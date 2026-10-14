@@ -4,7 +4,7 @@
   {{ range slice "Dining" "Visit" "Gatherings" "About" }}
     <section class="directory-group"><h3>{{ . }}</h3><div class="directory-grid">
     {{ range where hugo.Data.modules "group" . }}{{ if partial "feature-enabled.html" .id }}
-      <a class="directory-card" href="{{ partial "site-url.html" (printf "%s/" .id) }}" data-context-link data-search-text="{{ partial "shared/search-words.html" . }}"><span>{{ .label }}</span><p>{{ .description }}</p><span aria-hidden="true">→</span></a>
+      <a class="directory-card" href="{{ partial "site-url.html" (printf "%s/" .id) }}" data-context-link data-search-text="{{ partial "shared/search-words.html" . }}"><span>{{ partial "module-icon.html" .id }}{{ .label }}</span><p>{{ .description }}</p><span aria-hidden="true">→</span></a>
     {{ end }}{{ end }}
     </div></section>
   {{ end }}

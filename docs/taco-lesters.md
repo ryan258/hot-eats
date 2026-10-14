@@ -56,4 +56,6 @@ There are 36 icons on a 24 by 24 grid with a 2 px round line. Twenty cover site 
 - The sprite loads over HTTP, so `./he preview` and built sites work. Opening a built file directly from disk will not show them.
 - See the specimen sheet at `/site-kit/#icons` when the Taco Lester's preset is active.
 - `./he test` checks that every icon reference points at a real sprite symbol.
-- Icons are not placed on guest pages yet. The preview sheet is the only place they appear.
+- Placement (Taco Lester's preset only): the logo uses the taco icon instead of the star; the main menu and the More menu, the phone quick links, and the "Find what you need" cards each show an icon beside the label.
+- `layouts/partials/module-icon.html` maps each page module id to an icon and renders nothing for other presets. Change the mapping there.
+- Other presets keep their text-only links and the star.

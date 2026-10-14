@@ -32,12 +32,12 @@
     <div class="preview-bar">{{ site.Params.companyName }} · {{ site.Params.mode }} · illustrative or unapproved content{{ with .Params.previewpreset }} · {{ humanize . }} design{{ end }}</div>
   {{ end }}
   <header class="site-header wrap">
-    <a class="wordmark" href="{{ partial "site-url.html" ("") }}" aria-label="{{ site.Params.companyName }} home">{{ site.Params.companyName }}<span aria-hidden="true">✳</span></a>
+    <a class="wordmark" href="{{ partial "site-url.html" ("") }}" aria-label="{{ site.Params.companyName }} home">{{ site.Params.companyName }}<span aria-hidden="true">{{ if eq $config.preset "taco-lesters" }}{{ partial "icon.html" (dict "name" "taco") }}{{ else }}✳{{ end }}</span></a>
     <nav aria-label="Main navigation">
       {{ range slice "menu" "locations" "ordering" "reservations" }}
         {{ if partial "feature-enabled.html" . }}
           {{ $m := index (where hugo.Data.modules "id" .) 0 }}
-          <a href="{{ partial "site-url.html" (printf "%s/" .) }}" data-context-link{{ if eq $.Params.module . }} aria-current="page"{{ end }}>{{ $m.label }}</a>
+          <a href="{{ partial "site-url.html" (printf "%s/" .) }}" data-context-link{{ if eq $.Params.module . }} aria-current="page"{{ end }}>{{ partial "module-icon.html" . }}{{ $m.label }}</a>
         {{ end }}
       {{ end }}
       <details class="explore-nav">
@@ -47,11 +47,11 @@
             {{ $group := . }}
             <section><h2 class="nav-group">{{ . }}</h2>
               {{ range where hugo.Data.modules "group" $group }}
-                {{ if partial "feature-enabled.html" .id }}<a href="{{ partial "site-url.html" (printf "%s/" .id) }}" data-context-link>{{ .label }}</a>{{ end }}
+                {{ if partial "feature-enabled.html" .id }}<a href="{{ partial "site-url.html" (printf "%s/" .id) }}" data-context-link>{{ partial "module-icon.html" .id }}{{ .label }}</a>{{ end }}
               {{ end }}
             </section>
           {{ end }}
-          {{ if partial "feature-enabled.html" "search" }}<a href="{{ partial "site-url.html" ("search/") }}">Search</a>{{ end }}
+          {{ if partial "feature-enabled.html" "search" }}<a href="{{ partial "site-url.html" ("search/") }}">{{ partial "module-icon.html" "search" }}Search</a>{{ end }}
           {{ if ne site.Params.mode "publication" }}<a href="{{ partial "site-url.html" "site-kit/" }}"{{ if .Params.previewpreset }} target="_top"{{ end }}>Style & operator guide</a>{{ end }}
         </div>
       </details>
@@ -72,7 +72,7 @@
       {{ range slice "menu" "ordering" "reservations" "locations" "foodtruck" }}
         {{ if partial "feature-enabled.html" . }}
           {{ $labels := dict "menu" "Menu" "ordering" "Order" "reservations" "Book" "locations" "Visit" "foodtruck" "Truck" }}
-          <a href="{{ partial "site-url.html" (printf "%s/" .) }}" data-context-link>{{ index $labels . }}</a>
+          <a href="{{ partial "site-url.html" (printf "%s/" .) }}" data-context-link>{{ partial "module-icon.html" . }}{{ index $labels . }}</a>
         {{ end }}
       {{ end }}
     </nav>

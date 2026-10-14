@@ -92,10 +92,33 @@ class TacoLestersRendering(unittest.TestCase):
     def test_icon_sheet_is_in_the_taco_guide_only_and_icons_are_decorative(self):
         guide = (self.output / "site-kit/index.html").read_text()
         self.assertEqual(guide.count('class="sg-icon-card"'), len(ICONS))
-        self.assertEqual(guide.count('<svg class="icon" aria-hidden="true" focusable="false">'), len(ICONS))
+        sheet = guide.split('id="icons"', 1)[1].split('id="library"', 1)[0]
+        self.assertEqual(sheet.count('<svg class="icon" aria-hidden="true" focusable="false">'), len(ICONS))
         diner = (self.output / "site-kit/presets/diner/site-kit/index.html").read_text()
         self.assertNotIn('id="icons"', diner)
         self.assertNotIn('sg-icon-card', diner)
+
+    def test_icons_sit_beside_visible_labels_in_navigation_cards_and_logo(self):
+        home = self.read("")
+        mark = re.search(r'<a class="wordmark"[^>]*>.*?</a>', home, re.S).group(0)
+        self.assertIn('#tl-taco', mark)
+        self.assertNotIn("\u2733", mark)
+        quick = re.search(r'<nav class="quicklinks".*?</nav>', home, re.S).group(0)
+        links = re.findall(r"<a [^>]*>(.*?)</a>", quick, re.S)
+        self.assertTrue(links)
+        for link in links:
+            self.assertEqual(link.count("<svg class=\"icon\""), 1, link)
+            self.assertTrue(re.sub(r"<svg.*?</svg>", "", link, flags=re.S).strip(), link)
+        cards = re.findall(r'<a class="directory-card"[^>]*>(.*?)</a>', home, re.S)
+        self.assertTrue(cards)
+        for card in cards:
+            self.assertEqual(card.count("<svg class=\"icon\""), 1, card)
+        self.assertEqual(len(re.findall(r"<svg(?![^>]*aria-hidden=\"true\")[^>]*class=\"icon\"", home)), 0)
+
+    def test_other_presets_do_not_show_icons_or_the_taco_mark(self):
+        diner = (self.output / "site-kit/presets/diner/index.html").read_text()
+        self.assertNotIn('<svg class="icon"', diner)
+        self.assertIn("\u2733", diner)
 
     def test_other_presets_do_not_show_the_notes(self):
         page = (self.output / "site-kit/presets/diner/index.html").read_text()
