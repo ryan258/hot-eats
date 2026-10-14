@@ -13,7 +13,7 @@
     </div>
     <div class="sg-hero-note">
       <span class="sg-asterisk" aria-hidden="true">✳</span>
-      <p><strong>{{ len $library.components }} components</strong><br>{{ $layoutCount }} layout options<br>{{ len hugo.Data.modules }} page modules<br>9 restaurant presets</p>
+      <p><strong>{{ len $library.components }} components</strong><br>{{ $layoutCount }} layout options<br>{{ len hugo.Data.modules }} page modules<br>{{ len (partialCached "preset-library.html" "all") }} restaurant presets</p>
       <span class="sg-edition">A library to build from.</span>
     </div>
   </header>
@@ -126,7 +126,7 @@
 ./he menu
 ./he history</code></pre><p>For the full owner-run verification suite: <code>./he test</code>.</p></details>
         <details class="sg-owner"><summary>Create an independent restaurant</summary><pre><code>python3 scripts/sculpt.py --destination ../new-restaurant --name "New Restaurant" --slug new-restaurant --preset cafe</code></pre><p>The copy retains the module and component library. Contacts, schedules, provider destinations, reviews, jobs, and approvals are reset. Retained examples still need editing and review.</p></details>
-        <details class="sg-owner"><summary>Presets, content, and source files</summary><p>Kitchen sink, diner, café, fine dining, fast casual, bar, bakery, food truck, and multi-location. Example datasets live in <code>data/scenarios.json</code>; client records live in <code>data/restaurant.json</code>.</p><p>Guide fixtures live in <code>data/component_library.json</code>. Reusable partials live in <code>layouts/partials/components/</code>, with shared styles in <code>assets/css/components.css</code>. Read <code>docs/component-library.md</code> for integration guidance.</p><p>Current client content status: <strong>{{ $data.meta.status }}</strong>.</p></details>
+        <details class="sg-owner"><summary>Presets, content, and source files</summary><p>Kitchen sink, diner, café, fine dining, fast casual, bar, bakery, food truck, multi-location, and Taco Lester’s (parody). Example datasets live in <code>data/scenarios.json</code>; client records live in <code>data/restaurant.json</code>.</p><p>Guide fixtures live in <code>data/component_library.json</code>. Reusable partials live in <code>layouts/partials/components/</code>, with shared styles in <code>assets/css/components.css</code>. Read <code>docs/component-library.md</code> for integration guidance.</p><p>Current client content status: <strong>{{ $data.meta.status }}</strong>.</p></details>
         <details class="sg-owner"><summary>Owner tools & publication</summary><p>Local tools cover daily announcements, special hours, service pauses, menu updates, CSV editing, preview diffs, recovery snapshots, gathering briefs, recipe arithmetic, and private operational logs.</p><p>Read <code>docs/owner-guide.md</code>, <code>docs/data-model.md</code>, and <code>docs/publication.md</code>. Private records stay in <code>.local/</code>. Publication builds require reviewed client data and a real domain; they create a local artifact and do not deploy. Provider acceptance is a separate check.</p></details>
       </section>
       <a class="sg-back" href="#guide-top">Back to the top <span aria-hidden="true">↑</span></a>

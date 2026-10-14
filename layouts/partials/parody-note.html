@@ -1,0 +1,12 @@
+{{/* Optional parody note: a closed native disclosure. Pass a key from data/parody_notes.json. Keep it outside task controls. */}}
+{{ $id := . }}
+{{ if eq (partial "site-config.html" site).preset "taco-lesters" }}
+  {{ with index hugo.Data.parody_notes $id }}
+    <div class="wrap parody-note-wrap">
+      <details class="parody-note" id="note-{{ $id }}" data-parody-note="{{ $id }}">
+        <summary>{{ .label }}</summary>
+        <div class="parody-note__body">{{ range .lines }}<p>{{ . }}</p>{{ end }}</div>
+      </details>
+    </div>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="720" viewBox="0 0 800 720" role="img" aria-label="Illustration of a folded taco with lettuce, tomato, and a lime wedge">
+  <rect width="800" height="720" fill="#fff4d6"/>
+  <circle cx="400" cy="380" r="300" fill="#f2b84b"/>
+  <circle cx="400" cy="380" r="262" fill="#fff4d6" opacity=".55"/>
+  <path d="M120 470a280 280 0 0 1 560 0Z" fill="#e8c27a" stroke="#3a2c25" stroke-width="10" stroke-linejoin="round"/>
+  <g stroke="#3a2c25" stroke-width="6">
+    <circle cx="220" cy="300" r="46" fill="#6f8f2b"/>
+    <circle cx="300" cy="248" r="50" fill="#7da232"/>
+    <circle cx="400" cy="232" r="52" fill="#6f8f2b"/>
+    <circle cx="500" cy="248" r="50" fill="#7da232"/>
+    <circle cx="580" cy="300" r="46" fill="#6f8f2b"/>
+    <circle cx="350" cy="300" r="32" fill="#b3341f"/>
+    <circle cx="455" cy="296" r="32" fill="#b3341f"/>
+    <circle cx="402" cy="330" r="26" fill="#f2b84b"/>
+  </g>
+  <path d="M120 470a280 280 0 0 1 90-206" fill="none" stroke="#e8c27a" stroke-width="10"/>
+  <path d="M110 478h580" stroke="#3a2c25" stroke-width="10" stroke-linecap="round"/>
+  <path d="M560 540a90 90 0 0 0 130 0Z" fill="#7da232" stroke="#3a2c25" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M575 548a70 70 0 0 0 100 0" fill="none" stroke="#fff4d6" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -6,7 +6,7 @@ Updated October 3, 2026. This is the implementation handoff for the project revi
 
 ## Where the project now stands
 
-The project is a local-first restaurant website library with 24 selectable page modules and nine illustrative restaurant presets. It combines a static public site, an editable versioned restaurant model, a short owner CLI, and independent client-copy tooling. Hugo renders the public site; Python handles local validation, changes, copying, and fresh artifacts; browser JavaScript adds filters, calendar exports, and a private gathering brief.
+The project is a local-first restaurant website library with 24 selectable page modules and ten illustrative restaurant presets. It combines a static public site, an editable versioned restaurant model, a short owner CLI, and independent client-copy tooling. Hugo renders the public site; Python handles local validation, changes, copying, and fresh artifacts; browser JavaScript adds filters, calendar exports, and a private gathering brief.
 
 The implementation now gives the same location, service, menu, and content records to public pages and owner tools. Example and client data are separate. Provider actions have explicit availability and fallback contacts. Publication has a separate local build gate. These are useful foundations for the kitchen-sink exemplar, but they do not turn illustrative records into real business facts or establish that an outside provider completed a transaction.
 

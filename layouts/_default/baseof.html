@@ -58,6 +58,7 @@
     </nav>
   </header>
   <main id="main" tabindex="-1">{{ block "main" . }}{{ end }}</main>
+  {{ if site.Params.parody }}{{ with site.Params.parodyNotice }}<p class="wrap parody-notice">{{ . }}</p>{{ end }}{{ end }}
   <footer class="wrap footer">
     <a class="wordmark" href="{{ partial "site-url.html" ("") }}">{{ site.Params.companyName }}</a>
     <p>{{ $data.brand.tagline }}</p>

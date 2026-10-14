@@ -121,6 +121,34 @@ body[data-preset="multi-location"] .hero-art img { transform: none; }
 body[data-preset="multi-location"] .story { background: #dce8df; }
 body[data-preset="multi-location"] .location-entry { padding-bottom: 32px; border-bottom: 2px solid var(--line); }
 
+/* Taco Lester's: masa paper, salsa-red type, a papel-picado header stripe, and tortilla-round art. */
+body[data-preset="taco-lesters"] { --paper: #fff4d6; --red: #b3341f; --pink: #f2b84b; --line: #e0c27a; --green: #4f6b1f; --restaurant-surface: #fffaf0; --restaurant-radius: 16px; }
+body[data-preset="taco-lesters"] h1, body[data-preset="taco-lesters"] h2,
+body[data-preset="taco-lesters"] .restaurant-title, body[data-preset="taco-lesters"] .menu-grid .dish .restaurant-title { font-family: "Trebuchet MS", Arial, sans-serif; font-weight: 800; letter-spacing: -1px; }
+body[data-preset="taco-lesters"] .site-header { position: relative; border-bottom: 0; padding-bottom: 12px; }
+body[data-preset="taco-lesters"] .site-header::after { content: ""; position: absolute; inset: auto 0 0 0; height: 10px; border-radius: 10px 10px 0 0; background: repeating-linear-gradient(90deg, var(--red) 0 28px, var(--pink) 28px 56px, #6f8f2b 56px 84px, var(--paper) 84px 88px); }
+body[data-preset="taco-lesters"] .hero-art { border-radius: 50%; padding: 22px; border: 6px solid var(--red); outline: 3px dashed var(--red); outline-offset: 8px; }
+body[data-preset="taco-lesters"] .hero-art img { transform: none; }
+body[data-preset="taco-lesters"] .button { border-radius: 999px; }
+body[data-preset="taco-lesters"] .ticker { background: var(--red); color: var(--paper); }
+body[data-preset="taco-lesters"] .ticker span { font-family: "Trebuchet MS", Arial, sans-serif; font-style: normal; font-weight: 700; }
+body[data-preset="taco-lesters"] .menu-card { border: 2px dashed var(--red); border-radius: var(--restaurant-radius); background: var(--restaurant-surface); }
+body[data-preset="taco-lesters"] .story { background: #fbe7b0; }
+body[data-preset="taco-lesters"] { --restaurant-detail-font: "Trebuchet MS", Arial, sans-serif; --restaurant-detail-weight: 700; --restaurant-heading-font: "Trebuchet MS", Arial, sans-serif; --restaurant-heading-weight: 800; --restaurant-panel-rule: 3px dotted var(--red); }
+body[data-preset="taco-lesters"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-team,.restaurant-space,.restaurant-steps) { border: 3px dotted var(--red); border-radius: var(--restaurant-radius); }
+body[data-preset="taco-lesters"] :is(.restaurant-course-list strong,.restaurant-flight-items dt,.restaurant-step-list strong) { font-family: "Trebuchet MS", Arial, sans-serif; font-weight: 800; }
+body[data-preset="taco-lesters"] .restaurant-step-list li { border-style: dotted; border-radius: 12px; }
+body[data-preset="taco-lesters"] :is(.info-card,.directory-card,.planner-layout form,.brief-panel,.gallery-grid figure) { border: 3px dotted var(--red); border-radius: var(--restaurant-radius); }
+body[data-preset="taco-lesters"] .restaurant-offer { background: var(--red); border-color: var(--red); }
+
+/* Parody profiles: a visible disclosure above the footer and closed character notes. */
+.parody-notice { margin-block: 0; padding-block: 14px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+.parody-note-wrap { padding-block: 24px 40px; }
+.parody-note { max-width: 560px; padding: 8px 16px; border-left: 4px solid var(--red); font-size: 14px; }
+.parody-note summary { cursor: pointer; color: var(--muted); text-decoration: underline dotted; text-underline-offset: 4px; }
+.parody-note summary:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+.parody-note__body p { margin: 10px 0 0; }
+
 /* The section layout controls grouping; dish layouts keep their own markup. */
 .menu-grid[data-section-layout="board"],
 body[data-preset="fast-casual"] .menu-grid[data-section-layout="board"] { grid-template-columns: 1fr; }

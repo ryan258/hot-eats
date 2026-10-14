@@ -106,7 +106,7 @@ class GuestIntegrationTests(unittest.TestCase):
     def page(self, preset, route):
         return Markup((self.output / "site-kit/presets" / preset / route / "index.html").read_text())
 
-    def test_all_nine_presets_render_guest_components_with_their_layout_choices(self):
+    def test_all_presets_render_guest_components_with_their_layout_choices(self):
         for preset in self.scenarios:
             config, _ = configuration(ROOT, preset)
             layouts = config["params"]["componentLayouts"]

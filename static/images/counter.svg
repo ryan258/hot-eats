@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Illustration of a magnifying glass held over a tortilla on a taco counter">
+  <rect width="800" height="600" fill="#fff4d6"/>
+  <rect x="0" y="420" width="800" height="180" fill="#b3341f"/>
+  <path d="M0 420h800" stroke="#3a2c25" stroke-width="10"/>
+  <ellipse cx="330" cy="400" rx="200" ry="52" fill="#e8c27a" stroke="#3a2c25" stroke-width="8"/>
+  <circle cx="470" cy="250" r="130" fill="#fffaf0" fill-opacity=".6" stroke="#3a2c25" stroke-width="14"/>
+  <path d="m562 342 120 120" stroke="#3a2c25" stroke-width="26" stroke-linecap="round"/>
+  <path d="M400 230a90 90 0 0 1 100-60" fill="none" stroke="#f2b84b" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="170" cy="340" r="30" fill="#6f8f2b" stroke="#3a2c25" stroke-width="6"/>
+  <circle cx="230" cy="326" r="26" fill="#b3341f" stroke="#3a2c25" stroke-width="6"/>
+</svg>

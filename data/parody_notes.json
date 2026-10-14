@@ -1,0 +1,23 @@
+{
+  "tilly": {
+    "label": "Tilly has a note.",
+    "lines": [
+      "Tilly is a tortilla press. She has been pressed into service since the first day.",
+      "On thickness, she has the final word. On everything else, she is flat on the matter."
+    ]
+  },
+  "lester": {
+    "label": "A word from Lester, unprompted.",
+    "lines": [
+      "Lester remembers every taco he has ever served. He remembers very few customers' names.",
+      "He asked us to say the taco you almost ordered was a good choice."
+    ]
+  },
+  "marisol": {
+    "label": "Marisol, by the order pad.",
+    "lines": [
+      "Marisol keeps Friday's receipts on Friday. Her pen is not for sketching tacos.",
+      "She goes home at five. The salsa has been warned."
+    ]
+  }
+}

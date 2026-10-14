@@ -1,0 +1,56 @@
+[params]
+designName = "Salsa bar"
+designDescription = "Warm masa paper, salsa-red type, a papel-picado header stripe, round tortilla art, and a parody crew whose notes open on request."
+homeSections = ["hero", "announcement", "ticker", "menu", "story", "visit", "directory"]
+accent = "cherry"
+preset = "taco-lesters"
+[params.features]
+menu = true
+specials = true
+locations = true
+reservations = false
+ordering = true
+catering = true
+events = true
+planner = true
+gallery = true
+story = true
+team = true
+sourcing = false
+reviews = true
+giftcards = false
+loyalty = false
+newsletter = false
+news = false
+calendar = false
+careers = false
+faq = true
+contact = true
+accessibility = true
+press = false
+foodtruck = false
+
+visit = true
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "banner"
+dish-card = "horizontal"
+dietary-key = "inline"
+service-card = "horizontal"
+location-card = "split"
+hours-panel = "board"
+offer-card = "ribbon"
+package-card = "split"
+event-card = "stacked"
+quote-card = "centered"
+faq-list = "cards"
+contact-panel = "split"
+menu-section = "board"
+tasting-menu = "cards"
+beverage-flight = "board"
+team-profile = "horizontal"
+dining-space = "split"
+visit-steps = "tiles"

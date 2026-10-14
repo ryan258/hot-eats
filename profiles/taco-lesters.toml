@@ -1,0 +1,8 @@
+title = "Taco Lester's | Parody Taco Shop"
+[params]
+  companyName = "Taco Lester's"
+  profileID = "taco-lesters"
+  accent = "cherry"
+  description = "A parody taco shop built on the Hot Eats restaurant kit. Meet Lester, Marisol, and Tilly."
+  parody = true
+  parodyNotice = "Parody. Taco Lester's, its crew, reviews, prices, and schedule are invented. No real restaurant is offered here."

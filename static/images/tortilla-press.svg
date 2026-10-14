@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Illustration of a cast-iron tortilla press with a pressed tortilla">
+  <rect width="800" height="600" fill="#fff4d6"/>
+  <circle cx="400" cy="300" r="230" fill="#f2b84b" opacity=".55"/>
+  <rect x="180" y="400" width="440" height="52" rx="10" fill="#3a2c25"/>
+  <ellipse cx="400" cy="394" rx="170" ry="26" fill="#e8c27a" stroke="#3a2c25" stroke-width="8"/>
+  <rect x="200" y="338" width="400" height="44" rx="10" fill="#5a463b" stroke="#3a2c25" stroke-width="6"/>
+  <path d="M600 354 690 190" stroke="#3a2c25" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="696" cy="180" r="26" fill="#b3341f" stroke="#3a2c25" stroke-width="8"/>
+  <circle cx="200" cy="395" r="16" fill="#f2b84b" stroke="#3a2c25" stroke-width="6"/>
+  <path d="M250 500h300" stroke="#3a2c25" stroke-width="8" stroke-linecap="round"/>
+</svg>

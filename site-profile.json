@@ -1,5 +1,5 @@
 {
-  "profile": "profiles/lucyd.toml",
-  "preset": "presets/kitchen-sink.toml",
+  "profile": "profiles/taco-lesters.toml",
+  "preset": "presets/taco-lesters.toml",
   "use_examples": true
 }

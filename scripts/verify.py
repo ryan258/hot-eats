@@ -240,7 +240,7 @@ def main():
             "Preview bar leaked into publication",
         )
     print(
-        "PASS: contract regressions, JavaScript syntax, all nine preset builds, links/assets/anchors, Unicode client, frozen helper, SVG asset, edited menu, and publication output."
+        "PASS: contract regressions, JavaScript syntax, all ten preset builds, links/assets/anchors, Unicode client, frozen helper, SVG asset, edited menu, and publication output."
     )
     print("HTML page counts: " + ", ".join(f"{k}={v}" for k, v in counts.items()))
     print(

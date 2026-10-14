@@ -1,6 +1,6 @@
 # Hot Eats restaurant website library
 
-A Hugo restaurant master with 24 selectable page modules, 18 reusable restaurant components in 54 layouts, a living style guide, nine restaurant examples, location-aware guest paths, and local owner tools. Lucyd is the diner demonstration. All sample business facts, prices, schedules, and artwork require review before use for a real restaurant.
+A Hugo restaurant master with 24 selectable page modules, 18 reusable restaurant components in 54 layouts, a living style guide, ten restaurant examples, location-aware guest paths, and local owner tools. Lucyd is the diner demonstration. All sample business facts, prices, schedules, and artwork require review before use for a real restaurant.
 
 ## Start here
 
@@ -17,9 +17,9 @@ Open http://127.0.0.1:1417/ and `/site-kit/`. Choose another example:
 ./he doctor
 ```
 
-Presets: `kitchen-sink`, `diner`, `cafe`, `fine-dining`, `fast-casual`, `bar`, `bakery`, `food-truck`, `multi-location`. They select modules, a complete illustrative dataset, homepage composition, and component layouts. Each has its own typography, color, border, and card treatment; see [the preset designs](docs/preset-designs.md). Examples are maintained in `data/scenarios.json`; the client's editable records live in `data/restaurant.json`.
+Presets: `kitchen-sink`, `diner`, `cafe`, `fine-dining`, `fast-casual`, `bar`, `bakery`, `food-truck`, `multi-location`, `taco-lesters`. They select modules, a complete illustrative dataset, homepage composition, and component layouts. Each has its own typography, color, border, and card treatment; see [the preset designs](docs/preset-designs.md). `taco-lesters` is a parody taco shop with an invented crew and a visible parody notice; see [Taco Lester's](docs/taco-lesters.md). Examples are maintained in `data/scenarios.json`; the client's editable records live in `data/restaurant.json`.
 
-The [component living style guide](http://127.0.0.1:1417/site-kit/#presets) includes a nine-design switcher, side-by-side previews of real example pages at desktop or phone widths, and 54 rendered layouts with individual selectors and comparison controls, alternate states, template calls and sample input data, design tokens, category/search tools, palette previews, and a narrow preview. Choose Component showcase in the comparison page selector to see menu sections, tasting menus, beverage flights, team profiles, private dining spaces, and visit steps in each design. The six additions also render on enabled guest pages using validated restaurant records and the selected preset’s layouts. Its layout selectors start with the active preset’s choices. See [component integration](docs/component-library.md). The guide and its preset preview routes are excluded from publication builds.
+The [component living style guide](http://127.0.0.1:1417/site-kit/#presets) includes a ten-design switcher, side-by-side previews of real example pages at desktop or phone widths, and 54 rendered layouts with individual selectors and comparison controls, alternate states, template calls and sample input data, design tokens, category/search tools, palette previews, and a narrow preview. Choose Component showcase in the comparison page selector to see menu sections, tasting menus, beverage flights, team profiles, private dining spaces, and visit steps in each design. The six additions also render on enabled guest pages using validated restaurant records and the selected preset’s layouts. Its layout selectors start with the active preset’s choices. See [component integration](docs/component-library.md). The guide and its preset preview routes are excluded from publication builds.
 
 ## Everyday owner work
 
@@ -64,7 +64,7 @@ Provider URLs begin empty. The site does not process payment, send inquiries, cr
 ./he test
 ```
 
-Runs the owner-controlled contract regressions, JavaScript syntax check, nine preset builds, local links/assets/anchors, Unicode/copy recovery cases, SVG processing, edited-menu behavior, and a synthetic publication fixture. Temporary artifacts live in the system temporary directory. No network calls or publication. See [verification scope](docs/verification.md).
+Runs the owner-controlled contract regressions, JavaScript syntax check, ten preset builds, local links/assets/anchors, Unicode/copy recovery cases, SVG processing, edited-menu behavior, and a synthetic publication fixture. Temporary artifacts live in the system temporary directory. No network calls or publication. See [verification scope](docs/verification.md).
 
 ## Review and publication artifacts
 
@@ -81,7 +81,7 @@ Builds use a fresh destination outside source and print a sibling source/data/ou
 | --- | --- |
 | `site-profile.json`, `profiles/`, `presets/` | Selected identity, module set, presentation, example/client choice |
 | `data/restaurant.json` | Client public restaurant records |
-| `data/scenarios.json` | Nine illustrative example datasets |
+| `data/scenarios.json` | Ten illustrative example datasets |
 | `data/modules.json` | Module contracts, dependencies, navigation and search vocabulary |
 | `scripts/model.py` | Versioned validation and configuration resolution |
 | `scripts/owner.py` | Local updates, snapshots, imports, and professional utilities |

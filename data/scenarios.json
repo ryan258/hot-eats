@@ -8220,5 +8220,1064 @@
       "privacy_reviewed": false,
       "contact_reviewed": false
     }
+  },
+  "taco-lesters": {
+    "schema_version": 2,
+    "meta": {
+      "status": "demo",
+      "reviewed_on": "",
+      "source": ""
+    },
+    "brand": {
+      "headline": "The tortilla is there for the taco.",
+      "intro": "Tacos, a very invested cook, and the office keeping him on schedule. Meet Lester, Marisol, and Tilly.",
+      "eyebrow": "Parody taco shop",
+      "tagline": "Every taco deserves someone who notices.",
+      "note": "Parody. The shop, crew, reviews, and prices are invented. No real restaurant is offered here.",
+      "image": {
+        "src": "images/taco.svg",
+        "alt": "Illustration of a folded taco with lettuce, tomato, and a lime wedge; not a dish served by a real restaurant.",
+        "width": 800,
+        "height": 720
+      },
+      "story_title": "Lester has opinions about tortillas",
+      "story": [
+        "Lester pressed his first tortilla and has not stopped looking at it since. He remembers every taco he has made and very few street names.",
+        "Marisol keeps the orders and the books. She closes Friday's receipts on Friday and goes home on time.",
+        "Tilly, the tortilla press, has the final word on thickness. This is a parody; none of it is a real shop."
+      ],
+      "ticker": [
+        "Pressed, never rushed",
+        "Marisol closes the books at five",
+        "Tilly has the final word on thickness"
+      ]
+    },
+    "announcement": {
+      "text": "Parody notice: Taco Lester's is invented. The prices, hours, crew, and reviews are illustrative.",
+      "start": "",
+      "end": ""
+    },
+    "contacts": {
+      "email": "",
+      "phone": "",
+      "response": "Response times awaiting confirmation. This parody site sends nothing.",
+      "channels": []
+    },
+    "locations": [
+      {
+        "id": "location-1",
+        "name": "Taco Lester's · example counter",
+        "address": "",
+        "phone": "",
+        "map_url": "",
+        "timezone": "America/Chicago",
+        "hours": [
+          {
+            "day": 0,
+            "intervals": [
+              [
+                "11:00",
+                "20:00"
+              ]
+            ]
+          },
+          {
+            "day": 1,
+            "intervals": [
+              [
+                "11:00",
+                "20:00"
+              ]
+            ]
+          },
+          {
+            "day": 2,
+            "intervals": [
+              [
+                "11:00",
+                "20:00"
+              ]
+            ]
+          },
+          {
+            "day": 3,
+            "intervals": [
+              [
+                "11:00",
+                "20:00"
+              ]
+            ]
+          },
+          {
+            "day": 4,
+            "intervals": [
+              [
+                "11:00",
+                "20:00"
+              ]
+            ]
+          },
+          {
+            "day": 5,
+            "intervals": [
+              [
+                "11:00",
+                "20:00"
+              ]
+            ]
+          },
+          {
+            "day": 6,
+            "intervals": [
+              [
+                "11:00",
+                "20:00"
+              ]
+            ]
+          }
+        ],
+        "exceptions": [],
+        "access": {
+          "entrance": "Access information awaiting confirmation.",
+          "seating": "Seating information awaiting confirmation.",
+          "restroom": "Restroom information awaiting confirmation.",
+          "sensory": "Noise and lighting information awaiting confirmation.",
+          "parking": "Parking and transit information awaiting confirmation."
+        },
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      }
+    ],
+    "services": [
+      {
+        "id": "dine-in",
+        "label": "Dine in",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ]
+      },
+      {
+        "id": "pickup",
+        "label": "Pickup",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ]
+      },
+      {
+        "id": "delivery",
+        "label": "Delivery",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ]
+      },
+      {
+        "id": "catering",
+        "label": "Catering",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ]
+      },
+      {
+        "id": "events",
+        "label": "Private events",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "ordering-pickup-location-1",
+        "module": "ordering",
+        "service_id": "pickup",
+        "location_id": "location-1",
+        "label": "Order pickup",
+        "state": "unavailable",
+        "url": "",
+        "provider": "",
+        "note": "This demonstration has no connected provider.",
+        "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+        "fallback_email": "",
+        "fallback_phone": "",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      },
+      {
+        "id": "ordering-delivery-location-1",
+        "module": "ordering",
+        "service_id": "delivery",
+        "location_id": "location-1",
+        "label": "Order delivery",
+        "state": "unavailable",
+        "url": "",
+        "provider": "",
+        "note": "This demonstration has no connected provider.",
+        "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+        "fallback_email": "",
+        "fallback_phone": "",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      },
+      {
+        "id": "reservations-dine-in-location-1",
+        "module": "reservations",
+        "service_id": "dine-in",
+        "location_id": "location-1",
+        "label": "Reserve a table",
+        "state": "unavailable",
+        "url": "",
+        "provider": "",
+        "note": "This demonstration has no connected provider.",
+        "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+        "fallback_email": "",
+        "fallback_phone": "",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      },
+      {
+        "id": "giftcards-general-location-1",
+        "module": "giftcards",
+        "service_id": "",
+        "location_id": "location-1",
+        "label": "Buy a gift card",
+        "state": "unavailable",
+        "url": "",
+        "provider": "",
+        "note": "This demonstration has no connected provider.",
+        "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+        "fallback_email": "",
+        "fallback_phone": "",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      },
+      {
+        "id": "loyalty-general-location-1",
+        "module": "loyalty",
+        "service_id": "",
+        "location_id": "location-1",
+        "label": "Join rewards",
+        "state": "unavailable",
+        "url": "",
+        "provider": "",
+        "note": "This demonstration has no connected provider.",
+        "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+        "fallback_email": "",
+        "fallback_phone": "",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      },
+      {
+        "id": "newsletter-general-location-1",
+        "module": "newsletter",
+        "service_id": "",
+        "location_id": "location-1",
+        "label": "Sign up for updates",
+        "state": "unavailable",
+        "url": "",
+        "provider": "",
+        "note": "This demonstration has no connected provider.",
+        "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+        "fallback_email": "",
+        "fallback_phone": "",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      }
+    ],
+    "menu": {
+      "currency": "USD",
+      "reviewed_on": "",
+      "note": "Invented dishes and parody prices. Nothing here is for sale.",
+      "allergen_note": "This parody makes no ingredient, allergen, or dietary claims. A real restaurant must confirm them.",
+      "categories": [
+        {
+          "id": "tacos",
+          "label": "Tacos",
+          "eyebrow": "Parody selection",
+          "items": [
+            {
+              "id": "taco-lester",
+              "name": "The Lester",
+              "description": "Slow pork, pickled onion, and a tortilla Lester inspected first.",
+              "price": "4.50",
+              "state": "available",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            },
+            {
+              "id": "taco-marisol",
+              "name": "The Marisol",
+              "description": "Black beans, queso fresco, and one lime wedge. Efficient.",
+              "price": "4.25",
+              "state": "available",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            },
+            {
+              "id": "taco-tilly",
+              "name": "The Tilly",
+              "description": "Flat, even, and pressed to the exact thickness. Tilly does not elaborate.",
+              "price": "3.75",
+              "state": "available",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            },
+            {
+              "id": "taco-last",
+              "name": "Lester’s last taco",
+              "description": "Lester kept this one.",
+              "price": "5.00",
+              "state": "sold-out",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "sides",
+          "label": "Sides",
+          "eyebrow": "Parody selection",
+          "items": [
+            {
+              "id": "chips",
+              "name": "Chips and salsa",
+              "description": "Salsa the whole crew has opinions about.",
+              "price": "5.00",
+              "state": "available",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            },
+            {
+              "id": "corn-cup",
+              "name": "Corn cup",
+              "description": "Corn, lime, and cotija, in a cup.",
+              "price": "4.50",
+              "state": "available",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            },
+            {
+              "id": "beans",
+              "name": "Patient beans",
+              "description": "Simmered at a pace Lester calls respectful.",
+              "price": "3.50",
+              "state": "available",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "drinks",
+          "label": "Drinks",
+          "eyebrow": "Parody selection",
+          "items": [
+            {
+              "id": "horchata",
+              "name": "Horchata",
+              "description": "A cold cinnamon rice drink.",
+              "price": "3.50",
+              "state": "available",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            },
+            {
+              "id": "limeade",
+              "name": "Limeade",
+              "description": "Lime, sugar, and ice.",
+              "price": "3.25",
+              "state": "available",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            },
+            {
+              "id": "agua-fresca",
+              "name": "Agua fresca of the day",
+              "description": "Ask what Lester picked this morning.",
+              "price": "3.50",
+              "state": "available",
+              "location_ids": [],
+              "service_ids": [],
+              "dietary": [],
+              "options": [],
+              "meta": {
+                "status": "demo",
+                "reviewed_on": "",
+                "source": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "collections": {
+      "specials": [
+        {
+          "id": "specials-1",
+          "title": "Tuesday two-taco deal",
+          "text": "Two tacos and a drink, with Lester inspecting both tortillas. Illustrative offer; dates are fictional.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-10T11:00:00-06:00",
+          "end": "2099-11-10T14:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "id": "tasting-menu-example",
+          "title": "The Lester tasting",
+          "text": "An invented set menu. Replace dishes, prices, and service dates before any real use.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Parody set menu",
+            "price": "Example: 24 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "Salsa",
+                "text": "Example course: three salsas, ranked by Lester. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Tacos",
+                "text": "Example course: the Lester, the Marisol, and the Tilly. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Dessert",
+                "text": "Example course: cinnamon sugar tortilla chips. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "No dietary or allergen claim is made. A real restaurant must confirm substitutions and shared preparation.",
+            "terms": "Invented price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "id": "beverage-flight-example",
+          "title": "The agua fresca flight",
+          "text": "A small invented tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Parody drinks tasting",
+            "price": "Example: 9 USD / flight",
+            "items": [
+              {
+                "name": "Horchata",
+                "portion": "Example: 90 ml",
+                "text": "Cold, creamy, and cinnamon-forward."
+              },
+              {
+                "name": "Limeade",
+                "portion": "Example: 90 ml",
+                "text": "Bright and sharp."
+              },
+              {
+                "name": "Jamaica",
+                "portion": "Example: 60 ml",
+                "text": "Tart hibiscus to finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm ingredients, sweeteners, and allergens before use.",
+            "terms": "Invented price for three servings; taxes excluded."
+          }
+        }
+      ],
+      "catering": [
+        {
+          "id": "catering-1",
+          "title": "Tacos for the whole office",
+          "text": "A parody package: Lester brings the tacos and Marisol brings the invoice. Tilly stays home.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [
+            {
+              "label": "Serves",
+              "value": "Illustrative package for 12 guests"
+            },
+            {
+              "label": "Lead time",
+              "value": "Example: 72 hours; confirm the actual policy"
+            },
+            {
+              "label": "Service",
+              "value": "Confirm pickup, delivery, setup, and service area"
+            }
+          ],
+          "url": "",
+          "attachments": []
+        }
+      ],
+      "events": [
+        {
+          "id": "events-1",
+          "title": "The back room",
+          "text": "A parody space for birthdays and team lunches. Lester will tell you which table has the best tortilla view.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [
+            {
+              "label": "Capacity",
+              "value": "Confirm seated and standing capacity"
+            },
+            {
+              "label": "Access",
+              "value": "Confirm routes, seating, restrooms, and noise"
+            },
+            {
+              "label": "Terms",
+              "value": "Confirm deposits, minimums, and cancellation terms"
+            }
+          ],
+          "url": "",
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/counter.svg",
+              "alt": "Illustration of a magnifying glass over a tortilla on a counter; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Invented room only. A real restaurant must confirm the entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
+        }
+      ],
+      "story": [
+        {
+          "id": "story-1",
+          "title": "Lester’s first tortilla",
+          "text": "Lester pressed his first tortilla, held it to the light, and has been inspecting them since. This origin story is invented.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": []
+        }
+      ],
+      "team": [
+        {
+          "id": "team-lester",
+          "title": "Lester · fictional team member",
+          "text": "Obsessed with tacos. Remembers every one he has made and very few customers’ names.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "presentation": {
+            "role": "Taco relations",
+            "specialties": [
+              "Inspecting tortillas",
+              "Having opinions about salsa"
+            ],
+            "image": {
+              "src": "images/counter.svg",
+              "alt": "Illustration of a magnifying glass over a tortilla, standing in for a portrait of Lester. Lester declined to be photographed without a tortilla.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
+        },
+        {
+          "id": "team-marisol",
+          "title": "Marisol · fictional team member",
+          "text": "Keeps the orders and the books. Closes Friday’s receipts on Friday. Carries a pen Lester is not allowed to use for sketching tacos.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "presentation": {
+            "role": "Orders, books, and getting home on time",
+            "specialties": [
+              "Friday receipts on Friday",
+              "Guarding the order pad"
+            ],
+            "image": {
+              "src": "images/order-pad.svg",
+              "alt": "Illustration of an order pad beside a clock showing five o’clock, standing in for a portrait of Marisol.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
+        },
+        {
+          "id": "team-tilly",
+          "title": "Tilly · fictional tortilla press",
+          "text": "On thickness, the final word. On everything else, unavailable for comment.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "presentation": {
+            "role": "Thickness",
+            "specialties": [
+              "The final word on thickness",
+              "Declining to comment on anything else"
+            ],
+            "image": {
+              "src": "images/tortilla-press.svg",
+              "alt": "Illustration of a cast-iron tortilla press, standing in for a portrait of Tilly the press.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional kitchen equipment with a role."
+          }
+        }
+      ],
+      "sourcing": [
+        {
+          "id": "sourcing-1",
+          "title": "Ingredients and partners",
+          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": []
+        }
+      ],
+      "news": [
+        {
+          "id": "news-1",
+          "title": "From the restaurant",
+          "text": "A full editorial example with a stable detail link and review history.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": []
+        }
+      ],
+      "calendar": [
+        {
+          "id": "calendar-1",
+          "title": "Community supper",
+          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2026-10-10T11:00:00-05:00",
+          "end": "2026-10-10T14:00:00-05:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication"
+        }
+      ],
+      "accessibility": [
+        {
+          "id": "accessibility-1",
+          "title": "Plan a comfortable visit",
+          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": []
+        }
+      ],
+      "press": [
+        {
+          "id": "press-1",
+          "title": "Restaurant press kit",
+          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": []
+        }
+      ],
+      "foodtruck": [
+        {
+          "id": "foodtruck-1",
+          "title": "Example market stop",
+          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2026-10-10T11:00:00-05:00",
+          "end": "2026-10-10T14:00:00-05:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "reviews-1",
+          "title": "Four minutes about one taco",
+          "text": "I ordered one taco. Lester described it for four minutes. Marisol described the check in one.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "attribution": "Fictional reviewer · parody review"
+        },
+        {
+          "id": "reviews-2",
+          "title": "Evenly treated",
+          "text": "Tilly pressed my tortilla. I have never felt so evenly treated.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "attribution": "Fictional reviewer · parody review"
+        },
+        {
+          "id": "reviews-3",
+          "title": "At 4:58",
+          "text": "I asked Marisol a question at 4:58. She had already answered it.",
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "attribution": "Fictional reviewer · parody review"
+        }
+      ],
+      "careers": []
+    },
+    "faq": [
+      {
+        "id": "hours",
+        "question": "Where can I find hours and directions?",
+        "answer": "Choose the location to see its schedule and access information. Lester remembers every taco and very few street names, so use the map link once one is connected.",
+        "location_ids": []
+      },
+      {
+        "id": "ordering",
+        "question": "Can I order here?",
+        "answer": "No. This site sends no orders and has no connected provider. A real restaurant would add a provider link or a phone number here.",
+        "location_ids": []
+      },
+      {
+        "id": "dietary",
+        "question": "Can you tell me what is in a taco?",
+        "answer": "Not here. The dishes are invented and carry no ingredient, allergen, or dietary claim. A real restaurant must confirm those directly.",
+        "location_ids": []
+      },
+      {
+        "id": "parody",
+        "question": "Is Taco Lester’s a real restaurant?",
+        "answer": "No. It is a parody built on the Hot Eats restaurant kit. The shop, crew, reviews, prices, and schedule are invented.",
+        "location_ids": []
+      }
+    ],
+    "gallery": [
+      {
+        "id": "taco-art",
+        "src": "images/taco.svg",
+        "alt": "Illustration of a folded taco with lettuce, tomato, and a lime wedge.",
+        "caption": "Illustration, not a photograph of food or people served.",
+        "credit": "Hot Eats concept artwork",
+        "permission": "Project-authored illustrative SVG",
+        "collection": "Concept",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      },
+      {
+        "id": "counter-art",
+        "src": "images/counter.svg",
+        "alt": "Illustration of a magnifying glass over a tortilla on a counter.",
+        "caption": "Illustration, not a photograph of food or people served.",
+        "credit": "Hot Eats concept artwork",
+        "permission": "Project-authored illustrative SVG",
+        "collection": "Concept",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      },
+      {
+        "id": "order-pad-art",
+        "src": "images/order-pad.svg",
+        "alt": "Illustration of an order pad beside a clock showing five o’clock.",
+        "caption": "Illustration, not a photograph of food or people served.",
+        "credit": "Hot Eats concept artwork",
+        "permission": "Project-authored illustrative SVG",
+        "collection": "Concept",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      },
+      {
+        "id": "tortilla-press-art",
+        "src": "images/tortilla-press.svg",
+        "alt": "Illustration of a cast-iron tortilla press.",
+        "caption": "Illustration, not a photograph of food or people served.",
+        "credit": "Hot Eats concept artwork",
+        "permission": "Project-authored illustrative SVG",
+        "collection": "Concept",
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        }
+      }
+    ],
+    "policies": {
+      "privacy": "This website uses local menu filters and a local gathering brief. No brief is submitted by this site. Provider links lead to services with their own policies. Confirm hosting logs, contacts, retention, and any additional services before publication.",
+      "reservations": "Confirm walk-ins, party limits, deposits, cancellations, and accessible booking alternatives.",
+      "giftcards": "Confirm redemption locations, purchase terms, balance help, and support.",
+      "loyalty": "Confirm earning, redemption, eligibility, account help, and terms.",
+      "newsletter": "Confirm frequency, consent, privacy, and unsubscribe process."
+    },
+    "publication": {
+      "domain": "",
+      "approved": false,
+      "privacy_reviewed": false,
+      "contact_reviewed": false
+    }
   }
 }

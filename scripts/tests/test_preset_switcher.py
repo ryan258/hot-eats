@@ -63,7 +63,7 @@ class PresetSwitcherTests(unittest.TestCase):
         cls.publication = Path(cls.tmp.name) / "publication"
         build(cls.source, cls.publication, publication=True)
 
-    def test_all_nine_previews_use_their_own_content_and_configuration(self):
+    def test_all_previews_use_their_own_content_and_configuration(self):
         self.assertIn("Private client fixture headline", (self.output / "index.html").read_text())
         for preset, data in self.scenarios.items():
             with self.subTest(preset=preset):
@@ -98,7 +98,7 @@ class PresetSwitcherTests(unittest.TestCase):
             with self.subTest(preset=preset):
                 page = Markup((self.output / "site-kit/presets" / preset / "site-kit/index.html").read_text())
                 links = [a for _, a in page.elements if "data-design-link" in a]
-                self.assertEqual(len(links), 9)
+                self.assertEqual(len(links), len(self.scenarios))
                 self.assertEqual([a["data-design-link"] for a in links if a.get("aria-current") == "page"], [preset])
                 studio = next(a for _, a in page.elements if "data-preset-studio" in a)
                 catalog = json.loads(studio["data-presets"])

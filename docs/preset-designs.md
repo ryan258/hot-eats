@@ -13,6 +13,7 @@ Every preset selects a complete example dataset, enabled modules, homepage secti
 | `bakery` | From the oven | Honey tones, soft rounded cards, italic hero, dashed menu borders, poster specials, split catering packages, day-tile hours, and open FAQ cards. |
 | `food-truck` | Next stop | Bold signboard type, orange-and-cream surfaces, strong borders, schedule before menu, agenda event rows, compact service information, and a contact strip. |
 | `multi-location` | Around the neighborhood | Sage and teal, clear sans-serif headings, location details before the menu, split visit panels, compact menu rows, and horizontal service panels. |
+| `taco-lesters` | Salsa bar | Parody taco shop. Masa paper, salsa-red sans-serif headings, a papel-picado header stripe, a round tortilla illustration, dashed and dotted panel borders, board menu sections, and horizontal dishes. Its invented crew (Lester, Marisol, and Tilly the tortilla press), fictional reviews, and optional closed character notes are labelled as parody. See [Taco Lester’s](taco-lesters.md). |
 
 The six showcase components follow these compositions too: diner and food-truck use compact lists; café uses a flight board, horizontal team profile, split room panel, and arrival timeline; fine dining pairs split courses and room panels; fast casual and multi-location use menu boards and planning tiles; bar uses course cards and a flight board; bakery uses menu boards and stacked profile and room features. Kitchen-sink keeps the default layouts.
 
@@ -20,7 +21,7 @@ A layout is also selected for components belonging to disabled modules. Enabling
 
 ## Preview and compare
 
-Open `/site-kit/#presets` in the existing preview. Choose any of the nine design cards to open that design’s guide, with its palette and component layout defaults. Each selection has its own URL under `/site-kit/presets/<preset>/site-kit/`. Switching does not write to `site-profile.json`, change the client’s records, or restart the server.
+Open `/site-kit/#presets` in the existing preview. Choose any of the ten design cards to open that design’s guide, with its palette and component layout defaults. Each selection has its own URL under `/site-kit/presets/<preset>/site-kit/`. Switching does not write to `site-profile.json`, change the client’s records, or restart the server.
 
 - **Open full example** opens the selected restaurant. Navigation, menu filters, location details, record pages, and privacy stay within that preset’s preview.
 - **Compare two designs** adds a second independent preview. The page selector lists only pages enabled in both designs and falls back to Home when a previous page is unavailable.
@@ -29,7 +30,7 @@ Open `/site-kit/#presets` in the existing preview. Choose any of the nine design
 - **Screen width** sets both embedded pages to an actual 1280 px desktop viewport or 390 px phone viewport, scaled to fit. On narrow screens the comparison panels stack. The full-page links provide an unscaled view.
 - Scroll and follow links within either preview. **Open full page** follows that preview’s current page. Changing screen width preserves its position and inputs; **Reset previews** returns both to the selected page.
 - The comparison, page, and screen width are stored in the guide URL (`compare`, `page`, and `width`), so a link reopens that comparison. No browser storage is used. Choosing a new primary design retains these choices where available.
-- Without JavaScript, all nine design links and the full-example link still work. The interactive comparison controls stay hidden.
+- Without JavaScript, all ten design links and the full-example link still work. The interactive comparison controls stay hidden.
 
 The component gallery below uses the selected design’s choices. **Preset choice** marks the selected layout; **Reset view** restores those choices. Component controls are independent of the design comparison, and neither set of controls saves changes to the preset.
 

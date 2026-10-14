@@ -9,7 +9,7 @@ Hot Eats is a local-first, static Hugo restaurant website library and master. It
 ### Milestone 1: Core Engine & Data Model Consolidation
 - **Consolidated Schema Version 2**: Authoritative validation in `scripts/model.py` covering types, IDs, references, pricing strings, media containment, timezones, and paired timestamps with explicit UTC offsets.
 - **24 Selectable Modules**: Independent modules with dependency graph validation and registry definitions in `data/modules.json`.
-- **9 Preset Configurations**: Fully configured illustrative presets (`kitchen-sink`, `diner`, `cafe`, `fine-dining`, `fast-casual`, `bar`, `bakery`, `food-truck`, `multi-location`) with custom compositions and data scenarios.
+- **10 Preset Configurations**: Fully configured illustrative presets (`kitchen-sink`, `diner`, `cafe`, `fine-dining`, `fast-casual`, `bar`, `bakery`, `food-truck`, `multi-location`, `taco-lesters`) with custom compositions and data scenarios.
 - **Local Owner Tools**: `./he` entrypoint providing diff-before-save, per-change snapshots, menu CSV export/import, operational logs, and recipe scaling.
 - **Staged Sculpting Pipeline**: Copying stages and validates transformations before reserving clean destinations, rolling back partial failures, and isolating private state.
 

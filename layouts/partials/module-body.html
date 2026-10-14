@@ -1,5 +1,6 @@
 {{ $m := .definition }}
 {{ partial (printf "modules/%s.html" $m.kind) . }}
+{{ with index (dict "menu" "lester" "team" "marisol") $m.id }}{{ partial "parody-note.html" . }}{{ end }}
 {{ if and (in (slice "catering" "events") $m.id) (partial "feature-enabled.html" "planner") }}
   <div class="module-cta">
     <h2>Plan your gathering</h2><p>Prepare a brief to keep or share. Nothing is sent or reserved.</p>
