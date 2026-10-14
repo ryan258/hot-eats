@@ -227,3 +227,11 @@
   .sg-preset-switcher a { min-height: 64px; justify-content: center; }
   .sg-preset-switcher a strong { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
+
+/* Icon set specimen sheet. */
+.sg-icon-code { margin: 0 0 12px; padding: 14px 16px; overflow-x: auto; border: 1px solid var(--line); border-radius: 5px; background: var(--restaurant-surface, transparent); font-size: 14px; }
+.sg-icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin: 0 0 32px; padding: 0; list-style: none; }
+.sg-icon-card { display: grid; align-content: start; justify-items: start; gap: 4px; padding: 16px; border: 1px solid var(--line); border-radius: 5px; background: var(--restaurant-surface, transparent); min-width: 0; }
+.sg-icon-card code { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.sg-icon-glyph { display: inline-grid; place-items: center; width: 48px; height: 48px; margin-bottom: 6px; border-radius: 50%; background: var(--pink); color: var(--red); font-size: 28px; }
+.sg-icon-glyph .icon { vertical-align: 0; }

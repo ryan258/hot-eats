@@ -116,7 +116,13 @@ def build(root, output, preset=None, publication=False, example=False):
             if target.is_dir():
                 target /= "index.html"
             require(target.exists(), f"Broken local link: {link} in {path}")
-            if u.fragment:
+            if u.fragment and target.suffix == ".svg":
+                # Sprite references such as images/taco-icons.svg#tl-menu.
+                require(
+                    f'id="{unquote(u.fragment)}"' in target.read_text(encoding="utf-8"),
+                    f"Missing sprite symbol: {link}",
+                )
+            elif u.fragment:
                 require(
                     target in pages and unquote(u.fragment) in pages[target].ids,
                     f"Broken anchor: {link}",

@@ -1,0 +1,3 @@
+{{/* Decorative Taco Lester's icon. Pass dict "name" (an id from data/icons.json) and an optional "class". Always pair it with visible text; it is hidden from assistive technology. */}}
+{{ if not (where hugo.Data.icons "id" .name) }}{{ errorf "Unknown icon: %s" .name }}{{ end }}
+<svg class="icon{{ with .class }} {{ . }}{{ end }}" aria-hidden="true" focusable="false"><use href="{{ printf "images/taco-icons.svg#tl-%s" .name | relURL }}"></use></svg>

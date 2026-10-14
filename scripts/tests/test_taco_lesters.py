@@ -43,6 +43,22 @@ class TacoLestersData(unittest.TestCase):
             self.assertTrue(1 <= len(note["lines"]) <= 3, key)
 
 
+ICONS = json.loads((ROOT / "data/icons.json").read_text())
+
+
+class TacoLestersIcons(unittest.TestCase):
+    def test_sprite_symbols_match_the_catalogue(self):
+        sprite = (ROOT / "static/images/taco-icons.svg").read_text()
+        symbols = re.findall(r'<symbol id="tl-([a-z0-9-]+)" viewBox="0 0 24 24"', sprite)
+        self.assertEqual(symbols, [icon["id"] for icon in ICONS])
+        self.assertEqual(len(symbols), len(set(symbols)))
+        self.assertEqual({icon["group"] for icon in ICONS}, {"Site functions", "Taco world"})
+        for icon in ICONS:
+            self.assertTrue(icon["label"] and icon["use"], icon["id"])
+        self.assertEqual(sprite.count("<title>"), len(ICONS))
+        self.assertNotRegex(sprite, r'(?i)(fill|stroke)="#')
+
+
 class TacoLestersRendering(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -72,6 +88,14 @@ class TacoLestersRendering(unittest.TestCase):
         for route in ["faq", "contact", "planner", "ordering"]:
             with self.subTest(route=route):
                 self.assertNotIn("parody-note", self.read(route).replace("parody-notice", ""))
+
+    def test_icon_sheet_is_in_the_taco_guide_only_and_icons_are_decorative(self):
+        guide = (self.output / "site-kit/index.html").read_text()
+        self.assertEqual(guide.count('class="sg-icon-card"'), len(ICONS))
+        self.assertEqual(guide.count('<svg class="icon" aria-hidden="true" focusable="false">'), len(ICONS))
+        diner = (self.output / "site-kit/presets/diner/site-kit/index.html").read_text()
+        self.assertNotIn('id="icons"', diner)
+        self.assertNotIn('sg-icon-card', diner)
 
     def test_other_presets_do_not_show_the_notes(self):
         page = (self.output / "site-kit/presets/diner/index.html").read_text()

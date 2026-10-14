@@ -21,6 +21,8 @@ Taco Lester's is the tenth Hot Eats preset. It is a parody taco shop, in the sam
 | `layouts/partials/parody-note.html` | Renders a note as a closed native disclosure, only for this preset |
 | `assets/css/presets.css` | Look: masa paper, salsa red, papel-picado header stripe, tortilla-round art |
 | `static/images/taco.svg`, `counter.svg`, `order-pad.svg`, `tortilla-press.svg` | Project-authored illustrations |
+| `static/images/taco-icons.svg`, `data/icons.json` | The 36-icon sprite and its catalogue |
+| `layouts/partials/icon.html`, `layouts/partials/icon-set.html` | Draw one icon; the review-only specimen sheet in the style guide |
 | `scripts/tests/test_taco_lesters.py` | Disclosure, labelling, and note-placement checks |
 
 ## Rules that keep the joke safe
@@ -40,3 +42,18 @@ Taco Lester's is the tenth Hot Eats preset. It is a parody taco shop, in the sam
 ```
 
 The second command shows the diner design. The parody notice still appears, because the profile is still Taco Lester's. The character notes do not appear, because they follow the preset.
+
+## Icon set
+
+There are 36 icons on a 24 by 24 grid with a 2 px round line. Twenty cover site functions (menu, order, visit, hours, phone, catering, events, questions, contact, access, gallery, reviews, team, search, print, specials, story, plan, info, go). Sixteen are taco-world icons (taco, salsa jar, lime, chili, tortilla press, order pad, five o'clock, inspect, corn cup, horchata, chips, beans, avocado, cilantro, flat-top, tortilla).
+
+```gotemplate
+{{ partial "icon.html" (dict "name" "taco") }}
+```
+
+- Icons use `currentColor`, so they follow the text color. Size follows the text size.
+- They are hidden from assistive technology. Keep the visible text label next to every icon.
+- The sprite loads over HTTP, so `./he preview` and built sites work. Opening a built file directly from disk will not show them.
+- See the specimen sheet at `/site-kit/#icons` when the Taco Lester's preset is active.
+- `./he test` checks that every icon reference points at a real sprite symbol.
+- Icons are not placed on guest pages yet. The preview sheet is the only place they appear.

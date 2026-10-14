@@ -25,6 +25,7 @@
         <p class="sg-nav-label">On the table</p>
         <a href="#presets">↗ <span>Restaurant designs</span></a>
         <a href="#foundations">01 <span>Foundations</span></a>
+        {{ if eq $config.preset "taco-lesters" }}<a href="#icons">01b <span>Icon set</span></a>{{ end }}
         <a href="#library">02 <span>Components</span></a>
         <div class="sg-component-nav">{{ range $library.components }}<a href="#component-{{ .id }}">{{ .name }}</a>{{ end }}</div>
         <a href="#modules">03 <span>Page modules</span></a>
@@ -49,6 +50,7 @@
         </div>
         <div class="sg-spacing"><span class="sg-label">Spacing rhythm</span>{{ range slice 8 16 24 32 48 }}<span><i class="sg-space-{{ . }}" aria-hidden="true"></i>{{ . }} px</span>{{ end }}<span><code>12 px</code> card radius</span></div>
       </section>
+      {{ if eq $config.preset "taco-lesters" }}{{ partial "icon-set.html" . }}{{ end }}
       <section class="sg-section" id="library" aria-labelledby="library-title">
         <p class="sg-eyebrow">02 / The component library</p>
         <h2 id="library-title">A few good building blocks.</h2>

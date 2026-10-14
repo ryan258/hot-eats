@@ -1,0 +1,218 @@
+[
+  {
+    "id": "menu",
+    "label": "Menu",
+    "group": "Site functions",
+    "use": "Menu page and quick link"
+  },
+  {
+    "id": "order",
+    "label": "Order",
+    "group": "Site functions",
+    "use": "Pickup or delivery handoff"
+  },
+  {
+    "id": "visit",
+    "label": "Visit",
+    "group": "Site functions",
+    "use": "Hours and locations"
+  },
+  {
+    "id": "hours",
+    "label": "Hours",
+    "group": "Site functions",
+    "use": "Schedules and open status"
+  },
+  {
+    "id": "phone",
+    "label": "Phone",
+    "group": "Site functions",
+    "use": "Click-to-call links"
+  },
+  {
+    "id": "catering",
+    "label": "Catering",
+    "group": "Site functions",
+    "use": "Group orders"
+  },
+  {
+    "id": "events",
+    "label": "Events",
+    "group": "Site functions",
+    "use": "Private events and calendars"
+  },
+  {
+    "id": "faq",
+    "label": "Questions",
+    "group": "Site functions",
+    "use": "FAQ page"
+  },
+  {
+    "id": "contact",
+    "label": "Contact",
+    "group": "Site functions",
+    "use": "Contact page and email"
+  },
+  {
+    "id": "access",
+    "label": "Access",
+    "group": "Site functions",
+    "use": "Access information"
+  },
+  {
+    "id": "gallery",
+    "label": "Gallery",
+    "group": "Site functions",
+    "use": "Photos and illustrations"
+  },
+  {
+    "id": "reviews",
+    "label": "Reviews",
+    "group": "Site functions",
+    "use": "Guest reviews"
+  },
+  {
+    "id": "team",
+    "label": "Team",
+    "group": "Site functions",
+    "use": "Crew and team page"
+  },
+  {
+    "id": "search",
+    "label": "Search",
+    "group": "Site functions",
+    "use": "Search page"
+  },
+  {
+    "id": "print",
+    "label": "Print",
+    "group": "Site functions",
+    "use": "Print the menu"
+  },
+  {
+    "id": "specials",
+    "label": "Specials",
+    "group": "Site functions",
+    "use": "Offers and specials"
+  },
+  {
+    "id": "story",
+    "label": "Story",
+    "group": "Site functions",
+    "use": "Our story"
+  },
+  {
+    "id": "planner",
+    "label": "Plan",
+    "group": "Site functions",
+    "use": "Gathering planner"
+  },
+  {
+    "id": "info",
+    "label": "Info",
+    "group": "Site functions",
+    "use": "Notices and notes"
+  },
+  {
+    "id": "arrow",
+    "label": "Go",
+    "group": "Site functions",
+    "use": "Links and next steps"
+  },
+  {
+    "id": "taco",
+    "label": "Taco",
+    "group": "Taco world",
+    "use": "Brand mark and menu"
+  },
+  {
+    "id": "salsa-jar",
+    "label": "Salsa jar",
+    "group": "Taco world",
+    "use": "Sides and sauces"
+  },
+  {
+    "id": "lime",
+    "label": "Lime",
+    "group": "Taco world",
+    "use": "Limeade and garnish"
+  },
+  {
+    "id": "chili",
+    "label": "Chili",
+    "group": "Taco world",
+    "use": "Heat level"
+  },
+  {
+    "id": "tortilla-press",
+    "label": "Tortilla press",
+    "group": "Taco world",
+    "use": "Tilly"
+  },
+  {
+    "id": "order-pad",
+    "label": "Order pad",
+    "group": "Taco world",
+    "use": "Marisol"
+  },
+  {
+    "id": "clock-five",
+    "label": "Five o’clock",
+    "group": "Taco world",
+    "use": "Marisol goes home"
+  },
+  {
+    "id": "inspect",
+    "label": "Inspect",
+    "group": "Taco world",
+    "use": "Lester at work"
+  },
+  {
+    "id": "corn-cup",
+    "label": "Corn cup",
+    "group": "Taco world",
+    "use": "Sides"
+  },
+  {
+    "id": "horchata",
+    "label": "Horchata",
+    "group": "Taco world",
+    "use": "Drinks"
+  },
+  {
+    "id": "chips",
+    "label": "Chips",
+    "group": "Taco world",
+    "use": "Chips and salsa"
+  },
+  {
+    "id": "beans",
+    "label": "Beans",
+    "group": "Taco world",
+    "use": "Patient beans"
+  },
+  {
+    "id": "avocado",
+    "label": "Avocado",
+    "group": "Taco world",
+    "use": "Toppings"
+  },
+  {
+    "id": "cilantro",
+    "label": "Cilantro",
+    "group": "Taco world",
+    "use": "Fresh herbs"
+  },
+  {
+    "id": "flame",
+    "label": "Flat-top",
+    "group": "Taco world",
+    "use": "Grill and heat"
+  },
+  {
+    "id": "tortilla",
+    "label": "Tortilla",
+    "group": "Taco world",
+    "use": "Fresh tortillas"
+  }
+]

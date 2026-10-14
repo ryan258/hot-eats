@@ -1,0 +1,23 @@
+{{/* Review-only specimen sheet for the Taco Lester's icon set (data/icons.json, static/images/taco-icons.svg). */}}
+<section class="sg-section" id="icons" aria-labelledby="icons-title">
+  <p class="sg-eyebrow">01b / Icon set</p>
+  <h2 id="icons-title">{{ len hugo.Data.icons }} icons, one line weight.</h2>
+  <p class="sg-description">A 24 by 24 grid, a 2 px round line, and one color that follows the surrounding text. Twenty icons cover site functions. The rest are taco-world icons for the crew and the menu. They are decorative and hidden from assistive technology, so always keep the visible label.</p>
+  <h3>Use an icon</h3>
+  <pre class="sg-icon-code"><code>{{ `{{ partial "icon.html" (dict "name" "taco") }}` }}</code></pre>
+  <p class="sg-small">The sprite is <code>static/images/taco-icons.svg</code>. Each symbol is <code>#tl-&lt;id&gt;</code>. Sizes follow the text size.</p>
+  {{ range slice "Site functions" "Taco world" }}
+    {{ $group := . }}
+    <h3>{{ $group }}</h3>
+    <ul class="sg-icon-grid">
+      {{ range where hugo.Data.icons "group" $group }}
+        <li class="sg-icon-card">
+          <span class="sg-icon-glyph">{{ partial "icon.html" (dict "name" .id) }}</span>
+          <strong>{{ .label }}</strong>
+          <code>{{ .id }}</code>
+          <span class="sg-small">{{ .use }}</span>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</section>

@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- Taco Lester’s icon set: 24 × 24 grid, 2 px round line, one color via currentColor. Reference as #tl-<id>. -->
+  <symbol id="tl-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Menu</title>
+    <path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18"/><path d="M17 21V3c-2.5 1.5-3.5 5-3.5 8H17"/>
+  </symbol>
+  <symbol id="tl-order" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Order</title>
+    <path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+  </symbol>
+  <symbol id="tl-visit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Visit</title>
+    <path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z"/><circle cx="12" cy="10" r="2.2"/>
+  </symbol>
+  <symbol id="tl-hours" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Hours</title>
+    <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+  </symbol>
+  <symbol id="tl-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Phone</title>
+    <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z"/>
+  </symbol>
+  <symbol id="tl-catering" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Catering</title>
+    <path d="M5 17a7 7 0 0 1 14 0"/><path d="M12 10V7"/><circle cx="12" cy="6" r="1"/><path d="M3 17h18M4 20.5h16"/>
+  </symbol>
+  <symbol id="tl-events" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Events</title>
+    <rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/><path d="M9 14h2M13 14h2M9 17h2"/>
+  </symbol>
+  <symbol id="tl-faq" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Questions</title>
+    <path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="M10 9.5a2 2 0 1 1 3 1.7c-.6.4-1 .8-1 1.5"/><path d="M12 15h.01"/>
+  </symbol>
+  <symbol id="tl-contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Contact</title>
+    <rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>
+  </symbol>
+  <symbol id="tl-access" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Access</title>
+    <circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.5" r="1.2"/><path d="m7.5 10.5 4.5.5 4.5-.5M12 11v3.5m0 0-2.5 3.5m2.5-3.5 2.5 3.5"/>
+  </symbol>
+  <symbol id="tl-gallery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Gallery</title>
+    <rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="m4 18 5-5 4 4 3-3 4 4"/>
+  </symbol>
+  <symbol id="tl-reviews" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Reviews</title>
+    <path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/>
+  </symbol>
+  <symbol id="tl-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Team</title>
+    <circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2A5 5 0 0 1 21 19"/>
+  </symbol>
+  <symbol id="tl-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Search</title>
+    <circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/>
+  </symbol>
+  <symbol id="tl-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Print</title>
+    <path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/>
+  </symbol>
+  <symbol id="tl-specials" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Specials</title>
+    <path d="M3 12V4h8l10 10-8 8L3 12Z"/><circle cx="7.5" cy="8.5" r="1.3"/>
+  </symbol>
+  <symbol id="tl-story" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Story</title>
+    <path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2Z"/><path d="M12 6v14"/>
+  </symbol>
+  <symbol id="tl-planner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Plan</title>
+    <rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9z"/><path d="m9 14 2 2 4-4"/>
+  </symbol>
+  <symbol id="tl-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Info</title>
+    <circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><path d="M12 7.5h.01"/>
+  </symbol>
+  <symbol id="tl-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Go</title>
+    <path d="M4 12h16m-6-6 6 6-6 6"/>
+  </symbol>
+  <symbol id="tl-taco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Taco</title>
+    <path d="M3 19a9 9 0 0 1 18 0Z"/><path d="M7 19a5 5 0 0 1 10 0"/><path d="M10.5 16.5h.01M13.5 16.5h.01" stroke-width="3"/>
+  </symbol>
+  <symbol id="tl-salsa-jar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Salsa jar</title>
+    <path d="M8 3h8v3H8z"/><path d="M6 6h12v4l1 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7l1-2V6Z"/><path d="M5 13h14M9 17h6"/>
+  </symbol>
+  <symbol id="tl-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Lime</title>
+    <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><path d="M12 6.5v11M6.5 12h11M8.1 8.1l7.8 7.8M15.9 8.1l-7.8 7.8"/>
+  </symbol>
+  <symbol id="tl-chili" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Chili</title>
+    <path d="M5 20c7 0 12-4 14-9 .8-2.4 0-4.8-2-6-2.2 1.5-4 3.2-5.2 5.8C10.8 15 8.4 18 5 20Z"/><path d="M17 5c.2-1.4 1-2.4 2.5-3"/>
+  </symbol>
+  <symbol id="tl-tortilla-press" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Tortilla press</title>
+    <rect x="3" y="17" width="16" height="3" rx="1"/><rect x="4" y="13" width="14" height="3" rx="1"/><path d="m18 14.5 3-9.5"/><circle cx="21" cy="4.5" r="1.5"/>
+  </symbol>
+  <symbol id="tl-order-pad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Order pad</title>
+    <rect x="5" y="5" width="14" height="16" rx="2"/><path d="M8 3v4M12 3v4M16 3v4"/><path d="M9 12h6M9 16h4"/>
+  </symbol>
+  <symbol id="tl-clock-five" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Five o’clock</title>
+    <circle cx="12" cy="12" r="9"/><path d="M12 12V6.5M12 12l2.5 4.3"/><path d="M12 3.5V5M20.5 12H19M12 20.5V19M3.5 12H5"/>
+  </symbol>
+  <symbol id="tl-inspect" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Inspect</title>
+    <circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/><path d="M7.5 9.5h.01M10.5 7.5h.01M11.5 11.5h.01" stroke-width="3"/>
+  </symbol>
+  <symbol id="tl-corn-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Corn cup</title>
+    <path d="M6 10h12l-1.5 10h-9L6 10Z"/><path d="M5 10h14"/><path d="M8 7.5a2 2 0 0 1 4 0M12 7.5a2 2 0 0 1 4 0"/><path d="M10 14h.01M14 14h.01M12 17h.01" stroke-width="3"/>
+  </symbol>
+  <symbol id="tl-horchata" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Horchata</title>
+    <path d="M7 7h10l-1.2 13H8.2L7 7Z"/><path d="m13 7 2.5-4.5"/><path d="M8 12h8"/>
+  </symbol>
+  <symbol id="tl-chips" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Chips</title>
+    <path d="M4 18 12 4l8 14H4Z"/><path d="M9 14h.01M13 15h.01M12 10h.01" stroke-width="3"/>
+  </symbol>
+  <symbol id="tl-beans" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Beans</title>
+    <path d="M3 11h18a9 9 0 0 1-18 0Z"/><ellipse cx="9" cy="7.5" rx="1.6" ry="1.1" transform="rotate(-20 9 7.5)"/><ellipse cx="14" cy="7" rx="1.6" ry="1.1" transform="rotate(20 14 7)"/>
+  </symbol>
+  <symbol id="tl-avocado" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Avocado</title>
+    <path d="M12 3c3 0 5 3.5 5.5 7 .6 4-1 11-5.5 11S6 14 6.5 10C7 6.5 9 3 12 3Z"/><circle cx="12" cy="14" r="3"/>
+  </symbol>
+  <symbol id="tl-cilantro" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Cilantro</title>
+    <path d="M12 21v-8"/><path d="M12 13c-4 0-6-2-6-5 2 0 3.5.5 4.5 1.5C10.5 7 11 5 12 4c1 1 1.5 3 1.5 5.5C14.5 8.5 16 8 18 8c0 3-2 5-6 5Z"/>
+  </symbol>
+  <symbol id="tl-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Flat-top</title>
+    <path d="M12 21c-4 0-6.5-2.5-6.5-6 0-3 2-4.5 3-7 1 1 2 2 2.5 3 1-2 1-4.5.5-6.5C16 5 18.5 9.5 18.5 15c0 3.5-2.5 6-6.5 6Z"/><path d="M12 21c-1.8 0-3-1-3-2.8 0-1.5 1-2.2 1.5-3.2 1 .8 1.5 1.5 1.5 2.5.5-.5 1-1.2 1-2 1 1 2 2 2 2.7 0 1.8-1.2 2.8-3 2.8Z"/>
+  </symbol>
+  <symbol id="tl-tortilla" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <title>Tortilla</title>
+    <circle cx="12" cy="12" r="9"/><path d="M8.5 9h.01M14 8h.01M16 13.5h.01M10 15.5h.01M12.5 12h.01" stroke-width="3"/>
+  </symbol>
+</svg>
