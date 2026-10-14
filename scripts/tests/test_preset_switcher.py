@@ -22,7 +22,7 @@ class PresetSwitcherTests(unittest.TestCase):
         cls.addClassCleanup(cls.tmp.cleanup)
         cls.source = Path(cls.tmp.name) / "source"
         cls.source.mkdir()
-        for folder in ["assets", "content", "data", "layouts", "presets", "profiles", "config", "static"]:
+        for folder in ["assets", "content", "data", "layouts", "presets", "profiles", "static"]:
             shutil.copytree(ROOT / folder, cls.source / folder)
         for name in ["hugo.toml", "site-profile.json"]:
             shutil.copy2(ROOT / name, cls.source / name)

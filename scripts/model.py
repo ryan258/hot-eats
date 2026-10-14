@@ -581,9 +581,8 @@ def validate(data, modules, config, root=None, publication=False):
                 or row.get("start")
                 or row.get("end")
             ):
-                if instant(row.get("end"), at + ".end") <= instant(
-                    row.get("start"), at + ".start"
-                ):
+                start = instant(row.get("start"), at + ".start")
+                if instant(row.get("end"), at + ".end") <= start:
                     fail(at, "end must follow start")
                 try:
                     ZoneInfo(row.get("timezone"))
