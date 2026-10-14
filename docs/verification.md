@@ -1,5 +1,55 @@
 # Verification evidence and owner handoff
 
+## October 13 remaining-page consistency pass
+
+The remaining restaurant pages were reviewed across all nine presets: service handoffs (ordering/reservations/gift cards/rewards/newsletters), catering, calendars/truck schedules, quotations, FAQs, contact, hours/location listings, editorial records (story/sourcing/news/careers/press), galleries, search, privacy, and record details. A route manifest derived from the current preset feature switches and illustrative data contained 258 guest pages: kitchen-sink 42, diner 29, café 26, fine dining 32, fast casual 24, bar 25, bakery 27, food truck 23, and multi-location 30. Guides and component-showcase routes were excluded from that count.
+
+The pass changed preset styles and the comparison catalog, plus documentation. It added shared heading/panel tokens, consistent module/detail spacing, readable editorial cards, preset styling for the remaining components, wrapped metadata, better single-record composition, whole-image gallery frames, larger form labels, a single-column planner before preparation, responsive prepared-brief columns, and bounded expanded phone navigation. Search and Privacy were added to the comparison selector. Restaurant data, feature switches, selected component layouts, availability/expiry guards, and JavaScript action logic were preserved.
+
+Final browser probes covered all 258 guest pages at 1280, 390, and 320 px (774 page/width combinations), with no horizontal overflow, clipped card/panel containers, or missing primary headings. Visual review covered representative remaining page families across the enabled presets. Additional workflow probes covered brief preparation, empty-search/recovery, and expanded navigation across nine presets and three widths (81 checks), with no failures or phone menu overlap with fixed quick actions. The café planner changed from one 760 px column to two 576 px columns at 1280 px after preparation, retained the supplied local test notes, and reported that nothing was sent or saved. A native keyboard check opened More with Enter and closed it with Escape, retaining focus on its summary. No email, booking, download, or clipboard action was invoked.
+
+Search and Privacy comparison frames rendered the correct scoped pages at 390 px. All 108 guide layout/state examples fit the guide's 360 px previews. All 29 targeted component, guest-integration, and preset checks passed; `git diff --check` passed. No console errors/warnings appeared in the checked planner/comparison journeys. The existing synthetic publication-isolation checks passed with the expanded comparison catalog.
+
+GitNexus file impacts for both stylesheets and the preset-switcher template returned `UNKNOWN`, with no resolved callers/processes. Direct inspection confirmed the shared stylesheet bundle and the guide's direct call to the switcher; absent graph edges were not treated as a safety result. The installed CLI was used without installing or reanalyzing.
+
+These are local illustrative-page and automated-browser results. The full suite, real devices, human assistive-technology use, print, factual/media review, real providers, deployment, and release acceptance remain unconfirmed. Unrelated local changes were preserved; no staging, commit, push, deployment, or publication was performed.
+
+## October 13 desktop and phone component refinement
+
+The integrated pages were reviewed across all nine presets. Before changes, browser measurements covered 45 affected pages at 1280 and 390 px (90 page/width combinations), with visual comparisons of menu sections, tasting menus, flights, team profiles, rooms, and visit guidance. The review found compact menu sections being overridden by dish-grid composition, excess nested menu padding, serif detail headings in sans-serif designs, compact thumbnail backgrounds stretching with biographies, and single profile/room records leaving an empty grid column.
+
+Refinements were limited to the two component/preset stylesheets and documentation. They correct category grouping, reduce nested spacing, keep dish permalinks at least 44 px high, bound desktop reading widths, refine mobile headings and image heights, prevent thumbnail stretch, improve single-record composition, wrap metadata more closely, and give the six components preset-specific type, borders, and surfaces. No record text, data fields, feature switches, layout selections, or action logic changed in this pass.
+
+For the first three-dish category in each illustrative menu at 390 px, the rendered heights changed as follows (pixels, including the category heading and dish permalinks):
+
+| Preset | Before | After |
+| --- | ---: | ---: |
+| Bakery | 861 | 722 |
+| Bar | 836 | 653 |
+| Café | 783 | 721 |
+| Diner | 912 | 653 |
+| Fast casual | 782 | 720 |
+| Fine dining | 771 | 653 |
+| Food truck | 979 | 653 |
+| Kitchen-sink | 1007 | 793 |
+| Multi-location | 959 | 712 |
+
+Final browser probes covered the 45 affected component pages plus all nine homes at 1280, 390, and 320 px: 162 page/width combinations with no horizontal overflow. New component containers on the 135 component-page combinations showed no vertical clipping. The 36 new guide layout/state examples also fit their 360 px previews. Visual inspection covered the updated menu, tasting, flight, profile, room, and arrival treatments; the browser console reported no errors or warnings in the review session. Compact team thumbnail panels measured 88 px high instead of stretching to the biography. All 29 targeted component, guest-integration, and preset tests passed, including synthetic publication isolation; `git diff --check` passed.
+
+GitNexus file impacts for both stylesheets returned `UNKNOWN`, no resolved callers/processes, and an explicit warning that absent edges do not prove safety. Direct inspection confirmed both stylesheets are bundled by the shared base template for all guest and guide pages. The generated runner attempted an unavailable npm lookup; impacts succeeded through the already-installed GitNexus CLI, without reanalysis or installation.
+
+These are local illustrative-page and automated-browser results, not real-device, human assistive-technology, print, factual/media, provider, deployment, or release acceptance. The full suite was not run. Existing unrelated changes were preserved; no staging, commit, push, deployment, or publication was performed.
+
+## October 13 guest-page component integration
+
+The six additions now render from restaurant data on enabled guest pages across all nine presets. Menu-section wraps the existing dish-card markup; typed Specials records use tasting-menu/beverage-flight; team and events use team-profile/dining-space; accessibility and location detail pages derive visit-steps from the location's access facts. Preset layout selections and feature switches remain unchanged. The nine illustrative datasets gained clearly labeled sample component details; the client restaurant data and saved selection were preserved.
+
+All 29 focused checks passed: 10 guest integration/data-contract tests, 13 preset-layout/switcher tests, and six component-library tests. New checks cover optional-field compatibility, component/collection allowlists, blocked identity/state/provider overrides, serving sizes and structured selections, local-image validation, configured guest layouts across all nine presets, record detail rendering, search fields, all access facts including extra keys, owner-data isolation, and provider/calendar guards for available, paused, expired, cancelled, sold-out, unavailable, and demo records. The existing synthetic publication test also passed with the expanded source.
+
+Browser checks covered 45 enabled Menu, Specials, Team, Private events, Accessibility, and first-location detail pages across the nine presets at 320 px, with the expected components present and no horizontal overflow. Kitchen-sink and fast-casual menu comparisons at 390 px retained search, empty-result handling, and dish-permalink recovery. A fine-dining tasting menu was visually inspected in its split layout at 1280 px. Multi-location arrival steps followed location selection and updated URL context. No console errors or warnings appeared in the checked comparison and access journeys.
+
+These are targeted local and automated-browser results. The full suite, real devices, human assistive-technology use, print acceptance, factual/media review, and real provider outcomes remain outside this verification. No external provider was called, and no Git, publication, or deployment action was performed.
+
 ## October 13 component library expansion
 
 Six restaurant components were added: menu sections, tasting menus, beverage flights, team profiles, private dining spaces, and visit planning steps. Each has three layouts and populated/empty examples. The guide now renders 18 components, 54 layouts, and 108 layout/state combinations. All nine presets select layouts for the new components and expose a Component showcase in the design comparison page selector.

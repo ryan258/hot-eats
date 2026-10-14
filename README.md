@@ -19,7 +19,7 @@ Open http://127.0.0.1:1417/ and `/site-kit/`. Choose another example:
 
 Presets: `kitchen-sink`, `diner`, `cafe`, `fine-dining`, `fast-casual`, `bar`, `bakery`, `food-truck`, `multi-location`. They select modules, a complete illustrative dataset, homepage composition, and component layouts. Each has its own typography, color, border, and card treatment; see [the preset designs](docs/preset-designs.md). Examples are maintained in `data/scenarios.json`; the client's editable records live in `data/restaurant.json`.
 
-The [component living style guide](http://127.0.0.1:1417/site-kit/#presets) includes a nine-design switcher, side-by-side previews of real example pages at desktop or phone widths, and 54 rendered layouts with individual selectors and comparison controls, alternate states, template calls and sample input data, design tokens, category/search tools, palette previews, and a narrow preview. Choose Component showcase in the comparison page selector to see menu sections, tasting menus, beverage flights, team profiles, private dining spaces, and visit steps in each design. Its layout selectors start with the active preset’s choices. See [component integration](docs/component-library.md). The guide and its preset preview routes are excluded from publication builds.
+The [component living style guide](http://127.0.0.1:1417/site-kit/#presets) includes a nine-design switcher, side-by-side previews of real example pages at desktop or phone widths, and 54 rendered layouts with individual selectors and comparison controls, alternate states, template calls and sample input data, design tokens, category/search tools, palette previews, and a narrow preview. Choose Component showcase in the comparison page selector to see menu sections, tasting menus, beverage flights, team profiles, private dining spaces, and visit steps in each design. The six additions also render on enabled guest pages using validated restaurant records and the selected preset’s layouts. Its layout selectors start with the active preset’s choices. See [component integration](docs/component-library.md). The guide and its preset preview routes are excluded from publication builds.
 
 ## Everyday owner work
 
@@ -46,7 +46,7 @@ Use the wrapper to select profile, preset, and dataset consistently. Plain Hugo 
 
 ## Implemented local capabilities
 
-This revision is awaiting owner-run verification; see the [implementation status and enhancement register](docs/remediation-status.md).
+This revision is awaiting owner-run verification; see the [project roadmap](roadmap.md) and [enhancement register](docs/remediation-status.md).
 
 - Menu search, category/service/location filters, stable dish links, explicit sold-out states, and full/filtered printing.
 - Location detail pages, split schedules, date exceptions, access facts, click-to-call, and approved-schedule current-status display.

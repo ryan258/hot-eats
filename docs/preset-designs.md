@@ -25,6 +25,7 @@ Open `/site-kit/#presets` in the existing preview. Choose any of the nine design
 - **Open full example** opens the selected restaurant. Navigation, menu filters, location details, record pages, and privacy stay within that preset’s preview.
 - **Compare two designs** adds a second independent preview. The page selector lists only pages enabled in both designs and falls back to Home when a previous page is unavailable.
 - **Component showcase** in the page selector opens six illustrative restaurant components using each preset’s configured layouts. It is available in every design, with a full-page link and no guide toolbar inside the preview. The component gallery below still provides all three layouts and alternate states.
+- **Search** and **Privacy** are also available in the page selector. Search appears when enabled in the selected designs; Privacy is available in every preset.
 - **Screen width** sets both embedded pages to an actual 1280 px desktop viewport or 390 px phone viewport, scaled to fit. On narrow screens the comparison panels stack. The full-page links provide an unscaled view.
 - Scroll and follow links within either preview. **Open full page** follows that preview’s current page. Changing screen width preserves its position and inputs; **Reset previews** returns both to the selected page.
 - The comparison, page, and screen width are stored in the guide URL (`compare`, `page`, and `width`), so a link reopens that comparison. No browser storage is used. Choosing a new primary design retains these choices where available.
@@ -64,9 +65,31 @@ Templates map validated restaurant records into the presentation components:
 - Provider handoffs check both the action and its service before showing a destination, and retain fallback contacts and terms.
 - Location cards retain address, directions, phone, access facts, and detail links. The hours wrapper retains reviewed-schedule status, timezone, split intervals, and date exceptions.
 - Specials, catering/private events, calendars/truck stops, and reviews use their corresponding presentation partials. Record metadata, attachments, expiry checks, provider links, and calendar downloads remain in the shared record wrapper.
+- Menu categories additionally use the menu-section layout, independently of the individual dish-card layout. Typed Specials records select tasting-menu or beverage-flight from validated `presentation` fields; the shared record wrapper retains dates, state, location context, attachments, review metadata, and provider/calendar guards.
+- Team records use team-profile; private-event records use dining-space, with capacity/access facts and terms retained. Access information and location detail pages use visit-steps derived from actual location access records, including extra access fields. Optional fields are described in [the data contract](data-model.md#restaurant-component-details). Existing feature switches continue to decide which modules each preset exposes.
 - FAQs retain location context in both disclosure and open-card layouts. Contact panels keep actual contact details and response expectations.
 
 No component choice changes the publication gates or connects a provider. The living guide remains absent from publication output.
+
+## Component fit on desktop and phones
+
+The six additions inherit each preset's composition as well as its palette. Diner uses double rules and compact rows; café uses open panels and quiet dividers; fine dining uses restrained widths, italic feature headings, and neutral illustration panels. Fast casual uses bold sans-serif course/flight details and rounded tiles. Bar uses plum tasting boards; bakery uses soft cards, italic headings, and dashed details. Food truck uses square signboard panels and sans-serif detail type. Multi-location uses directory typography and compact facts; kitchen-sink retains the reference card treatment.
+
+The selected menu-section layout controls category grouping independently of the dish-card layout. Board sections arrange dishes across the available width, while compact sections stay in a single list even when individual dishes use a horizontal layout. Phone spacing is reduced around nested cards without changing content. Dish permalinks have a minimum 44 px target. Course/flight descriptions and supporting notes use bounded reading widths on desktop.
+
+Single profile and room records fill their component grid rather than leaving a second empty column. Compact thumbnails align with the start of the copy instead of stretching with its height; larger illustration panels reduce to 170 px image height on narrow screens. Record status, dates, timezone, venue, review information, attachments, and actions remain visible, with metadata wrapping into a more compact arrangement.
+
+The shared detail-type tokens are `--restaurant-detail-font` and `--restaurant-detail-weight` in `components.css`; preset overrides live in `presets.css`. These styles apply in the guide and guest pages. Layout values, enabled modules, record data, and action guards are unchanged by the fit refinements.
+
+## Consistency across the remaining pages
+
+Service handoffs (reservations, ordering, gift cards, rewards, and newsletters), catering packages, calendars/truck schedules, quotations, FAQs, contact panels, hours/location listings, generic editorial records, galleries, search, privacy, and record details use the same guest-page spacing and preset treatments. The shared heading tokens are `--restaurant-heading-font` and `--restaurant-heading-weight`; `--restaurant-panel-rule` supplies the preset's top border. Diner uses bold serif headings and double rules, café uses open dividers, fine dining uses italic headings and restrained panels, fast casual uses bold rounded surfaces, bar uses plum rules, bakery uses dashed soft cards, food truck uses square signboard borders, and multi-location uses directory typography. Kitchen-sink remains the neutral reference.
+
+Generic editorial records use readable body text and bounded widths. Single records and single gallery images no longer leave a reserved second or third grid column. Gallery images use `object-fit: contain`, so captions/credits and the whole image stay together. Metadata remains visible and wraps with consistent spacing. Shared module headings, detail/privacy headings, section padding, example disclosures, policies, and gathering calls to action use a common rhythm on desktop and phones.
+
+The planner uses a bounded single column before a brief is prepared, then two columns on wider screens and a stack below 850 px. Form labels are 15 px and fields 16 px, with the active preset's surfaces and borders. The prepared brief remains editable; its save/download/copy/email behavior is unchanged. Navigation links and footer links have comfortable targets, and the expanded phone menu is height-bounded and scrollable above the fixed quick actions. Search and FAQ controls retain their existing local/native behavior.
+
+Print output normalizes preset screen surfaces across all designs to clean black text on white paper with a half-inch margin. During print, disclosure accordions expand automatically, editable textarea fields convert to full inline text, and an active scope note marks whether the full menu or filtered selection was printed. Interactive UI controls, search boxes, and action buttons are suppressed while preserving dish cards, headings, and page flow without awkward page splits.
 
 ## Focused verification
 

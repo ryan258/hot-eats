@@ -30,4 +30,37 @@ Use facts for package sizes, prices, minimums, service area, lead times, capacit
 
 Images may live under `assets/` (responsive processing when supported) or `static/` (served directly). SVG resources are not raster-resized. Use accurate alt text and image dimensions; the default fallback size is not evidence of a real image's aspect ratio.
 
+## Restaurant component details
+
+Version 2 accepts an optional `presentation` object on the following collection records. Old records remain valid without it. The renderer always takes identity, title, description, location scope, availability, dates, facts, attachments, metadata, and provider URL from the parent record. A presentation object cannot override those fields or supply its own action link.
+
+| Collection | Component | Presentation fields |
+| --- | --- | --- |
+| `specials` | `component: "tasting-menu"` | `eyebrow`, `price` (display text including currency and basis), `schedule`, `courses: [{name, text}]`, `dietary_note`, `terms` |
+| `specials` | `component: "beverage-flight"` | `eyebrow`, `price`, `items: [{name, portion, text}]`, `note`, `terms` |
+| `team` | `team-profile` by default | `role`, `specialties: [text]`, `image`, `note` |
+| `events` | `dining-space` by default | `eyebrow`, `image`, `access_note`, `terms`; capacity/arrangements remain in the record's `facts` |
+
+Specials require the explicit `component` field when using `presentation`. Team and event records may omit it or explicitly select their default component. Unknown component/collection combinations and unknown presentation fields are rejected. Selection names must be nonempty, flight items require a serving-size `portion`, and available tasting menus/flights require at least one selection and a price. Empty selections in unavailable records render a readable pending-content fallback. These components expose a provider link and calendar action only for a current `available` parent record; paused, demo, sold-out, cancelled, unavailable, and expired records retain their copy with actions withheld.
+
+Record images use the existing local `src`, descriptive `alt`, optional positive `width`/`height` contract and add a `permission` text field. Permission must be recorded before publishing an image on an enabled team/event page. The parent record's existing metadata review covers its component details. A field being structurally valid does not establish business or media approval.
+
+For example, add this object to an existing Specials record (which still supplies its paired timestamps and timezone):
+
+```json
+"presentation": {
+  "component": "tasting-menu",
+  "price": "68 USD / person",
+  "schedule": "Friday–Saturday, 6–9 pm",
+  "courses": [
+    {"name": "First course", "text": "Supply the reviewed dish description."},
+    {"name": "Main course", "text": "Supply the reviewed dish description."}
+  ],
+  "dietary_note": "Supply the reviewed dietary and preparation guidance.",
+  "terms": "Supply the reviewed fees, deposit, and cancellation terms."
+}
+```
+
+The menu-section component groups the existing menu categories/items; no new menu fields are required. Visit steps are derived from each location's existing `access` facts, ordered as parking, entrance, seating, restroom, and sensory conditions, followed by any additional facts. They appear on Access information and location detail pages, including the mobile-kitchen access page when fixed-location routes are disabled. Preset feature switches and component layout choices remain independent of data.
+
 Legacy `data/diner.json` was consolidated into the menu/brand model. An untouched migration reference is retained as `examples/legacy-diner.json`; it is not read by Hugo. Existing old clients require a deliberate version-2 migration before adopting these scripts.
