@@ -6,4 +6,8 @@
     <a class="button" data-context-link href="{{ partial "site-url.html" (printf "planner/?occasion=%s" $m.id) }}">Prepare a brief →</a>
   </div>
 {{ end }}
-{{ if eq $m.id "accessibility" }}{{ partial "modules/locations.html" . }}{{ end }}
+{{ if eq $m.id "accessibility" }}
+  {{ partial "modules/locations.html" . }}
+  {{ $data := partial "site-data.html" . }}
+  {{ range $data.locations }}{{ partial "visit-planning.html" (dict "location" . "level" 2) }}{{ end }}
+{{ end }}

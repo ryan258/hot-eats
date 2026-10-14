@@ -1,0 +1,13 @@
+{{/* Access facts belong to the current location; no guide fixtures or inferred access promises. */}}
+{{ $location := .location }}
+{{ $steps := slice }}
+{{ with $location.access.parking }}{{ $steps = $steps | append (dict "title" "Plan your arrival" "text" .) }}{{ end }}
+{{ with $location.access.entrance }}{{ $steps = $steps | append (dict "title" "Find the entrance" "text" .) }}{{ end }}
+{{ with $location.access.seating }}{{ $steps = $steps | append (dict "title" "Choose your seating" "text" .) }}{{ end }}
+{{ with $location.access.restroom }}{{ $steps = $steps | append (dict "title" "Check the restroom route" "text" .) }}{{ end }}
+{{ with $location.access.sensory }}{{ $steps = $steps | append (dict "title" "Plan for noise and lighting" "text" .) }}{{ end }}
+{{ range $key, $value := $location.access }}{{ if and $value (not (in (slice "parking" "entrance" "seating" "restroom" "sensory") $key)) }}{{ $steps = $steps | append (dict "title" (humanize $key) "text" $value) }}{{ end }}{{ end }}
+{{ $view := dict "title" (printf "Arrival at %s" $location.name) "steps" $steps }}
+<div class="visit-planning"{{ if not .detail }} data-location-card="{{ $location.id }}"{{ end }}>
+  {{ partial "components/visit-steps.html" (dict "data" $view "level" (.level | default 2) "layout" (partial "component-layout.html" "visit-steps")) }}
+</div>

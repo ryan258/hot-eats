@@ -1,0 +1,12 @@
+{{/* Render validated menu items; returned markup is passed directly to the section partial. */}}
+<div class="menu-dishes">
+{{ range .items }}
+  <div class="dish" id="dish-{{ .id }}" data-menu-item data-locations="{{ delimit .location_ids " " }}" data-services="{{ delimit .service_ids " " }}" data-search="{{ .name }} {{ .description }} {{ delimit .dietary " " }}">
+    {{ $price := "" }}{{ if ne .price "" }}{{ $price = printf "%s %s" .price $.currency }}{{ end }}
+    {{ $modifiers := slice }}{{ range .options }}{{ $modifiers = $modifiers | append (dict "label" . "price" "") }}{{ end }}
+    {{ $view := dict "title" .name "text" .description "price" $price "state" .state "tags" .dietary "modifiers" $modifiers }}
+    {{ partial "components/dish-card.html" (dict "data" $view "level" (add $.level 1) "layout" $.layout) }}
+    <a class="dish-link" href="#dish-{{ .id }}">Link to {{ .name }}</a>
+  </div>
+{{ else }}<p class="empty-state">Dishes in this section are being confirmed.</p>{{ end }}
+</div>

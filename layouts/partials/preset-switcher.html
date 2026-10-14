@@ -9,6 +9,8 @@
       {{ $routes = $routes | append (dict "path" (printf "%s/" .id) "label" .label) }}
     {{ end }}
   {{ end }}
+  {{ if $features.search }}{{ $routes = $routes | append (dict "path" "search/" "label" "Search") }}{{ end }}
+  {{ $routes = $routes | append (dict "path" "privacy/" "label" "Privacy") }}
   {{ $catalog = $catalog | append (dict "id" .preset "label" (humanize .preset) "name" .designname "description" .designdescription "url" (printf "site-kit/presets/%s/" .preset | relURL) "routes" $routes) }}
 {{ end }}
 <section class="sg-designs sg-section" id="presets" aria-labelledby="presets-title" data-preset-studio data-current-preset="{{ $config.preset }}" data-presets="{{ $catalog | jsonify }}">

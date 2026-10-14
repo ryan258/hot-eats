@@ -2,7 +2,7 @@
 {{ $module := .definition.id }}
 {{ if not .home }}{{ partial "shared/location-picker.html" . }}{{ end }}
 {{ $component := partial "record-component.html" $module }}
-<div class="{{ if $component }}component-grid{{ else }}directory-grid{{ end }}"{{ with $component }} data-component-layout="{{ partial "component-layout.html" . }}"{{ end }}>
+<div class="{{ if $component }}component-grid{{ else }}directory-grid{{ end }}"{{ with $component }} data-component-layout="{{ if eq $module "specials" }}mixed{{ else }}{{ partial "component-layout.html" . }}{{ end }}"{{ end }}>
 {{ $rows := index $data.collections $module | default slice }}
 {{ if in (slice "specials" "calendar" "foodtruck") $module }}{{ $rows = sort $rows "start" }}{{ end }}
 {{ range $rows }}

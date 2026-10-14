@@ -2,12 +2,17 @@
 {{ $state := $row.state }}
 {{ with $row.end }}{{ if le (time.AsTime .) now }}{{ $state = "expired" }}{{ end }}{{ end }}
 {{ $component := partial "record-component.html" .module }}
+{{ $presentation := $row.presentation | default dict }}
+{{ with $presentation.component }}{{ $component = . }}{{ end }}
+{{ $newComponent := in (slice "tasting-menu" "beverage-flight" "team-profile" "dining-space") $component }}
 {{ $level := .level | default 2 }}
 {{ $title := $row.title }}{{ $headingURL := partial "site-url.html" (printf "%s/%s/" .module $row.id) }}
 {{ if .detail }}{{ $title = "" }}{{ $headingURL = "" }}{{ end }}
 <div class="record {{ if $component }}component-record{{ else }}info-card{{ end }}" id="record-{{ $row.id }}"{{ if not .detail }} data-location-card="{{ delimit ($row.location_ids | default slice) " " }}"{{ end }} data-record-state="{{ $state }}"{{ with $row.end }} data-end="{{ . }}"{{ end }}>
   {{ if $component }}
     {{ $view := dict "title" $title "text" $row.text "state" $state }}
+    {{ if $newComponent }}{{ $view = merge $presentation $view }}{{ end }}
+    {{ if eq $component "dining-space" }}{{ $view = merge $view (dict "facts" $row.facts) }}{{ end }}
     {{ if eq $component "package-card" }}{{ $view = merge $view (dict "facts" $row.facts "eyebrow" (humanize .module)) }}{{ end }}
     {{ if eq $component "event-card" }}
       {{ $dateLabel := "" }}{{ with $row.start }}{{ $dateLabel = time.Format "Jan 02" . }}{{ end }}
@@ -29,10 +34,10 @@
       {{ with $row.start }}<p><time datetime="{{ . }}">{{ time.Format "Mon, Jan 2, 2006 at 3:04 PM -0700" . }}</time>{{ with $row.end }} to <time datetime="{{ . }}">{{ time.Format "Mon, Jan 2, 2006 at 3:04 PM -0700" . }}</time>{{ end }}</p>{{ end }}
       {{ with $row.timezone }}<p>Timezone: {{ . }}</p>{{ end }}{{ with $row.venue }}<p>{{ . }}</p>{{ end }}
     {{ end }}
-    {{ if ne $component "package-card" }}{{ with $row.facts }}<dl class="facts">{{ range . }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}</dl>{{ end }}{{ end }}
+    {{ if not (in (slice "package-card" "dining-space") $component) }}{{ with $row.facts }}<dl class="facts">{{ range . }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}</dl>{{ end }}{{ end }}
     {{ range $row.attachments }}<p><a href="{{ .src | relURL }}" download>{{ .label }}</a></p>{{ end }}
-    {{ if and $row.url (not (in (slice "expired" "cancelled" "sold-out" "unavailable") $state)) }}<p><a class="text-link" href="{{ $row.url }}">{{ if eq .module "reviews" }}Original review{{ else }}Details with provider{{ end }} →</a></p>{{ end }}
-    {{ if and $row.start $row.end (not (in (slice "expired" "cancelled" "unavailable") $state)) }}
+    {{ if and $row.url (not (in (slice "expired" "cancelled" "sold-out" "unavailable") $state)) (or (not $newComponent) (eq $state "available")) }}<p><a class="text-link" href="{{ $row.url }}">{{ if eq .module "reviews" }}Original review{{ else }}Details with provider{{ end }} →</a></p>{{ end }}
+    {{ if and $row.start $row.end (not (in (slice "expired" "cancelled" "unavailable") $state)) (or (not $newComponent) (eq $state "available")) }}
       <button type="button" class="text-button calendar-download" hidden data-title="{{ $row.title }}" data-id="{{ .module }}-{{ $row.id }}" data-start="{{ $row.start }}" data-end="{{ $row.end }}" data-venue="{{ $row.venue }}">Download calendar event</button>
     {{ end }}
     {{ with $row.meta.reviewed_on }}<p class="small-note">Reviewed {{ . }}</p>{{ end }}

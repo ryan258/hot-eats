@@ -685,6 +685,94 @@
           "end": "2026-10-10T14:00:00-05:00",
           "timezone": "America/Chicago",
           "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "tasting-menu-example",
+          "title": "The neighborhood supper",
+          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Example set menu",
+            "price": "Example: 36 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "Breakfast",
+                "text": "Example course: Counter stack. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Lunch",
+                "text": "Example course: Counter burger. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Sweets & sips",
+                "text": "Example course: Seasonal pie. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
+            "terms": "Illustrative price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "beverage-flight-example",
+          "title": "The coffee counter flight",
+          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Example drinks tasting",
+            "price": "Example: 12 USD / flight",
+            "items": [
+              {
+                "name": "First pour",
+                "portion": "Example: 90 ml",
+                "text": "A bright, light preparation."
+              },
+              {
+                "name": "Second pour",
+                "portion": "Example: 90 ml",
+                "text": "A rounder, slower preparation."
+              },
+              {
+                "name": "Final pour",
+                "portion": "Example: 60 ml",
+                "text": "A concentrated finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
+            "terms": "Illustrative price for three servings; taxes excluded."
+          }
         }
       ],
       "catering": [
@@ -722,7 +810,7 @@
       "events": [
         {
           "id": "events-1",
-          "title": "Private dining",
+          "title": "The neighborhood room",
           "text": "A space example with capacity, access information, and planning terms.",
           "state": "demo",
           "location_ids": [
@@ -748,7 +836,18 @@
             }
           ],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/dining-room.svg",
+              "alt": "Illustrative table, chairs, and window; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Illustrative room only. Confirm the actual entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
         }
       ],
       "story": [
@@ -773,8 +872,8 @@
       "team": [
         {
           "id": "team-1",
-          "title": "The people behind the welcome",
-          "text": "Replace with a real name, role, biography, and permissioned portrait.",
+          "title": "Sam Morgan · fictional team member",
+          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -786,7 +885,22 @@
           },
           "facts": [],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "role": "Example chef",
+            "specialties": [
+              "Example seasonal preparation",
+              "Example guest welcome"
+            ],
+            "image": {
+              "src": "images/team-kitchen.svg",
+              "alt": "Illustration of a mixing bowl and bread; not a portrait of the team member.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
         }
       ],
       "sourcing": [
@@ -1439,6 +1553,94 @@
           "end": "2026-10-10T14:00:00-05:00",
           "timezone": "America/Chicago",
           "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "tasting-menu-example",
+          "title": "The counter supper trio",
+          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Example set menu",
+            "price": "Example: 36 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "Breakfast",
+                "text": "Example course: Morning stack. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Lunch",
+                "text": "Example course: Counter burger. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Sweets & sips",
+                "text": "Example course: Pie of the day. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
+            "terms": "Illustrative price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "beverage-flight-example",
+          "title": "The morning coffee flight",
+          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Example drinks tasting",
+            "price": "Example: 12 USD / flight",
+            "items": [
+              {
+                "name": "First pour",
+                "portion": "Example: 90 ml",
+                "text": "A bright, light preparation."
+              },
+              {
+                "name": "Second pour",
+                "portion": "Example: 90 ml",
+                "text": "A rounder, slower preparation."
+              },
+              {
+                "name": "Final pour",
+                "portion": "Example: 60 ml",
+                "text": "A concentrated finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
+            "terms": "Illustrative price for three servings; taxes excluded."
+          }
         }
       ],
       "catering": [
@@ -1476,7 +1678,7 @@
       "events": [
         {
           "id": "events-1",
-          "title": "Private dining",
+          "title": "The back dining room",
           "text": "A space example with capacity, access information, and planning terms.",
           "state": "demo",
           "location_ids": [
@@ -1502,7 +1704,18 @@
             }
           ],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/dining-room.svg",
+              "alt": "Illustrative table, chairs, and window; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Illustrative room only. Confirm the actual entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
         }
       ],
       "story": [
@@ -1527,8 +1740,8 @@
       "team": [
         {
           "id": "team-1",
-          "title": "The people behind the welcome",
-          "text": "Replace with a real name, role, biography, and permissioned portrait.",
+          "title": "Jo Bennett · fictional team member",
+          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1540,7 +1753,22 @@
           },
           "facts": [],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "role": "Example diner cook",
+            "specialties": [
+              "Example seasonal preparation",
+              "Example guest welcome"
+            ],
+            "image": {
+              "src": "images/team-kitchen.svg",
+              "alt": "Illustration of a mixing bowl and bread; not a portrait of the team member.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
         }
       ],
       "sourcing": [
@@ -2193,6 +2421,94 @@
           "end": "2026-10-10T14:00:00-05:00",
           "timezone": "America/Chicago",
           "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "tasting-menu-example",
+          "title": "The slow lunch menu",
+          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Example set menu",
+            "price": "Example: 36 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "Coffee & tea",
+                "text": "Example course: House coffee. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Lunch",
+                "text": "Example course: Soup & sandwich. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Bakery",
+                "text": "Example course: Morning bun. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
+            "terms": "Illustrative price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "beverage-flight-example",
+          "title": "The coffeehouse flight",
+          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Example drinks tasting",
+            "price": "Example: 12 USD / flight",
+            "items": [
+              {
+                "name": "First pour",
+                "portion": "Example: 90 ml",
+                "text": "A bright, light preparation."
+              },
+              {
+                "name": "Second pour",
+                "portion": "Example: 90 ml",
+                "text": "A rounder, slower preparation."
+              },
+              {
+                "name": "Final pour",
+                "portion": "Example: 60 ml",
+                "text": "A concentrated finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
+            "terms": "Illustrative price for three servings; taxes excluded."
+          }
         }
       ],
       "catering": [
@@ -2230,7 +2546,7 @@
       "events": [
         {
           "id": "events-1",
-          "title": "Private dining",
+          "title": "The café gathering room",
           "text": "A space example with capacity, access information, and planning terms.",
           "state": "demo",
           "location_ids": [
@@ -2256,7 +2572,18 @@
             }
           ],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/dining-room.svg",
+              "alt": "Illustrative table, chairs, and window; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Illustrative room only. Confirm the actual entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
         }
       ],
       "story": [
@@ -2281,8 +2608,8 @@
       "team": [
         {
           "id": "team-1",
-          "title": "The people behind the welcome",
-          "text": "Replace with a real name, role, biography, and permissioned portrait.",
+          "title": "Robin Ellis · fictional team member",
+          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2294,7 +2621,22 @@
           },
           "facts": [],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "role": "Example barista",
+            "specialties": [
+              "Example seasonal preparation",
+              "Example guest welcome"
+            ],
+            "image": {
+              "src": "images/team-kitchen.svg",
+              "alt": "Illustration of a mixing bowl and bread; not a portrait of the team member.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
         }
       ],
       "sourcing": [
@@ -2947,6 +3289,94 @@
           "end": "2026-10-10T14:00:00-05:00",
           "timezone": "America/Chicago",
           "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "tasting-menu-example",
+          "title": "The seasonal tasting table",
+          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Example set menu",
+            "price": "Example: 36 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "First course",
+                "text": "Example course: Seasonal vegetables. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Main course",
+                "text": "Example course: Chef’s seasonal plate. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Dessert",
+                "text": "Example course: Fruit dessert. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
+            "terms": "Illustrative price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "beverage-flight-example",
+          "title": "The alcohol-free pairing flight",
+          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Example drinks tasting",
+            "price": "Example: 12 USD / flight",
+            "items": [
+              {
+                "name": "First pour",
+                "portion": "Example: 90 ml",
+                "text": "A bright, light preparation."
+              },
+              {
+                "name": "Second pour",
+                "portion": "Example: 90 ml",
+                "text": "A rounder, slower preparation."
+              },
+              {
+                "name": "Final pour",
+                "portion": "Example: 60 ml",
+                "text": "A concentrated finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
+            "terms": "Illustrative price for three servings; taxes excluded."
+          }
         }
       ],
       "catering": [
@@ -2984,7 +3414,7 @@
       "events": [
         {
           "id": "events-1",
-          "title": "Private dining",
+          "title": "The private dining room",
           "text": "A space example with capacity, access information, and planning terms.",
           "state": "demo",
           "location_ids": [
@@ -3010,7 +3440,18 @@
             }
           ],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/dining-room.svg",
+              "alt": "Illustrative table, chairs, and window; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Illustrative room only. Confirm the actual entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
         }
       ],
       "story": [
@@ -3035,8 +3476,8 @@
       "team": [
         {
           "id": "team-1",
-          "title": "The people behind the welcome",
-          "text": "Replace with a real name, role, biography, and permissioned portrait.",
+          "title": "Morgan Lee · fictional team member",
+          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3048,7 +3489,22 @@
           },
           "facts": [],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "role": "Example head chef",
+            "specialties": [
+              "Example seasonal preparation",
+              "Example guest welcome"
+            ],
+            "image": {
+              "src": "images/team-kitchen.svg",
+              "alt": "Illustration of a mixing bowl and bread; not a portrait of the team member.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
         }
       ],
       "sourcing": [
@@ -3701,6 +4157,94 @@
           "end": "2026-10-10T14:00:00-05:00",
           "timezone": "America/Chicago",
           "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "tasting-menu-example",
+          "title": "The fresh lunch trio",
+          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Example set menu",
+            "price": "Example: 36 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "Bowls",
+                "text": "Example course: Harvest bowl. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Sandwiches",
+                "text": "Example course: Garden sandwich. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Sides",
+                "text": "Example course: Seasonal side. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
+            "terms": "Illustrative price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "beverage-flight-example",
+          "title": "The iced tea flight",
+          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Example drinks tasting",
+            "price": "Example: 12 USD / flight",
+            "items": [
+              {
+                "name": "First pour",
+                "portion": "Example: 90 ml",
+                "text": "A bright, light preparation."
+              },
+              {
+                "name": "Second pour",
+                "portion": "Example: 90 ml",
+                "text": "A rounder, slower preparation."
+              },
+              {
+                "name": "Final pour",
+                "portion": "Example: 60 ml",
+                "text": "A concentrated finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
+            "terms": "Illustrative price for three servings; taxes excluded."
+          }
         }
       ],
       "catering": [
@@ -3738,7 +4282,7 @@
       "events": [
         {
           "id": "events-1",
-          "title": "Private dining",
+          "title": "The group dining corner",
           "text": "A space example with capacity, access information, and planning terms.",
           "state": "demo",
           "location_ids": [
@@ -3764,7 +4308,18 @@
             }
           ],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/dining-room.svg",
+              "alt": "Illustrative table, chairs, and window; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Illustrative room only. Confirm the actual entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
         }
       ],
       "story": [
@@ -3789,8 +4344,8 @@
       "team": [
         {
           "id": "team-1",
-          "title": "The people behind the welcome",
-          "text": "Replace with a real name, role, biography, and permissioned portrait.",
+          "title": "Casey Park · fictional team member",
+          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3802,7 +4357,22 @@
           },
           "facts": [],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "role": "Example kitchen lead",
+            "specialties": [
+              "Example seasonal preparation",
+              "Example guest welcome"
+            ],
+            "image": {
+              "src": "images/team-kitchen.svg",
+              "alt": "Illustration of a mixing bowl and bread; not a portrait of the team member.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
         }
       ],
       "sourcing": [
@@ -4455,6 +5025,94 @@
           "end": "2026-10-10T14:00:00-05:00",
           "timezone": "America/Chicago",
           "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "tasting-menu-example",
+          "title": "The evening small-plate menu",
+          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Example set menu",
+            "price": "Example: 36 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "Drinks",
+                "text": "Example course: House cocktail. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Small plates",
+                "text": "Example course: House snack. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Alcohol-free",
+                "text": "Example course: Citrus spritz. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
+            "terms": "Illustrative price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "beverage-flight-example",
+          "title": "The alcohol-free evening flight",
+          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Example drinks tasting",
+            "price": "Example: 12 USD / flight",
+            "items": [
+              {
+                "name": "First pour",
+                "portion": "Example: 90 ml",
+                "text": "A bright, light preparation."
+              },
+              {
+                "name": "Second pour",
+                "portion": "Example: 90 ml",
+                "text": "A rounder, slower preparation."
+              },
+              {
+                "name": "Final pour",
+                "portion": "Example: 60 ml",
+                "text": "A concentrated finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
+            "terms": "Illustrative price for three servings; taxes excluded."
+          }
         }
       ],
       "catering": [
@@ -4492,7 +5150,7 @@
       "events": [
         {
           "id": "events-1",
-          "title": "Private dining",
+          "title": "The upstairs gathering room",
           "text": "A space example with capacity, access information, and planning terms.",
           "state": "demo",
           "location_ids": [
@@ -4518,7 +5176,18 @@
             }
           ],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/dining-room.svg",
+              "alt": "Illustrative table, chairs, and window; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Illustrative room only. Confirm the actual entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
         }
       ],
       "story": [
@@ -4543,8 +5212,8 @@
       "team": [
         {
           "id": "team-1",
-          "title": "The people behind the welcome",
-          "text": "Replace with a real name, role, biography, and permissioned portrait.",
+          "title": "Taylor Reed · fictional team member",
+          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4556,7 +5225,22 @@
           },
           "facts": [],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "role": "Example bar host",
+            "specialties": [
+              "Example seasonal preparation",
+              "Example guest welcome"
+            ],
+            "image": {
+              "src": "images/team-kitchen.svg",
+              "alt": "Illustration of a mixing bowl and bread; not a portrait of the team member.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
         }
       ],
       "sourcing": [
@@ -5209,6 +5893,94 @@
           "end": "2026-10-10T14:00:00-05:00",
           "timezone": "America/Chicago",
           "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "tasting-menu-example",
+          "title": "The bakery lunch menu",
+          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Example set menu",
+            "price": "Example: 36 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "Bread",
+                "text": "Example course: Country loaf. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Pastries",
+                "text": "Example course: Morning pastry. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Celebrations",
+                "text": "Example course: Celebration cake. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
+            "terms": "Illustrative price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "beverage-flight-example",
+          "title": "The tea and coffee flight",
+          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Example drinks tasting",
+            "price": "Example: 12 USD / flight",
+            "items": [
+              {
+                "name": "First pour",
+                "portion": "Example: 90 ml",
+                "text": "A bright, light preparation."
+              },
+              {
+                "name": "Second pour",
+                "portion": "Example: 90 ml",
+                "text": "A rounder, slower preparation."
+              },
+              {
+                "name": "Final pour",
+                "portion": "Example: 60 ml",
+                "text": "A concentrated finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
+            "terms": "Illustrative price for three servings; taxes excluded."
+          }
         }
       ],
       "catering": [
@@ -5246,7 +6018,7 @@
       "events": [
         {
           "id": "events-1",
-          "title": "Private dining",
+          "title": "The bakery gathering table",
           "text": "A space example with capacity, access information, and planning terms.",
           "state": "demo",
           "location_ids": [
@@ -5272,7 +6044,18 @@
             }
           ],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/dining-room.svg",
+              "alt": "Illustrative table, chairs, and window; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Illustrative room only. Confirm the actual entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
         }
       ],
       "story": [
@@ -5297,8 +6080,8 @@
       "team": [
         {
           "id": "team-1",
-          "title": "The people behind the welcome",
-          "text": "Replace with a real name, role, biography, and permissioned portrait.",
+          "title": "Jamie Brooks · fictional team member",
+          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5310,7 +6093,22 @@
           },
           "facts": [],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "role": "Example baker",
+            "specialties": [
+              "Example seasonal preparation",
+              "Example guest welcome"
+            ],
+            "image": {
+              "src": "images/team-kitchen.svg",
+              "alt": "Illustration of a mixing bowl and bread; not a portrait of the team member.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
         }
       ],
       "sourcing": [
@@ -5963,6 +6761,94 @@
           "end": "2026-10-10T14:00:00-05:00",
           "timezone": "America/Chicago",
           "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "tasting-menu-example",
+          "title": "The street-food tasting trio",
+          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Example set menu",
+            "price": "Example: 36 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "Street food",
+                "text": "Example course: House taco. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Sides",
+                "text": "Example course: Crisp potatoes. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Drinks",
+                "text": "Example course: Lemonade. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
+            "terms": "Illustrative price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "beverage-flight-example",
+          "title": "The market iced tea flight",
+          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Example drinks tasting",
+            "price": "Example: 12 USD / flight",
+            "items": [
+              {
+                "name": "First pour",
+                "portion": "Example: 90 ml",
+                "text": "A bright, light preparation."
+              },
+              {
+                "name": "Second pour",
+                "portion": "Example: 90 ml",
+                "text": "A rounder, slower preparation."
+              },
+              {
+                "name": "Final pour",
+                "portion": "Example: 60 ml",
+                "text": "A concentrated finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
+            "terms": "Illustrative price for three servings; taxes excluded."
+          }
         }
       ],
       "catering": [
@@ -6000,7 +6886,7 @@
       "events": [
         {
           "id": "events-1",
-          "title": "Private dining",
+          "title": "Private gathering arrangements",
           "text": "A space example with capacity, access information, and planning terms.",
           "state": "demo",
           "location_ids": [
@@ -6026,7 +6912,18 @@
             }
           ],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/dining-room.svg",
+              "alt": "Illustrative table, chairs, and window; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Illustrative room only. Confirm the actual entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
         }
       ],
       "story": [
@@ -6051,8 +6948,8 @@
       "team": [
         {
           "id": "team-1",
-          "title": "The people behind the welcome",
-          "text": "Replace with a real name, role, biography, and permissioned portrait.",
+          "title": "Avery Lane · fictional team member",
+          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6064,7 +6961,22 @@
           },
           "facts": [],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "role": "Example mobile-kitchen cook",
+            "specialties": [
+              "Example seasonal preparation",
+              "Example guest welcome"
+            ],
+            "image": {
+              "src": "images/team-kitchen.svg",
+              "alt": "Illustration of a mixing bowl and bread; not a portrait of the team member.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
         }
       ],
       "sourcing": [
@@ -6922,6 +7834,94 @@
           "end": "2026-10-10T14:00:00-05:00",
           "timezone": "America/Chicago",
           "venue": "Illustrative venue — confirm before publication"
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "tasting-menu-example",
+          "title": "The neighborhood set menu",
+          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "presentation": {
+            "component": "tasting-menu",
+            "eyebrow": "Example set menu",
+            "price": "Example: 36 USD / person",
+            "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
+            "courses": [
+              {
+                "name": "Morning",
+                "text": "Example course: Breakfast plate. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Midday",
+                "text": "Example course: House sandwich. Confirm actual dishes and substitutions."
+              },
+              {
+                "name": "Evening",
+                "text": "Example course: Dinner plate. Confirm actual dishes and substitutions."
+              }
+            ],
+            "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
+            "terms": "Illustrative price; drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms."
+          }
+        },
+        {
+          "state": "demo",
+          "location_ids": [
+            "location-1"
+          ],
+          "meta": {
+            "status": "demo",
+            "reviewed_on": "",
+            "source": ""
+          },
+          "facts": [],
+          "url": "",
+          "attachments": [],
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T21:00:00-06:00",
+          "timezone": "America/Chicago",
+          "venue": "Illustrative venue — confirm before publication",
+          "id": "beverage-flight-example",
+          "title": "The house coffee flight",
+          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "presentation": {
+            "component": "beverage-flight",
+            "eyebrow": "Example drinks tasting",
+            "price": "Example: 12 USD / flight",
+            "items": [
+              {
+                "name": "First pour",
+                "portion": "Example: 90 ml",
+                "text": "A bright, light preparation."
+              },
+              {
+                "name": "Second pour",
+                "portion": "Example: 90 ml",
+                "text": "A rounder, slower preparation."
+              },
+              {
+                "name": "Final pour",
+                "portion": "Example: 60 ml",
+                "text": "A concentrated finish."
+              }
+            ],
+            "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
+            "terms": "Illustrative price for three servings; taxes excluded."
+          }
         }
       ],
       "catering": [
@@ -6959,7 +7959,7 @@
       "events": [
         {
           "id": "events-1",
-          "title": "Private dining",
+          "title": "The neighborhood private room",
           "text": "A space example with capacity, access information, and planning terms.",
           "state": "demo",
           "location_ids": [
@@ -6985,7 +7985,18 @@
             }
           ],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "image": {
+              "src": "images/dining-room.svg",
+              "alt": "Illustrative table, chairs, and window; not a photograph of this venue.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not venue photography."
+            },
+            "access_note": "Illustrative room only. Confirm the actual entrance, table clearance, restroom route, and noise conditions.",
+            "terms": "An inquiry does not reserve a room or date. Confirm minimums, deposits, setup, and cancellation terms."
+          }
         }
       ],
       "story": [
@@ -7010,8 +8021,8 @@
       "team": [
         {
           "id": "team-1",
-          "title": "The people behind the welcome",
-          "text": "Replace with a real name, role, biography, and permissioned portrait.",
+          "title": "Jordan Quinn · fictional team member",
+          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -7023,7 +8034,22 @@
           },
           "facts": [],
           "url": "",
-          "attachments": []
+          "attachments": [],
+          "presentation": {
+            "role": "Example kitchen lead",
+            "specialties": [
+              "Example seasonal preparation",
+              "Example guest welcome"
+            ],
+            "image": {
+              "src": "images/team-kitchen.svg",
+              "alt": "Illustration of a mixing bowl and bread; not a portrait of the team member.",
+              "width": 800,
+              "height": 600,
+              "permission": "Project-authored illustrative SVG; not staff photography."
+            },
+            "note": "Fictional person, role, and areas of focus."
+          }
         }
       ],
       "sourcing": [

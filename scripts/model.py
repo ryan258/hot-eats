@@ -40,6 +40,14 @@ COMPONENT_LAYOUTS = {
     "dining-space": {"default", "split", "compact"},
     "visit-steps": {"default", "timeline", "tiles"},
 }
+RECORD_PRESENTATIONS = {
+    "specials": {
+        "tasting-menu": {"eyebrow", "price", "schedule", "courses", "dietary_note", "terms"},
+        "beverage-flight": {"eyebrow", "price", "items", "note", "terms"},
+    },
+    "team": {"team-profile": {"role", "specialties", "image", "note"}},
+    "events": {"dining-space": {"eyebrow", "image", "access_note", "terms"}},
+}
 KINDS = {
     "menu",
     "locations",
@@ -385,6 +393,45 @@ def validate(data, modules, config, root=None, publication=False):
                     "use a positive integer dimension of at most 50000 pixels",
                 )
 
+    def record_presentation(row, module, path):
+        if "presentation" not in row:
+            return
+        fields = mapping(row["presentation"], path)
+        choices = RECORD_PRESENTATIONS.get(module, {})
+        default = {"team": "team-profile", "events": "dining-space"}.get(module)
+        component = fields.get("component", default)
+        if not isinstance(component, str) or component not in choices:
+            fail(path + ".component", "unsupported component for this collection")
+        unknown = set(fields) - choices[component] - {"component"}
+        if unknown:
+            fail(path, f"unsupported presentation fields: {sorted(unknown)}")
+        for field in choices[component] - {"courses", "items", "specialties", "image"}:
+            text(fields.get(field, ""), path + "." + field)
+        for value in sequence(fields.get("specialties", []), path + ".specialties"):
+            text(value, path + ".specialties", True)
+        for field in ["courses", "items"]:
+            if field not in choices[component]:
+                continue
+            entries = sequence(fields.get(field, []), path + "." + field)
+            if row["state"] == "available" and not entries:
+                fail(path + "." + field, "available selections need at least one entry")
+            for index, entry in enumerate(entries):
+                at = f"{path}.{field}.{index}"
+                entry = mapping(entry, at)
+                allowed = {"name", "text"} | ({"portion"} if field == "items" else set())
+                if set(entry) - allowed:
+                    fail(at, "unsupported selection fields")
+                text(entry.get("name"), at + ".name", True)
+                text(entry.get("text", ""), at + ".text")
+                if field == "items":
+                    text(entry.get("portion"), at + ".portion", True)
+            if row["state"] == "available":
+                text(fields.get("price"), path + ".price", True)
+        if "image" in fields:
+            image(fields["image"], path + ".image")
+            text(fields["image"].get("permission", ""), path + ".image.permission",
+                 publication and module in active)
+
     if brand.get("image"):
         image(brand["image"], "brand.image")
     loc_ids = records(data.get("locations"), "locations")
@@ -527,6 +574,7 @@ def validate(data, modules, config, root=None, publication=False):
             references(row.get("location_ids", []), loc_ids, at + ".location_ids")
             if row.get("state") not in STATES:
                 fail(at + ".state", "unknown state")
+            record_presentation(row, key, at + ".presentation")
             url(row.get("url", ""), at + ".url")
             if (
                 key in {"calendar", "specials", "foodtruck"}

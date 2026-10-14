@@ -4,5 +4,14 @@
 {{ if eq .id "menu" }}{{ range $data.menu.categories }}{{ range .items }}{{ $words = printf "%s %s %s" $words .name .description }}{{ end }}{{ end }}{{ end }}
 {{ if eq .id "locations" }}{{ range $data.locations }}{{ $words = printf "%s %s %s" $words .name .address }}{{ end }}{{ end }}
 {{ if eq .id "faq" }}{{ range $data.faq }}{{ $words = printf "%s %s %s" $words .question .answer }}{{ end }}{{ end }}
-{{ range index $data.collections $m.id }}{{ $words = printf "%s %s %s" $words .title .text }}{{ end }}
+{{ range index $data.collections $m.id }}
+  {{ $words = printf "%s %s %s" $words .title .text }}
+  {{ with .presentation }}
+    {{ $presentation := . }}
+    {{ range slice "role" "price" "schedule" "dietary_note" "access_note" "note" "terms" }}{{ with index $presentation . }}{{ $words = printf "%s %s" $words . }}{{ end }}{{ end }}
+    {{ range .courses }}{{ $words = printf "%s %s %s" $words .name .text }}{{ end }}
+    {{ range .items }}{{ $words = printf "%s %s %s %s" $words .name .text .portion }}{{ end }}
+    {{ range .specialties }}{{ $words = printf "%s %s" $words . }}{{ end }}
+  {{ end }}
+{{ end }}
 {{ return $words }}
