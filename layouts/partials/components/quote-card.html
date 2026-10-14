@@ -1,0 +1,7 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "centered" "compact")) }}
+<figure class="restaurant-card restaurant-card-body restaurant-quote" data-layout="{{ $layout }}">
+  {{ with $d.label }}<p class="restaurant-kicker">{{ . }}</p>{{ end }}
+  <blockquote><p>{{ $d.quote }}</p></blockquote>
+  <figcaption><strong>{{ $d.attribution }}</strong>{{ with $d.context }}<span>{{ . }}</span>{{ end }}{{ partial "components/link.html" $d.link }}</figcaption>
+</figure>

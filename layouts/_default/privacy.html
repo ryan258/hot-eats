@@ -1,0 +1,1 @@
+{{ define "main" }}{{ $data := partial "site-data.html" . }}<article class="wrap section prose"><h1>Privacy</h1><p>{{ $data.policies.privacy }}</p>{{ if ne site.Params.mode "publication" }}<p>This is a local review. Publication requires a privacy notice reviewed for the actual host and services.</p>{{ end }}</article>{{ end }}

@@ -1,0 +1,56 @@
+[params]
+designName = "Next stop"
+designDescription = "Punchy type and strong borders, with the truck schedule early and compact service information."
+homeSections = ["hero", "announcement", "schedule", "menu", "story", "directory"]
+accent = "forest"
+preset = "food-truck"
+[params.features]
+menu = true
+specials = true
+locations = false
+reservations = false
+ordering = true
+catering = true
+events = false
+planner = true
+gallery = true
+story = true
+team = false
+sourcing = false
+reviews = false
+giftcards = false
+loyalty = false
+newsletter = false
+news = false
+calendar = true
+careers = false
+faq = true
+contact = true
+accessibility = true
+press = false
+foodtruck = true
+
+visit = false
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "banner"
+dish-card = "horizontal"
+dietary-key = "inline"
+service-card = "compact"
+location-card = "compact"
+hours-panel = "compact"
+offer-card = "ribbon"
+package-card = "compact"
+event-card = "row"
+quote-card = "compact"
+faq-list = "cards"
+contact-panel = "bar"
+menu-section = "compact"
+tasting-menu = "default"
+beverage-flight = "compact"
+team-profile = "compact"
+dining-space = "compact"
+visit-steps = "timeline"

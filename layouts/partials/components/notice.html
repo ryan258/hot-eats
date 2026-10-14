@@ -1,0 +1,8 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "banner" "centered")) }}
+<aside class="restaurant-notice" data-layout="{{ $layout }}" data-tone="{{ $d.tone | default "info" }}">
+  <span class="restaurant-notice-mark" aria-hidden="true">{{ if eq $d.tone "warning" }}!{{ else }}i{{ end }}</span>
+  <div class="restaurant-notice-content"><div class="restaurant-intro">{{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+    <p>{{ $d.text }}</p></div>{{ partial "components/link.html" $d.link }}
+  </div>
+</aside>

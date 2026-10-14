@@ -1,0 +1,33 @@
+{{ $data := partial "site-data.html" . }}
+{{ $level := .level | default 2 }}
+{{ $layout := partial "component-layout.html" "dish-card" }}
+<p>{{ $data.menu.note }}</p>
+<p class="menu-print-identity">{{ site.Params.companyName }} · {{ $data.menu.currency }}{{ with $data.menu.reviewed_on }} · Menu reviewed {{ . }}{{ end }}</p>
+{{ partial "shared/location-picker.html" . }}
+<div class="menu-tools" hidden>
+  <label for="menu-query">Find a dish or ingredient</label><input type="search" id="menu-query" placeholder="Search the menu">
+  <label for="service-context">Service</label><select id="service-context"><option value="">All services</option>{{ range $data.services }}<option value="{{ .id }}">{{ .label }}</option>{{ end }}</select>
+  <div class="menu-filters" role="group" aria-label="Filter menu categories">
+    <button type="button" data-filter="all" aria-pressed="true">All categories</button>
+    {{ range $data.menu.categories }}<button type="button" data-filter="{{ .id }}" aria-pressed="false">{{ .label }}</button>{{ end }}
+  </div>
+  <p id="menu-status" role="status"></p>
+</div>
+<div class="menu-grid" data-component-layout="{{ $layout }}">
+{{ range $data.menu.categories }}
+  <section class="menu-card" data-category="{{ .id }}" aria-labelledby="category-{{ .id }}">
+    <p class="eyebrow">{{ .eyebrow }}</p>
+    {{ if eq $level 2 }}<h2 id="category-{{ .id }}">{{ .label }}</h2>{{ else }}<h3 id="category-{{ .id }}">{{ .label }}</h3>{{ end }}
+    {{ range .items }}
+      <div class="dish" id="dish-{{ .id }}" data-menu-item data-locations="{{ delimit .location_ids " " }}" data-services="{{ delimit .service_ids " " }}" data-search="{{ .name }} {{ .description }} {{ delimit .dietary " " }}">
+        {{ $price := "" }}{{ if ne .price "" }}{{ $price = printf "%s %s" .price $data.menu.currency }}{{ end }}
+        {{ $modifiers := slice }}{{ range .options }}{{ $modifiers = $modifiers | append (dict "label" . "price" "") }}{{ end }}
+        {{ $view := dict "title" .name "text" .description "price" $price "state" .state "tags" .dietary "modifiers" $modifiers }}
+        {{ partial "components/dish-card.html" (dict "data" $view "level" (add $level 1) "layout" $layout) }}
+        <a class="dish-link" href="#dish-{{ .id }}">Link to {{ .name }}</a>
+      </div>
+    {{ end }}
+  </section>
+{{ else }}<p class="empty-state">The menu is being updated. Contact the restaurant for current dishes and prices.</p>{{ end }}
+</div>
+<div class="menu-footnote">{{ partial "components/dietary-key.html" (dict "data" (dict "title" "Dietary information" "note" $data.menu.allergen_note) "level" $level "layout" (partial "component-layout.html" "dietary-key")) }}</div>

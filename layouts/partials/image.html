@@ -1,0 +1,22 @@
+{{ $src := .src }}
+{{ $image := resources.Get $src }}
+{{ $width := .width | default 1200 }}
+{{ $height := .height | default 800 }}
+{{ $url := $src | relURL }}
+{{ $set := slice }}
+{{ with $image }}
+  {{ $url = .RelPermalink }}
+  {{ if reflect.IsImageResourceWithMeta . }}
+    {{ $width = .Width }}{{ $height = .Height }}
+  {{ end }}
+  {{ if reflect.IsImageResourceProcessable . }}
+    {{ range slice 480 960 1600 }}
+      {{ if lt . $image.Width }}
+        {{ $variant := $image.Resize (printf "%dx webp q80" .) }}
+        {{ $set = $set | append (printf "%s %dw" $variant.RelPermalink .) }}
+      {{ end }}
+    {{ end }}
+    {{ $set = $set | append (printf "%s %dw" .RelPermalink .Width) }}
+  {{ end }}
+{{ end }}
+<img src="{{ $url }}"{{ with $set }} srcset="{{ delimit . ", " }}" sizes="{{ $.sizes | default "(max-width: 700px) 100vw, 50vw" }}"{{ end }} alt="{{ .alt }}" width="{{ $width }}" height="{{ $height }}"{{ with .class }} class="{{ . }}"{{ end }}{{ if .priority }} fetchpriority="high"{{ else }} loading="{{ .loading | default "lazy" }}"{{ end }} decoding="async">

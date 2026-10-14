@@ -1,0 +1,5 @@
+{{- $level := int (.level | default 3) -}}
+{{- if not (in (slice 2 3 4 5 6) $level) }}{{ $level = 3 }}{{ end -}}
+{{- with .text -}}
+{{- printf "<h%d class=\"restaurant-title\">" $level | safeHTML -}}{{ if $.url }}<a href="{{ $.url }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{- printf "</h%d>" $level | safeHTML -}}
+{{- end -}}

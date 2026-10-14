@@ -1,0 +1,56 @@
+[params]
+designName = "From the oven"
+designDescription = "Warm honey tones, rounded menu cards, poster-style specials, and open answer cards."
+homeSections = ["hero", "announcement", "menu", "ticker", "story", "visit", "directory"]
+accent = "coffee"
+preset = "bakery"
+[params.features]
+menu = true
+specials = true
+locations = true
+reservations = false
+ordering = true
+catering = true
+events = true
+planner = true
+gallery = true
+story = true
+team = false
+sourcing = true
+reviews = false
+giftcards = true
+loyalty = false
+newsletter = true
+news = false
+calendar = false
+careers = false
+faq = true
+contact = true
+accessibility = true
+press = false
+foodtruck = false
+
+visit = true
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "centered"
+dish-card = "default"
+dietary-key = "grid"
+service-card = "default"
+location-card = "default"
+hours-panel = "board"
+offer-card = "default"
+package-card = "split"
+event-card = "stacked"
+quote-card = "default"
+faq-list = "cards"
+contact-panel = "default"
+menu-section = "board"
+tasting-menu = "default"
+beverage-flight = "default"
+team-profile = "default"
+dining-space = "default"
+visit-steps = "tiles"

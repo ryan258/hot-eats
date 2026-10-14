@@ -1,0 +1,9 @@
+{{ $data := partial "site-data.html" . }}
+{{ if and (partial "feature-enabled.html" "announcement") $data.announcement.text }}
+  {{ $show := true }}
+  {{ with $data.announcement.start }}{{ if gt (time.AsTime .) now }}{{ $show = false }}{{ end }}{{ end }}
+  {{ with $data.announcement.end }}{{ if le (time.AsTime .) now }}{{ $show = false }}{{ end }}{{ end }}
+  {{ if $show }}<div class="home-notice wrap" data-expiring{{ with $data.announcement.end }} data-end="{{ . }}"{{ end }}>
+    {{ partial "components/notice.html" (dict "data" (dict "title" "Before you visit" "text" $data.announcement.text) "level" 2 "layout" (partial "component-layout.html" "notice")) }}
+  </div>{{ end }}
+{{ end }}

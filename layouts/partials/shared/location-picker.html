@@ -1,0 +1,8 @@
+{{ $data := partial "site-data.html" . }}
+{{ with $data.locations }}
+  <div class="context-picker" hidden>
+    <label for="location-context">Location</label>
+    <select id="location-context"><option value="">All locations</option>{{ range . }}<option value="{{ .id }}">{{ .name }}</option>{{ end }}</select>
+    <p class="small-note" id="context-status" role="status"></p>
+  </div>
+{{ end }}

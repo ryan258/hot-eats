@@ -1,0 +1,11 @@
+<section class="section wrap module-directory" aria-labelledby="explore-title">
+  <h2 id="explore-title">Find what you need</h2>
+  {{ if partial "feature-enabled.html" "search" }}<div class="directory-search" hidden><label for="site-search">Find a page</label><input type="search" id="site-search" placeholder="Try hours, parking, catering, or a dish"><p id="search-status" role="status"></p></div>{{ end }}
+  {{ range slice "Dining" "Visit" "Gatherings" "About" }}
+    <section class="directory-group"><h3>{{ . }}</h3><div class="directory-grid">
+    {{ range where hugo.Data.modules "group" . }}{{ if partial "feature-enabled.html" .id }}
+      <a class="directory-card" href="{{ partial "site-url.html" (printf "%s/" .id) }}" data-context-link data-search-text="{{ partial "shared/search-words.html" . }}"><span>{{ .label }}</span><p>{{ .description }}</p><span aria-hidden="true">→</span></a>
+    {{ end }}{{ end }}
+    </div></section>
+  {{ end }}
+</section>

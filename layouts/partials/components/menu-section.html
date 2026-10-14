@@ -1,0 +1,16 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "board" "compact")) }}
+<section class="restaurant-card restaurant-card-body restaurant-menu-section" data-layout="{{ $layout }}">
+  <div class="restaurant-intro">
+    {{ with $d.eyebrow }}<p class="restaurant-kicker">{{ . }}</p>{{ end }}
+    {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+    {{ with $d.text }}<p>{{ . }}</p>{{ end }}
+  </div>
+  <div class="restaurant-details">
+    {{ with $d.items }}<dl class="restaurant-menu-items">{{ range . }}
+      <div><dt>{{ .name }}</dt><dd>{{ with .price }}<span class="restaurant-menu-price">{{ . }}</span>{{ end }}{{ with .text }}<p>{{ . }}</p>{{ end }}{{ with .tags }}<ul class="restaurant-tags" aria-label="Dish details">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}{{ if eq .state "sold-out" }}<p class="restaurant-badge">Sold out</p>{{ else if ne (.state | default "available") "available" }}<p class="restaurant-badge">Currently unavailable</p>{{ end }}</dd></div>
+    {{ end }}</dl>{{ else }}<p class="restaurant-note">Menu items are being confirmed.</p>{{ end }}
+    {{ with $d.note }}<p class="restaurant-note">{{ . }}</p>{{ end }}
+    {{ partial "components/link.html" $d.link }}
+  </div>
+</section>

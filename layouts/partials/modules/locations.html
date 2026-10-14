@@ -1,0 +1,14 @@
+{{ $data := partial "site-data.html" . }}
+{{ $layout := partial "component-layout.html" "location-card" }}
+{{ $level := .level | default 2 }}
+<div class="location-grid component-grid" data-component-layout="{{ $layout }}">
+  {{ range $data.locations }}
+    {{ $facts := slice }}{{ range $k,$v := .access }}{{ $facts = $facts | append (dict "label" (humanize $k) "value" $v) }}{{ end }}
+    {{ $link := dict }}{{ if partial "feature-enabled.html" "locations" }}{{ $link = dict "url" (printf "locations/%s/" .id) "label" "Location details and access" }}{{ end }}
+    <div class="location-entry" id="location-{{ .id }}">
+      {{ $view := dict "title" .name "eyebrow" "Plan your visit" "address" .address "phone" .phone "map_url" .map_url "facts" $facts "link" $link }}
+      {{ partial "components/location-card.html" (dict "data" $view "level" $level "layout" $layout) }}
+      {{ partial "shared/hours.html" (dict "location" . "level" (add $level 1)) }}
+    </div>
+  {{ else }}<p class="empty-state">No locations have been listed. Contact the restaurant for current service information.</p>{{ end }}
+</div>

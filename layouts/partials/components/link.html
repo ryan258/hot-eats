@@ -1,0 +1,8 @@
+{{- with . -}}
+  {{- if and .url .label -}}
+    {{- $url := .url -}}
+    {{- if and (strings.HasPrefix $url "/") (not (strings.HasPrefix $url "//")) }}{{ $url = strings.TrimPrefix "/" $url }}{{ end -}}
+    {{- if not (strings.HasPrefix $url "#") }}{{ $url = partial "site-url.html" $url }}{{ end -}}
+    <a class="restaurant-link" href="{{ $url }}">{{ .label }} <span aria-hidden="true">↗</span></a>
+  {{- end -}}
+{{- end -}}

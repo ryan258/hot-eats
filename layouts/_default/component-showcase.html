@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ $config := partial "site-config.html" . }}
+<div class="wrap restaurant-showcase">
+  <header>
+    <p class="restaurant-kicker">{{ $config.designname }} · Component examples</p>
+    <h1>A little more on the table.</h1>
+    <p>Six restaurant components, shown with this design’s layout choices. All names, prices, menus, and room details below are fictional examples.</p>
+    <a class="restaurant-link" href="{{ partial "site-url.html" "site-kit/#library" }}" target="_top">Explore all layouts in the guide</a>
+  </header>
+  {{ range hugo.Data.component_library.components }}
+    {{ if .showcase }}
+      {{ $example := index (index hugo.Data.component_library.examples .id) 0 }}
+      <section id="showcase-{{ .id }}" class="restaurant-showcase-section" aria-labelledby="showcase-label-{{ .id }}" data-showcase-component="{{ .id }}">
+        <p id="showcase-label-{{ .id }}" class="restaurant-kicker">{{ .name }} · {{ partial "component-layout.html" .id }} layout</p>
+        {{ partial (printf "components/%s.html" .id) (dict "data" $example.data "level" 2 "layout" (partial "component-layout.html" .id)) }}
+      </section>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

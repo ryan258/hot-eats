@@ -1,0 +1,9 @@
+{{ $m := .definition }}
+{{ partial (printf "modules/%s.html" $m.kind) . }}
+{{ if and (in (slice "catering" "events") $m.id) (partial "feature-enabled.html" "planner") }}
+  <div class="module-cta">
+    <h2>Plan your gathering</h2><p>Prepare a brief to keep or share. Nothing is sent or reserved.</p>
+    <a class="button" data-context-link href="{{ partial "site-url.html" (printf "planner/?occasion=%s" $m.id) }}">Prepare a brief →</a>
+  </div>
+{{ end }}
+{{ if eq $m.id "accessibility" }}{{ partial "modules/locations.html" . }}{{ end }}

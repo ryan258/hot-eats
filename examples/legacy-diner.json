@@ -1,0 +1,72 @@
+{
+  "tagline": "Good food. Good company.",
+  "menuNote": "A taste of the concept. These are sample dishes; the actual menu, prices, and availability are still to come.",
+  "categories": [
+    {
+      "id": "breakfast",
+      "label": "Breakfast",
+      "eyebrow": "For the sunny side of life",
+      "items": [
+        {
+          "name": "The slow-morning stack",
+          "description": "Fluffy buttermilk pancakes, whipped butter, and a generous pour of maple syrup.",
+          "tag": "Sweet beginnings"
+        },
+        {
+          "name": "Two eggs, your way",
+          "description": "A classic plate with crisp potatoes and thick-cut toast.",
+          "tag": "Diner classic"
+        },
+        {
+          "name": "The breakfast sandwich",
+          "description": "Egg, cheddar, and a toasted bun. A little messy. A lot to love.",
+          "tag": ""
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "label": "Lunch",
+      "eyebrow": "Pull up hungry",
+      "items": [
+        {
+          "name": "The counter burger",
+          "description": "A griddled burger with cheddar, pickles, and house-style sauce.",
+          "tag": "Comfort on a bun"
+        },
+        {
+          "name": "Golden grilled cheese",
+          "description": "Melty cheddar on buttery toast, with tomato soup for dipping.",
+          "tag": ""
+        },
+        {
+          "name": "The big chopped salad",
+          "description": "Crunchy greens, seasonal vegetables, and a bright, tangy dressing.",
+          "tag": ""
+        }
+      ]
+    },
+    {
+      "id": "sweets",
+      "label": "Sweets & sips",
+      "eyebrow": "Stay for something sweet",
+      "items": [
+        {
+          "name": "A slice of pie",
+          "description": "A flaky crust and a little nostalgia. Ask about the day\u2019s slice.",
+          "tag": "Save some room"
+        },
+        {
+          "name": "The classic milkshake",
+          "description": "Vanilla, chocolate, or strawberry. Finished with whipped cream.",
+          "tag": ""
+        },
+        {
+          "name": "One more coffee",
+          "description": "A simple cup for good conversation and unhurried mornings.",
+          "tag": ""
+        }
+      ]
+    }
+  ]
+}

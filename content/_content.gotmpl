@@ -1,0 +1,9 @@
+{{ partial "generate-restaurant-pages.html" (dict "adapter" . "config" site.Params "prefix" "" "params" dict) }}
+{{ if ne site.Params.mode "publication" }}
+  {{ range partialCached "preset-library.html" "all" }}
+    {{ $config := merge site.Params . (dict "useexamples" true) }}
+    {{ partial "generate-restaurant-pages.html" (dict "adapter" $ "config" $config "prefix" (printf "site-kit/presets/%s/" .preset) "params" (dict "previewpreset" .preset)) }}
+  {{ end }}
+{{ else if or site.Params.useExamples (not site.Params.publicationValidated) }}
+  {{ errorf "Publication requires scripts/site.py build --mode publication and reviewed client data" }}
+{{ end }}

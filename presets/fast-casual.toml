@@ -1,0 +1,56 @@
+[params]
+designName = "Fresh & direct"
+designDescription = "Bold sans-serif headings, menu tiles, and direct service panels with answers visible at a glance."
+homeSections = ["hero", "announcement", "menu", "visit", "directory", "story"]
+accent = "forest"
+preset = "fast-casual"
+[params.features]
+menu = true
+specials = true
+locations = true
+reservations = false
+ordering = true
+catering = true
+events = false
+planner = true
+gallery = true
+story = true
+team = false
+sourcing = false
+reviews = false
+giftcards = true
+loyalty = true
+newsletter = false
+news = false
+calendar = false
+careers = true
+faq = true
+contact = true
+accessibility = true
+press = false
+foodtruck = false
+
+visit = true
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "banner"
+dish-card = "default"
+dietary-key = "grid"
+service-card = "horizontal"
+location-card = "compact"
+hours-panel = "board"
+offer-card = "ribbon"
+package-card = "compact"
+event-card = "row"
+quote-card = "compact"
+faq-list = "cards"
+contact-panel = "bar"
+menu-section = "board"
+tasting-menu = "cards"
+beverage-flight = "board"
+team-profile = "compact"
+dining-space = "compact"
+visit-steps = "tiles"

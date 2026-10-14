@@ -1,0 +1,14 @@
+{{ $id := . }}{{ $features := dict }}
+{{ if reflect.IsMap . }}{{ $id = .id }}{{ $features = .features }}{{ else }}{{ $features = (partial "site-config.html" .).features }}{{ end }}
+{{ $enabled := eq (index $features $id) true }}
+{{ range where hugo.Data.modules "id" $id }}
+  {{ range .requires }}
+    {{ if not (partial "feature-enabled.html" (dict "id" . "features" $features)) }}{{ $enabled = false }}{{ end }}
+  {{ end }}
+  {{ with .requires_any }}
+    {{ $any := false }}
+    {{ range . }}{{ if partial "feature-enabled.html" (dict "id" . "features" $features) }}{{ $any = true }}{{ end }}{{ end }}
+    {{ if not $any }}{{ $enabled = false }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ return $enabled }}

@@ -1,0 +1,56 @@
+baseURL = "/"
+locale = "en-us"
+title = "Lucyd — Restaurant Website Master"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+# Mount preset definitions as data so every design participates in live reload.
+[[module.mounts]]
+source = "data"
+target = "data"
+[[module.mounts]]
+source = "presets"
+target = "data/restaurant_presets"
+
+[outputs]
+  home = ["HTML", "JSON"]
+[params]
+  companyName = "Lucyd"
+  description = "A modular restaurant website master, with Lucyd as its diner demonstration."
+  noindex = true
+  reviewOnly = true
+  mode = "demo"
+  useExamples = true
+  publicationValidated = false
+  preset = "kitchen-sink"
+  accent = "cherry"
+  homeSections = ["hero", "announcement", "ticker", "menu", "story", "visit", "directory"]
+[params.features]
+  menu = true
+  specials = true
+  locations = true
+  reservations = true
+  ordering = true
+  catering = true
+  events = true
+  planner = true
+  gallery = true
+  story = true
+  team = true
+  sourcing = true
+  reviews = true
+  giftcards = true
+  loyalty = true
+  newsletter = true
+  news = true
+  calendar = true
+  careers = true
+  faq = true
+  contact = true
+  accessibility = true
+  press = true
+  foodtruck = true
+  visit = true
+  search = true
+  announcement = true
+  quicklinks = true

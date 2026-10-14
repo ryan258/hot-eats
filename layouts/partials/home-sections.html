@@ -1,0 +1,1 @@
+{{ range (partial "site-config.html" .).homesections }}{{ partial (printf "home-%s.html" .) $ }}{{ end }}

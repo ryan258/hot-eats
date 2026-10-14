@@ -1,0 +1,136 @@
+{{ define "main" }}
+{{ $config := partial "site-config.html" . }}
+{{ $data := partial "site-data.html" . }}
+{{ $library := hugo.Data.component_library }}
+{{ $layoutCount := 0 }}{{ range $library.components }}{{ $layoutCount = add $layoutCount (len .layouts) }}{{ end }}
+<div class="wrap style-guide">
+  <header class="sg-hero" id="guide-top">
+    <div>
+      <p class="sg-eyebrow">Hot Eats / The restaurant toolkit</p>
+      <h1>Good ingredients.<br><em>Endless possibilities.</em></h1>
+      <p class="sg-lede">A living style guide for restaurant websites. Explore the foundations, try the components, and take what your next site needs.</p>
+      <div class="sg-action-row"><a class="button" href="#presets">Explore the designs <span aria-hidden="true">↓</span></a><a class="restaurant-link" href="#library">Browse components</a></div>
+    </div>
+    <div class="sg-hero-note">
+      <span class="sg-asterisk" aria-hidden="true">✳</span>
+      <p><strong>{{ len $library.components }} components</strong><br>{{ $layoutCount }} layout options<br>{{ len hugo.Data.modules }} page modules<br>9 restaurant presets</p>
+      <span class="sg-edition">A library to build from.</span>
+    </div>
+  </header>
+  <p class="sg-context"><span class="sg-dot" aria-hidden="true"></span> Living style guide <span aria-hidden="true">/</span> {{ $config.preset }} preset <span aria-hidden="true">/</span> {{ site.Params.mode }} mode. All previews are illustrative; this guide is excluded from publication builds.</p>
+  {{ partial "preset-switcher.html" . }}
+  <div class="sg-layout">
+    <aside class="sg-sidebar">
+      <nav aria-label="Style guide sections">
+        <p class="sg-nav-label">On the table</p>
+        <a href="#presets">↗ <span>Restaurant designs</span></a>
+        <a href="#foundations">01 <span>Foundations</span></a>
+        <a href="#library">02 <span>Components</span></a>
+        <div class="sg-component-nav">{{ range $library.components }}<a href="#component-{{ .id }}">{{ .name }}</a>{{ end }}</div>
+        <a href="#modules">03 <span>Page modules</span></a>
+        <a href="#owner-tools">04 <span>Build & maintain</span></a>
+      </nav>
+      <p class="sg-sidebar-note">Same partials.<br>Real rendered examples.<br>Made to be reused.</p>
+    </aside>
+    <div class="sg-main">
+      <section class="sg-section" id="foundations" aria-labelledby="foundations-title">
+        <p class="sg-eyebrow">01 / Foundations</p>
+        <h2 id="foundations-title">Set the table.</h2>
+        <p class="sg-description">Warm paper, confident type, and room to breathe. Components inherit the active restaurant palette and share the same spacing and controls.</p>
+        <h3>Color & surface</h3>
+        <ul class="sg-swatches">
+          {{ range slice (dict "name" "Paper" "token" "--paper" "class" "paper") (dict "name" "Accent" "token" "--red" "class" "accent") (dict "name" "Ink" "token" "--ink" "class" "ink") (dict "name" "Muted" "token" "--muted" "class" "muted") (dict "name" "Forest" "token" "--green" "class" "forest") (dict "name" "Blush" "token" "--pink" "class" "blush") (dict "name" "Border" "token" "--line" "class" "border") (dict "name" "Surface" "token" "--restaurant-surface" "class" "surface") }}
+          <li><span class="sg-swatch sg-swatch-{{ .class }}" aria-hidden="true"></span><strong>{{ .name }}</strong><code>{{ .token }}</code></li>
+          {{ end }}
+        </ul>
+        <div class="sg-foundation-grid">
+          <div class="sg-type-sample"><p class="sg-label">Display / Georgia</p><p class="sg-display-text">Stay a little<br><em>longer.</em></p><p class="sg-label">Body / Arial · 16 px · 1.6 line height</p><p>Good food starts with clear information. Keep prices, availability, and the next step easy to find.</p></div>
+          <div class="sg-control-sample"><p class="sg-label">Actions & states</p><div class="sg-action-row"><a class="button" href="#library">Browse components</a><button class="button" type="button" disabled>Unavailable</button></div><a class="restaurant-link" href="#modules">Explore page modules <span aria-hidden="true">↗</span></a><p class="sg-small">Controls have a minimum 44 px target. Use Tab to inspect focus and Enter or Space for native disclosures.</p><label for="sg-field">Example inquiry name</label><input id="sg-field" type="text" placeholder="Your name" autocomplete="off"><p class="sg-small">A local field example; nothing is submitted or stored.</p></div>
+        </div>
+        <div class="sg-spacing"><span class="sg-label">Spacing rhythm</span>{{ range slice 8 16 24 32 48 }}<span><i class="sg-space-{{ . }}" aria-hidden="true"></i>{{ . }} px</span>{{ end }}<span><code>12 px</code> card radius</span></div>
+      </section>
+      <section class="sg-section" id="library" aria-labelledby="library-title">
+        <p class="sg-eyebrow">02 / The component library</p>
+        <h2 id="library-title">A few good building blocks.</h2>
+        <p class="sg-description">Each example below is rendered by its reusable Hugo partial. Choose a layout, compare the alternatives, and explore the content states. Every layout has its own copyable template call.</p>
+        <p class="sg-context"><strong>{{ $config.designname | default (humanize $config.preset) }}</strong> — {{ $config.designdescription }} The selectors start with this preset’s choices. Reset view returns to those choices.</p>
+        <div class="sg-toolbar" data-kit-controls hidden>
+          <div class="sg-search-row"><div class="sg-search"><label for="component-query">Find a component</label><input type="search" id="component-query" placeholder="Try pickup, dietary, or hours…" aria-controls="component-catalog"></div><button type="button" class="sg-reset" data-kit-reset>Reset view</button></div>
+          <div class="sg-filters" role="group" aria-label="Component category">
+            {{ range slice "All" "Menu" "Service" "Visit" "Gatherings" "Story" }}<button type="button" data-kit-group="{{ . }}" aria-pressed="{{ if eq . "All" }}true{{ else }}false{{ end }}">{{ . }}</button>{{ end }}
+          </div>
+          <div class="sg-preview-controls"><label for="kit-palette">Preview palette<select id="kit-palette"><option value="">Current preset</option><option value="cherry">Cherry</option><option value="forest">Forest</option><option value="coffee">Coffee</option><option value="wine">Wine</option></select></label><label for="kit-width">Preview width<select id="kit-width"><option value="roomy">Roomy</option><option value="narrow">Narrow · 360 px</option></select></label><p id="component-status" role="status" aria-live="polite" aria-atomic="true">{{ len $library.components }} components shown.</p></div>
+        </div>
+        <noscript><p class="sg-context">All layouts and states are available below. Layout selection, comparison controls, filtering, palette previews, and copying are available with JavaScript.</p></noscript>
+        <div id="component-catalog">
+          {{ range $index, $component := $library.components }}
+          {{ $examples := index $library.examples .id }}
+          {{ $presetLayout := partial "component-layout.html" .id }}
+          <article class="sg-component" id="component-{{ .id }}" data-kit-component data-preset-layout="{{ $presetLayout }}" data-group="{{ .group }}" data-search="{{ .name }} {{ .description }} {{ .keywords }} {{ .fields }} {{ range .layouts }}{{ .name }} {{ .description }} {{ end }}">
+            <header class="sg-component-header"><div><p class="sg-label">{{ printf "%02d" (add $index 1) }} / {{ .group }}</p><h3><a href="#component-{{ .id }}">{{ .name }}</a></h3></div><span class="sg-state-count">{{ len .layouts }} layouts · {{ len $examples }} {{ if eq (len $examples) 1 }}example{{ else }}states{{ end }}</span></header>
+            <div class="sg-component-layout">
+              <div class="sg-component-docs">
+                <div><p>{{ .description }}</p><p class="sg-small">{{ .guidance }}</p></div>
+                <details class="sg-code"><summary>Usage & input data</summary>
+                  <p class="sg-small">Pass a data object as <code>data</code>. Choose a <code>layout</code> below and set <code>level</code> to the heading level needed by the surrounding page (2–6; default 3). Omitting <code>layout</code> keeps the original design.</p>
+                  <p><strong>Fields</strong><br>{{ .fields }}</p>
+                  <p class="sg-label">First example data</p><pre><code id="data-{{ .id }}">{{ (index $examples 0).data | jsonify (dict "indent" "  ") }}</code></pre>
+                  <button class="sg-copy" type="button" data-copy="data-{{ .id }}" hidden>Copy {{ .name }} data</button>
+                  <p class="sg-small">Source: <code>layouts/partials/components/{{ .id }}.html</code></p>
+                </details>
+              </div>
+              <div class="sg-layout-controls" data-layout-controls hidden>
+                <label for="layout-choice-{{ .id }}">Layout for {{ .name }}<select id="layout-choice-{{ .id }}" data-layout-choice aria-controls="layouts-{{ .id }}">{{ range .layouts }}<option value="{{ .id }}"{{ if eq .id $presetLayout }} selected{{ end }}>{{ .name }}{{ if eq .id $presetLayout }} · Preset choice{{ end }}</option>{{ end }}</select></label>
+                <button type="button" class="sg-compare" data-layout-compare aria-pressed="false" aria-controls="layouts-{{ .id }}">Compare all layouts<span class="sr-only"> for {{ .name }}</span></button>
+                <p class="sg-small" data-layout-status role="status" aria-live="polite"></p>
+              </div>
+              <div class="sg-layout-gallery" id="layouts-{{ .id }}">
+                {{ range .layouts }}
+                {{ $layout := . }}{{ $panelID := printf "layout-%s-%s" $component.id .id }}
+                <section class="sg-layout-option" id="{{ $panelID }}" data-layout-panel="{{ .id }}" aria-labelledby="{{ $panelID }}-title">
+                  <header class="sg-layout-heading"><h4 id="{{ $panelID }}-title"><a href="#{{ $panelID }}">{{ .name }}</a></h4><p>{{ .description }}</p></header>
+                  <div class="sg-preview">
+                    <p class="sg-preview-label">Live example <span>{{ (index $examples 0).name }}</span></p>
+                    <div class="sg-demo" data-preview-component="{{ $component.id }}" data-preview-layout="{{ .id }}" data-preview-state="0">{{ partial (printf "components/%s.html" $component.id) (dict "data" (index $examples 0).data "level" 5 "layout" .id) }}</div>
+                    {{ if gt (len $examples) 1 }}
+                    <details class="sg-variants"><summary>Explore {{ sub (len $examples) 1 }} more {{ if eq (len $examples) 2 }}state{{ else }}states{{ end }} in this layout</summary>
+                      {{ range $stateIndex, $example := after 1 $examples }}<div class="sg-variant"><p class="sg-label">{{ .name }}</p><div class="sg-demo" data-preview-component="{{ $component.id }}" data-preview-layout="{{ $layout.id }}" data-preview-state="{{ add $stateIndex 1 }}">{{ partial (printf "components/%s.html" $component.id) (dict "data" .data "level" 5 "layout" $layout.id) }}</div></div>{{ end }}
+                    </details>{{ end }}
+                  </div>
+                  <details class="sg-layout-code"><summary>Use this layout</summary>
+                    <pre><code id="code-{{ $component.id }}-{{ .id }}">{{ printf "{{ partial \"components/%s.html\" (dict \"data\" .Params.component \"level\" 3 \"layout\" \"%s\") }}" $component.id .id }}</code></pre>
+                    <button class="sg-copy" type="button" data-copy="code-{{ $component.id }}-{{ .id }}" hidden>Copy {{ $component.name }} · {{ .name }}</button>
+                  </details>
+                </section>
+                {{ end }}
+              </div>
+            </div>
+          </article>
+          {{ end }}
+        </div>
+        <div class="sg-empty" data-kit-empty hidden><h3>Nothing on this part of the menu.</h3><p>Try a shorter search or choose another category.</p><button type="button" class="button" data-kit-reset>Show all components</button></div>
+        <p class="sr-only" id="kit-copy-status" role="status" aria-live="polite"></p>
+      </section>
+      <section class="sg-section" id="modules" aria-labelledby="modules-title">
+        <p class="sg-eyebrow">03 / Assemble a restaurant</p><h2 id="modules-title">The bigger picture.</h2>
+        <p class="sg-description">Components are reusable pieces. These {{ len hugo.Data.modules }} existing page modules connect restaurant data, navigation, and guest tasks. Enabled modules link to their working pages in this preset.</p>
+        <div class="sg-modules">{{ range hugo.Data.modules }}<article><div class="sg-module-title"><h3>{{ .label }}</h3><span class="sg-module-state">{{ if partial "feature-enabled.html" .id }}Enabled{{ else }}Disabled{{ end }}</span></div><p>{{ .description }}</p><details><summary>Module contract</summary><p><strong>{{ .kind }}</strong> renderer · {{ .group }}</p><p>{{ .inputs }}</p>{{ with .requires }}<p>Requires all: {{ delimit . ", " }}</p>{{ end }}{{ with .requires_any }}<p>Requires one: {{ delimit . ", " }}</p>{{ end }}</details>{{ if partial "feature-enabled.html" .id }}<a class="restaurant-link" href="{{ partial "site-url.html" (printf "%s/" .id) }}">Open {{ .label }} <span aria-hidden="true">↗</span></a>{{ end }}</article>{{ end }}</div>
+      </section>
+      <section class="sg-section" id="owner-tools" aria-labelledby="owner-title">
+        <p class="sg-eyebrow">04 / Build & maintain</p><h2 id="owner-title">Make it your own.</h2>
+        <p class="sg-description">Choose a restaurant preset, keep the pieces you need, and replace the illustrative content with reviewed restaurant information.</p>
+        <details class="sg-owner" open><summary>Everyday commands</summary><pre><code>./he preview
+./he preview --preset food-truck
+./he check
+./he today
+./he menu
+./he history</code></pre><p>For the full owner-run verification suite: <code>./he test</code>.</p></details>
+        <details class="sg-owner"><summary>Create an independent restaurant</summary><pre><code>python3 scripts/sculpt.py --destination ../new-restaurant --name "New Restaurant" --slug new-restaurant --preset cafe</code></pre><p>The copy retains the module and component library. Contacts, schedules, provider destinations, reviews, jobs, and approvals are reset. Retained examples still need editing and review.</p></details>
+        <details class="sg-owner"><summary>Presets, content, and source files</summary><p>Kitchen sink, diner, café, fine dining, fast casual, bar, bakery, food truck, and multi-location. Example datasets live in <code>data/scenarios.json</code>; client records live in <code>data/restaurant.json</code>.</p><p>Guide fixtures live in <code>data/component_library.json</code>. Reusable partials live in <code>layouts/partials/components/</code>, with shared styles in <code>assets/css/components.css</code>. Read <code>docs/component-library.md</code> for integration guidance.</p><p>Current client content status: <strong>{{ $data.meta.status }}</strong>.</p></details>
+        <details class="sg-owner"><summary>Owner tools & publication</summary><p>Local tools cover daily announcements, special hours, service pauses, menu updates, CSV editing, preview diffs, recovery snapshots, gathering briefs, recipe arithmetic, and private operational logs.</p><p>Read <code>docs/owner-guide.md</code>, <code>docs/data-model.md</code>, and <code>docs/publication.md</code>. Private records stay in <code>.local/</code>. Publication builds require reviewed client data and a real domain; they create a local artifact and do not deploy. Provider acceptance is a separate check.</p></details>
+      </section>
+      <a class="sg-back" href="#guide-top">Back to the top <span aria-hidden="true">↑</span></a>
+    </div>
+  </div>
+</div>
+{{ end }}

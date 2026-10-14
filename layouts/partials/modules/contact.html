@@ -1,0 +1,6 @@
+{{ $data := partial "site-data.html" . }}
+{{ $layout := partial "component-layout.html" "contact-panel" }}
+{{ partial "components/contact-panel.html" (dict "data" (dict "title" "Contact the restaurant" "text" "This page does not submit a message." "phone" $data.contacts.phone "email" $data.contacts.email "response" $data.contacts.response) "level" 2 "layout" $layout) }}
+{{ with $data.contacts.channels }}<div class="component-grid contact-channels" data-component-layout="{{ $layout }}">{{ range . }}
+  {{ partial "components/contact-panel.html" (dict "data" (dict "title" .label "eyebrow" "Contact channel" "phone" .phone "email" .email) "level" 2 "layout" $layout) }}
+{{ end }}</div>{{ end }}

@@ -1,0 +1,6 @@
+{{ $config := dict }}
+{{ if and (reflect.IsMap .) .config }}{{ $config = .config }}{{ else }}{{ $config = partial "site-config.html" . }}{{ end }}
+{{ $data := hugo.Data.restaurant }}
+{{ if $config.useexamples }}{{ $data = index hugo.Data.scenarios $config.preset }}{{ end }}
+{{ if not $data }}{{ errorf "No restaurant dataset for preset %s" $config.preset }}{{ end }}
+{{ return $data }}

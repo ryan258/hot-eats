@@ -1,0 +1,6 @@
+{{ $data := partial "site-data.html" . }}
+<div class="gallery-grid">
+{{ range $data.gallery }}<figure id="image-{{ .id }}">
+  {{ partial "image.html" . }}<figcaption>{{ .caption }}{{ with .credit }} <span>Credit: {{ . }}</span>{{ end }}</figcaption>
+</figure>{{ else }}<p>Photos will appear here when available.</p>{{ end }}
+</div>

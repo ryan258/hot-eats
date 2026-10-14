@@ -1,0 +1,15 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "split" "compact")) }}
+<article class="restaurant-card restaurant-card-body restaurant-package" data-layout="{{ $layout }}">
+  <div class="restaurant-intro">
+  <p class="restaurant-kicker">{{ $d.eyebrow | default "For your gathering" }}</p>
+  {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+  {{ with $d.price }}<p class="restaurant-package-price">{{ . }}</p>{{ end }}
+  <p>{{ $d.text }}</p>
+  </div><div class="restaurant-details">
+  {{ with $d.includes }}<ul class="restaurant-includes">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+  {{ with $d.facts }}<dl class="restaurant-facts">{{ range . }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}</dl>{{ end }}
+  {{ with $d.note }}<p class="restaurant-note">{{ . }}</p>{{ end }}
+  {{ partial "components/link.html" $d.link }}
+  </div>
+</article>

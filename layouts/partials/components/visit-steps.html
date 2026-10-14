@@ -1,0 +1,13 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "timeline" "tiles")) }}
+<section class="restaurant-card restaurant-card-body restaurant-steps" data-layout="{{ $layout }}">
+  <div class="restaurant-intro">
+    {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+    {{ with $d.text }}<p>{{ . }}</p>{{ end }}
+  </div>
+  <div class="restaurant-details">
+    {{ with $d.steps }}<ol class="restaurant-step-list">{{ range . }}<li><strong>{{ .title }}</strong>{{ with .text }}<p>{{ . }}</p>{{ end }}{{ partial "components/link.html" .link }}</li>{{ end }}</ol>{{ else }}<p class="restaurant-note">Visit steps are being confirmed. Ask the restaurant before traveling.</p>{{ end }}
+    {{ with $d.note }}<p class="restaurant-note">{{ . }}</p>{{ end }}
+    {{ partial "components/link.html" $d.link }}
+  </div>
+</section>

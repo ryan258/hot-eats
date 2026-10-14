@@ -1,0 +1,3 @@
+{{ $data := partial "site-data.html" . }}
+{{ partial "shared/location-picker.html" . }}
+{{ partial "components/faq-list.html" (dict "data" (dict "title" "Before your visit" "items" $data.faq) "level" 2 "layout" (partial "component-layout.html" "faq-list") "locationAware" true) }}

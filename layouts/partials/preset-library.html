@@ -1,0 +1,9 @@
+{{/* The presets data mount reads the same TOML files used by the CLI. */}}
+{{ $presets := slice }}
+{{ range hugo.Data.restaurant_presets }}
+    {{ $source := . }}
+    {{ $params := dict }}
+    {{ range $key, $value := $source.params }}{{ $params = merge $params (dict (lower $key) $value) }}{{ end }}
+    {{ $presets = $presets | append $params }}
+{{ end }}
+{{ return $presets }}

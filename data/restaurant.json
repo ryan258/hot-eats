@@ -1,0 +1,959 @@
+{
+  "schema_version": 2,
+  "meta": {
+    "status": "demo",
+    "reviewed_on": "",
+    "source": ""
+  },
+  "brand": {
+    "headline": "A little comfort, served up.",
+    "intro": "Explore every restaurant service in one clearly labeled demonstration.",
+    "eyebrow": "Restaurant demonstration",
+    "tagline": "A little comfort, served up.",
+    "note": "Illustrative menu and business details.",
+    "image": {
+      "src": "images/breakfast.svg",
+      "alt": "Concept illustration of breakfast and coffee.",
+      "width": 800,
+      "height": 720
+    },
+    "story_title": "Our kind of place",
+    "story": [
+      "Share the restaurant’s actual story, people, and place in the neighborhood."
+    ],
+    "ticker": [
+      "Explore the menu",
+      "Plan your visit",
+      "Gather around"
+    ]
+  },
+  "announcement": {
+    "text": "Explore this restaurant example. Services and prices are illustrative.",
+    "start": "",
+    "end": ""
+  },
+  "contacts": {
+    "email": "",
+    "phone": "",
+    "response": "Response times awaiting confirmation.",
+    "channels": []
+  },
+  "locations": [
+    {
+      "id": "location-1",
+      "name": "Example neighborhood location",
+      "address": "",
+      "phone": "",
+      "map_url": "",
+      "timezone": "America/Chicago",
+      "hours": [
+        {
+          "day": 0,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 1,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 2,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 3,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 4,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 5,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 6,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        }
+      ],
+      "exceptions": [],
+      "access": {
+        "entrance": "Access information awaiting confirmation.",
+        "seating": "Seating information awaiting confirmation.",
+        "restroom": "Restroom information awaiting confirmation.",
+        "sensory": "Noise and lighting information awaiting confirmation.",
+        "parking": "Parking and transit information awaiting confirmation."
+      },
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "location-2",
+      "name": "Example market location",
+      "address": "",
+      "phone": "",
+      "map_url": "",
+      "timezone": "America/Chicago",
+      "hours": [
+        {
+          "day": 0,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 1,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 2,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 3,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 4,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 5,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        },
+        {
+          "day": 6,
+          "intervals": [
+            [
+              "08:00",
+              "15:00"
+            ]
+          ]
+        }
+      ],
+      "exceptions": [],
+      "access": {
+        "entrance": "Access information awaiting confirmation.",
+        "seating": "Seating information awaiting confirmation.",
+        "restroom": "Restroom information awaiting confirmation.",
+        "sensory": "Noise and lighting information awaiting confirmation.",
+        "parking": "Parking and transit information awaiting confirmation."
+      },
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "dine-in",
+      "label": "Dine in",
+      "state": "demo",
+      "location_ids": [
+        "location-1",
+        "location-2"
+      ]
+    },
+    {
+      "id": "pickup",
+      "label": "Pickup",
+      "state": "demo",
+      "location_ids": [
+        "location-1",
+        "location-2"
+      ]
+    },
+    {
+      "id": "delivery",
+      "label": "Delivery",
+      "state": "demo",
+      "location_ids": [
+        "location-1",
+        "location-2"
+      ]
+    },
+    {
+      "id": "catering",
+      "label": "Catering",
+      "state": "demo",
+      "location_ids": [
+        "location-1",
+        "location-2"
+      ]
+    },
+    {
+      "id": "events",
+      "label": "Private events",
+      "state": "demo",
+      "location_ids": [
+        "location-1",
+        "location-2"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "ordering-pickup-location-1",
+      "module": "ordering",
+      "service_id": "pickup",
+      "location_id": "location-1",
+      "label": "Order pickup",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "ordering-delivery-location-1",
+      "module": "ordering",
+      "service_id": "delivery",
+      "location_id": "location-1",
+      "label": "Order delivery",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "reservations-dine-in-location-1",
+      "module": "reservations",
+      "service_id": "dine-in",
+      "location_id": "location-1",
+      "label": "Reserve a table",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "giftcards-general-location-1",
+      "module": "giftcards",
+      "service_id": "",
+      "location_id": "location-1",
+      "label": "Buy a gift card",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "loyalty-general-location-1",
+      "module": "loyalty",
+      "service_id": "",
+      "location_id": "location-1",
+      "label": "Join rewards",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "newsletter-general-location-1",
+      "module": "newsletter",
+      "service_id": "",
+      "location_id": "location-1",
+      "label": "Sign up for updates",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "ordering-pickup-location-2",
+      "module": "ordering",
+      "service_id": "pickup",
+      "location_id": "location-2",
+      "label": "Order pickup",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "ordering-delivery-location-2",
+      "module": "ordering",
+      "service_id": "delivery",
+      "location_id": "location-2",
+      "label": "Order delivery",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "reservations-dine-in-location-2",
+      "module": "reservations",
+      "service_id": "dine-in",
+      "location_id": "location-2",
+      "label": "Reserve a table",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "giftcards-general-location-2",
+      "module": "giftcards",
+      "service_id": "",
+      "location_id": "location-2",
+      "label": "Buy a gift card",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "loyalty-general-location-2",
+      "module": "loyalty",
+      "service_id": "",
+      "location_id": "location-2",
+      "label": "Join rewards",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    },
+    {
+      "id": "newsletter-general-location-2",
+      "module": "newsletter",
+      "service_id": "",
+      "location_id": "location-2",
+      "label": "Sign up for updates",
+      "state": "unavailable",
+      "url": "",
+      "provider": "",
+      "note": "This demonstration has no connected provider.",
+      "terms": "Confirm availability, terms, and an accessible alternative before connecting this action.",
+      "fallback_email": "",
+      "fallback_phone": "",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    }
+  ],
+  "menu": {
+    "currency": "USD",
+    "reviewed_on": "",
+    "note": "Illustrative dishes and prices. Replace with the approved menu.",
+    "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
+    "categories": [
+      {
+        "id": "breakfast",
+        "label": "Breakfast",
+        "eyebrow": "Illustrative selection",
+        "items": [
+          {
+            "id": "item-1",
+            "name": "Counter stack",
+            "description": "Fluffy buttermilk pancakes, whipped butter, and a generous pour of maple syrup.",
+            "price": "8.00",
+            "state": "available",
+            "location_ids": [],
+            "service_ids": [],
+            "dietary": [],
+            "options": [],
+            "meta": {
+              "status": "demo",
+              "reviewed_on": "",
+              "source": ""
+            }
+          },
+          {
+            "id": "item-2",
+            "name": "House breakfast",
+            "description": "A classic plate with crisp potatoes and thick-cut toast.",
+            "price": "9.00",
+            "state": "available",
+            "location_ids": [],
+            "service_ids": [],
+            "dietary": [],
+            "options": [],
+            "meta": {
+              "status": "demo",
+              "reviewed_on": "",
+              "source": ""
+            }
+          },
+          {
+            "id": "item-3",
+            "name": "Breakfast sandwich",
+            "description": "Egg, cheddar, and a toasted bun. A little messy. A lot to love.",
+            "price": "10.00",
+            "state": "available",
+            "location_ids": [],
+            "service_ids": [],
+            "dietary": [],
+            "options": [],
+            "meta": {
+              "status": "demo",
+              "reviewed_on": "",
+              "source": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "lunch",
+        "label": "Lunch",
+        "eyebrow": "Illustrative selection",
+        "items": [
+          {
+            "id": "item-4",
+            "name": "Counter burger",
+            "description": "A griddled burger with cheddar, pickles, and house-style sauce.",
+            "price": "12.00",
+            "state": "available",
+            "location_ids": [],
+            "service_ids": [],
+            "dietary": [],
+            "options": [],
+            "meta": {
+              "status": "demo",
+              "reviewed_on": "",
+              "source": ""
+            }
+          },
+          {
+            "id": "item-5",
+            "name": "Grilled cheese",
+            "description": "Melty cheddar on buttery toast, with tomato soup for dipping.",
+            "price": "13.00",
+            "state": "available",
+            "location_ids": [],
+            "service_ids": [],
+            "dietary": [],
+            "options": [],
+            "meta": {
+              "status": "demo",
+              "reviewed_on": "",
+              "source": ""
+            }
+          },
+          {
+            "id": "item-6",
+            "name": "Chopped salad",
+            "description": "Crunchy greens, seasonal vegetables, and a bright, tangy dressing.",
+            "price": "14.00",
+            "state": "available",
+            "location_ids": [],
+            "service_ids": [],
+            "dietary": [],
+            "options": [],
+            "meta": {
+              "status": "demo",
+              "reviewed_on": "",
+              "source": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "sweets",
+        "label": "Sweets & sips",
+        "eyebrow": "Illustrative selection",
+        "items": [
+          {
+            "id": "item-7",
+            "name": "Seasonal pie",
+            "description": "A flaky crust and a little nostalgia. Ask about the day’s slice.",
+            "price": "16.00",
+            "state": "available",
+            "location_ids": [],
+            "service_ids": [],
+            "dietary": [],
+            "options": [],
+            "meta": {
+              "status": "demo",
+              "reviewed_on": "",
+              "source": ""
+            }
+          },
+          {
+            "id": "item-8",
+            "name": "Classic shake",
+            "description": "Vanilla, chocolate, or strawberry. Finished with whipped cream.",
+            "price": "17.00",
+            "state": "available",
+            "location_ids": [],
+            "service_ids": [],
+            "dietary": [],
+            "options": [],
+            "meta": {
+              "status": "demo",
+              "reviewed_on": "",
+              "source": ""
+            }
+          },
+          {
+            "id": "item-9",
+            "name": "Fresh coffee",
+            "description": "A simple cup for good conversation and unhurried mornings.",
+            "price": "18.00",
+            "state": "available",
+            "location_ids": [],
+            "service_ids": [],
+            "dietary": [],
+            "options": [],
+            "meta": {
+              "status": "demo",
+              "reviewed_on": "",
+              "source": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "collections": {
+    "specials": [
+      {
+        "id": "specials-1",
+        "title": "Seasonal special",
+        "text": "A dated offer with clear serving times and terms.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [],
+        "url": "",
+        "attachments": [],
+        "start": "2026-10-10T11:00:00-05:00",
+        "end": "2026-10-10T14:00:00-05:00",
+        "timezone": "America/Chicago",
+        "venue": "Illustrative venue — confirm before publication"
+      }
+    ],
+    "catering": [
+      {
+        "id": "catering-1",
+        "title": "A meal for the group",
+        "text": "A package example with quantities, lead times, and service details.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [
+          {
+            "label": "Serves",
+            "value": "Illustrative package for 12 guests"
+          },
+          {
+            "label": "Lead time",
+            "value": "Example: 72 hours; confirm the actual policy"
+          },
+          {
+            "label": "Service",
+            "value": "Confirm pickup, delivery, setup, and service area"
+          }
+        ],
+        "url": "",
+        "attachments": []
+      }
+    ],
+    "events": [
+      {
+        "id": "events-1",
+        "title": "Private dining",
+        "text": "A space example with capacity, access information, and planning terms.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [
+          {
+            "label": "Capacity",
+            "value": "Confirm seated and standing capacity"
+          },
+          {
+            "label": "Access",
+            "value": "Confirm routes, seating, restrooms, and noise"
+          },
+          {
+            "label": "Terms",
+            "value": "Confirm deposits, minimums, and cancellation terms"
+          }
+        ],
+        "url": "",
+        "attachments": []
+      }
+    ],
+    "story": [
+      {
+        "id": "story-1",
+        "title": "A place in the neighborhood",
+        "text": "Share the real origin, purpose, and welcome of the restaurant.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [],
+        "url": "",
+        "attachments": []
+      }
+    ],
+    "team": [
+      {
+        "id": "team-1",
+        "title": "The people behind the welcome",
+        "text": "Replace with a real name, role, biography, and permissioned portrait.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [],
+        "url": "",
+        "attachments": []
+      }
+    ],
+    "sourcing": [
+      {
+        "id": "sourcing-1",
+        "title": "Ingredients and partners",
+        "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [],
+        "url": "",
+        "attachments": []
+      }
+    ],
+    "news": [
+      {
+        "id": "news-1",
+        "title": "From the restaurant",
+        "text": "A full editorial example with a stable detail link and review history.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [],
+        "url": "",
+        "attachments": []
+      }
+    ],
+    "calendar": [
+      {
+        "id": "calendar-1",
+        "title": "Community supper",
+        "text": "An event example with a date, timezone, venue, and cancellation state.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [],
+        "url": "",
+        "attachments": [],
+        "start": "2026-10-10T11:00:00-05:00",
+        "end": "2026-10-10T14:00:00-05:00",
+        "timezone": "America/Chicago",
+        "venue": "Illustrative venue — confirm before publication"
+      }
+    ],
+    "accessibility": [
+      {
+        "id": "accessibility-1",
+        "title": "Plan a comfortable visit",
+        "text": "Use the location-specific access facts below and contact the team about questions.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [],
+        "url": "",
+        "attachments": []
+      }
+    ],
+    "press": [
+      {
+        "id": "press-1",
+        "title": "Restaurant press kit",
+        "text": "Approved facts and downloadable, permissioned assets belong here.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [],
+        "url": "",
+        "attachments": []
+      }
+    ],
+    "foodtruck": [
+      {
+        "id": "foodtruck-1",
+        "title": "Example market stop",
+        "text": "A scheduled stop for the mobile-kitchen demonstration.",
+        "state": "demo",
+        "location_ids": [
+          "location-1"
+        ],
+        "meta": {
+          "status": "demo",
+          "reviewed_on": "",
+          "source": ""
+        },
+        "facts": [],
+        "url": "",
+        "attachments": [],
+        "start": "2026-10-10T11:00:00-05:00",
+        "end": "2026-10-10T14:00:00-05:00",
+        "timezone": "America/Chicago",
+        "venue": "Illustrative venue — confirm before publication"
+      }
+    ],
+    "reviews": [],
+    "careers": []
+  },
+  "faq": [
+    {
+      "id": "hours",
+      "question": "Where can I find hours and directions?",
+      "answer": "Choose a location to see its schedule and access information. Demo schedules are illustrative.",
+      "location_ids": []
+    },
+    {
+      "id": "dietary",
+      "question": "How do I ask about ingredients?",
+      "answer": "Contact the restaurant before ordering. The team must confirm ingredients and cross-contact procedures.",
+      "location_ids": []
+    }
+  ],
+  "gallery": [
+    {
+      "id": "breakfast-art",
+      "src": "images/breakfast.svg",
+      "alt": "Concept illustration of breakfast and coffee.",
+      "caption": "Illustration, not a photograph of food served.",
+      "credit": "Hot Eats concept artwork",
+      "permission": "Review for the chosen restaurant",
+      "collection": "Concept",
+      "meta": {
+        "status": "demo",
+        "reviewed_on": "",
+        "source": ""
+      }
+    }
+  ],
+  "policies": {
+    "privacy": "This website uses local menu filters and a local gathering brief. No brief is submitted by this site. Provider links lead to services with their own policies. Confirm hosting logs, contacts, retention, and any additional services before publication.",
+    "reservations": "Confirm walk-ins, party limits, deposits, cancellations, and accessible booking alternatives.",
+    "giftcards": "Confirm redemption locations, purchase terms, balance help, and support.",
+    "loyalty": "Confirm earning, redemption, eligibility, account help, and terms.",
+    "newsletter": "Confirm frequency, consent, privacy, and unsubscribe process."
+  },
+  "publication": {
+    "domain": "",
+    "approved": false,
+    "privacy_reviewed": false,
+    "contact_reviewed": false
+  }
+}

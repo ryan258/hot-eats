@@ -1,0 +1,56 @@
+[params]
+designName = "Around the neighborhood"
+designDescription = "A clear location-first layout with split visit cards and compact schedules for comparing branches."
+homeSections = ["hero", "announcement", "visit", "menu", "directory", "story"]
+accent = "forest"
+preset = "multi-location"
+[params.features]
+menu = true
+specials = true
+locations = true
+reservations = true
+ordering = true
+catering = true
+events = true
+planner = true
+gallery = true
+story = true
+team = true
+sourcing = false
+reviews = false
+giftcards = true
+loyalty = true
+newsletter = false
+news = false
+calendar = false
+careers = true
+faq = true
+contact = true
+accessibility = true
+press = false
+foodtruck = false
+
+visit = true
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "banner"
+dish-card = "compact"
+dietary-key = "grid"
+service-card = "horizontal"
+location-card = "split"
+hours-panel = "compact"
+offer-card = "split"
+package-card = "split"
+event-card = "row"
+quote-card = "compact"
+faq-list = "split"
+contact-panel = "split"
+menu-section = "board"
+tasting-menu = "cards"
+beverage-flight = "compact"
+team-profile = "compact"
+dining-space = "compact"
+visit-steps = "tiles"

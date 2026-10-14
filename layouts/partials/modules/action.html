@@ -1,0 +1,23 @@
+{{ $data := partial "site-data.html" . }}
+{{ partial "shared/location-picker.html" . }}
+{{ $actions := where $data.actions "module" .definition.id }}
+{{ $serviceIDs := slice }}{{ range $actions }}{{ with .service_id }}{{ $serviceIDs = $serviceIDs | append . }}{{ end }}{{ end }}
+{{ with $serviceIDs }}
+  <div class="service-picker" hidden><label for="service-context">Service</label><select id="service-context"><option value="">All services</option>{{ range $data.services }}{{ if in $serviceIDs .id }}<option value="{{ .id }}">{{ .label }}</option>{{ end }}{{ end }}</select></div>
+{{ end }}
+{{ $layout := partial "component-layout.html" "service-card" }}
+<div class="component-grid" data-component-layout="{{ $layout }}">
+{{ range $actions }}
+  {{ $service := dict }}
+  {{ range where $data.services "id" .service_id }}{{ $service = . }}{{ end }}
+  {{ $available := and (eq .state "available") (or (not .service_id) (eq $service.state "available")) }}
+  {{ $state := .state }}{{ if and .service_id (ne $service.state "available") }}{{ $state = $service.state }}{{ end }}
+  {{ $link := dict }}{{ if and $available .url }}{{ $link = dict "url" .url "label" (printf "%s with %s" .label (.provider | default "provider")) }}{{ end }}
+  {{ $facts := slice }}{{ range where $data.locations "id" .location_id }}{{ $facts = $facts | append (dict "label" "Location" "value" .name) }}{{ end }}
+  <div data-location-card="{{ .location_id }}" data-service-card="{{ .service_id }}">
+    {{ $view := dict "title" .label "eyebrow" "Service options" "text" .note "state" $state "status_label" (humanize $state) "terms" .terms "facts" $facts "link" $link "fallback_email" .fallback_email "fallback_phone" .fallback_phone }}
+    {{ partial "components/service-card.html" (dict "data" $view "level" 2 "layout" $layout) }}
+  </div>
+{{ else }}<p class="empty-state">This service has no configured destination. Contact the restaurant for help.</p>{{ end }}
+</div>
+{{ with index $data.policies .definition.id }}<p class="policy-note">{{ . }}</p>{{ end }}

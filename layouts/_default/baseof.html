@@ -1,0 +1,86 @@
+{{ $config := partial "site-config.html" . }}
+{{ $data := partial "site-data.html" . }}
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Params.companyName }}{{ end }}</title>
+  <meta name="description" content="{{ .Description | default $data.brand.intro }}">
+  <meta name="theme-color" content="#f6f0df">
+  {{ if ne site.Params.mode "publication" }}<meta name="robots" content="noindex, nofollow">{{ else }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta property="og:title" content="{{ .Title | default site.Title }}">
+    <meta property="og:description" content="{{ .Description | default $data.brand.intro }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="website">
+    {{ with site.Params.socialImage }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+    <meta name="twitter:card" content="summary_large_image">
+    {{ if .Params.locationid }}{{ partial "shared/schema.html" . }}{{ end }}
+  {{ end }}
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  {{ $css := slice (resources.Get "css/site.css") (resources.Get "css/components.css") (resources.Get "css/presets.css") | resources.Concat "css/restaurant.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ if eq .Layout "site-kit" }}
+    {{ $guideCSS := resources.Get "css/style-guide.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $guideCSS.RelPermalink }}" integrity="{{ $guideCSS.Data.Integrity }}">
+  {{ end }}
+</head>
+<body data-preset="{{ $config.preset }}" data-accent="{{ $config.accent }}" data-base="{{ partial "site-url.html" ("") }}"{{ with .Params.locationid }} data-location-default="{{ . }}"{{ end }}>
+  <a class="skip" href="#main">Skip to content</a>
+  {{ if ne site.Params.mode "publication" }}
+    <div class="preview-bar">{{ site.Params.companyName }} · {{ site.Params.mode }} · illustrative or unapproved content{{ with .Params.previewpreset }} · {{ humanize . }} design{{ end }}</div>
+  {{ end }}
+  <header class="site-header wrap">
+    <a class="wordmark" href="{{ partial "site-url.html" ("") }}" aria-label="{{ site.Params.companyName }} home">{{ site.Params.companyName }}<span aria-hidden="true">✳</span></a>
+    <nav aria-label="Main navigation">
+      {{ range slice "menu" "locations" "ordering" "reservations" }}
+        {{ if partial "feature-enabled.html" . }}
+          {{ $m := index (where hugo.Data.modules "id" .) 0 }}
+          <a href="{{ partial "site-url.html" (printf "%s/" .) }}" data-context-link{{ if eq $.Params.module . }} aria-current="page"{{ end }}>{{ $m.label }}</a>
+        {{ end }}
+      {{ end }}
+      <details class="explore-nav">
+        <summary>More</summary>
+        <div>
+          {{ range slice "Dining" "Visit" "Gatherings" "About" }}
+            {{ $group := . }}
+            <section><h2 class="nav-group">{{ . }}</h2>
+              {{ range where hugo.Data.modules "group" $group }}
+                {{ if partial "feature-enabled.html" .id }}<a href="{{ partial "site-url.html" (printf "%s/" .id) }}" data-context-link>{{ .label }}</a>{{ end }}
+              {{ end }}
+            </section>
+          {{ end }}
+          {{ if partial "feature-enabled.html" "search" }}<a href="{{ partial "site-url.html" ("search/") }}">Search</a>{{ end }}
+          {{ if ne site.Params.mode "publication" }}<a href="{{ partial "site-url.html" "site-kit/" }}"{{ if .Params.previewpreset }} target="_top"{{ end }}>Style & operator guide</a>{{ end }}
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1">{{ block "main" . }}{{ end }}</main>
+  <footer class="wrap footer">
+    <a class="wordmark" href="{{ partial "site-url.html" ("") }}">{{ site.Params.companyName }}</a>
+    <p>{{ $data.brand.tagline }}</p>
+    <a href="{{ partial "site-url.html" ("privacy/") }}">Privacy</a>
+    {{ if partial "feature-enabled.html" "accessibility" }}<a href="{{ partial "site-url.html" ("accessibility/") }}">Access information</a>{{ end }}
+    {{ if ne site.Params.mode "publication" }}<a href="{{ partial "site-url.html" "site-kit/" }}"{{ if .Params.previewpreset }} target="_top"{{ end }}>Style & operator guide</a>{{ end }}
+    <span>© {{ now.Year }} {{ site.Params.companyName }}</span>
+  </footer>
+  {{ if and (partial "feature-enabled.html" "quicklinks") (ne .Layout "site-kit") }}
+    <nav class="quicklinks" aria-label="Quick actions">
+      {{ range slice "menu" "ordering" "reservations" "locations" "foodtruck" }}
+        {{ if partial "feature-enabled.html" . }}
+          {{ $labels := dict "menu" "Menu" "ordering" "Order" "reservations" "Book" "locations" "Visit" "foodtruck" "Truck" }}
+          <a href="{{ partial "site-url.html" (printf "%s/" .) }}" data-context-link>{{ index $labels . }}</a>
+        {{ end }}
+      {{ end }}
+    </nav>
+  {{ end }}
+  {{ $js := resources.Get "js/site.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  {{ if eq .Layout "site-kit" }}
+    {{ $guideJS := resources.Get "js/style-guide.js" | minify | fingerprint }}
+    <script src="{{ $guideJS.RelPermalink }}" integrity="{{ $guideJS.Data.Integrity }}" defer></script>
+  {{ end }}
+</body>
+</html>

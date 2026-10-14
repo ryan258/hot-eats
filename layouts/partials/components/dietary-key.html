@@ -1,0 +1,8 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "grid" "inline")) }}
+<aside class="restaurant-card restaurant-card-body restaurant-dietary" data-layout="{{ $layout }}">
+  {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+  <dl class="restaurant-key">{{ range $d.items }}<div><dt><span class="restaurant-badge">{{ .label }}</span></dt><dd>{{ .text }}</dd></div>{{ end }}</dl>
+  {{ with $d.note }}<p class="restaurant-note">{{ . }}</p>{{ end }}
+  {{ partial "components/link.html" $d.link }}
+</aside>

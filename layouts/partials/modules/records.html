@@ -1,0 +1,11 @@
+{{ $data := partial "site-data.html" . }}
+{{ $module := .definition.id }}
+{{ if not .home }}{{ partial "shared/location-picker.html" . }}{{ end }}
+{{ $component := partial "record-component.html" $module }}
+<div class="{{ if $component }}component-grid{{ else }}directory-grid{{ end }}"{{ with $component }} data-component-layout="{{ partial "component-layout.html" . }}"{{ end }}>
+{{ $rows := index $data.collections $module | default slice }}
+{{ if in (slice "specials" "calendar" "foodtruck") $module }}{{ $rows = sort $rows "start" }}{{ end }}
+{{ range $rows }}
+  {{ partial "shared/record-card.html" (dict "record" . "module" $module "detail" false "level" ($.level | default 2)) }}
+{{ else }}<p class="empty-state">No current {{ replace $module "foodtruck" "truck stops" }} are listed. Contact the restaurant for current information.</p>{{ end }}
+</div>

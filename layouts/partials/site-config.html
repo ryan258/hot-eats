@@ -1,0 +1,8 @@
+{{/* Page-local preview context never mutates site.Params or owner selection. */}}
+{{ $config := site.Params }}
+{{ with page.Params.previewpreset }}
+  {{ $matches := where (partialCached "preset-library.html" "all") "preset" . }}
+  {{ if ne (len $matches) 1 }}{{ errorf "Unknown preview preset: %s" . }}{{ end }}
+  {{ $config = merge $config (index $matches 0) (dict "useexamples" true) }}
+{{ end }}
+{{ return $config }}

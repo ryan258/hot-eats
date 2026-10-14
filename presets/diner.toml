@@ -1,0 +1,56 @@
+[params]
+designName = "Counter classics"
+designDescription = "A friendly counter menu with compact dish rows, day tiles, and bold announcement strips."
+homeSections = ["hero", "announcement", "ticker", "menu", "visit", "story", "directory"]
+accent = "cherry"
+preset = "diner"
+[params.features]
+menu = true
+specials = true
+locations = true
+reservations = true
+ordering = true
+catering = true
+events = true
+planner = true
+gallery = true
+story = true
+team = true
+sourcing = false
+reviews = true
+giftcards = true
+loyalty = false
+newsletter = false
+news = false
+calendar = false
+careers = true
+faq = true
+contact = true
+accessibility = true
+press = false
+foodtruck = false
+
+visit = true
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "banner"
+dish-card = "compact"
+dietary-key = "inline"
+service-card = "horizontal"
+location-card = "default"
+hours-panel = "board"
+offer-card = "ribbon"
+package-card = "default"
+event-card = "row"
+quote-card = "compact"
+faq-list = "default"
+contact-panel = "bar"
+menu-section = "compact"
+tasting-menu = "default"
+beverage-flight = "compact"
+team-profile = "compact"
+dining-space = "compact"
+visit-steps = "default"

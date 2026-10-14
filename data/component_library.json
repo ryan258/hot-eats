@@ -1,0 +1,1135 @@
+{
+  "components": [
+    {
+      "id": "notice",
+      "name": "Service notice",
+      "group": "Service",
+      "description": "A short, prominent update for closures, changed hours, or service interruptions.",
+      "guidance": "Use one clear message and a next step. Static notices are not live alerts.",
+      "fields": "title, text; optional tone (info/warning), link",
+      "keywords": "Closures announcements alerts opening",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Inset notice",
+          "description": "A contained update beside other page content."
+        },
+        {
+          "id": "banner",
+          "name": "Wide banner",
+          "description": "A horizontal update with a separate action area."
+        },
+        {
+          "id": "centered",
+          "name": "Centered announcement",
+          "description": "An announcement for a quiet, focused section."
+        }
+      ]
+    },
+    {
+      "id": "dish-card",
+      "name": "Featured dish",
+      "group": "Menu",
+      "description": "A menu item with a clear price, description, optional artwork, and modifiers.",
+      "guidance": "Write dietary labels in full. Sold-out and unavailable states suppress the action.",
+      "fields": "title, text; optional category, price, image, tags, modifiers, state, link",
+      "keywords": "Food breakfast dessert price menu item modifiers sold out",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Photo card",
+          "description": "A full-width image above the dish details."
+        },
+        {
+          "id": "horizontal",
+          "name": "Image beside copy",
+          "description": "A side-by-side feature for a wider menu section."
+        },
+        {
+          "id": "compact",
+          "name": "Compact menu row",
+          "description": "A small thumbnail and tighter typography for a longer menu."
+        }
+      ]
+    },
+    {
+      "id": "dietary-key",
+      "name": "Dietary key",
+      "group": "Menu",
+      "description": "Explain the terms used on a menu without relying on symbols or color.",
+      "guidance": "An ingredient label is not an allergen guarantee. Supply the restaurant’s reviewed cross-contact guidance.",
+      "fields": "title, items [{label, text}]; optional note, link",
+      "keywords": "Allergens vegan vegetarian gluten ingredients accessibility",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Stacked glossary",
+          "description": "A readable vertical list of labels and their meanings."
+        },
+        {
+          "id": "grid",
+          "name": "Label tiles",
+          "description": "A responsive grid for scanning several dietary labels."
+        },
+        {
+          "id": "inline",
+          "name": "Inline definitions",
+          "description": "Labels beside their explanations, useful below a menu."
+        }
+      ]
+    },
+    {
+      "id": "service-card",
+      "name": "Service handoff",
+      "group": "Service",
+      "description": "Explain pickup, delivery, or reservation options before linking onward.",
+      "guidance": "Only state=available with a labeled link exposes the action. The component itself does not take an order or reservation.",
+      "fields": "title, text, state; optional eyebrow, facts, fallback, link",
+      "keywords": "Ordering pickup delivery booking reservations paused unavailable",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Service card",
+          "description": "A single column with status, details, and the next step."
+        },
+        {
+          "id": "horizontal",
+          "name": "Service panel",
+          "description": "Introduction beside practical details and the action."
+        },
+        {
+          "id": "compact",
+          "name": "Compact service row",
+          "description": "A shorter list treatment for several service options."
+        }
+      ]
+    },
+    {
+      "id": "location-card",
+      "name": "Visit card",
+      "group": "Visit",
+      "description": "Put the address and practical access facts together before someone travels.",
+      "guidance": "Describe specific conditions: entrances, seating, parking, and restrooms. Confirm each location independently.",
+      "fields": "title; optional address, eyebrow, facts, note, link",
+      "keywords": "Address directions parking wheelchair access visit location",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Location card",
+          "description": "An address and access facts in a familiar card."
+        },
+        {
+          "id": "split",
+          "name": "Split visit panel",
+          "description": "A distinct address panel beside practical visit information."
+        },
+        {
+          "id": "compact",
+          "name": "Location directory row",
+          "description": "An understated row with access facts arranged in a grid."
+        }
+      ]
+    },
+    {
+      "id": "hours-panel",
+      "name": "Hours & exceptions",
+      "group": "Visit",
+      "description": "A readable schedule with a separate place for a holiday or one-off change.",
+      "guidance": "This is a static schedule. Use the existing shared/hours.html partial for approved live opening status.",
+      "fields": "title; optional timezone, rows [{label, value}], exception, note, link",
+      "keywords": "Hours holiday closure split service schedule opening",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Schedule list",
+          "description": "Day labels and hours in readable rows."
+        },
+        {
+          "id": "board",
+          "name": "Day tiles",
+          "description": "A board of day groups with the exception below."
+        },
+        {
+          "id": "compact",
+          "name": "Compact hours strip",
+          "description": "A light, compact schedule for a sidebar or footer."
+        }
+      ]
+    },
+    {
+      "id": "offer-card",
+      "name": "Special & promotion",
+      "group": "Menu",
+      "description": "An editorial treatment for a seasonal dish, set menu, or recurring special.",
+      "guidance": "Keep availability, price, schedule, and terms together. Explicitly set state=available to show an action.",
+      "fields": "title, text, state; optional eyebrow, price, schedule, terms, link",
+      "keywords": "Specials happy hour brunch promotion deal seasonal",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Specials poster",
+          "description": "A strong single-column treatment for one offer."
+        },
+        {
+          "id": "split",
+          "name": "Split promotion",
+          "description": "Offer story beside price, schedule, and terms."
+        },
+        {
+          "id": "ribbon",
+          "name": "Promotion ribbon",
+          "description": "A shallow horizontal promotion with all terms retained."
+        }
+      ]
+    },
+    {
+      "id": "package-card",
+      "name": "Catering package",
+      "group": "Gatherings",
+      "description": "Show what is included, what it costs, and how much planning it needs.",
+      "guidance": "Include the price basis, minimum, lead time, and any fees. An inquiry link does not confirm a booking.",
+      "fields": "title, text; optional eyebrow, price, includes, facts, note, link",
+      "keywords": "Catering private dining party package minimum lead time",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Package card",
+          "description": "A complete package in one column."
+        },
+        {
+          "id": "split",
+          "name": "Package comparison panel",
+          "description": "Price and introduction beside inclusions and planning details."
+        },
+        {
+          "id": "compact",
+          "name": "Compact package row",
+          "description": "A list treatment with compact inclusions and facts."
+        }
+      ]
+    },
+    {
+      "id": "event-card",
+      "name": "Event listing",
+      "group": "Gatherings",
+      "description": "A compact date, venue, and event description with explicit availability.",
+      "guidance": "Use ISO timestamps with offsets. A past end time automatically suppresses the action at build time; rebuild to refresh it.",
+      "fields": "title, text, state; optional date_label, start, end, venue, note, link",
+      "keywords": "Calendar events tickets music cancelled sold out past",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Date beside copy",
+          "description": "A date marker beside the event details."
+        },
+        {
+          "id": "stacked",
+          "name": "Date-band card",
+          "description": "A prominent date band above the event."
+        },
+        {
+          "id": "row",
+          "name": "Agenda row",
+          "description": "A compact schedule entry with event and attendance details alongside."
+        }
+      ]
+    },
+    {
+      "id": "quote-card",
+      "name": "Guest quotation",
+      "group": "Story",
+      "description": "A readable quotation with attribution and room for a source link.",
+      "guidance": "Only publish verified quotations with the required permission. These guide samples are clearly fictional.",
+      "fields": "quote, attribution; optional label, context, link",
+      "keywords": "Review testimonial quote guest press attribution",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Editorial quotation",
+          "description": "A generous left-aligned quotation and attribution."
+        },
+        {
+          "id": "centered",
+          "name": "Centered feature",
+          "description": "A centered quotation for a full-width story section."
+        },
+        {
+          "id": "compact",
+          "name": "Compact pull quote",
+          "description": "A smaller quotation with a margin rule for supporting content."
+        }
+      ]
+    },
+    {
+      "id": "faq-list",
+      "name": "Questions & answers",
+      "group": "Visit",
+      "description": "Native disclosures for the practical questions guests ask most often.",
+      "guidance": "Keyboard and no-JavaScript operation are built in. Keep answers concise; multiple answers can stay open.",
+      "fields": "title, items [{question, answer}]; optional link",
+      "keywords": "FAQ accordion disclosure questions answers walk ins dogs",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Accordion list",
+          "description": "Native disclosures keep a long FAQ compact."
+        },
+        {
+          "id": "split",
+          "name": "Split FAQ panel",
+          "description": "An introduction column beside the disclosures."
+        },
+        {
+          "id": "cards",
+          "name": "Open answer cards",
+          "description": "Every answer is visible in a responsive grid; no expansion required."
+        }
+      ]
+    },
+    {
+      "id": "contact-panel",
+      "name": "Contact & response",
+      "group": "Service",
+      "description": "Clear phone and email actions with an honest response expectation.",
+      "guidance": "Only provided contact details become links. Telephone and email links open the visitor’s own apps.",
+      "fields": "title, text; optional eyebrow, phone, email, response",
+      "keywords": "Contact email telephone phone help response inquiry",
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Contact card",
+          "description": "A stacked introduction, contact links, and response expectation."
+        },
+        {
+          "id": "split",
+          "name": "Split contact panel",
+          "description": "An invitation beside clearly separated contact actions."
+        },
+        {
+          "id": "bar",
+          "name": "Contact strip",
+          "description": "A horizontal contact area suited to the end of a section."
+        }
+      ]
+    },
+    {
+      "id": "menu-section",
+      "name": "Menu section",
+      "group": "Menu",
+      "description": "Group a short menu with prices, descriptions, and item availability.",
+      "guidance": "Keep price basis and dietary notes nearby; a section does not place an order.",
+      "fields": "title, items [{name, price, text, tags, state}]; optional eyebrow, text, note, link",
+      "keywords": "Menu category breakfast lunch dinner sides prices sold out",
+      "showcase": true,
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Menu list",
+          "description": "Dishes separated by readable rules."
+        },
+        {
+          "id": "board",
+          "name": "Menu board",
+          "description": "Individual dish tiles in a responsive grid."
+        },
+        {
+          "id": "compact",
+          "name": "Counter menu",
+          "description": "Tighter rows with dish names beside their details."
+        }
+      ]
+    },
+    {
+      "id": "tasting-menu",
+      "name": "Tasting menu",
+      "group": "Menu",
+      "description": "Present an ordered sequence of courses with price, service times, and booking terms.",
+      "guidance": "Only state=available exposes a labeled action. Keep dietary arrangements and cancellation terms visible.",
+      "fields": "title, courses [{name, text}], state; optional eyebrow, text, price, schedule, dietary_note, terms, link",
+      "keywords": "Chef prix fixe set menu courses degustation dinner booking",
+      "showcase": true,
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Course sequence",
+          "description": "An ordered menu with a quiet vertical rhythm."
+        },
+        {
+          "id": "split",
+          "name": "Invitation and courses",
+          "description": "Price and introduction beside the course sequence."
+        },
+        {
+          "id": "cards",
+          "name": "Course cards",
+          "description": "Numbered course tiles for a wider feature section."
+        }
+      ]
+    },
+    {
+      "id": "beverage-flight",
+      "name": "Beverage flight",
+      "group": "Menu",
+      "description": "Explain a coffee, tea, alcohol-free, or wine flight and the size of each serving.",
+      "guidance": "State serving sizes and relevant caffeine or alcohol information. Only state=available exposes an action.",
+      "fields": "title, items [{name, portion, text}], state; optional eyebrow, text, price, note, terms, link",
+      "keywords": "Drinks coffee tea wine beer tasting flight portions caffeine alcohol",
+      "showcase": true,
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Tasting notes",
+          "description": "A vertical list of selections and serving sizes."
+        },
+        {
+          "id": "board",
+          "name": "Flight board",
+          "description": "Selections in individual tasting tiles."
+        },
+        {
+          "id": "compact",
+          "name": "Drinks list",
+          "description": "A lighter, compact list for a drinks menu."
+        }
+      ]
+    },
+    {
+      "id": "team-profile",
+      "name": "Team profile",
+      "group": "Story",
+      "description": "Introduce a chef, baker, barista, or host with room for a portrait and areas of focus.",
+      "guidance": "Use approved biographies and image permissions. The guide uses fictional people and labeled illustrative artwork.",
+      "fields": "title; optional role, text, image, specialties, note, link",
+      "keywords": "Chef baker barista host staff team biography portrait",
+      "showcase": true,
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Profile card",
+          "description": "Artwork above the person’s introduction."
+        },
+        {
+          "id": "horizontal",
+          "name": "Portrait beside profile",
+          "description": "A side-by-side introduction that wraps on small screens."
+        },
+        {
+          "id": "compact",
+          "name": "Team directory row",
+          "description": "A small image and concise profile for a longer team list."
+        }
+      ]
+    },
+    {
+      "id": "dining-space",
+      "name": "Private dining space",
+      "group": "Gatherings",
+      "description": "Describe a room with seating arrangements, access details, and inquiry terms.",
+      "guidance": "Confirm capacity for each arrangement and specific access conditions. An inquiry does not hold a date.",
+      "fields": "title; optional eyebrow, text, image, facts [{label, value}], access_note, terms, link",
+      "keywords": "Private dining room patio capacity seating venue space gathering",
+      "showcase": true,
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Room feature",
+          "description": "An illustration and introduction above practical room details."
+        },
+        {
+          "id": "split",
+          "name": "Room and arrangements",
+          "description": "The room feature beside capacity and planning information."
+        },
+        {
+          "id": "compact",
+          "name": "Venue directory row",
+          "description": "A compact overview for comparing several spaces."
+        }
+      ]
+    },
+    {
+      "id": "visit-steps",
+      "name": "Visit planning steps",
+      "group": "Visit",
+      "description": "Show the sequence for planning a meal, arriving, and finding help.",
+      "guidance": "Keep steps short and descriptive. These are reading instructions, with no progress tracking or saved checklist state.",
+      "fields": "title, steps [{title, text, link}]; optional text, note, link",
+      "keywords": "Arrival planning parking entrance pickup access sequence steps",
+      "showcase": true,
+      "layouts": [
+        {
+          "id": "default",
+          "name": "Numbered steps",
+          "description": "A straightforward ordered list with optional links."
+        },
+        {
+          "id": "timeline",
+          "name": "Arrival timeline",
+          "description": "Steps along a vertical guide with visible numbers."
+        },
+        {
+          "id": "tiles",
+          "name": "Planning tiles",
+          "description": "Ordered tiles that wrap from left to right."
+        }
+      ]
+    }
+  ],
+  "examples": {
+    "notice": [
+      {
+        "name": "Information",
+        "data": {
+          "title": "A little heads-up for your visit",
+          "text": "Our example patio closes early on Thursday. Indoor tables follow the usual schedule.",
+          "tone": "info",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      },
+      {
+        "name": "Service interruption",
+        "data": {
+          "title": "Pickup is taking a break",
+          "text": "Online pickup is paused in this example. Please check with the restaurant before making the trip.",
+          "tone": "warning"
+        }
+      }
+    ],
+    "dish-card": [
+      {
+        "name": "Featured · available",
+        "data": {
+          "title": "The slow morning",
+          "category": "Breakfast, at your pace",
+          "text": "A stack of buttermilk pancakes, seasonal berries, and a little maple syrup. A good reason to stay a little longer.",
+          "price": "$14",
+          "image": {
+            "src": "images/breakfast.svg",
+            "alt": "Illustration of pancakes with berries and a cup of coffee.",
+            "width": 800,
+            "height": 720
+          },
+          "tags": [
+            "Vegetarian"
+          ],
+          "modifiers": [
+            {
+              "label": "Add a cup of coffee",
+              "price": "+$3"
+            },
+            {
+              "label": "Add seasonal fruit",
+              "price": "+$4"
+            }
+          ],
+          "state": "available",
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      },
+      {
+        "name": "Sold out · no artwork",
+        "data": {
+          "title": "Sunday cinnamon roll",
+          "category": "From the oven",
+          "text": "Brown sugar, cinnamon, and a generous spoonful of vanilla glaze.",
+          "price": "$6",
+          "state": "sold-out",
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      },
+      {
+        "name": "Unavailable",
+        "data": {
+          "title": "Seasonal fruit bowl",
+          "text": "Selection changes with the season.",
+          "state": "unavailable",
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      }
+    ],
+    "dietary-key": [
+      {
+        "name": "Plain-language labels",
+        "data": {
+          "title": "A menu you can make sense of",
+          "items": [
+            {
+              "label": "Vegetarian",
+              "text": "Made without meat or fish."
+            },
+            {
+              "label": "Vegan",
+              "text": "Made without animal-derived ingredients."
+            },
+            {
+              "label": "Gluten-free ingredients",
+              "text": "Describes the ingredients, not a dedicated preparation space."
+            }
+          ],
+          "note": "Example wording only. Shared preparation areas can create cross-contact. Ask the restaurant about your specific needs before ordering.",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      }
+    ],
+    "service-card": [
+      {
+        "name": "Available · local menu handoff",
+        "data": {
+          "title": "Take the good stuff with you",
+          "eyebrow": "Pickup",
+          "text": "Choose your meal, then check the restaurant’s current pickup arrangements.",
+          "state": "available",
+          "facts": [
+            {
+              "label": "Where",
+              "value": "Example counter pickup"
+            },
+            {
+              "label": "Next step",
+              "value": "Browse the menu"
+            }
+          ],
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      },
+      {
+        "name": "Paused",
+        "data": {
+          "title": "Delivery",
+          "text": "Delivery is paused for this example service.",
+          "state": "paused",
+          "fallback": "Check back later or contact the restaurant about pickup.",
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      },
+      {
+        "name": "Not connected",
+        "data": {
+          "title": "Reserve a table",
+          "text": "Reservation arrangements have not been confirmed.",
+          "state": "unavailable",
+          "fallback": "Contact the restaurant before planning your visit."
+        }
+      }
+    ],
+    "location-card": [
+      {
+        "name": "Access facts",
+        "data": {
+          "title": "The neighborhood dining room",
+          "eyebrow": "An example place to gather",
+          "address": "Illustrative address · replace before use",
+          "facts": [
+            {
+              "label": "Entrance",
+              "value": "Example: step-free entrance from the side patio."
+            },
+            {
+              "label": "Seating",
+              "value": "Example: chairs with backs and a mix of table heights."
+            },
+            {
+              "label": "Parking",
+              "value": "Confirm designated spaces and the route to the entrance."
+            }
+          ],
+          "note": "Access information here is demonstration copy, not verified location information.",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      },
+      {
+        "name": "Address pending",
+        "data": {
+          "title": "A new neighborhood stop",
+          "note": "Location details are being confirmed."
+        }
+      }
+    ],
+    "hours-panel": [
+      {
+        "name": "Split service & exception",
+        "data": {
+          "title": "Make time for a good meal",
+          "timezone": "America/Chicago",
+          "rows": [
+            {
+              "label": "Monday–Thursday",
+              "value": "8 am–3 pm"
+            },
+            {
+              "label": "Friday–Saturday",
+              "value": "8 am–3 pm · 5 pm–9 pm"
+            },
+            {
+              "label": "Sunday",
+              "value": "Closed"
+            }
+          ],
+          "exception": {
+            "label": "Example holiday:",
+            "text": "Closed all day; regular service resumes the following day."
+          },
+          "note": "Illustrative schedule. Confirm hours before traveling."
+        }
+      },
+      {
+        "name": "Unconfirmed hours",
+        "data": {
+          "title": "Hours coming soon",
+          "rows": []
+        }
+      }
+    ],
+    "offer-card": [
+      {
+        "name": "Recurring special",
+        "data": {
+          "title": "A slower kind of Sunday",
+          "eyebrow": "The brunch table",
+          "text": "One breakfast plate and a cup of filter coffee. Pull up a chair.",
+          "price": "$18 / person",
+          "schedule": "Example · Sundays, 9 am–noon",
+          "terms": "Illustrative price. Dine-in only; taxes and gratuity excluded.",
+          "state": "available",
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      },
+      {
+        "name": "Sold-out special",
+        "data": {
+          "title": "The last slice went fast",
+          "text": "Our example seasonal pie has sold out.",
+          "state": "sold-out",
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      }
+    ],
+    "package-card": [
+      {
+        "name": "Per-person package",
+        "data": {
+          "title": "The everyone’s-welcome spread",
+          "eyebrow": "Gather around",
+          "price": "From $24 / person",
+          "text": "A relaxed lunch spread for a team day, a family get-together, or just because.",
+          "includes": [
+            "Two seasonal mains",
+            "A big green salad and fresh bread",
+            "Something sweet to finish"
+          ],
+          "facts": [
+            {
+              "label": "Minimum",
+              "value": "12 guests"
+            },
+            {
+              "label": "Lead time",
+              "value": "3 days"
+            },
+            {
+              "label": "Service",
+              "value": "Pickup · setup not included"
+            }
+          ],
+          "note": "Example package and pricing. Taxes, delivery, and dietary arrangements require confirmation.",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      }
+    ],
+    "event-card": [
+      {
+        "name": "Upcoming · illustrative future date",
+        "data": {
+          "title": "Supper & a little live music",
+          "date_label": "NOV 14",
+          "start": "2099-11-14T18:00:00-06:00",
+          "end": "2099-11-14T20:00:00-06:00",
+          "venue": "Example dining room",
+          "text": "A shared table, a seasonal menu, and an acoustic set.",
+          "note": "Fictional future event for demonstrating the component.",
+          "state": "available",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      },
+      {
+        "name": "Past event · automatic state",
+        "data": {
+          "title": "A neighborhood supper",
+          "date_label": "SEP 01",
+          "start": "2020-09-01T18:00:00-05:00",
+          "end": "2020-09-01T20:00:00-05:00",
+          "text": "A fictional past gathering. The expired date removes the action.",
+          "state": "available",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      },
+      {
+        "name": "Cancelled",
+        "data": {
+          "title": "Patio music evening",
+          "date_label": "TBA",
+          "text": "This illustrative event has been cancelled.",
+          "state": "cancelled",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      }
+    ],
+    "quote-card": [
+      {
+        "name": "Fictional sample · clearly attributed",
+        "data": {
+          "label": "Sample quotation",
+          "quote": "The kind of place where a quick coffee turns into a long conversation.",
+          "attribution": "Fictional guest",
+          "context": "Demonstration copy · not a real review"
+        }
+      }
+    ],
+    "faq-list": [
+      {
+        "name": "Native disclosures",
+        "data": {
+          "title": "Before you pull up a chair",
+          "items": [
+            {
+              "question": "Can I just walk in?",
+              "answer": "Example answer: walk-ins are welcome when tables are available. Confirm the restaurant’s actual seating policy before use."
+            },
+            {
+              "question": "Can you accommodate dietary needs?",
+              "answer": "Speak with the restaurant about ingredients and preparation before ordering. Do not assume shared equipment is free from cross-contact."
+            },
+            {
+              "question": "Where can I find access information?",
+              "answer": "Ask about the entrance, seating, restrooms, and parking for the location you plan to visit."
+            }
+          ],
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      },
+      {
+        "name": "No answers yet",
+        "data": {
+          "title": "Questions about your visit?",
+          "items": []
+        }
+      }
+    ],
+    "contact-panel": [
+      {
+        "name": "Contact details · fictional",
+        "data": {
+          "title": "A real conversation helps",
+          "text": "For a gathering, an access question, or something the menu doesn’t answer.",
+          "phone": "+1 202-555-0142",
+          "email": "hello@example.com",
+          "response": "Example response window: within two working days. These sample details do not reach a restaurant."
+        }
+      },
+      {
+        "name": "Contact details pending",
+        "data": {
+          "title": "We’re getting things ready",
+          "text": "Public contact details are being confirmed.",
+          "response": "Please check again before making travel plans."
+        }
+      }
+    ],
+    "menu-section": [
+      {
+        "name": "Breakfast section · mixed availability",
+        "data": {
+          "title": "From the morning kitchen",
+          "eyebrow": "Breakfast",
+          "text": "A few things worth getting up for.",
+          "items": [
+            {
+              "name": "Soft scrambled eggs",
+              "price": "$12 / plate",
+              "text": "Sourdough toast, chives, and roasted tomatoes.",
+              "tags": [
+                "Vegetarian"
+              ],
+              "state": "available"
+            },
+            {
+              "name": "Maple granola",
+              "price": "$8 / bowl",
+              "text": "Oats, toasted almonds, yogurt, and seasonal fruit.",
+              "state": "available"
+            },
+            {
+              "name": "Morning bun",
+              "price": "$5 / pastry",
+              "text": "Orange zest and cinnamon sugar.",
+              "state": "sold-out"
+            }
+          ],
+          "note": "Fictional menu and prices; taxes excluded. Shared preparation areas may create cross-contact. Ask about ingredients before ordering.",
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      },
+      {
+        "name": "Menu pending",
+        "data": {
+          "title": "A menu in the making",
+          "items": []
+        }
+      }
+    ],
+    "tasting-menu": [
+      {
+        "name": "Seasonal courses · available",
+        "data": {
+          "title": "An evening in three courses",
+          "text": "A leisurely dinner built around the season.",
+          "price": "$68 / person",
+          "schedule": "Example service · Friday–Saturday, 6–9 pm",
+          "courses": [
+            {
+              "name": "To begin",
+              "text": "Roasted beetroot, citrus, and fresh herbs."
+            },
+            {
+              "name": "At the center",
+              "text": "Mushroom barley with charred leeks."
+            },
+            {
+              "name": "Something sweet",
+              "text": "Poached pear with vanilla cream."
+            }
+          ],
+          "dietary_note": "Example arrangements: ask about dietary needs before booking. Substitutions and cross-contact conditions require confirmation.",
+          "terms": "Fictional menu and price. Drinks, taxes, and gratuity excluded. Confirm deposit and cancellation terms before booking.",
+          "state": "available",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      },
+      {
+        "name": "Courses pending · unavailable",
+        "data": {
+          "title": "The next seasonal table",
+          "courses": [],
+          "state": "unavailable",
+          "terms": "Service dates and booking terms are being confirmed.",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      }
+    ],
+    "beverage-flight": [
+      {
+        "name": "Coffee tasting · available",
+        "data": {
+          "title": "Three ways to take your coffee",
+          "eyebrow": "A small tasting",
+          "text": "Compare three preparations, served together.",
+          "price": "$12 / flight",
+          "items": [
+            {
+              "name": "Filter coffee",
+              "portion": "90 ml",
+              "text": "A light roast with a bright finish."
+            },
+            {
+              "name": "Cold brew",
+              "portion": "90 ml",
+              "text": "A slow extraction with a rounded flavor."
+            },
+            {
+              "name": "Espresso",
+              "portion": "30 ml",
+              "text": "A short, concentrated finish."
+            }
+          ],
+          "note": "Illustrative selections. Contains caffeine; amounts vary with preparation. Milk and ingredient details require confirmation.",
+          "terms": "Example price for three servings. Taxes excluded.",
+          "state": "available",
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      },
+      {
+        "name": "Flight pending · unavailable",
+        "data": {
+          "title": "The next tasting flight",
+          "items": [],
+          "state": "unavailable",
+          "link": {
+            "url": "/menu/",
+            "label": "Explore the menu"
+          }
+        }
+      }
+    ],
+    "team-profile": [
+      {
+        "name": "Fictional baker · illustrated",
+        "data": {
+          "title": "Alex Rivera",
+          "role": "Example head baker",
+          "text": "Alex starts with slow doughs, a warm oven, and a little room for experimentation.",
+          "image": {
+            "src": "images/team-kitchen.svg",
+            "alt": "Illustration of a mixing bowl, whisk, and loaf of bread; not a portrait.",
+            "width": 800,
+            "height": 600
+          },
+          "specialties": [
+            "Naturally leavened bread",
+            "Seasonal pastries"
+          ],
+          "note": "Fictional person and biography. Replace with approved staff copy and imagery.",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      },
+      {
+        "name": "Biography pending · no portrait",
+        "data": {
+          "title": "Meet the next member of the team",
+          "role": "Team introduction"
+        }
+      }
+    ],
+    "dining-space": [
+      {
+        "name": "Room arrangements · illustrative",
+        "data": {
+          "title": "The garden room",
+          "text": "A quieter corner for a long lunch or an evening together.",
+          "image": {
+            "src": "images/dining-room.svg",
+            "alt": "Illustrative dining room with a long table, chairs, and a window; not a real venue.",
+            "width": 800,
+            "height": 600
+          },
+          "facts": [
+            {
+              "label": "Seated meal",
+              "value": "Example: up to 18 guests at one long table."
+            },
+            {
+              "label": "Reception",
+              "value": "Example: up to 26 guests standing."
+            },
+            {
+              "label": "Planning",
+              "value": "Example: inquire at least 7 days ahead."
+            }
+          ],
+          "access_note": "Illustrative access details: a level doorway and movable chairs. Confirm doorway width, restroom route, and table clearance for the actual venue.",
+          "terms": "Fictional venue. Minimum spend, staffing, setup, and deposit terms require confirmation. An inquiry does not reserve the room.",
+          "link": {
+            "url": "/contact/",
+            "label": "Ask the restaurant"
+          }
+        }
+      },
+      {
+        "name": "Room details pending",
+        "data": {
+          "title": "A new space to gather",
+          "facts": [],
+          "access_note": "Access conditions have not been confirmed."
+        }
+      }
+    ],
+    "visit-steps": [
+      {
+        "name": "Plan, arrive, settle in",
+        "data": {
+          "title": "A visit with fewer surprises",
+          "text": "A little planning makes room for a slower meal.",
+          "steps": [
+            {
+              "title": "Choose your meal",
+              "text": "Browse dishes and ask about any ingredient needs.",
+              "link": {
+                "url": "/menu/",
+                "label": "Explore the menu"
+              }
+            },
+            {
+              "title": "Confirm your arrival",
+              "text": "Ask about today’s hours, parking, and the entrance you plan to use.",
+              "link": {
+                "url": "/contact/",
+                "label": "Ask the restaurant"
+              }
+            },
+            {
+              "title": "Get comfortable",
+              "text": "Let the host know what seating or assistance would help."
+            }
+          ],
+          "note": "Illustrative steps; confirm the restaurant’s actual arrangements before traveling."
+        }
+      },
+      {
+        "name": "Arrival guidance pending",
+        "data": {
+          "title": "Planning information coming soon",
+          "steps": []
+        }
+      }
+    ]
+  }
+}

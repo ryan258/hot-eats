@@ -1,0 +1,13 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "horizontal" "compact")) }}
+<article class="restaurant-card restaurant-team" data-layout="{{ $layout }}">
+  {{ with $d.image }}<div class="restaurant-team-image">{{ partial "image.html" . }}</div>{{ end }}
+  <div class="restaurant-card-body">
+    {{ with $d.role }}<p class="restaurant-kicker">{{ . }}</p>{{ end }}
+    {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+    <p>{{ $d.text | default "Profile details are being confirmed." }}</p>
+    {{ with $d.specialties }}<ul class="restaurant-tags" aria-label="Areas of focus">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+    {{ with $d.note }}<p class="restaurant-note">{{ . }}</p>{{ end }}
+    {{ partial "components/link.html" $d.link }}
+  </div>
+</article>

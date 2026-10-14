@@ -1,0 +1,13 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "horizontal" "compact")) }}
+<article class="restaurant-card restaurant-dish" data-layout="{{ $layout }}" data-state="{{ $d.state | default "available" }}">
+  {{ with $d.image }}<div class="restaurant-dish-image">{{ partial "image.html" . }}</div>{{ end }}
+  <div class="restaurant-card-body">
+    {{ with $d.category }}<p class="restaurant-kicker">{{ . }}</p>{{ end }}
+    <div class="restaurant-title-row">{{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}{{ with $d.price }}<p class="restaurant-price">{{ . }}</p>{{ end }}</div>
+    <p>{{ $d.text }}</p>
+    {{ with $d.tags }}<ul class="restaurant-tags" aria-label="Dish details">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+    {{ with $d.modifiers }}<ul class="restaurant-modifiers">{{ range . }}<li><span>{{ .label }}</span><span>{{ .price }}</span></li>{{ end }}</ul>{{ end }}
+    {{ if eq $d.state "sold-out" }}<p class="restaurant-badge">Sold out</p>{{ else if eq $d.state "unavailable" }}<p class="restaurant-badge">Currently unavailable</p>{{ else }}{{ partial "components/link.html" $d.link }}{{ end }}
+  </div>
+</article>

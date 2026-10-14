@@ -1,0 +1,5 @@
+{{ $pages := slice }}
+{{ range hugo.Data.modules }}{{ if partial "feature-enabled.html" .id }}
+  {{ $pages = $pages | append (dict "title" .label "description" .description "url" (partial "site-url.html" (printf "%s/" .id)) "keywords" (partial "shared/search-words.html" .)) }}
+{{ end }}{{ end }}
+{{ $pages | jsonify }}

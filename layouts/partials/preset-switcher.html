@@ -1,0 +1,40 @@
+{{ $config := partial "site-config.html" . }}
+{{ $presets := partialCached "preset-library.html" "all" }}
+{{ $catalog := slice }}
+{{ range $presets }}
+  {{ $routes := slice (dict "path" "" "label" "Home") (dict "path" "component-showcase/" "label" "Component showcase") }}
+  {{ $features := .features }}
+  {{ range hugo.Data.modules }}
+    {{ if partial "feature-enabled.html" (dict "id" .id "features" $features) }}
+      {{ $routes = $routes | append (dict "path" (printf "%s/" .id) "label" .label) }}
+    {{ end }}
+  {{ end }}
+  {{ $catalog = $catalog | append (dict "id" .preset "label" (humanize .preset) "name" .designname "description" .designdescription "url" (printf "site-kit/presets/%s/" .preset | relURL) "routes" $routes) }}
+{{ end }}
+<section class="sg-designs sg-section" id="presets" aria-labelledby="presets-title" data-preset-studio data-current-preset="{{ $config.preset }}" data-presets="{{ $catalog | jsonify }}">
+  <div class="sg-design-intro"><div><p class="sg-eyebrow">Nine ways to set the table</p><h2 id="presets-title">Find your restaurant’s feel.</h2></div><p>Choose a design to preview its pages and component layouts. Compare two designs at the same screen width. Your restaurant’s saved selection stays unchanged.</p></div>
+  <nav class="sg-preset-switcher" aria-label="Restaurant design">
+    {{ range $presets }}<a href="{{ printf "site-kit/presets/%s/site-kit/#presets" .preset | relURL }}" data-design-link="{{ .preset }}"{{ if eq .preset $config.preset }} aria-current="page"{{ end }}><span>{{ humanize .preset }}</span><strong>{{ .designname }}</strong>{{ if eq .preset $config.preset }}<span class="sg-preset-selected">Selected</span>{{ end }}</a>{{ end }}
+  </nav>
+  <div class="sg-design-current"><p><strong>{{ $config.designname }}</strong> — {{ $config.designdescription }}</p><a class="restaurant-link" href="{{ printf "site-kit/presets/%s/" $config.preset | relURL }}" data-primary-full>Open full example <span aria-hidden="true">↗</span></a></div>
+  <div data-studio-controls hidden>
+    <div class="sg-studio-toolbar">
+      <label for="design-page">Page to preview<select id="design-page"></select></label>
+      <label for="design-width">Screen width<select id="design-width"><option value="desktop">Desktop · 1280 px</option><option value="phone">Phone · 390 px</option></select></label>
+      <button class="sg-reset" type="button" id="design-reset-pages">Reset previews</button>
+      <button class="sg-compare" type="button" id="design-compare" aria-pressed="false" aria-controls="design-secondary">Compare two designs</button>
+      <label for="design-against" data-compare-control hidden>Compare with<select id="design-against">{{ range $presets }}<option value="{{ .preset }}">{{ humanize .preset }} · {{ .designname }}</option>{{ end }}</select></label>
+    </div>
+    <p class="sg-small sg-studio-help">Both previews use the selected screen width and fit the available space. Scroll or follow links inside a preview, or open it at full size. The page selector resets both previews. <a href="#foundations">Skip the previews</a></p>
+    <p class="sg-small" id="design-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div class="sg-design-frames" data-design-frames>
+      {{ range slice "primary" "secondary" }}
+      <section class="sg-design-frame" id="design-{{ . }}" data-design-frame="{{ . }}"{{ if eq . "secondary" }} hidden{{ end }} aria-labelledby="design-title-{{ . }}">
+        <header><div><p class="sg-label" data-frame-label></p><h3 id="design-title-{{ . }}" data-frame-title></h3></div><a class="restaurant-link" data-frame-open>Open full page <span aria-hidden="true">↗</span></a></header>
+        <div class="sg-frame-mat"><div class="sg-frame-viewport"><iframe title="{{ humanize . }} restaurant design preview" data-design-iframe loading="lazy"></iframe></div></div>
+      </section>
+      {{ end }}
+    </div>
+  </div>
+  <noscript><p class="sg-context">Choose any design above to open its guide, or use “Open full example” to browse its pages. Side-by-side previews require JavaScript.</p></noscript>
+</section>

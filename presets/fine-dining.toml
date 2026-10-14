@@ -1,0 +1,56 @@
+[params]
+designName = "Evening editorial"
+designDescription = "A centered introduction, restrained menu typography, and spacious split panels for planning a visit."
+homeSections = ["hero", "announcement", "story", "menu", "visit", "directory"]
+accent = "wine"
+preset = "fine-dining"
+[params.features]
+menu = true
+specials = true
+locations = true
+reservations = true
+ordering = false
+catering = false
+events = true
+planner = true
+gallery = true
+story = true
+team = true
+sourcing = true
+reviews = true
+giftcards = true
+loyalty = false
+newsletter = false
+news = true
+calendar = false
+careers = true
+faq = true
+contact = true
+accessibility = true
+press = true
+foodtruck = false
+
+visit = true
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "centered"
+dish-card = "compact"
+dietary-key = "default"
+service-card = "horizontal"
+location-card = "split"
+hours-panel = "default"
+offer-card = "split"
+package-card = "split"
+event-card = "stacked"
+quote-card = "centered"
+faq-list = "split"
+contact-panel = "split"
+menu-section = "compact"
+tasting-menu = "split"
+beverage-flight = "default"
+team-profile = "horizontal"
+dining-space = "split"
+visit-steps = "timeline"

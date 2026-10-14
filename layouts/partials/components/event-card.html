@@ -1,0 +1,17 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "stacked" "row")) }}
+{{ $state := $d.state | default "unavailable" }}
+{{ if and $d.end (eq $state "available") }}{{ if le (time.AsTime $d.end) now }}{{ $state = "expired" }}{{ end }}{{ end }}
+<article class="restaurant-card restaurant-card-body restaurant-event" data-layout="{{ $layout }}">
+  {{ with $d.date_label }}<p class="restaurant-event-date">{{ . }}</p>{{ end }}
+  <div class="restaurant-event-copy"><div class="restaurant-intro">
+    {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+    {{ with $d.start }}<p><time datetime="{{ . }}">{{ time.Format "Mon, Jan 2, 2006 · 3:04 PM -0700" . }}</time>{{ with $d.end }} to <time datetime="{{ . }}">{{ time.Format "Mon, Jan 2, 2006 · 3:04 PM -0700" . }}</time>{{ end }}</p>{{ end }}
+    {{ with $d.timezone }}<p class="restaurant-note">Timezone: {{ . }}</p>{{ end }}
+    {{ with $d.venue }}<p class="restaurant-kicker">{{ . }}</p>{{ end }}
+    </div><div class="restaurant-details"><p>{{ $d.text }}</p>
+    {{ with $d.note }}<p class="restaurant-note">{{ . }}</p>{{ end }}
+    {{ if eq $state "available" }}{{ partial "components/link.html" $d.link }}{{ else }}<p class="restaurant-badge">{{ if eq $state "expired" }}Past event{{ else if eq $state "cancelled" }}Cancelled{{ else if eq $state "sold-out" }}Sold out{{ else }}Details to be confirmed{{ end }}</p>{{ end }}
+    </div>
+  </div>
+</article>

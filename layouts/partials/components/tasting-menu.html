@@ -1,0 +1,17 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "split" "cards")) }}
+<article class="restaurant-card restaurant-card-body restaurant-tasting" data-layout="{{ $layout }}" data-state="{{ $d.state | default "unavailable" }}">
+  <div class="restaurant-intro">
+    <p class="restaurant-kicker">{{ $d.eyebrow | default "At the chef’s table" }}</p>
+    {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+    {{ with $d.text }}<p>{{ . }}</p>{{ end }}
+    {{ with $d.price }}<p class="restaurant-package-price">{{ . }}</p>{{ end }}
+    {{ with $d.schedule }}<p>{{ . }}</p>{{ end }}
+  </div>
+  <div class="restaurant-details">
+    {{ with $d.courses }}<ol class="restaurant-course-list">{{ range . }}<li><strong>{{ .name }}</strong>{{ with .text }}<p>{{ . }}</p>{{ end }}</li>{{ end }}</ol>{{ else }}<p class="restaurant-note">Courses are being confirmed.</p>{{ end }}
+    {{ with $d.dietary_note }}<p class="restaurant-note">{{ . }}</p>{{ end }}
+    {{ with $d.terms }}<p class="restaurant-note">{{ . }}</p>{{ end }}
+    {{ if eq $d.state "available" }}{{ partial "components/link.html" $d.link }}{{ else }}<p class="restaurant-badge">Currently unavailable</p>{{ end }}
+  </div>
+</article>

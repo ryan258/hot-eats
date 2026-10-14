@@ -1,0 +1,15 @@
+#!/bin/sh
+# Short, local entry point. No installation, publishing, or shell profile edits.
+set -eu
+cd "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+command="${1:-help}"
+if [ "$#" -gt 0 ]; then shift; fi
+case "$command" in
+  preview) exec python3 scripts/site.py serve "$@" ;;
+  build) exec python3 scripts/site.py build "$@" ;;
+  doctor) exec python3 scripts/site.py doctor "$@" ;;
+  test) exec python3 scripts/verify.py "$@" ;;
+  check|today|menu|history|restore|import-menu|export-menu|brief|cost|scale|log|report)
+    exec python3 scripts/owner.py "$command" "$@" ;;
+  *) printf '%s\n' 'Hot Eats: ./he preview | build | doctor | check | test' 'Owner: ./he today | menu | history | restore | import-menu | export-menu' 'Professional tools: ./he brief | cost | scale | log | report' ;;
+esac

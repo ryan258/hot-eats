@@ -1,0 +1,56 @@
+[params]
+designName = "The full toolkit"
+designDescription = "The original warm restaurant canvas, with classic cards and every module available."
+homeSections = ["hero", "announcement", "ticker", "menu", "story", "visit", "directory"]
+accent = "cherry"
+preset = "kitchen-sink"
+[params.features]
+menu = true
+specials = true
+locations = true
+reservations = true
+ordering = true
+catering = true
+events = true
+planner = true
+gallery = true
+story = true
+team = true
+sourcing = true
+reviews = true
+giftcards = true
+loyalty = true
+newsletter = true
+news = true
+calendar = true
+careers = true
+faq = true
+contact = true
+accessibility = true
+press = true
+foodtruck = true
+
+visit = true
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "default"
+dish-card = "default"
+dietary-key = "default"
+service-card = "default"
+location-card = "default"
+hours-panel = "default"
+offer-card = "default"
+package-card = "default"
+event-card = "default"
+quote-card = "default"
+faq-list = "default"
+contact-panel = "default"
+menu-section = "default"
+tasting-menu = "default"
+beverage-flight = "default"
+team-profile = "default"
+dining-space = "default"
+visit-steps = "default"

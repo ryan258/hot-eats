@@ -1,0 +1,29 @@
+{{ $adapter := .adapter }}{{ $config := .config }}{{ $prefix := .prefix }}{{ $params := .params }}
+{{ $data := partial "site-data.html" (dict "config" $config) }}
+{{ range hugo.Data.modules }}
+  {{ if partial "feature-enabled.html" (dict "id" .id "features" $config.features) }}
+    {{ $adapter.AddPage (dict "path" (printf "%s%s" $prefix .id) "kind" "page" "title" .title "layout" "module" "description" .description "params" (merge $params (dict "module" .id))) }}
+    {{ $module := .id }}
+    {{ if eq .kind "records" }}
+      {{ range index $data.collections .id }}
+        {{ $adapter.AddPage (dict "path" (printf "%s%s/%s" $prefix $module .id) "kind" "page" "title" .title "layout" "record" "description" .text "params" (merge $params (dict "module" $module "recordid" .id))) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if partial "feature-enabled.html" (dict "id" "locations" "features" $config.features) }}
+  {{ range $data.locations }}
+    {{ $adapter.AddPage (dict "path" (printf "%slocations/%s" $prefix .id) "kind" "page" "title" .name "layout" "location" "description" .address "params" (merge $params (dict "module" "locations" "locationid" .id))) }}
+  {{ end }}
+{{ end }}
+{{ if partial "feature-enabled.html" (dict "id" "search" "features" $config.features) }}
+  {{ $adapter.AddPage (dict "path" (printf "%ssearch" $prefix) "kind" "page" "title" "Find restaurant information" "layout" "search" "params" $params) }}
+{{ end }}
+{{ if $prefix }}
+  {{ $adapter.AddPage (dict "path" (strings.TrimSuffix "/" $prefix) "kind" "page" "title" $config.designname "layout" "preset-home" "params" $params) }}
+  {{ $adapter.AddPage (dict "path" (printf "%sprivacy" $prefix) "kind" "page" "title" "Privacy" "layout" "privacy" "params" $params) }}
+{{ end }}
+{{ if ne site.Params.mode "publication" }}
+  {{ $adapter.AddPage (dict "path" (printf "%ssite-kit" $prefix) "kind" "page" "title" "Restaurant component living style guide" "layout" "site-kit" "params" $params) }}
+  {{ $adapter.AddPage (dict "path" (printf "%scomponent-showcase" $prefix) "kind" "page" "title" "Restaurant component examples" "layout" "component-showcase" "params" $params) }}
+{{ end }}

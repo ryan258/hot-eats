@@ -1,0 +1,32 @@
+{{ $data := partial "site-data.html" . }}
+<div class="planner-layout">
+<form id="gathering-planner">
+  <p>Prepare an editable brief. Nothing is sent or booked. Export a draft if you want to return later; this page does not save it automatically.</p>
+  <fieldset id="planner-fields" disabled><legend class="sr-only">Gathering details</legend>
+  <label for="event-type">Service</label><select id="event-type" name="occasion">
+    {{ if partial "feature-enabled.html" "catering" }}<option value="catering">Catering</option>{{ end }}
+    {{ if partial "feature-enabled.html" "events" }}<option value="events">Private event</option>{{ end }}
+  </select>
+  <label for="event-location">Location</label><select id="event-location" name="location"><option value="">To be discussed</option>{{ range $data.locations }}<option value="{{ .id }}">{{ .name }}</option>{{ end }}</select>
+  <label for="event-date">Preferred date (optional)</label><input id="event-date" type="date" name="date">
+  <label for="event-guests">Approximate guests (optional)</label><input id="event-guests" type="number" name="guests" min="1" max="100000" inputmode="numeric">
+  <label for="event-budget">Budget range (optional)</label><input id="event-budget" name="budget" maxlength="120" placeholder="Include currency and whether total or per guest">
+  <label for="event-notes">Timing, format, and questions (optional)</label><textarea id="event-notes" name="notes" rows="5" maxlength="2000"></textarea>
+  <button class="button" type="submit" id="prepare-brief" hidden>Prepare brief</button>
+  <div class="draft-import" hidden><label for="import-brief">Open a saved draft</label><input id="import-brief" type="file" accept=".json,application/json"></div>
+  </fieldset>
+  <noscript><p>Use these prompts to write your own inquiry. The brief tools require JavaScript.</p></noscript>
+</form>
+<div class="brief-panel" hidden>
+  <h2>Your gathering brief</h2><label for="brief-output">Review and edit before sharing</label><textarea id="brief-output" rows="13" maxlength="10000"></textarea>
+  <div class="brief-actions">
+    <button type="button" class="button" id="copy-brief">Copy brief</button>
+    <button type="button" class="text-button" id="download-brief">Download text</button>
+    <button type="button" class="text-button" id="save-brief">Save editable draft</button>
+    <button type="button" class="text-button" id="clear-brief">Clear everything</button>
+  </div>
+  <p id="brief-status" role="status"></p>
+  {{ with $data.contacts.email }}<p><a id="email-brief" data-recipient="{{ . }}" href="mailto:{{ . }}">Open an email draft</a> — review it in your email app before sending.</p>{{ end }}
+  <p>Preparing this brief does not confirm availability, pricing, or a booking.</p>
+</div>
+</div>

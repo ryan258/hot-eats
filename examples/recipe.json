@@ -1,0 +1,8 @@
+{
+  "name": "Illustrative portion-cost worksheet",
+  "currency": "USD",
+  "yield_servings": "12",
+  "ingredients": [
+    {"name": "Example ingredient", "quantity": "2", "unit": "kg", "cost_per_unit": "4.50", "waste_percent": "10"}
+  ]
+}

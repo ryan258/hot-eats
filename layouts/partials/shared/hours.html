@@ -1,0 +1,14 @@
+{{ $loc := .location | default . }}
+{{ $days := slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday" }}
+{{ $rows := slice }}
+{{ range $loc.hours }}
+  {{ $times := slice }}{{ range .intervals }}{{ $times = $times | append (printf "%s–%s" (index . 0) (index . 1)) }}{{ end }}
+  {{ $rows = $rows | append (dict "label" (index $days (int .day)) "value" (delimit $times ", " | default "Closed")) }}
+{{ end }}
+<div class="location-hours" data-hours="{{ $loc.hours | jsonify }}" data-exceptions="{{ $loc.exceptions | jsonify }}" data-timezone="{{ $loc.timezone }}" data-reviewed="{{ eq $loc.meta.status "approved" }}">
+  <p class="hours-status" role="status">{{ if ne $loc.meta.status "approved" }}Illustrative or unconfirmed schedule{{ else }}Times are local to {{ $loc.timezone }}{{ end }}</p>
+  {{ partial "components/hours-panel.html" (dict "data" (dict "title" "Hours" "rows" $rows "timezone" $loc.timezone) "level" (.level | default 3) "layout" (partial "component-layout.html" "hours-panel")) }}
+  {{ with $loc.exceptions }}<details><summary>Special hours and closures</summary><ul>
+    {{ range . }}<li><time datetime="{{ .date }}">{{ .date }}</time>: {{ if .intervals }}{{ range .intervals }}{{ index . 0 }}–{{ index . 1 }} {{ end }}{{ else }}Closed{{ end }} {{ .note }}</li>{{ end }}
+  </ul></details>{{ end }}
+</div>

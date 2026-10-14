@@ -1,0 +1,2 @@
+{{ $data := partial "site-data.html" . }}
+{{ with $data.brand.ticker }}<div class="ticker" aria-hidden="true">{{ range . }}<span>{{ . }}</span>✳{{ end }}</div>{{ end }}

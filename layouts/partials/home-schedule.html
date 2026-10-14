@@ -1,0 +1,3 @@
+{{ if partial "feature-enabled.html" "foodtruck" }}
+  <section class="section wrap"><h2>Truck schedule</h2>{{ partial "modules/records.html" (dict "definition" (dict "id" "foodtruck") "home" true "level" 3) }}</section>
+{{ end }}

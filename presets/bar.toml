@@ -1,0 +1,56 @@
+[params]
+designName = "After hours"
+designDescription = "A dark feature area, editorial promotions, and date-band event cards for an evening-led site."
+homeSections = ["hero", "announcement", "ticker", "story", "menu", "visit", "directory"]
+accent = "wine"
+preset = "bar"
+[params.features]
+menu = true
+specials = true
+locations = true
+reservations = true
+ordering = false
+catering = false
+events = true
+planner = true
+gallery = true
+story = true
+team = false
+sourcing = false
+reviews = false
+giftcards = true
+loyalty = false
+newsletter = false
+news = false
+calendar = true
+careers = true
+faq = true
+contact = true
+accessibility = true
+press = false
+foodtruck = false
+
+visit = true
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "centered"
+dish-card = "horizontal"
+dietary-key = "inline"
+service-card = "default"
+location-card = "split"
+hours-panel = "compact"
+offer-card = "split"
+package-card = "split"
+event-card = "stacked"
+quote-card = "centered"
+faq-list = "default"
+contact-panel = "bar"
+menu-section = "compact"
+tasting-menu = "cards"
+beverage-flight = "board"
+team-profile = "horizontal"
+dining-space = "split"
+visit-steps = "default"

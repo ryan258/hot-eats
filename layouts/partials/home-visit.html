@@ -1,0 +1,3 @@
+{{ if and (partial "feature-enabled.html" "visit") (partial "feature-enabled.html" "locations") }}
+  <section class="section wrap"><h2>Plan your visit</h2>{{ partial "modules/locations.html" (dict "level" 3) }}</section>
+{{ end }}

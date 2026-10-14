@@ -1,0 +1,56 @@
+[params]
+designName = "Neighborhood journal"
+designDescription = "A quiet coffeehouse layout with open space, horizontal menu features, and split visit information."
+homeSections = ["hero", "announcement", "story", "menu", "visit", "directory"]
+accent = "coffee"
+preset = "cafe"
+[params.features]
+menu = true
+specials = true
+locations = true
+reservations = false
+ordering = true
+catering = true
+events = false
+planner = true
+gallery = true
+story = true
+team = false
+sourcing = true
+reviews = false
+giftcards = false
+loyalty = true
+newsletter = true
+news = false
+calendar = false
+careers = true
+faq = true
+contact = true
+accessibility = true
+press = false
+foodtruck = false
+
+visit = true
+search = true
+announcement = true
+quicklinks = true
+
+[params.componentLayouts]
+notice = "default"
+dish-card = "horizontal"
+dietary-key = "inline"
+service-card = "compact"
+location-card = "split"
+hours-panel = "compact"
+offer-card = "split"
+package-card = "compact"
+event-card = "default"
+quote-card = "centered"
+faq-list = "split"
+contact-panel = "split"
+menu-section = "default"
+tasting-menu = "split"
+beverage-flight = "board"
+team-profile = "horizontal"
+dining-space = "split"
+visit-steps = "timeline"

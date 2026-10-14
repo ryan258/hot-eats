@@ -1,0 +1,4 @@
+{{- /* Layout is independent of content and availability. Unknown values use the original layout. */ -}}
+{{- $layout := .value | default "default" -}}
+{{- if not (in .allowed $layout) }}{{ $layout = "default" }}{{ end -}}
+{{- return $layout -}}

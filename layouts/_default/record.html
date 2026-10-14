@@ -1,0 +1,6 @@
+{{ define "main" }}
+{{ $data := partial "site-data.html" . }}
+<section class="wrap section prose"><a class="text-link" href="{{ partial "site-url.html" (printf "%s/" .Params.module) }}">← {{ humanize .Params.module }}</a><h1>{{ .Title }}</h1>
+{{ range where (index $data.collections .Params.module) "id" .Params.recordid }}{{ partial "shared/record-card.html" (dict "record" . "module" $.Params.module "detail" true) }}{{ end }}
+</section>
+{{ end }}

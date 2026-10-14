@@ -1,0 +1,28 @@
+{{ $data := partial "site-data.html" . }}
+{{ $locations := where $data.locations "id" .Params.locationid }}
+{{ range $locations }}
+  {{ $hours := slice }}
+  {{ $days := slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday" }}
+  {{ range .hours }}
+    {{ $day := index $days (int .day) }}
+    {{ $periods := .intervals }}{{ if not $periods }}{{ $periods = slice (slice "00:00" "00:00") }}{{ end }}
+    {{ range $periods }}
+      {{ $open := index . 0 }}{{ $close := index . 1 }}
+      {{ if eq $close "24:00" }}{{ $close = "00:00" }}{{ if eq $open "00:00" }}{{ $close = "23:59" }}{{ end }}{{ end }}
+      {{ $hours = $hours | append (dict "@type" "OpeningHoursSpecification" "dayOfWeek" $day "opens" $open "closes" $close) }}
+    {{ end }}
+  {{ end }}
+  {{ $exceptions := slice }}
+  {{ range .exceptions }}
+    {{ $date := .date }}{{ $periods := .intervals }}{{ if not $periods }}{{ $periods = slice (slice "00:00" "00:00") }}{{ end }}
+    {{ range $periods }}
+      {{ $open := index . 0 }}{{ $close := index . 1 }}
+      {{ if eq $close "24:00" }}{{ $close = "00:00" }}{{ if eq $open "00:00" }}{{ $close = "23:59" }}{{ end }}{{ end }}
+      {{ $exceptions = $exceptions | append (dict "@type" "OpeningHoursSpecification" "validFrom" $date "validThrough" $date "opens" $open "closes" $close) }}
+    {{ end }}
+  {{ end }}
+  {{ $schema := dict "@context" "https://schema.org" "@type" "Restaurant" "name" (printf "%s — %s" site.Params.companyName .name) "address" .address "telephone" .phone "url" $.Permalink "openingHoursSpecification" $hours }}
+  {{ with $exceptions }}{{ $schema = merge $schema (dict "specialOpeningHoursSpecification" .) }}{{ end }}
+  {{ if partial "feature-enabled.html" "menu" }}{{ $schema = merge $schema (dict "menu" ("menu/" | absURL)) }}{{ end }}
+  <script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{ end }}

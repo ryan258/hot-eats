@@ -1,0 +1,8 @@
+{{/* Scope restaurant routes to their preview; external URLs and fragments stay intact. */}}
+{{ $url := . }}
+{{ if not (findRE `^([a-zA-Z][a-zA-Z0-9+.-]*:|//|#)` $url) }}
+  {{ $path := strings.TrimPrefix "/" $url }}
+  {{ with page.Params.previewpreset }}{{ $path = printf "site-kit/presets/%s/%s" . $path }}{{ end }}
+  {{ $url = $path | relURL }}
+{{ end }}
+{{ return $url }}

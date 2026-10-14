@@ -1,0 +1,18 @@
+{{ $data := partial "site-data.html" . }}
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow">{{ $data.brand.eyebrow }}</p>
+    <h1 id="hero-title">{{ $data.brand.headline }}</h1>
+    <p class="intro">{{ $data.brand.intro }}</p>
+    <div class="hero-actions">
+      {{ range slice "menu" "ordering" "reservations" "locations" "foodtruck" }}
+        {{ if partial "feature-enabled.html" . }}
+          {{ $m := index (where hugo.Data.modules "id" .) 0 }}
+          <a class="button" data-context-link href="{{ partial "site-url.html" (printf "%s/" .) }}">{{ $m.label }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+    {{ with $data.brand.note }}<p class="small-note">{{ . }}</p>{{ end }}
+  </div>
+  {{ with $data.brand.image }}<div class="hero-art">{{ partial "image.html" (merge . (dict "priority" true)) }}</div>{{ end }}
+</section>

@@ -1,0 +1,10 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "board" "compact")) }}
+<section class="restaurant-card restaurant-card-body restaurant-schedule" data-layout="{{ $layout }}">
+  {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+  {{ with $d.timezone }}<p class="restaurant-note">Times shown in {{ . }}.</p>{{ end }}
+  {{ if $d.rows }}<dl class="restaurant-facts restaurant-hours">{{ range $d.rows }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}</dl>{{ else }}<p>Hours are awaiting confirmation. Please check before traveling.</p>{{ end }}
+  {{ with $d.exception }}<p class="restaurant-hours-exception"><strong>{{ .label }}</strong> {{ .text }}</p>{{ end }}
+  {{ with $d.note }}<p class="restaurant-note">{{ . }}</p>{{ end }}
+  {{ partial "components/link.html" $d.link }}
+</section>

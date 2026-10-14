@@ -1,0 +1,12 @@
+{{ $d := .data }}
+{{ $layout := partial "components/layout.html" (dict "value" .layout "allowed" (slice "default" "split" "cards")) }}
+<section class="restaurant-card restaurant-card-body restaurant-questions" data-layout="{{ $layout }}">
+  <div class="restaurant-intro">
+  {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
+  </div><div class="restaurant-details">
+  <div class="restaurant-faq">{{ range $d.items }}
+    {{ if eq $layout "cards" }}<div class="restaurant-answer"{{ if $.locationAware }} id="faq-{{ .id }}" data-location-card="{{ delimit (.location_ids | default slice) " " }}"{{ end }}>{{ partial "components/heading.html" (dict "text" .question "level" (math.Min 6 (add (int ($.level | default 3)) 1))) }}<p>{{ .answer }}</p></div>
+    {{ else }}<details{{ if $.locationAware }} id="faq-{{ .id }}" data-location-card="{{ delimit (.location_ids | default slice) " " }}"{{ end }}><summary>{{ .question }}</summary><p>{{ .answer }}</p></details>{{ end }}
+  {{ else }}<p>Answers are being prepared. Please contact the restaurant with your question.</p>{{ end }}</div>
+  {{ partial "components/link.html" $d.link }}</div>
+</section>

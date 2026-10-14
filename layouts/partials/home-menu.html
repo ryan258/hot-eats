@@ -1,0 +1,7 @@
+{{ if partial "feature-enabled.html" "menu" }}
+  <section class="menu-section wrap section" aria-labelledby="menu-title">
+    <h2 id="menu-title">Explore the menu</h2>
+    {{ partial "menu.html" (dict "level" 3) }}
+    <p><a class="text-link" href="{{ partial "site-url.html" ("menu/") }}" data-context-link>Full menu and print options →</a></p>
+  </section>
+{{ end }}

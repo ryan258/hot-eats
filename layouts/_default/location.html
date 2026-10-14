@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ $data := partial "site-data.html" . }}
+{{ range where $data.locations "id" .Params.locationid }}
+<article class="wrap section prose">
+  <h1>{{ .name }}</h1><p>{{ .address | default "Address to be confirmed" }}</p>
+  {{ partial "shared/hours.html" (dict "location" . "level" 2) }}
+  {{ with .phone }}<p><a href="tel:{{ replaceRE `[^+0-9]` "" . }}">Call {{ . }}</a></p>{{ end }}
+  {{ with .map_url }}<p><a class="button" href="{{ . }}">Directions</a></p>{{ end }}
+  <h2>Access and arrival</h2><dl class="facts">{{ range $k,$v := .access }}<div><dt>{{ humanize $k }}</dt><dd>{{ $v }}</dd></div>{{ end }}</dl>
+  {{ with .meta.reviewed_on }}<p>Details reviewed: {{ . }}</p>{{ end }}
+  {{ $id := .id }}<div class="hero-actions">
+  {{ range slice "menu" "ordering" "reservations" }}{{ if partial "feature-enabled.html" . }}<a class="button" href="{{ partial "site-url.html" (printf "%s/?location=%s" . $id) }}">{{ humanize . }}</a>{{ end }}{{ end }}
+  </div>
+</article>
+{{ end }}
+{{ end }}
