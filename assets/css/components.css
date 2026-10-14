@@ -3,6 +3,8 @@
   --restaurant-surface: #fbf7ed;
   --restaurant-radius: 12px;
   --restaurant-space: 24px;
+  --restaurant-detail-font: Georgia, 'Times New Roman', serif;
+  --restaurant-detail-weight: 700;
 }
 .restaurant-card, .restaurant-notice {
   min-width: 0;
@@ -194,7 +196,7 @@
 /* Menu groupings, tasting menus, and flight notes. */
 .restaurant-menu-items, .restaurant-flight-items { margin: 0 0 20px; }
 .restaurant-menu-items>div, .restaurant-flight-items>div { padding-block: 18px; border-bottom: 1px solid var(--line); }
-.restaurant-menu-items dt, .restaurant-flight-items dt { font: bold 20px/1.4 Georgia, serif; }
+.restaurant-menu-items dt, .restaurant-flight-items dt { font: var(--restaurant-detail-weight) 20px/1.4 var(--restaurant-detail-font); }
 .restaurant-menu-items dd, .restaurant-flight-items dd { margin: 8px 0 0; }
 .restaurant-card .restaurant-menu-price { display: block; font-weight: bold; color: var(--red); margin-bottom: 8px; }
 .restaurant-card .restaurant-flight-portion { font-size: 14px; font-weight: bold; color: var(--red); margin-bottom: 8px; }
@@ -211,7 +213,7 @@
 .restaurant-course-list { padding-left: 26px; margin: 0 0 24px; }
 .restaurant-course-list li { padding: 16px 8px; border-bottom: 1px solid var(--line); }
 .restaurant-course-list li::marker { color: var(--red); font-weight: bold; }
-.restaurant-course-list strong { font: bold 20px/1.4 Georgia, serif; }
+.restaurant-course-list strong { font: var(--restaurant-detail-weight) 20px/1.4 var(--restaurant-detail-font); }
 .restaurant-course-list p { margin-top: 8px; }
 .restaurant-tasting[data-layout="cards"] .restaurant-course-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 16px; padding: 0; list-style-position: inside; }
 .restaurant-tasting[data-layout="cards"] .restaurant-course-list li { padding: 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }
@@ -222,7 +224,7 @@
 .restaurant-team[data-layout="horizontal"] { display: flex; flex-wrap: wrap; }
 .restaurant-team[data-layout="horizontal"]>.restaurant-team-image { flex: 1 1 200px; border-radius: 0; display: grid; align-items: center; }
 .restaurant-team[data-layout="horizontal"]>.restaurant-card-body { flex: 2 1 250px; min-width: 0; }
-.restaurant-team[data-layout="compact"] { display: flex; flex-wrap: wrap; gap: 20px; }
+.restaurant-team[data-layout="compact"] { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
 .restaurant-team[data-layout="compact"]>.restaurant-team-image { flex: 0 0 80px; padding: 4px; border-radius: 6px; }
 .restaurant-team[data-layout="compact"] .restaurant-team-image img { height: 80px; }
 .restaurant-team[data-layout="compact"]>.restaurant-card-body { flex: 1 1 180px; padding: 0; min-width: 0; }
@@ -231,7 +233,7 @@
 .restaurant-space[data-layout="split"]>.restaurant-intro { flex-basis: 260px; }
 .restaurant-space[data-layout="split"]>.restaurant-details { flex-basis: 260px; padding: 28px; }
 .restaurant-space[data-layout="split"] .restaurant-space-image { border-radius: 0; }
-.restaurant-space[data-layout="compact"]>.restaurant-intro { display: flex; flex-wrap: wrap; gap: 20px; }
+.restaurant-space[data-layout="compact"]>.restaurant-intro { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
 .restaurant-space[data-layout="compact"] .restaurant-space-image { flex: 0 0 100px; padding: 4px; border-radius: 6px; }
 .restaurant-space[data-layout="compact"] .restaurant-space-image img { height: 100px; }
 .restaurant-space[data-layout="compact"] .restaurant-card-body { padding: 0; }
@@ -254,10 +256,30 @@
 .restaurant-showcase-section { margin-block: 40px; }
 .restaurant-showcase .restaurant-kicker { color: var(--red); font-size: 14px; font-weight: bold; }
 
+/* Keep supporting copy readable in wide features without shortening its content. */
+.restaurant-tasting>.restaurant-intro>p,
+.restaurant-flight>.restaurant-intro>p,
+.restaurant-team .restaurant-card-body>p,
+.restaurant-space .restaurant-card-body>p { max-width: 65ch; }
+.restaurant-tasting .restaurant-note, .restaurant-flight .restaurant-note,
+.restaurant-space .restaurant-note, .restaurant-steps>.restaurant-intro>p { max-width: 75ch; }
+.restaurant-tasting .restaurant-package-price,
+.restaurant-flight .restaurant-package-price { font-family: var(--restaurant-detail-font); }
+
 @media (max-width: 500px) {
   .restaurant-facts>div { grid-template-columns: 1fr; gap: 4px; }
   .restaurant-event { flex-direction: column; gap: 8px; }
   .restaurant-notice { padding: 20px; gap: 12px; }
+  .restaurant-team-image img, .restaurant-space-image img { height: 170px; }
+  .restaurant-team-image, .restaurant-space-image { padding: 12px; }
+  .restaurant-tasting .restaurant-title, .restaurant-flight .restaurant-title,
+  .restaurant-team .restaurant-title, .restaurant-space .restaurant-title,
+  .restaurant-steps .restaurant-title { font-size: 26px; line-height: 1.2; letter-spacing: -.4px; }
+  .restaurant-team[data-layout="compact"] .restaurant-title,
+  .restaurant-space[data-layout="compact"] .restaurant-title { font-size: 23px; }
+  .restaurant-course-list li, .restaurant-step-list li { padding-block: 12px; }
+  .restaurant-steps[data-layout="timeline"] .restaurant-step-list li { padding: 10px 16px 18px; }
+  .restaurant-space[data-layout="split"]>.restaurant-details { padding: 20px; }
 }
 @media (forced-colors: active) {
   .restaurant-card, .restaurant-notice, .restaurant-offer { border-color: CanvasText; background: Canvas; color: CanvasText; }

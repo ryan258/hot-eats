@@ -114,8 +114,46 @@
       if (event.key === 'Escape') { details.open = false; details.querySelector('summary').focus(); }
     });
     document.addEventListener('click', event => { if (!details.contains(event.target)) details.open = false; });
+    details.addEventListener('focusout', event => {
+      if (event.relatedTarget && !details.contains(event.relatedTarget)) details.open = false;
+    });
   });
 
+  // Print expanded answers and complete editable text, then restore the screen state.
+  let printDetails = [];
+  let printFields = [];
+  let printScopeNote;
+  let printing = false;
+  window.addEventListener('beforeprint', () => {
+    if (printing) return;
+    printing = true;
+    printDetails = $$('main details').map(details => [details, details.open]);
+    printDetails.forEach(([details]) => { details.open = true; });
+    printFields = $$('main textarea').map(field => {
+      const text = document.createElement('p');
+      text.className = 'print-field-value';
+      text.textContent = field.value || 'Not specified';
+      field.after(text); field.classList.add('print-field-source');
+      return [field, text];
+    });
+    const identity = $('.menu-print-identity');
+    if (identity) {
+      printScopeNote = document.createElement('p');
+      printScopeNote.className = 'menu-print-scope';
+      printScopeNote.textContent = document.body.dataset.printScope === 'selection'
+        ? `Current selection · ${$('#menu-status')?.textContent || 'Current visible dishes'}`
+        : 'Full menu · All locations and services';
+      identity.after(printScopeNote);
+    }
+  });
+  window.addEventListener('afterprint', () => {
+    printDetails.forEach(([details, open]) => { details.open = open; });
+    printFields.forEach(([field, text]) => { field.classList.remove('print-field-source'); text.remove(); });
+    printScopeNote?.remove();
+    printDetails = []; printFields = []; printScopeNote = undefined;
+    printing = false;
+    delete document.body.dataset.printScope;
+  });
   const printControls = $('.print-controls');
   if (printControls) {
     printControls.hidden = false;
@@ -125,7 +163,6 @@
       document.body.dataset.printScope = button.dataset.print;
       window.print();
     });
-    window.addEventListener('afterprint', () => { delete document.body.dataset.printScope; });
   }
 
   function refreshTime() {

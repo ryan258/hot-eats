@@ -3,7 +3,8 @@
 .component-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .component-grid[data-component-layout="split"], .component-grid[data-component-layout="horizontal"],
 .component-grid[data-component-layout="ribbon"], .component-grid[data-component-layout="row"],
-.component-grid[data-component-layout="centered"], .component-grid[data-component-layout="bar"] { grid-template-columns: 1fr; }
+.component-grid[data-component-layout="centered"], .component-grid[data-component-layout="bar"],
+.component-grid[data-component-layout="mixed"] { grid-template-columns: 1fr; }
 .component-grid>*, .location-entry { min-width: 0; }
 .location-entry { display: grid; gap: 20px; align-content: start; }
 .location-grid[data-component-layout="split"] .location-entry { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; }
@@ -23,10 +24,13 @@
 .menu-grid .dish-link { font-size: 14px; }
 .menu-grid .restaurant-modifiers { padding: 0; }
 .menu-grid[data-component-layout="horizontal"] { grid-template-columns: 1fr; }
-.menu-grid[data-component-layout="horizontal"] .menu-card { max-width: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; }
-.menu-grid[data-component-layout="horizontal"] .menu-card>.eyebrow,
-.menu-grid[data-component-layout="horizontal"] .menu-card>h2,
-.menu-grid[data-component-layout="horizontal"] .menu-card>h3 { grid-column: 1/-1; }
+.menu-grid[data-component-layout="horizontal"] .menu-card { max-width: none; }
+.menu-dishes { display: grid; gap: 20px; }
+.menu-grid .menu-dishes>.dish { margin-top: 0; min-width: 0; }
+.menu-grid[data-component-layout="horizontal"] .menu-dishes,
+.menu-grid .restaurant-menu-section[data-layout="board"] .menu-dishes { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.menu-grid[data-section-layout="board"] { grid-template-columns: 1fr; }
+.visit-planning { margin-block: 28px; }
 .menu-grid[data-component-layout="compact"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .menu-grid[data-component-layout="compact"] .menu-card { background: transparent; border-radius: 0; border-inline: 0; border-top: 3px solid var(--red); }
 .menu-grid .menu-card:only-child { max-width: none; }
@@ -117,25 +121,269 @@ body[data-preset="multi-location"] .hero-art img { transform: none; }
 body[data-preset="multi-location"] .story { background: #dce8df; }
 body[data-preset="multi-location"] .location-entry { padding-bottom: 32px; border-bottom: 2px solid var(--line); }
 
+/* The section layout controls grouping; dish layouts keep their own markup. */
+.menu-grid[data-section-layout="board"],
+body[data-preset="fast-casual"] .menu-grid[data-section-layout="board"] { grid-template-columns: 1fr; }
+.menu-grid .restaurant-menu-section[data-layout="compact"] .menu-dishes { grid-template-columns: 1fr; gap: 0; }
+.menu-grid .restaurant-menu-section[data-layout="compact"] .dish { padding-block: 16px; border-bottom: 1px solid var(--line); }
+.menu-grid .restaurant-menu-section[data-layout="compact"] .restaurant-dish { border: 0; background: transparent; padding: 0; }
+.menu-grid .restaurant-menu-section[data-layout="compact"] .restaurant-dish .restaurant-card-body { padding: 0; }
+.menu-grid .dish .restaurant-title { font-size: 24px; margin-bottom: 10px; }
+.menu-grid .dish .restaurant-title-row { gap: 8px 12px; }
+.menu-grid .dish .restaurant-card .restaurant-price { font-size: 20px; margin-bottom: 10px; }
+.menu-grid .restaurant-menu-section:not([data-layout="compact"]) .restaurant-dish:not([data-layout="compact"]) .restaurant-card-body { padding: 18px; }
+.menu-grid .restaurant-menu-section[data-layout="board"] .restaurant-dish[data-layout="compact"] { padding: 12px 0; }
+.menu-grid .dish .restaurant-card p:not(.restaurant-price) { max-width: 65ch; }
+.menu-grid .dish-link { display: inline-flex; align-items: center; min-height: 44px; padding-block: 6px; }
+
+/* Single room/profile records get a useful measure instead of an empty grid column. */
+.component-grid:has(> .component-record:only-child > .restaurant-space) { grid-template-columns: 1fr; max-width: 1040px; }
+.component-grid:has(> .component-record:only-child > .restaurant-team) { grid-template-columns: 1fr; max-width: 880px; }
+
+/* Supporting record information stays visible, with less stacked spacing. */
+.component-record>.restaurant-tasting+.record-meta,
+.component-record>.restaurant-flight+.record-meta,
+.component-record>.restaurant-team+.record-meta,
+.component-record>.restaurant-space+.record-meta {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 24px;
+  padding: 18px 24px; font-size: 14px; line-height: 1.6;
+}
+.component-record>.restaurant-tasting+.record-meta>p,
+.component-record>.restaurant-flight+.record-meta>p,
+.component-record>.restaurant-team+.record-meta>p,
+.component-record>.restaurant-space+.record-meta>p { margin: 0; max-width: 75ch; }
+.component-record>.restaurant-team+.record-meta>.facts { flex-basis: 100%; }
+
+/* Counter classics: firm rules, compact lists, and familiar serif details. */
+body[data-preset="diner"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-team,.restaurant-space,.restaurant-steps) { border-top: 4px double var(--red); }
+body[data-preset="diner"] .restaurant-course-list li { border-bottom-style: dashed; }
+body[data-preset="diner"] .restaurant-flight[data-layout="compact"] { border-bottom: 4px double var(--red); }
+
+/* Neighborhood journal: open editorial panels with quiet dividers. */
+body[data-preset="cafe"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-team,.restaurant-space,.restaurant-steps) { background: transparent; border-inline: 0; border-radius: 0; border-top: 1px solid var(--red); }
+body[data-preset="cafe"] .restaurant-tasting[data-layout="split"]>.restaurant-details { border-left: 1px solid var(--line); padding-left: 28px; }
+body[data-preset="cafe"] .restaurant-flight-items>div { background: var(--restaurant-surface); }
+
+/* Evening editorial: restrained widths, italic features, and light course rules. */
+body[data-preset="fine-dining"] .component-grid[data-component-layout="mixed"] { max-width: 1040px; margin-inline: auto; }
+body[data-preset="fine-dining"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-team,.restaurant-space,.restaurant-steps) { border-inline: 0; background: transparent; }
+body[data-preset="fine-dining"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-team,.restaurant-space) .restaurant-title { font-style: italic; }
+body[data-preset="fine-dining"] .restaurant-course-list strong { font-weight: normal; font-size: 22px; }
+body[data-preset="fine-dining"] .restaurant-team-image, body[data-preset="fine-dining"] .restaurant-space-image { background: #e4ded3; }
+
+/* Fresh & direct: the same bold sans-serif hierarchy inside the new tiles. */
+body[data-preset="fast-casual"] { --restaurant-detail-font: Arial, sans-serif; --restaurant-detail-weight: 800; }
+body[data-preset="fast-casual"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-steps) { border-width: 2px; }
+body[data-preset="fast-casual"] :is(.restaurant-course-list li,.restaurant-flight-items>div,.restaurant-step-list li) { border-radius: 12px; }
+body[data-preset="fast-casual"] :is(.restaurant-tasting,.restaurant-flight) .restaurant-package-price { font-weight: 700; }
+
+/* After hours: plum accents and tinted tasting boards. */
+body[data-preset="bar"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-space,.restaurant-steps) { border-top: 3px solid var(--red); }
+body[data-preset="bar"] .restaurant-tasting[data-layout="cards"] .restaurant-course-list li,
+body[data-preset="bar"] .restaurant-flight[data-layout="board"] .restaurant-flight-items>div { background: var(--pink); border-color: var(--red); }
+body[data-preset="bar"] .restaurant-course-list strong, body[data-preset="bar"] .restaurant-flight-items dt { color: var(--red); }
+body[data-preset="bar"] .menu-grid[data-section-layout="compact"] { max-width: 1040px; }
+
+/* From the oven: soft feature cards and dashed inner details. */
+body[data-preset="bakery"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-team,.restaurant-space,.restaurant-steps) { border-style: dashed; border-color: var(--red); }
+body[data-preset="bakery"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-team,.restaurant-space) .restaurant-title { font-style: italic; }
+body[data-preset="bakery"] .restaurant-course-list li { border-bottom-style: dashed; }
+body[data-preset="bakery"] .restaurant-step-list li { border-style: dashed; border-radius: 16px; }
+
+/* Next stop: legible signboard type and sturdy square edges. */
+body[data-preset="food-truck"] { --restaurant-detail-font: Arial, sans-serif; --restaurant-detail-weight: 800; }
+body[data-preset="food-truck"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-team,.restaurant-space,.restaurant-steps) { border: 2px solid var(--ink); border-radius: 0; }
+body[data-preset="food-truck"] :is(.restaurant-course-list strong,.restaurant-flight-items dt,.restaurant-step-list strong) { font-family: Arial, sans-serif; font-weight: 800; }
+body[data-preset="food-truck"] :is(.restaurant-tasting,.restaurant-flight) .restaurant-package-price { font-weight: 800; }
+body[data-preset="food-truck"] .restaurant-steps[data-layout="timeline"] .restaurant-step-list li { border-left-color: var(--ink); }
+body[data-preset="food-truck"] .menu-grid[data-section-layout="compact"] { max-width: 1040px; }
+
+/* Around the neighborhood: consistent directory type and compact facts. */
+body[data-preset="multi-location"] { --restaurant-detail-font: Arial, sans-serif; --restaurant-detail-weight: 700; }
+body[data-preset="multi-location"] :is(.restaurant-tasting,.restaurant-flight,.restaurant-team,.restaurant-space,.restaurant-steps) { border-top: 3px solid var(--red); }
+body[data-preset="multi-location"] .restaurant-space[data-layout="compact"] .restaurant-facts dt { color: var(--red); }
+
+/* Shared guest-page rhythm, extended to the remaining modules and details. */
+body {
+  --restaurant-heading-font: Georgia, 'Times New Roman', serif;
+  --restaurant-heading-weight: 400;
+  --restaurant-panel-rule: 1px solid var(--line);
+}
+.module-page { padding-block: clamp(32px, 5vw, 64px); }
+.module-heading { margin: 24px 0 28px; }
+.module-heading h1, main>.wrap.section>h1, .wrap.section.prose>h1 {
+  font-family: var(--restaurant-heading-font); font-weight: var(--restaurant-heading-weight);
+  font-size: clamp(40px, 5.5vw, 68px); line-height: 1.12; letter-spacing: -1.5px;
+  max-width: 22ch; margin-bottom: 20px;
+}
+.module-heading .intro { font-size: 18px; line-height: 1.65; max-width: 65ch; }
+.sample-notice { background: var(--restaurant-surface); padding: 16px 20px; font-size: 14px; margin-block: 24px; border-radius: var(--restaurant-radius); }
+.sample-notice summary { cursor: pointer; display: list-item; min-height: 44px; align-content: center; }
+.wrap.section.prose { max-width: 960px; min-height: 0; padding-block: clamp(32px, 5vw, 64px); }
+.wrap.section.prose>p, .info-card>p { max-width: 70ch; font-size: 16px; line-height: 1.7; }
+.info-card { background: var(--restaurant-surface); border-radius: var(--restaurant-radius); border-top: var(--restaurant-panel-rule); padding: clamp(20px, 3vw, 32px); min-width: 0; overflow-wrap: anywhere; }
+.info-card .restaurant-title { font-family: var(--restaurant-heading-font); font-weight: var(--restaurant-heading-weight); font-size: clamp(26px, 3vw, 34px); }
+.directory-grid:has(> .record.info-card) { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); max-width: 1040px; }
+.directory-grid>.record.info-card:only-child { grid-column: 1/-1; max-width: 880px; }
+.component-grid:has(> .component-record:only-child) { grid-template-columns: 1fr; max-width: 1040px; }
+.component-grid:has(> [data-location-card]:only-child > .restaurant-service) { grid-template-columns: 1fr; max-width: 1040px; }
+.info-card>.record-meta { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+.info-card>.record-meta, .component-record>.record-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 24px; font-size: 14px; line-height: 1.6; }
+.info-card>.record-meta>p, .component-record>.record-meta>p { font-size: 14px; margin: 0; max-width: 75ch; }
+.record-meta>.facts { flex-basis: 100%; font-size: 16px; }
+.module-cta { max-width: 1040px; padding-top: 28px; margin-top: 32px; }
+.module-cta h2 { font-family: var(--restaurant-heading-font); font-weight: var(--restaurant-heading-weight); font-size: clamp(28px, 3vw, 38px); letter-spacing: -.6px; }
+.module-cta p, .policy-note { max-width: 70ch; }
+.policy-note { margin-top: 28px; padding: 18px 20px; border-left: 3px solid var(--red); background: var(--restaurant-surface); font-size: 16px; line-height: 1.7; }
+
+/* Directory, forms, and disclosures share the current preset's surfaces and type. */
+.module-directory { padding-block: clamp(28px, 4vw, 52px); }
+.directory-group>h3 { font-family: var(--restaurant-heading-font); font-weight: var(--restaurant-heading-weight); font-size: 26px; color: var(--red); }
+.directory-card { background: var(--restaurant-surface); border-radius: var(--restaurant-radius); border-top: var(--restaurant-panel-rule); padding: 24px; min-width: 0; }
+.directory-card>span:first-child { font-family: var(--restaurant-heading-font); font-weight: var(--restaurant-heading-weight); font-size: 24px; line-height: 1.25; }
+.directory-card p { font-size: 16px; line-height: 1.6; margin-bottom: 28px; }
+.directory-card:hover { background: var(--pink); }
+.directory-search label, .planner-layout label { font-size: 15px; }
+.context-picker, .service-picker, .directory-search { margin-block: 24px; }
+:is(.context-picker,.service-picker,.directory-search,.planner-layout) :is(input,select,textarea) { background: var(--restaurant-surface); border-color: var(--muted); border-radius: min(var(--restaurant-radius), 8px); font-size: 16px; min-width: 0; }
+.empty-state { background: var(--restaurant-surface); border-radius: var(--restaurant-radius); border-top: var(--restaurant-panel-rule); font-size: 16px; }
+:is(.restaurant-service,.restaurant-contact,.restaurant-questions,.restaurant-location,.restaurant-schedule,.restaurant-package,.restaurant-event,.restaurant-quote) { border-top: var(--restaurant-panel-rule); }
+.restaurant-service p, .restaurant-contact p, .restaurant-package p { max-width: 70ch; }
+.restaurant-contact-links a { overflow-wrap: anywhere; }
+.restaurant-answer .restaurant-title { font-family: var(--restaurant-detail-font); }
+.restaurant-faq summary { line-height: 1.5; }
+.restaurant-faq details p, .restaurant-answer p { max-width: 70ch; }
+.restaurant-package-price { font-family: var(--restaurant-heading-font); }
+.restaurant-quote blockquote { font-family: var(--restaurant-heading-font); }
+
+/* A prepared brief creates the second column; an empty panel leaves no blank column. */
+.planner-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; max-width: 1200px; align-items: start; }
+.planner-layout:has(> .brief-panel[hidden]) { grid-template-columns: minmax(0, 760px); }
+.planner-layout form, .brief-panel { min-width: 0; padding: clamp(20px, 3vw, 28px); border: 1px solid var(--line); border-top: var(--restaurant-panel-rule); border-radius: var(--restaurant-radius); background: var(--restaurant-surface); }
+.planner-layout form>p { font-size: 16px; max-width: 65ch; }
+.planner-layout label { margin-top: 20px; }
+.planner-layout textarea { line-height: 1.65; }
+.brief-panel { position: sticky; top: 24px; }
+.brief-panel h2 { font-family: var(--restaurant-heading-font); font-weight: var(--restaurant-heading-weight); font-size: 30px; line-height: 1.2; }
+.brief-panel>p, #brief-status { font-size: 14px; }
+.brief-actions { gap: 8px 20px; }
+.text-button { font-size: 15px; min-height: 44px; }
+.draft-import label { margin-top: 0; }
+
+/* Gallery images remain whole, with captions and credits in the same frame. */
+.gallery-grid { gap: 28px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); max-width: 1120px; }
+.gallery-grid>figure:only-child { max-width: 760px; }
+.gallery-grid figure { min-width: 0; padding: 12px; border: 1px solid var(--line); border-top: var(--restaurant-panel-rule); border-radius: var(--restaurant-radius); background: var(--restaurant-surface); }
+.gallery-grid img { width: 100%; height: 340px; object-fit: contain; border-radius: max(0px, calc(var(--restaurant-radius) - 8px)); }
+.gallery-grid figcaption { padding: 8px 8px 4px; font-size: 16px; line-height: 1.6; color: var(--ink); }
+.gallery-grid figcaption span { font-size: 14px; color: var(--muted); margin-top: 6px; }
+
+/* Site navigation and footer links keep readable labels and comfortable targets. */
+.explore-nav>div { width: min(640px, calc(100vw - 36px)); padding: 20px; gap: 12px; background: var(--restaurant-surface); border-radius: var(--restaurant-radius); border-top: var(--restaurant-panel-rule); }
+.explore-nav a { font-size: 15px; line-height: 1.5; min-height: 44px; }
+.explore-nav .nav-group { margin: 8px 10px; }
+.footer { flex-wrap: wrap; gap: 12px 24px; padding-block: 28px; }
+.footer p { flex: 1 1 220px; }
+.footer>a:not(.wordmark) { display: inline-flex; align-items: center; min-height: 44px; padding-block: 6px; }
+
+/* Carry each restaurant's established treatment through every remaining page type. */
+body[data-preset="diner"] { --restaurant-heading-weight: 700; --restaurant-panel-rule: 4px double var(--red); }
+body[data-preset="cafe"] { --restaurant-panel-rule: 1px solid var(--red); }
+body[data-preset="fine-dining"] { --restaurant-panel-rule: 1px solid var(--line); }
+body[data-preset="fast-casual"] { --restaurant-heading-font: Arial, sans-serif; --restaurant-heading-weight: 800; --restaurant-panel-rule: 2px solid var(--line); }
+body[data-preset="bar"] { --restaurant-panel-rule: 3px solid var(--red); }
+body[data-preset="bakery"] { --restaurant-panel-rule: 1px dashed var(--red); }
+body[data-preset="food-truck"] { --restaurant-heading-font: Arial, sans-serif; --restaurant-heading-weight: 800; --restaurant-panel-rule: 2px solid var(--ink); }
+body[data-preset="multi-location"] { --restaurant-heading-font: Arial, sans-serif; --restaurant-heading-weight: 700; --restaurant-panel-rule: 3px solid var(--red); }
+body[data-preset="cafe"] :is(.info-card,.restaurant-service,.restaurant-contact,.restaurant-questions,.restaurant-package,.restaurant-quote) { border-inline: 0; background: transparent; border-radius: 0; }
+body[data-preset="fine-dining"] :is(.module-heading h1,.wrap.section.prose>h1,.directory-group>h3) { font-style: italic; }
+body[data-preset="fine-dining"] :is(.info-card,.restaurant-service,.restaurant-contact,.restaurant-questions,.restaurant-package,.restaurant-quote) { border-inline: 0; background: transparent; }
+body[data-preset="cafe"] .restaurant-offer, body[data-preset="bar"] .restaurant-offer { background: var(--red); border-color: var(--red); }
+body[data-preset="fine-dining"] .restaurant-offer { background: var(--ink); border-color: var(--ink); }
+body[data-preset="bakery"] :is(.info-card,.directory-card,.planner-layout form,.brief-panel,.gallery-grid figure) { border-style: dashed; border-color: var(--red); }
+body[data-preset="bakery"] :is(.info-card .restaurant-title,.directory-group>h3) { font-style: italic; }
+body[data-preset="food-truck"] :is(.info-card,.directory-card,.planner-layout form,.brief-panel,.gallery-grid figure) { border: 2px solid var(--ink); border-radius: 0; }
+
 @media (max-width: 850px) {
   .location-grid[data-component-layout="split"] .location-entry { grid-template-columns: 1fr; }
   .menu-grid[data-component-layout="horizontal"] .menu-card { grid-template-columns: 1fr; }
   body[data-preset="cafe"] .hero { grid-template-columns: 1fr; }
   body[data-preset="bar"] .hero { padding: 28px; }
+  .planner-layout, .planner-layout:has(> .brief-panel[hidden]) { grid-template-columns: minmax(0, 760px); }
+  .brief-panel { position: static; }
 }
 @media (max-width: 700px) {
   .component-grid, .menu-grid[data-component-layout], body[data-preset="fast-casual"] .menu-grid { grid-template-columns: 1fr; }
   body[data-preset="fine-dining"] .hero { padding-block: 45px; }
   body[data-preset="cafe"] .story .wrap { margin-inline: auto; }
   body[data-preset="food-truck"] .hero-art { width: calc(100% - 8px); justify-self: start; }
+  .menu-grid .dish .restaurant-title { font-size: 22px; line-height: 1.25; }
+  .menu-grid .restaurant-menu-section:not([data-layout="compact"]) .restaurant-dish:not([data-layout="compact"]) .restaurant-card-body { padding: 14px; }
+  .menu-grid .restaurant-menu-section[data-layout="compact"] .dish { padding-block: 12px; }
+  body[data-preset="cafe"] .restaurant-tasting[data-layout="split"]>.restaurant-details { border-left: 0; border-top: 1px solid var(--line); padding: 20px 0 0; }
+  .module-page, .wrap.section.prose { padding-block: 28px; }
+  .module-heading { margin-block: 20px 24px; }
+  .module-heading h1, main>.wrap.section>h1, .wrap.section.prose>h1 { font-size: clamp(34px, 10vw, 42px); letter-spacing: -.8px; }
+  .module-heading .intro { font-size: 17px; }
+  .info-card .restaurant-title { font-size: 26px; }
+  .sample-notice { padding: 12px 16px; }
+  .directory-grid, .directory-grid:has(> .record.info-card) { grid-template-columns: 1fr; }
+  .directory-card { padding: 20px; }
+  .planner-layout form, .brief-panel { padding: 20px; }
+  .gallery-grid img { height: 230px; }
+  .explore-nav>div { width: 100%; padding: 16px; grid-template-columns: 1fr; max-height: min(55dvh, calc(100dvh - 320px)); }
+  .footer p { flex-basis: 100%; }
 }
 @media (forced-colors: active) {
   body[data-preset="bar"] .hero { background: Canvas; --red: CanvasText; --muted: CanvasText; }
   body[data-preset="food-truck"] .hero-art, body[data-preset="food-truck"] .button { box-shadow: none; }
+  .info-card, .directory-card, .planner-layout form, .brief-panel, .gallery-grid figure,
+  .sample-notice, .policy-note, .empty-state, .explore-nav>div { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}
+/* Keep the focus ring visible on the evening cover and inside scrollable menus. */
+body[data-preset="bar"] .hero :focus-visible { outline-color: #f2e5cb; }
+/* Native date subfields can hold focus without matching :focus-visible on the input. */
+input[type="date"]:focus-within { outline: 3px solid var(--green); outline-offset: 4px; }
+.explore-nav>div { scroll-padding-block: 8px; }
+.explore-nav a:focus-visible { outline-offset: -3px; }
+.print-field-value, .menu-print-scope { display: none; }
+@media screen and (max-width: 700px) and (max-height: 500px) {
+  /* At high zoom or in landscape, let the document carry the expanded navigation. */
+  .explore-nav>div { position: static; max-height: none; overflow: visible; margin-top: 8px; box-shadow: none; }
+  .explore-nav { flex-basis: 100%; }
+  .quicklinks { position: static; }
+  body:has(.quicklinks) { padding-bottom: 0; }
+}
+@media (forced-colors: active) {
+  body[data-preset="bar"] .hero :focus-visible { outline-color: Highlight; }
 }
 @media print {
+  @page { margin: 0.5in; }
+  /* Override preset screen surfaces last in the bundle, including dark offers. */
+  body[data-preset] { background: white; color: black; --paper: white; --ink: black; --red: black; --muted: #333; --green: black; --line: #999; --restaurant-surface: white; }
+  body[data-preset] :is(.hero,.story,.ticker,.restaurant-card,.restaurant-offer,.restaurant-notice,.info-card,.directory-card,.record-meta,.planner-layout form,.brief-panel,.gallery-grid figure,.policy-note,.hours-status) {
+    background: white; color: black; box-shadow: none; --paper: white; --ink: black; --red: black; --muted: #333;
+  }
+  body[data-preset] :is(.module-page,.wrap.section.prose) { padding-block: 0; }
+  body[data-preset] .module-heading { margin-top: 0; }
+  .service-picker, .directory-search, .brief-actions, #prepare-brief, #email-brief, .calendar-download { display: none!important; }
+  .menu-print-scope, .print-field-value { display: block; }
+  .menu-print-scope { font-size: 14px; }
+  .print-field-value { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .print-field-source { display: none!important; }
+  .planner-layout:has(> .brief-panel:not([hidden])) form { display: none!important; }
+  body[data-preset] .brief-panel { border: 0; padding: 0; }
+  .component-grid, .directory-grid, .location-grid, .gallery-grid, .restaurant-faq, .menu-dishes { display: block!important; }
   .menu-grid[data-component-layout], .menu-grid[data-component-layout="horizontal"] .menu-card,
   body[data-preset="fast-casual"] .menu-grid { display: block; }
+  .restaurant-card, .restaurant-notice, .menu-card, .info-card, .location-entry { break-inside: auto; }
+  .restaurant-title, .restaurant-intro, h1, h2, h3, summary { break-after: avoid; }
+  .menu-grid .restaurant-intro { break-inside: avoid; }
   .menu-grid .dish { break-inside: avoid; }
+  .menu-grid .dish:first-child { break-before: avoid; }
+  body[data-preset] .menu-grid .menu-card { padding: 8px 0; margin-bottom: 16px; }
   .menu-grid .restaurant-card { padding: 8px; border: 0; }
+  body[data-preset] .menu-grid .dish .restaurant-card-body { padding: 8px 0; }
+  .planner-layout { display: block; }
+  .brief-panel { position: static; }
 }
