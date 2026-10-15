@@ -986,8 +986,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "A menu worth the close-up",
-          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
+          "title": "Lucyd's hot take: the 'just one bite' lie",
+          "text": "Lucyd is a fictional diner exemplar with a small, familiar provocation: 'just one bite' is usually a lie, and the last piece of pie deserves a story. Crisp-edged pancakes, griddled burgers, melty grilled cheese, and seasonal pie give the imagined menu its comfort-food core. The press angle is appetite without apology. This is a design demonstration, not an operating restaurant; dishes, prices, people, locations, hours, and business details are illustrative.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -997,9 +997,39 @@
             "reviewed_on": "",
             "source": ""
           },
-          "facts": [],
+          "facts": [
+            {
+              "label": "Editorial hook",
+              "value": "'Just one bite' is usually a lie. Who gets the last slice?"
+            },
+            {
+              "label": "Concept",
+              "value": "Fictional diner exemplar in the Hot Eats restaurant website master."
+            },
+            {
+              "label": "Signature line",
+              "value": "Come hungry. Leave with crumbs."
+            },
+            {
+              "label": "Illustrative menu",
+              "value": "Buttermilk pancakes, breakfast sandwich, burger, grilled cheese, chopped salad, pie, shakes, and coffee."
+            },
+            {
+              "label": "Business status",
+              "value": "No operating restaurant, real location, press contact, or confirmed price is represented."
+            },
+            {
+              "label": "Visuals",
+              "value": "The exemplar uses concept illustrations, not photographs of food served or a real venue."
+            }
+          ],
           "url": "",
-          "attachments": []
+          "attachments": [
+            {
+              "src": "press/lucyd-press-backgrounder.txt",
+              "label": "Download the Lucyd press backgrounder (fictional demo)"
+            }
+          ]
         }
       ],
       "foodtruck": [
