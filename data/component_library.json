@@ -480,8 +480,8 @@
       {
         "name": "Information",
         "data": {
-          "title": "A little heads-up for your visit",
-          "text": "Our example patio closes early on Thursday. Indoor tables follow the usual schedule.",
+          "title": "The patio is stealing the afternoon",
+          "text": "For this demo, the patio closes early Thursday. Bring your appetite inside; the fictional kitchen is still the star.",
           "tone": "info",
           "link": {
             "url": "/contact/",
@@ -492,8 +492,8 @@
       {
         "name": "Service interruption",
         "data": {
-          "title": "Pickup is taking a break",
-          "text": "Online pickup is paused in this example. Please check with the restaurant before making the trip.",
+          "title": "Pickup is taking a breather",
+          "text": "This demo pickup service is paused. Check with the restaurant before making the trip, however hungry you are.",
           "tone": "warning"
         }
       }
@@ -504,7 +504,7 @@
         "data": {
           "title": "The slow morning",
           "category": "Breakfast, at your pace",
-          "text": "A stack of buttermilk pancakes, seasonal berries, and a little maple syrup. A good reason to stay a little longer.",
+          "text": "A soft stack of buttermilk pancakes, glossy with melting butter and maple syrup pooling in every little gap. Try not to stare.",
           "price": "$14",
           "image": {
             "src": "images/breakfast.svg",
@@ -537,7 +537,7 @@
         "data": {
           "title": "Sunday cinnamon roll",
           "category": "From the oven",
-          "text": "Brown sugar, cinnamon, and a generous spoonful of vanilla glaze.",
+          "text": "Brown sugar and cinnamon folded through tender dough, finished under a generous coat of vanilla glaze. It sold out before anyone could pretend to share.",
           "price": "$6",
           "state": "sold-out",
           "link": {
@@ -550,7 +550,7 @@
         "name": "Unavailable",
         "data": {
           "title": "Seasonal fruit bowl",
-          "text": "Selection changes with the season.",
+          "text": "Bright, tart, juicy fruit that changes with the season. The exact lineup is still a delicious mystery.",
           "state": "unavailable",
           "link": {
             "url": "/menu/",
@@ -563,7 +563,7 @@
       {
         "name": "Plain-language labels",
         "data": {
-          "title": "A menu you can make sense of",
+          "title": "Read the menu before the first bite",
           "items": [
             {
               "label": "Vegetarian",
@@ -590,9 +590,9 @@
       {
         "name": "Available · local menu handoff",
         "data": {
-          "title": "Take the good stuff with you",
+          "title": "Do not let the good stuff wait",
           "eyebrow": "Pickup",
-          "text": "Choose your meal, then check the restaurant’s current pickup arrangements.",
+          "text": "Choose what you crave, then check the restaurant’s current pickup arrangements before placing an order.",
           "state": "available",
           "facts": [
             {
@@ -614,7 +614,7 @@
         "name": "Paused",
         "data": {
           "title": "Delivery",
-          "text": "Delivery is paused for this example service.",
+          "text": "Delivery is paused for this fictional example service.",
           "state": "paused",
           "fallback": "Check back later or contact the restaurant about pickup.",
           "link": {
@@ -637,8 +637,8 @@
       {
         "name": "Access facts",
         "data": {
-          "title": "The neighborhood dining room",
-          "eyebrow": "An example place to gather",
+          "title": "The table worth finding",
+          "eyebrow": "Fictional neighborhood dining room",
           "address": "Illustrative address · replace before use",
           "facts": [
             {
@@ -673,7 +673,7 @@
       {
         "name": "Split service & exception",
         "data": {
-          "title": "Make time for a good meal",
+          "title": "Come hungry. Check the clock first.",
           "timezone": "America/Chicago",
           "rows": [
             {
@@ -708,9 +708,9 @@
       {
         "name": "Recurring special",
         "data": {
-          "title": "A slower kind of Sunday",
+          "title": "Sunday, with your guard down",
           "eyebrow": "The brunch table",
-          "text": "One breakfast plate and a cup of filter coffee. Pull up a chair.",
+          "text": "One breakfast plate and a cup of filter coffee, taken slowly enough to make the morning jealous.",
           "price": "$18 / person",
           "schedule": "Example · Sundays, 9 am–noon",
           "terms": "Illustrative price. Dine-in only; taxes and gratuity excluded.",
@@ -725,7 +725,7 @@
         "name": "Sold-out special",
         "data": {
           "title": "The last slice went fast",
-          "text": "Our example seasonal pie has sold out.",
+          "text": "The fictional seasonal pie has disappeared, crust flakes and all. This sample is sold out.",
           "state": "sold-out",
           "link": {
             "url": "/menu/",
@@ -738,10 +738,10 @@
       {
         "name": "Per-person package",
         "data": {
-          "title": "The everyone’s-welcome spread",
+          "title": "A spread with no interest in being ignored",
           "eyebrow": "Gather around",
           "price": "From $24 / person",
-          "text": "A relaxed lunch spread for a team day, a family get-together, or just because.",
+          "text": "A relaxed lunch built to tempt the whole table: two seasonal mains, a heap of green salad and fresh bread, then something sweet at the end.",
           "includes": [
             "Two seasonal mains",
             "A big green salad and fresh bread",
@@ -778,7 +778,7 @@
           "start": "2099-11-14T18:00:00-06:00",
           "end": "2099-11-14T20:00:00-06:00",
           "venue": "Example dining room",
-          "text": "A shared table, a seasonal menu, and an acoustic set.",
+          "text": "A shared table, a seasonal menu, and an acoustic set: one more reason to let dinner run long.",
           "note": "Fictional future event for demonstrating the component.",
           "state": "available",
           "link": {
@@ -794,7 +794,7 @@
           "date_label": "SEP 01",
           "start": "2020-09-01T18:00:00-05:00",
           "end": "2020-09-01T20:00:00-05:00",
-          "text": "A fictional past gathering. The expired date removes the action.",
+          "text": "A fictional past gathering: the kind of table where one more bite was always the answer. Its date has passed, so the action is gone.",
           "state": "available",
           "link": {
             "url": "/contact/",
@@ -807,7 +807,7 @@
         "data": {
           "title": "Patio music evening",
           "date_label": "TBA",
-          "text": "This illustrative event has been cancelled.",
+          "text": "This fictional evening is cancelled; the menu will have to wait for another date.",
           "state": "cancelled",
           "link": {
             "url": "/contact/",
@@ -821,7 +821,7 @@
         "name": "Fictional sample · clearly attributed",
         "data": {
           "label": "Sample quotation",
-          "quote": "The kind of place where a quick coffee turns into a long conversation.",
+          "quote": "That pie had a flaky crust, a warm center, and absolutely no intention of letting me leave with leftovers.",
           "attribution": "Fictional guest",
           "context": "Demonstration copy · not a real review"
         }
@@ -831,7 +831,7 @@
       {
         "name": "Native disclosures",
         "data": {
-          "title": "Before you pull up a chair",
+          "title": "Before you surrender to the menu",
           "items": [
             {
               "question": "Can I just walk in?",
@@ -865,7 +865,7 @@
         "name": "Contact details · fictional",
         "data": {
           "title": "A real conversation helps",
-          "text": "For a gathering, an access question, or something the menu doesn’t answer.",
+          "text": "For a gathering, an access question, or the dish you cannot stop thinking about.",
           "phone": "+1 202-555-0142",
           "email": "hello@example.com",
           "response": "Example response window: within two working days. These sample details do not reach a restaurant."
@@ -886,12 +886,12 @@
         "data": {
           "title": "From the morning kitchen",
           "eyebrow": "Breakfast",
-          "text": "A few things worth getting up for.",
+          "text": "Crisp edges, soft centers, hot coffee: try to order just one thing.",
           "items": [
             {
               "name": "Soft scrambled eggs",
               "price": "$12 / plate",
-              "text": "Sourdough toast, chives, and roasted tomatoes.",
+              "text": "Slow-soft eggs, buttery sourdough, chives, and roasted tomatoes: silky, sharp, and crisp in one forkful.",
               "tags": [
                 "Vegetarian"
               ],
@@ -900,13 +900,13 @@
             {
               "name": "Maple granola",
               "price": "$8 / bowl",
-              "text": "Oats, toasted almonds, yogurt, and seasonal fruit.",
+              "text": "Toasted oats and almonds tumble over cool yogurt and ripe fruit, a crisp-smooth-sweet bite that keeps asking for another.",
               "state": "available"
             },
             {
               "name": "Morning bun",
               "price": "$5 / pastry",
-              "text": "Orange zest and cinnamon sugar.",
+              "text": "Orange zest and cinnamon sugar wrapped through tender, buttery layers; sold out is the painful part.",
               "state": "sold-out"
             }
           ],
@@ -930,21 +930,21 @@
         "name": "Seasonal courses · available",
         "data": {
           "title": "An evening in three courses",
-          "text": "A leisurely dinner built around the season.",
+          "text": "A leisurely, fictional dinner built around the season and the difficult art of saving room for the next bite.",
           "price": "$68 / person",
           "schedule": "Example service · Friday–Saturday, 6–9 pm",
           "courses": [
             {
               "name": "To begin",
-              "text": "Roasted beetroot, citrus, and fresh herbs."
+              "text": "Roasted beetroot, citrus, and fresh herbs; earthy sweetness with a bright little spark."
             },
             {
               "name": "At the center",
-              "text": "Mushroom barley with charred leeks."
+              "text": "Mushroom barley and charred leeks, savory and slow, with edges that invite one more forkful."
             },
             {
               "name": "Something sweet",
-              "text": "Poached pear with vanilla cream."
+              "text": "Poached pear with vanilla cream, soft, fragrant, and worth saving the last spoonful for."
             }
           ],
           "dietary_note": "Example arrangements: ask about dietary needs before booking. Substitutions and cross-contact conditions require confirmation.",
@@ -976,23 +976,23 @@
         "data": {
           "title": "Three ways to take your coffee",
           "eyebrow": "A small tasting",
-          "text": "Compare three preparations, served together.",
+          "text": "Compare three preparations, served together; the first sip is only the opening act.",
           "price": "$12 / flight",
           "items": [
             {
               "name": "Filter coffee",
               "portion": "90 ml",
-              "text": "A light roast with a bright finish."
+              "text": "A bright, light roast with a lively finish that wakes up the whole first sip."
             },
             {
               "name": "Cold brew",
               "portion": "90 ml",
-              "text": "A slow extraction with a rounded flavor."
+              "text": "A slow extraction with a rounded, chocolatey softness and a long, cool finish."
             },
             {
               "name": "Espresso",
               "portion": "30 ml",
-              "text": "A short, concentrated finish."
+              "text": "A short, concentrated pour: deep aroma, silky crema, no small talk."
             }
           ],
           "note": "Illustrative selections. Contains caffeine; amounts vary with preparation. Milk and ingredient details require confirmation.",
@@ -1023,7 +1023,7 @@
         "data": {
           "title": "Alex Rivera",
           "role": "Example head baker",
-          "text": "Alex starts with slow doughs, a warm oven, and a little room for experimentation.",
+          "text": "Alex Rivera is fictional; in this sample kitchen, the day begins with slow dough, a warm oven, and a first bite that makes restraint difficult.",
           "image": {
             "src": "images/team-kitchen.svg",
             "alt": "Illustration of a mixing bowl, whisk, and loaf of bread; not a portrait.",
@@ -1054,7 +1054,7 @@
         "name": "Room arrangements · illustrative",
         "data": {
           "title": "The garden room",
-          "text": "A quieter corner for a long lunch or an evening together.",
+          "text": "A quieter corner for a long lunch, a lingering evening, and the conspiratorial last bite.",
           "image": {
             "src": "images/dining-room.svg",
             "alt": "Illustrative dining room with a long table, chairs, and a window; not a real venue.",
@@ -1097,11 +1097,11 @@
         "name": "Plan, arrive, settle in",
         "data": {
           "title": "A visit with fewer surprises",
-          "text": "A little planning makes room for a slower meal.",
+          "text": "A little planning leaves more room for the thing you came craving.",
           "steps": [
             {
-              "title": "Choose your meal",
-              "text": "Browse dishes and ask about any ingredient needs.",
+              "title": "Choose the thing you cannot stop thinking about",
+              "text": "Browse the dishes, then ask the team about any ingredients you need to know.",
               "link": {
                 "url": "/menu/",
                 "label": "Explore the menu"
@@ -1116,8 +1116,8 @@
               }
             },
             {
-              "title": "Get comfortable",
-              "text": "Let the host know what seating or assistance would help."
+              "title": "Settle in and take your time",
+              "text": "Tell the host what seating or help would make this meal comfortable."
             }
           ],
           "note": "Illustrative steps; confirm the restaurant’s actual arrangements before traveling."

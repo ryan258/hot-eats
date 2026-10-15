@@ -7,29 +7,29 @@
       "source": ""
     },
     "brand": {
-      "headline": "A little comfort, served up.",
-      "intro": "Explore every restaurant service in one clearly labeled demonstration.",
-      "eyebrow": "Restaurant demonstration",
-      "tagline": "A little comfort, served up.",
-      "note": "Illustrative menu and business details.",
+      "headline": "Come hungry. Leave with crumbs.",
+      "intro": "From soft pancakes to shamelessly molten cheese and the last slice of pie, this fictional menu knows exactly how to tempt you.",
+      "eyebrow": "Fictional restaurant · illustrative menu",
+      "tagline": "Come hungry. Leave with crumbs.",
+      "note": "Fictional dishes, prices, and restaurant details; for design demonstration only.",
       "image": {
         "src": "images/breakfast.svg",
         "alt": "Concept illustration of breakfast and coffee.",
         "width": 800,
         "height": 720
       },
-      "story_title": "Our kind of place",
+      "story_title": "The first bite is the point",
       "story": [
-        "Share the restaurant’s actual story, people, and place in the neighborhood."
+        "This fictional table is built around the crackle of hot crust, the pull of melted cheese, and the little pause after a perfect bite. The leftovers can fend for themselves."
       ],
       "ticker": [
-        "Explore the menu",
-        "Plan your visit",
-        "Gather around"
+        "See what’s calling",
+        "Find your table",
+        "Save room for the last bite"
       ]
     },
     "announcement": {
-      "text": "Explore this restaurant example. Services and prices are illustrative.",
+      "text": "This is a fictional restaurant demo. Come hungry: every menu is invented for the page and written to tempt your appetite.",
       "start": "",
       "end": ""
     },
@@ -493,7 +493,7 @@
     "menu": {
       "currency": "USD",
       "reviewed_on": "",
-      "note": "Illustrative dishes and prices. Replace with the approved menu.",
+      "note": "Fictional dishes, ingredients, and prices for this design demo. Verify every detail before using a real menu.",
       "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
       "categories": [
         {
@@ -504,7 +504,7 @@
             {
               "id": "item-1",
               "name": "Counter stack",
-              "description": "Fluffy buttermilk pancakes, whipped butter, and a generous pour of maple syrup.",
+              "description": "A tall stack of buttermilk pancakes, tender in the middle and crisp at the edges, with butter going glossy and maple syrup finding every little gap.",
               "price": "8.00",
               "state": "available",
               "location_ids": [],
@@ -520,7 +520,7 @@
             {
               "id": "item-2",
               "name": "House breakfast",
-              "description": "A classic plate with crisp potatoes and thick-cut toast.",
+              "description": "Crisp potatoes, thick-cut toast, and the sort of hot, savory comfort that makes a second helping feel inevitable.",
               "price": "9.00",
               "state": "available",
               "location_ids": [],
@@ -536,7 +536,7 @@
             {
               "id": "item-3",
               "name": "Breakfast sandwich",
-              "description": "Egg, cheddar, and a toasted bun. A little messy. A lot to love.",
+              "description": "Soft egg and cheddar tucked into a toasted bun, warm, melty, and best approached with a stack of napkins.",
               "price": "10.00",
               "state": "available",
               "location_ids": [],
@@ -559,7 +559,7 @@
             {
               "id": "item-4",
               "name": "Counter burger",
-              "description": "A griddled burger with cheddar, pickles, and house-style sauce.",
+              "description": "A griddled burger with cheddar melting at the edges, sharp pickles, and house-style sauce sliding into every bite.",
               "price": "12.00",
               "state": "available",
               "location_ids": [],
@@ -575,7 +575,7 @@
             {
               "id": "item-5",
               "name": "Grilled cheese",
-              "description": "Melty cheddar on buttery toast, with tomato soup for dipping.",
+              "description": "Buttery toast giving way to molten cheddar; tomato soup waits nearby for a proper, shameless dip.",
               "price": "13.00",
               "state": "available",
               "location_ids": [],
@@ -591,7 +591,7 @@
             {
               "id": "item-6",
               "name": "Chopped salad",
-              "description": "Crunchy greens, seasonal vegetables, and a bright, tangy dressing.",
+              "description": "Crunchy greens and seasonal vegetables tossed with bright, tangy dressing that makes every crisp bite disappear too fast.",
               "price": "14.00",
               "state": "available",
               "location_ids": [],
@@ -614,7 +614,7 @@
             {
               "id": "item-7",
               "name": "Seasonal pie",
-              "description": "A flaky crust and a little nostalgia. Ask about the day’s slice.",
+              "description": "Flaky crust, tender fruit, and just enough nostalgia to make the first slice vanish. Ask which pie is tempting today.",
               "price": "16.00",
               "state": "available",
               "location_ids": [],
@@ -630,7 +630,7 @@
             {
               "id": "item-8",
               "name": "Classic shake",
-              "description": "Vanilla, chocolate, or strawberry. Finished with whipped cream.",
+              "description": "Vanilla, chocolate, or strawberry, thick enough to make the straw work; crowned with whipped cream for good measure.",
               "price": "17.00",
               "state": "available",
               "location_ids": [],
@@ -646,7 +646,7 @@
             {
               "id": "item-9",
               "name": "Fresh coffee",
-              "description": "A simple cup for good conversation and unhurried mornings.",
+              "description": "A simple, fragrant cup to cut through the sweet and savory, and keep you at the table for one more conversation.",
               "price": "18.00",
               "state": "available",
               "location_ids": [],
@@ -667,8 +667,8 @@
       "specials": [
         {
           "id": "specials-1",
-          "title": "Seasonal special",
-          "text": "A dated offer with clear serving times and terms.",
+          "title": "The seasonal temptation",
+          "text": "A fictional limited-time bite, here to make restraint feel optional. Serving times, price, and terms need real confirmation.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -705,24 +705,24 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "tasting-menu-example",
           "title": "The neighborhood supper",
-          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "text": "Three invented courses for a slow meal, a full appetite, and the difficult decision of which last bite to save.",
           "presentation": {
             "component": "tasting-menu",
-            "eyebrow": "Example set menu",
+            "eyebrow": "A fictional tasting",
             "price": "Example: 36 USD / person",
             "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
             "courses": [
               {
                 "name": "Breakfast",
-                "text": "Example course: Counter stack. Confirm actual dishes and substitutions."
+                "text": "A tall stack of buttermilk pancakes, tender in the middle and crisp at the edges, with butter going glossy and maple syrup finding every little gap."
               },
               {
                 "name": "Lunch",
-                "text": "Example course: Counter burger. Confirm actual dishes and substitutions."
+                "text": "A griddled burger with cheddar melting at the edges, sharp pickles, and house-style sauce sliding into every bite."
               },
               {
                 "name": "Sweets & sips",
-                "text": "Example course: Seasonal pie. Confirm actual dishes and substitutions."
+                "text": "Flaky crust, tender fruit, and just enough nostalgia to make the first slice vanish. Ask which pie is tempting today."
               }
             ],
             "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
@@ -748,26 +748,26 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "beverage-flight-example",
           "title": "The coffee counter flight",
-          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "text": "Three fictional pours, each with a different kind of invitation. Confirm every ingredient and serving size before a real menu uses them.",
           "presentation": {
             "component": "beverage-flight",
-            "eyebrow": "Example drinks tasting",
+            "eyebrow": "Three little temptations",
             "price": "Example: 12 USD / flight",
             "items": [
               {
                 "name": "First pour",
                 "portion": "Example: 90 ml",
-                "text": "A bright, light preparation."
+                "text": "A bright opening sip with a lively finish that wakes up the whole palate."
               },
               {
                 "name": "Second pour",
                 "portion": "Example: 90 ml",
-                "text": "A rounder, slower preparation."
+                "text": "A slower, rounder middle pour: smooth, aromatic, and worth lingering over."
               },
               {
                 "name": "Final pour",
                 "portion": "Example: 60 ml",
-                "text": "A concentrated finish."
+                "text": "A concentrated final sip, deep in flavor and short enough to make you want another."
               }
             ],
             "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
@@ -778,8 +778,8 @@
       "catering": [
         {
           "id": "catering-1",
-          "title": "A meal for the group",
-          "text": "A package example with quantities, lead times, and service details.",
+          "title": "A table full of yes",
+          "text": "A fictional spread for a group that wants one more slice, one more scoop, and one more reason to stay. Quantities and terms are examples.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -811,7 +811,7 @@
         {
           "id": "events-1",
           "title": "The neighborhood room",
-          "text": "A space example with capacity, access information, and planning terms.",
+          "text": "A fictional space for a long meal, a shared plate, and the last bite nobody wants to claim. Confirm real room and booking details.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -853,8 +853,8 @@
       "story": [
         {
           "id": "story-1",
-          "title": "A place in the neighborhood",
-          "text": "Share the real origin, purpose, and welcome of the restaurant.",
+          "title": "The first bite is the point",
+          "text": "This fictional table is built around the crackle of hot crust, the pull of melted cheese, and the little pause after a perfect bite. The leftovers can fend for themselves.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -873,7 +873,7 @@
         {
           "id": "team-1",
           "title": "Sam Morgan · fictional team member",
-          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
+          "text": "A fictional team member for this demo, here to make the kitchen feel warm and the menu worth lingering over.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -889,8 +889,8 @@
           "presentation": {
             "role": "Example chef",
             "specialties": [
-              "Example seasonal preparation",
-              "Example guest welcome"
+              "Slow doughs and crisp edges",
+              "Warm plates and easy welcomes"
             ],
             "image": {
               "src": "images/team-kitchen.svg",
@@ -906,8 +906,8 @@
       "sourcing": [
         {
           "id": "sourcing-1",
-          "title": "Ingredients and partners",
-          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "title": "Where the good stuff begins",
+          "text": "A sample page would name the growers, makers, and ingredients behind the menu. Confirm each real source before making the claim.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -925,8 +925,8 @@
       "news": [
         {
           "id": "news-1",
-          "title": "From the restaurant",
-          "text": "A full editorial example with a stable detail link and review history.",
+          "title": "Fresh from the kitchen",
+          "text": "A fictional kitchen note with a stable detail page; this copy is here to make you hungry, not report a real update.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -944,8 +944,8 @@
       "calendar": [
         {
           "id": "calendar-1",
-          "title": "Community supper",
-          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "title": "Supper worth lingering over",
+          "text": "A fictional event listing for a shared table and a menu worth showing up hungry for.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -967,8 +967,8 @@
       "accessibility": [
         {
           "id": "accessibility-1",
-          "title": "Plan a comfortable visit",
-          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "title": "Find your comfortable seat",
+          "text": "Use the confirmed entrance, seating, restroom, and parking details below; contact the team if you need help planning.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -986,8 +986,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "Restaurant press kit",
-          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "title": "A menu worth the close-up",
+          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1005,8 +1005,8 @@
       "foodtruck": [
         {
           "id": "foodtruck-1",
-          "title": "Example market stop",
-          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "title": "Next stop: follow that smell",
+          "text": "A fictional truck stop for the demo schedule; imagine crisp edges, generous fillings, and salsa worth chasing.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1080,29 +1080,29 @@
       "source": ""
     },
     "brand": {
-      "headline": "Your neighborhood table.",
-      "intro": "Breakfast, lunch, and something sweet, with an easy path from menu to visit.",
-      "eyebrow": "Restaurant demonstration",
-      "tagline": "Your neighborhood table.",
-      "note": "Illustrative menu and business details.",
+      "headline": "No good intentions after breakfast.",
+      "intro": "Hot coffee, buttery toast, burgers with a proper drip, and pie you will not want to split.",
+      "eyebrow": "Fictional restaurant · illustrative menu",
+      "tagline": "No good intentions after breakfast.",
+      "note": "Fictional dishes, prices, and restaurant details; for design demonstration only.",
       "image": {
         "src": "images/breakfast.svg",
         "alt": "Concept illustration of breakfast and coffee.",
         "width": 800,
         "height": 720
       },
-      "story_title": "Our kind of place",
+      "story_title": "A little counter-side temptation",
       "story": [
-        "Share the restaurant’s actual story, people, and place in the neighborhood."
+        "This fictional counter is made for the first forkful before the day has properly begun: butter softening on pancakes, crisp potatoes, and coffee ready to stand up to pie."
       ],
       "ticker": [
-        "Explore the menu",
-        "Plan your visit",
-        "Gather around"
+        "See what’s calling",
+        "Find your table",
+        "Save room for the last bite"
       ]
     },
     "announcement": {
-      "text": "Explore this restaurant example. Services and prices are illustrative.",
+      "text": "This is a fictional restaurant demo. Come hungry: every menu is invented for the page and written to tempt your appetite.",
       "start": "",
       "end": ""
     },
@@ -1361,7 +1361,7 @@
     "menu": {
       "currency": "USD",
       "reviewed_on": "",
-      "note": "Illustrative dishes and prices. Replace with the approved menu.",
+      "note": "Fictional dishes, ingredients, and prices for this design demo. Verify every detail before using a real menu.",
       "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
       "categories": [
         {
@@ -1372,7 +1372,7 @@
             {
               "id": "item-1",
               "name": "Morning stack",
-              "description": "Fluffy buttermilk pancakes, whipped butter, and a generous pour of maple syrup.",
+              "description": "A tall counter stack of buttermilk pancakes, feather-soft inside, golden at the edges, and glossy with butter and maple.",
               "price": "8.00",
               "state": "available",
               "location_ids": [],
@@ -1388,7 +1388,7 @@
             {
               "id": "item-2",
               "name": "Egg breakfast",
-              "description": "A classic plate with crisp potatoes and thick-cut toast.",
+              "description": "Crisp potatoes and thick-cut toast make a hot, savory breakfast that turns a quick stop into a second cup.",
               "price": "9.00",
               "state": "available",
               "location_ids": [],
@@ -1404,7 +1404,7 @@
             {
               "id": "item-3",
               "name": "Breakfast sandwich",
-              "description": "Egg, cheddar, and a toasted bun. A little messy. A lot to love.",
+              "description": "Soft egg and cheddar tucked into a toasted bun, warm, melty, and delightfully difficult to eat neatly.",
               "price": "10.00",
               "state": "available",
               "location_ids": [],
@@ -1427,7 +1427,7 @@
             {
               "id": "item-4",
               "name": "Counter burger",
-              "description": "A griddled burger with cheddar, pickles, and house-style sauce.",
+              "description": "A griddled burger with cheddar melting at the edges, sharp pickles, and sauce ready to make a little trouble.",
               "price": "12.00",
               "state": "available",
               "location_ids": [],
@@ -1443,7 +1443,7 @@
             {
               "id": "item-5",
               "name": "Grilled cheese",
-              "description": "Melty cheddar on buttery toast, with tomato soup for dipping.",
+              "description": "A buttery, crisp toast shell around molten cheddar, with tomato soup on standby for the long dip.",
               "price": "13.00",
               "state": "available",
               "location_ids": [],
@@ -1459,7 +1459,7 @@
             {
               "id": "item-6",
               "name": "Chopped salad",
-              "description": "Crunchy greens, seasonal vegetables, and a bright, tangy dressing.",
+              "description": "Crunchy greens and seasonal vegetables dressed bright and tangy, just the thing to tempt you between richer bites.",
               "price": "14.00",
               "state": "available",
               "location_ids": [],
@@ -1482,7 +1482,7 @@
             {
               "id": "item-7",
               "name": "Pie of the day",
-              "description": "A flaky crust and a little nostalgia. Ask about the day’s slice.",
+              "description": "A flaky crust, tender fruit, and enough nostalgia to make the first slice disappear before the coffee cools.",
               "price": "16.00",
               "state": "available",
               "location_ids": [],
@@ -1498,7 +1498,7 @@
             {
               "id": "item-8",
               "name": "Classic shake",
-              "description": "Vanilla, chocolate, or strawberry. Finished with whipped cream.",
+              "description": "A thick vanilla, chocolate, or strawberry shake finished with whipped cream and absolutely no reason to sip politely.",
               "price": "17.00",
               "state": "available",
               "location_ids": [],
@@ -1514,7 +1514,7 @@
             {
               "id": "item-9",
               "name": "Fresh coffee",
-              "description": "A simple cup for good conversation and unhurried mornings.",
+              "description": "A fragrant diner cup with a clean, warming finish; order one and the pie has a proper companion.",
               "price": "18.00",
               "state": "available",
               "location_ids": [],
@@ -1535,8 +1535,8 @@
       "specials": [
         {
           "id": "specials-1",
-          "title": "Seasonal special",
-          "text": "A dated offer with clear serving times and terms.",
+          "title": "The seasonal temptation",
+          "text": "A fictional limited-time bite, here to make restraint feel optional. Serving times, price, and terms need real confirmation.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1573,24 +1573,24 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "tasting-menu-example",
           "title": "The counter supper trio",
-          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "text": "Three invented courses for a slow meal, a full appetite, and the difficult decision of which last bite to save.",
           "presentation": {
             "component": "tasting-menu",
-            "eyebrow": "Example set menu",
+            "eyebrow": "A fictional tasting",
             "price": "Example: 36 USD / person",
             "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
             "courses": [
               {
                 "name": "Breakfast",
-                "text": "Example course: Morning stack. Confirm actual dishes and substitutions."
+                "text": "A tall counter stack of buttermilk pancakes, feather-soft inside, golden at the edges, and glossy with butter and maple."
               },
               {
                 "name": "Lunch",
-                "text": "Example course: Counter burger. Confirm actual dishes and substitutions."
+                "text": "A griddled burger with cheddar melting at the edges, sharp pickles, and sauce ready to make a little trouble."
               },
               {
                 "name": "Sweets & sips",
-                "text": "Example course: Pie of the day. Confirm actual dishes and substitutions."
+                "text": "A flaky crust, tender fruit, and enough nostalgia to make the first slice disappear before the coffee cools."
               }
             ],
             "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
@@ -1616,26 +1616,26 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "beverage-flight-example",
           "title": "The morning coffee flight",
-          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "text": "Three fictional pours, each with a different kind of invitation. Confirm every ingredient and serving size before a real menu uses them.",
           "presentation": {
             "component": "beverage-flight",
-            "eyebrow": "Example drinks tasting",
+            "eyebrow": "Three little temptations",
             "price": "Example: 12 USD / flight",
             "items": [
               {
                 "name": "First pour",
                 "portion": "Example: 90 ml",
-                "text": "A bright, light preparation."
+                "text": "A bright opening sip with a lively finish that wakes up the whole palate."
               },
               {
                 "name": "Second pour",
                 "portion": "Example: 90 ml",
-                "text": "A rounder, slower preparation."
+                "text": "A slower, rounder middle pour: smooth, aromatic, and worth lingering over."
               },
               {
                 "name": "Final pour",
                 "portion": "Example: 60 ml",
-                "text": "A concentrated finish."
+                "text": "A concentrated final sip, deep in flavor and short enough to make you want another."
               }
             ],
             "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
@@ -1646,8 +1646,8 @@
       "catering": [
         {
           "id": "catering-1",
-          "title": "A meal for the group",
-          "text": "A package example with quantities, lead times, and service details.",
+          "title": "A table full of yes",
+          "text": "A fictional spread for a group that wants one more slice, one more scoop, and one more reason to stay. Quantities and terms are examples.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1679,7 +1679,7 @@
         {
           "id": "events-1",
           "title": "The back dining room",
-          "text": "A space example with capacity, access information, and planning terms.",
+          "text": "A fictional space for a long meal, a shared plate, and the last bite nobody wants to claim. Confirm real room and booking details.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1721,8 +1721,8 @@
       "story": [
         {
           "id": "story-1",
-          "title": "A place in the neighborhood",
-          "text": "Share the real origin, purpose, and welcome of the restaurant.",
+          "title": "A little counter-side temptation",
+          "text": "This fictional counter is made for the first forkful before the day has properly begun: butter softening on pancakes, crisp potatoes, and coffee ready to stand up to pie.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1741,7 +1741,7 @@
         {
           "id": "team-1",
           "title": "Jo Bennett · fictional team member",
-          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
+          "text": "A fictional team member for this demo, here to make the kitchen feel warm and the menu worth lingering over.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1757,8 +1757,8 @@
           "presentation": {
             "role": "Example diner cook",
             "specialties": [
-              "Example seasonal preparation",
-              "Example guest welcome"
+              "Crisp potatoes and hot coffee",
+              "Pie advice and counter-side welcomes"
             ],
             "image": {
               "src": "images/team-kitchen.svg",
@@ -1774,8 +1774,8 @@
       "sourcing": [
         {
           "id": "sourcing-1",
-          "title": "Ingredients and partners",
-          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "title": "Where the good stuff begins",
+          "text": "A sample page would name the growers, makers, and ingredients behind the menu. Confirm each real source before making the claim.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1793,8 +1793,8 @@
       "news": [
         {
           "id": "news-1",
-          "title": "From the restaurant",
-          "text": "A full editorial example with a stable detail link and review history.",
+          "title": "Fresh from the kitchen",
+          "text": "A fictional kitchen note with a stable detail page; this copy is here to make you hungry, not report a real update.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1812,8 +1812,8 @@
       "calendar": [
         {
           "id": "calendar-1",
-          "title": "Community supper",
-          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "title": "Supper worth lingering over",
+          "text": "A fictional event listing for a shared table and a menu worth showing up hungry for.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1835,8 +1835,8 @@
       "accessibility": [
         {
           "id": "accessibility-1",
-          "title": "Plan a comfortable visit",
-          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "title": "Find your comfortable seat",
+          "text": "Use the confirmed entrance, seating, restroom, and parking details below; contact the team if you need help planning.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1854,8 +1854,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "Restaurant press kit",
-          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "title": "A menu worth the close-up",
+          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1873,8 +1873,8 @@
       "foodtruck": [
         {
           "id": "foodtruck-1",
-          "title": "Example market stop",
-          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "title": "Next stop: follow that smell",
+          "text": "A fictional truck stop for the demo schedule; imagine crisp edges, generous fillings, and salsa worth chasing.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -1948,29 +1948,29 @@
       "source": ""
     },
     "brand": {
-      "headline": "Coffee, lunch, and a little pause.",
-      "intro": "A café example built around morning coffee, seasonal lunches, and office catering.",
-      "eyebrow": "Restaurant demonstration",
-      "tagline": "Coffee, lunch, and a little pause.",
-      "note": "Illustrative menu and business details.",
+      "headline": "Coffee first. Then follow the butter.",
+      "intro": "Silky lattes, glossy pastries, and a slow lunch that can make a whole afternoon disappear.",
+      "eyebrow": "Fictional restaurant · illustrative menu",
+      "tagline": "Coffee first. Then follow the butter.",
+      "note": "Fictional dishes, prices, and restaurant details; for design demonstration only.",
       "image": {
         "src": "images/breakfast.svg",
         "alt": "Concept illustration of breakfast and coffee.",
         "width": 800,
         "height": 720
       },
-      "story_title": "Our kind of place",
+      "story_title": "Coffee, crumbs, and no plans",
       "story": [
-        "Share the restaurant’s actual story, people, and place in the neighborhood."
+        "This fictional café runs on the pause between the first sip and the second bite: soft foam, flaky layers, and no hurry to return to your inbox."
       ],
       "ticker": [
-        "Explore the menu",
-        "Plan your visit",
-        "Gather around"
+        "See what’s calling",
+        "Find your table",
+        "Save room for the last bite"
       ]
     },
     "announcement": {
-      "text": "Explore this restaurant example. Services and prices are illustrative.",
+      "text": "This is a fictional restaurant demo. Come hungry: every menu is invented for the page and written to tempt your appetite.",
       "start": "",
       "end": ""
     },
@@ -2229,7 +2229,7 @@
     "menu": {
       "currency": "USD",
       "reviewed_on": "",
-      "note": "Illustrative dishes and prices. Replace with the approved menu.",
+      "note": "Fictional dishes, ingredients, and prices for this design demo. Verify every detail before using a real menu.",
       "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
       "categories": [
         {
@@ -2240,7 +2240,7 @@
             {
               "id": "item-1",
               "name": "House coffee",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Deep, fragrant coffee with a dark, chocolatey edge and a lingering finish that makes the next sip feel urgent.",
               "price": "8.00",
               "state": "available",
               "location_ids": [],
@@ -2256,7 +2256,7 @@
             {
               "id": "item-2",
               "name": "Loose-leaf tea",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Loose leaves open slowly in hot water, turning floral, grassy, or brisk; ask which cup is steeping today.",
               "price": "9.00",
               "state": "available",
               "location_ids": [],
@@ -2272,7 +2272,7 @@
             {
               "id": "item-3",
               "name": "Iced latte",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Cold espresso meets silky milk and clinking ice: cool, creamy, and gone before the glass sweats.",
               "price": "10.00",
               "state": "available",
               "location_ids": [],
@@ -2295,7 +2295,7 @@
             {
               "id": "item-4",
               "name": "Soup & sandwich",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A warm bowl of savory soup and a toasted sandwich for dipping; the kind of lunch that makes your calendar negotiable.",
               "price": "12.00",
               "state": "available",
               "location_ids": [],
@@ -2311,7 +2311,7 @@
             {
               "id": "item-5",
               "name": "Seasonal salad",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Tender seasonal greens, ripe fruit, crisp toasted texture, and a bright vinaigrette that calls you back for another forkful.",
               "price": "13.00",
               "state": "available",
               "location_ids": [],
@@ -2327,7 +2327,7 @@
             {
               "id": "item-6",
               "name": "Toast of the day",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Thick toast with a golden edge, dressed for the day and ready for a slow, slightly messy bite.",
               "price": "14.00",
               "state": "available",
               "location_ids": [],
@@ -2350,7 +2350,7 @@
             {
               "id": "item-7",
               "name": "Morning bun",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Flaky, buttery layers wrapped around a tender center with a whisper of cinnamon; keep the crumbs on the plate if you can.",
               "price": "16.00",
               "state": "available",
               "location_ids": [],
@@ -2366,7 +2366,7 @@
             {
               "id": "item-8",
               "name": "Fruit loaf",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A tender loaf with fruit tucked through the crumb; toast it, butter it, and try to stop at one slice.",
               "price": "17.00",
               "state": "available",
               "location_ids": [],
@@ -2382,7 +2382,7 @@
             {
               "id": "item-9",
               "name": "Cookie",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A crisp edge, a soft middle, and just enough sweetness to make coffee feel like an excellent excuse.",
               "price": "18.00",
               "state": "available",
               "location_ids": [],
@@ -2403,8 +2403,8 @@
       "specials": [
         {
           "id": "specials-1",
-          "title": "Seasonal special",
-          "text": "A dated offer with clear serving times and terms.",
+          "title": "The seasonal temptation",
+          "text": "A fictional limited-time bite, here to make restraint feel optional. Serving times, price, and terms need real confirmation.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2441,24 +2441,24 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "tasting-menu-example",
           "title": "The slow lunch menu",
-          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "text": "Three invented courses for a slow meal, a full appetite, and the difficult decision of which last bite to save.",
           "presentation": {
             "component": "tasting-menu",
-            "eyebrow": "Example set menu",
+            "eyebrow": "A fictional tasting",
             "price": "Example: 36 USD / person",
             "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
             "courses": [
               {
                 "name": "Coffee & tea",
-                "text": "Example course: House coffee. Confirm actual dishes and substitutions."
+                "text": "Deep, fragrant coffee with a dark, chocolatey edge and a lingering finish that makes the next sip feel urgent."
               },
               {
                 "name": "Lunch",
-                "text": "Example course: Soup & sandwich. Confirm actual dishes and substitutions."
+                "text": "A warm bowl of savory soup and a toasted sandwich for dipping; the kind of lunch that makes your calendar negotiable."
               },
               {
                 "name": "Bakery",
-                "text": "Example course: Morning bun. Confirm actual dishes and substitutions."
+                "text": "Flaky, buttery layers wrapped around a tender center with a whisper of cinnamon; keep the crumbs on the plate if you can."
               }
             ],
             "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
@@ -2484,26 +2484,26 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "beverage-flight-example",
           "title": "The coffeehouse flight",
-          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "text": "Three fictional pours, each with a different kind of invitation. Confirm every ingredient and serving size before a real menu uses them.",
           "presentation": {
             "component": "beverage-flight",
-            "eyebrow": "Example drinks tasting",
+            "eyebrow": "Three little temptations",
             "price": "Example: 12 USD / flight",
             "items": [
               {
                 "name": "First pour",
                 "portion": "Example: 90 ml",
-                "text": "A bright, light preparation."
+                "text": "A bright opening sip with a lively finish that wakes up the whole palate."
               },
               {
                 "name": "Second pour",
                 "portion": "Example: 90 ml",
-                "text": "A rounder, slower preparation."
+                "text": "A slower, rounder middle pour: smooth, aromatic, and worth lingering over."
               },
               {
                 "name": "Final pour",
                 "portion": "Example: 60 ml",
-                "text": "A concentrated finish."
+                "text": "A concentrated final sip, deep in flavor and short enough to make you want another."
               }
             ],
             "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
@@ -2514,8 +2514,8 @@
       "catering": [
         {
           "id": "catering-1",
-          "title": "A meal for the group",
-          "text": "A package example with quantities, lead times, and service details.",
+          "title": "A table full of yes",
+          "text": "A fictional spread for a group that wants one more slice, one more scoop, and one more reason to stay. Quantities and terms are examples.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2547,7 +2547,7 @@
         {
           "id": "events-1",
           "title": "The café gathering room",
-          "text": "A space example with capacity, access information, and planning terms.",
+          "text": "A fictional space for a long meal, a shared plate, and the last bite nobody wants to claim. Confirm real room and booking details.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2589,8 +2589,8 @@
       "story": [
         {
           "id": "story-1",
-          "title": "A place in the neighborhood",
-          "text": "Share the real origin, purpose, and welcome of the restaurant.",
+          "title": "Coffee, crumbs, and no plans",
+          "text": "This fictional café runs on the pause between the first sip and the second bite: soft foam, flaky layers, and no hurry to return to your inbox.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2609,7 +2609,7 @@
         {
           "id": "team-1",
           "title": "Robin Ellis · fictional team member",
-          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
+          "text": "A fictional team member for this demo, here to make the kitchen feel warm and the menu worth lingering over.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2625,8 +2625,8 @@
           "presentation": {
             "role": "Example barista",
             "specialties": [
-              "Example seasonal preparation",
-              "Example guest welcome"
+              "Silky coffee and flaky pastry",
+              "Slow lunches and warm welcomes"
             ],
             "image": {
               "src": "images/team-kitchen.svg",
@@ -2642,8 +2642,8 @@
       "sourcing": [
         {
           "id": "sourcing-1",
-          "title": "Ingredients and partners",
-          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "title": "Where the good stuff begins",
+          "text": "A sample page would name the growers, makers, and ingredients behind the menu. Confirm each real source before making the claim.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2661,8 +2661,8 @@
       "news": [
         {
           "id": "news-1",
-          "title": "From the restaurant",
-          "text": "A full editorial example with a stable detail link and review history.",
+          "title": "Fresh from the kitchen",
+          "text": "A fictional kitchen note with a stable detail page; this copy is here to make you hungry, not report a real update.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2680,8 +2680,8 @@
       "calendar": [
         {
           "id": "calendar-1",
-          "title": "Community supper",
-          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "title": "Supper worth lingering over",
+          "text": "A fictional event listing for a shared table and a menu worth showing up hungry for.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2703,8 +2703,8 @@
       "accessibility": [
         {
           "id": "accessibility-1",
-          "title": "Plan a comfortable visit",
-          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "title": "Find your comfortable seat",
+          "text": "Use the confirmed entrance, seating, restroom, and parking details below; contact the team if you need help planning.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2722,8 +2722,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "Restaurant press kit",
-          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "title": "A menu worth the close-up",
+          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2741,8 +2741,8 @@
       "foodtruck": [
         {
           "id": "foodtruck-1",
-          "title": "Example market stop",
-          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "title": "Next stop: follow that smell",
+          "text": "A fictional truck stop for the demo schedule; imagine crisp edges, generous fillings, and salsa worth chasing.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -2816,29 +2816,29 @@
       "source": ""
     },
     "brand": {
-      "headline": "An evening worth making time for.",
-      "intro": "Explore a seasonal dinner, the dining room, and options for a private gathering.",
-      "eyebrow": "Restaurant demonstration",
-      "tagline": "An evening worth making time for.",
-      "note": "Illustrative menu and business details.",
+      "headline": "A slow dinner with dangerous intentions.",
+      "intro": "Invented seasonal courses, generous contrasts, and enough rich, bright, sweet detail to make restraint feel overrated.",
+      "eyebrow": "Fictional restaurant · illustrative menu",
+      "tagline": "A slow dinner with dangerous intentions.",
+      "note": "Fictional dishes, prices, and restaurant details; for design demonstration only.",
       "image": {
         "src": "images/breakfast.svg",
         "alt": "Concept illustration of breakfast and coffee.",
         "width": 800,
         "height": 720
       },
-      "story_title": "Our kind of place",
+      "story_title": "A slow evening, deliciously ruined",
       "story": [
-        "Share the restaurant’s actual story, people, and place in the neighborhood."
+        "This fictional dining room lets a meal unfold in tempting chapters; each course arrives with a new reason not to rush the last bite."
       ],
       "ticker": [
-        "Explore the menu",
-        "Plan your visit",
-        "Gather around"
+        "See what’s calling",
+        "Find your table",
+        "Save room for the last bite"
       ]
     },
     "announcement": {
-      "text": "Explore this restaurant example. Services and prices are illustrative.",
+      "text": "This is a fictional restaurant demo. Come hungry: every menu is invented for the page and written to tempt your appetite.",
       "start": "",
       "end": ""
     },
@@ -3097,7 +3097,7 @@
     "menu": {
       "currency": "USD",
       "reviewed_on": "",
-      "note": "Illustrative dishes and prices. Replace with the approved menu.",
+      "note": "Fictional dishes, ingredients, and prices for this design demo. Verify every detail before using a real menu.",
       "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
       "categories": [
         {
@@ -3108,7 +3108,7 @@
             {
               "id": "item-1",
               "name": "Seasonal vegetables",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A changing selection of seasonal vegetables, handled gently so their natural sweetness and crispness arrive first.",
               "price": "8.00",
               "state": "available",
               "location_ids": [],
@@ -3124,7 +3124,7 @@
             {
               "id": "item-2",
               "name": "Garden broth",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A clear, savory garden broth with herbs and a lingering finish that asks for one sip, then another.",
               "price": "9.00",
               "state": "available",
               "location_ids": [],
@@ -3140,7 +3140,7 @@
             {
               "id": "item-3",
               "name": "House starter",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A small opening act, crisp and bright, arranged to make the next course feel deliciously far away.",
               "price": "10.00",
               "state": "available",
               "location_ids": [],
@@ -3163,7 +3163,7 @@
             {
               "id": "item-4",
               "name": "Chef’s seasonal plate",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A seasonal plate with browned edges, a silky center, and a savory finish that stays just long enough.",
               "price": "12.00",
               "state": "available",
               "location_ids": [],
@@ -3179,7 +3179,7 @@
             {
               "id": "item-5",
               "name": "Vegetable centerpiece",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A generous vegetable centerpiece, deeply roasted and glossed with a rich sauce; the table goes quiet at first bite.",
               "price": "13.00",
               "state": "available",
               "location_ids": [],
@@ -3195,7 +3195,7 @@
             {
               "id": "item-6",
               "name": "Fish course",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A tender fish course, crisp at the edges and finished with citrus. Confirm the species and preparation before ordering.",
               "price": "14.00",
               "state": "available",
               "location_ids": [],
@@ -3218,7 +3218,7 @@
             {
               "id": "item-7",
               "name": "Fruit dessert",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Poached fruit, soft spice, and cool cream, spooned together slowly because the plate deserves a pause.",
               "price": "16.00",
               "state": "available",
               "location_ids": [],
@@ -3234,7 +3234,7 @@
             {
               "id": "item-8",
               "name": "Chocolate dessert",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Dark chocolate, a satiny middle, and a little bitter edge to keep the sweetness from behaving.",
               "price": "17.00",
               "state": "available",
               "location_ids": [],
@@ -3250,7 +3250,7 @@
             {
               "id": "item-9",
               "name": "Cheese selection",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A rotating selection of cheeses with preserves and crisp crackers: salty, sweet, and made for one more sliver.",
               "price": "18.00",
               "state": "available",
               "location_ids": [],
@@ -3271,8 +3271,8 @@
       "specials": [
         {
           "id": "specials-1",
-          "title": "Seasonal special",
-          "text": "A dated offer with clear serving times and terms.",
+          "title": "The seasonal temptation",
+          "text": "A fictional limited-time bite, here to make restraint feel optional. Serving times, price, and terms need real confirmation.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3309,24 +3309,24 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "tasting-menu-example",
           "title": "The seasonal tasting table",
-          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "text": "Three invented courses for a slow meal, a full appetite, and the difficult decision of which last bite to save.",
           "presentation": {
             "component": "tasting-menu",
-            "eyebrow": "Example set menu",
+            "eyebrow": "A fictional tasting",
             "price": "Example: 36 USD / person",
             "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
             "courses": [
               {
                 "name": "First course",
-                "text": "Example course: Seasonal vegetables. Confirm actual dishes and substitutions."
+                "text": "A changing selection of seasonal vegetables, handled gently so their natural sweetness and crispness arrive first."
               },
               {
                 "name": "Main course",
-                "text": "Example course: Chef’s seasonal plate. Confirm actual dishes and substitutions."
+                "text": "A seasonal plate with browned edges, a silky center, and a savory finish that stays just long enough."
               },
               {
                 "name": "Dessert",
-                "text": "Example course: Fruit dessert. Confirm actual dishes and substitutions."
+                "text": "Poached fruit, soft spice, and cool cream, spooned together slowly because the plate deserves a pause."
               }
             ],
             "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
@@ -3352,26 +3352,26 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "beverage-flight-example",
           "title": "The alcohol-free pairing flight",
-          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "text": "Three fictional pours, each with a different kind of invitation. Confirm every ingredient and serving size before a real menu uses them.",
           "presentation": {
             "component": "beverage-flight",
-            "eyebrow": "Example drinks tasting",
+            "eyebrow": "Three little temptations",
             "price": "Example: 12 USD / flight",
             "items": [
               {
                 "name": "First pour",
                 "portion": "Example: 90 ml",
-                "text": "A bright, light preparation."
+                "text": "A bright opening sip with a lively finish that wakes up the whole palate."
               },
               {
                 "name": "Second pour",
                 "portion": "Example: 90 ml",
-                "text": "A rounder, slower preparation."
+                "text": "A slower, rounder middle pour: smooth, aromatic, and worth lingering over."
               },
               {
                 "name": "Final pour",
                 "portion": "Example: 60 ml",
-                "text": "A concentrated finish."
+                "text": "A concentrated final sip, deep in flavor and short enough to make you want another."
               }
             ],
             "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
@@ -3382,8 +3382,8 @@
       "catering": [
         {
           "id": "catering-1",
-          "title": "A meal for the group",
-          "text": "A package example with quantities, lead times, and service details.",
+          "title": "A table full of yes",
+          "text": "A fictional spread for a group that wants one more slice, one more scoop, and one more reason to stay. Quantities and terms are examples.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3415,7 +3415,7 @@
         {
           "id": "events-1",
           "title": "The private dining room",
-          "text": "A space example with capacity, access information, and planning terms.",
+          "text": "A fictional space for a long meal, a shared plate, and the last bite nobody wants to claim. Confirm real room and booking details.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3457,8 +3457,8 @@
       "story": [
         {
           "id": "story-1",
-          "title": "A place in the neighborhood",
-          "text": "Share the real origin, purpose, and welcome of the restaurant.",
+          "title": "A slow evening, deliciously ruined",
+          "text": "This fictional dining room lets a meal unfold in tempting chapters; each course arrives with a new reason not to rush the last bite.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3477,7 +3477,7 @@
         {
           "id": "team-1",
           "title": "Morgan Lee · fictional team member",
-          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
+          "text": "A fictional team member for this demo, here to make the kitchen feel warm and the menu worth lingering over.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3493,8 +3493,8 @@
           "presentation": {
             "role": "Example head chef",
             "specialties": [
-              "Example seasonal preparation",
-              "Example guest welcome"
+              "Seasonal plates and patient pacing",
+              "A table made for lingering"
             ],
             "image": {
               "src": "images/team-kitchen.svg",
@@ -3510,8 +3510,8 @@
       "sourcing": [
         {
           "id": "sourcing-1",
-          "title": "Ingredients and partners",
-          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "title": "Where the good stuff begins",
+          "text": "A sample page would name the growers, makers, and ingredients behind the menu. Confirm each real source before making the claim.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3529,8 +3529,8 @@
       "news": [
         {
           "id": "news-1",
-          "title": "From the restaurant",
-          "text": "A full editorial example with a stable detail link and review history.",
+          "title": "Fresh from the kitchen",
+          "text": "A fictional kitchen note with a stable detail page; this copy is here to make you hungry, not report a real update.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3548,8 +3548,8 @@
       "calendar": [
         {
           "id": "calendar-1",
-          "title": "Community supper",
-          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "title": "Supper worth lingering over",
+          "text": "A fictional event listing for a shared table and a menu worth showing up hungry for.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3571,8 +3571,8 @@
       "accessibility": [
         {
           "id": "accessibility-1",
-          "title": "Plan a comfortable visit",
-          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "title": "Find your comfortable seat",
+          "text": "Use the confirmed entrance, seating, restroom, and parking details below; contact the team if you need help planning.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3590,8 +3590,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "Restaurant press kit",
-          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "title": "A menu worth the close-up",
+          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3609,8 +3609,8 @@
       "foodtruck": [
         {
           "id": "foodtruck-1",
-          "title": "Example market stop",
-          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "title": "Next stop: follow that smell",
+          "text": "A fictional truck stop for the demo schedule; imagine crisp edges, generous fillings, and salsa worth chasing.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -3684,29 +3684,29 @@
       "source": ""
     },
     "brand": {
-      "headline": "Your lunch, your way.",
-      "intro": "Choose a bowl, a sandwich, or a meal for the team, with pickup front and center.",
-      "eyebrow": "Restaurant demonstration",
-      "tagline": "Your lunch, your way.",
-      "note": "Illustrative menu and business details.",
+      "headline": "Lunch worth getting sauce on your sleeve for.",
+      "intro": "Bold bowls, pressed sandwiches, crisp sides, and a few very good reasons to abandon your sensible lunch.",
+      "eyebrow": "Fictional restaurant · illustrative menu",
+      "tagline": "Lunch worth getting sauce on your sleeve for.",
+      "note": "Fictional dishes, prices, and restaurant details; for design demonstration only.",
       "image": {
         "src": "images/breakfast.svg",
         "alt": "Concept illustration of breakfast and coffee.",
         "width": 800,
         "height": 720
       },
-      "story_title": "Our kind of place",
+      "story_title": "Lunch with its sleeves rolled up",
       "story": [
-        "Share the restaurant’s actual story, people, and place in the neighborhood."
+        "This fictional lunch counter believes the best meal leaves traces: sauce on the wrapper, spice on your tongue, and a satisfied silence halfway through."
       ],
       "ticker": [
-        "Explore the menu",
-        "Plan your visit",
-        "Gather around"
+        "See what’s calling",
+        "Find your table",
+        "Save room for the last bite"
       ]
     },
     "announcement": {
-      "text": "Explore this restaurant example. Services and prices are illustrative.",
+      "text": "This is a fictional restaurant demo. Come hungry: every menu is invented for the page and written to tempt your appetite.",
       "start": "",
       "end": ""
     },
@@ -3965,7 +3965,7 @@
     "menu": {
       "currency": "USD",
       "reviewed_on": "",
-      "note": "Illustrative dishes and prices. Replace with the approved menu.",
+      "note": "Fictional dishes, ingredients, and prices for this design demo. Verify every detail before using a real menu.",
       "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
       "categories": [
         {
@@ -3976,7 +3976,7 @@
             {
               "id": "item-1",
               "name": "Harvest bowl",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Warm grains, roasted seasonal vegetables, crunchy toppings, and a tangy sauce that gets into every corner of the bowl.",
               "price": "8.00",
               "state": "available",
               "location_ids": [],
@@ -3992,7 +3992,7 @@
             {
               "id": "item-2",
               "name": "Grain bowl",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Chewy grains and bright greens with crisp, savory toppings; a forkful with enough contrast to keep you chasing the next.",
               "price": "9.00",
               "state": "available",
               "location_ids": [],
@@ -4008,7 +4008,7 @@
             {
               "id": "item-3",
               "name": "House bowl",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A hearty base, seasonal toppings, and a generous swipe of sauce, built for the kind of lunch you eat while it is still hot.",
               "price": "10.00",
               "state": "available",
               "location_ids": [],
@@ -4031,7 +4031,7 @@
             {
               "id": "item-4",
               "name": "Garden sandwich",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Crisp greens and ripe vegetables tucked into toasted bread with a creamy spread; a little crunch with every bite.",
               "price": "12.00",
               "state": "available",
               "location_ids": [],
@@ -4047,7 +4047,7 @@
             {
               "id": "item-5",
               "name": "Grilled sandwich",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "The griddle gives the bread crisp edges while the filling turns warm and soft. Let the first bite make its own case.",
               "price": "13.00",
               "state": "available",
               "location_ids": [],
@@ -4063,7 +4063,7 @@
             {
               "id": "item-6",
               "name": "House wrap",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Fresh crunch and a generous filling rolled tight; the sauce at the seam means this one belongs over a napkin.",
               "price": "14.00",
               "state": "available",
               "location_ids": [],
@@ -4086,7 +4086,7 @@
             {
               "id": "item-7",
               "name": "Seasonal side",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A changing seasonal side with hot, crisp edges and bright seasoning, dangerously easy to finish before the main.",
               "price": "16.00",
               "state": "available",
               "location_ids": [],
@@ -4102,7 +4102,7 @@
             {
               "id": "item-8",
               "name": "Soup cup",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A warm, savory cup made for dunking, sipping, and briefly ignoring your sensible plans.",
               "price": "17.00",
               "state": "available",
               "location_ids": [],
@@ -4118,7 +4118,7 @@
             {
               "id": "item-9",
               "name": "Cookie",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Crisp at the edge, soft in the middle, and sweet enough to make an ordinary lunch feel like a small indulgence.",
               "price": "18.00",
               "state": "available",
               "location_ids": [],
@@ -4139,8 +4139,8 @@
       "specials": [
         {
           "id": "specials-1",
-          "title": "Seasonal special",
-          "text": "A dated offer with clear serving times and terms.",
+          "title": "The seasonal temptation",
+          "text": "A fictional limited-time bite, here to make restraint feel optional. Serving times, price, and terms need real confirmation.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4177,24 +4177,24 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "tasting-menu-example",
           "title": "The fresh lunch trio",
-          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "text": "Three invented courses for a slow meal, a full appetite, and the difficult decision of which last bite to save.",
           "presentation": {
             "component": "tasting-menu",
-            "eyebrow": "Example set menu",
+            "eyebrow": "A fictional tasting",
             "price": "Example: 36 USD / person",
             "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
             "courses": [
               {
                 "name": "Bowls",
-                "text": "Example course: Harvest bowl. Confirm actual dishes and substitutions."
+                "text": "Warm grains, roasted seasonal vegetables, crunchy toppings, and a tangy sauce that gets into every corner of the bowl."
               },
               {
                 "name": "Sandwiches",
-                "text": "Example course: Garden sandwich. Confirm actual dishes and substitutions."
+                "text": "Crisp greens and ripe vegetables tucked into toasted bread with a creamy spread; a little crunch with every bite."
               },
               {
                 "name": "Sides",
-                "text": "Example course: Seasonal side. Confirm actual dishes and substitutions."
+                "text": "A changing seasonal side with hot, crisp edges and bright seasoning, dangerously easy to finish before the main."
               }
             ],
             "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
@@ -4220,26 +4220,26 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "beverage-flight-example",
           "title": "The iced tea flight",
-          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "text": "Three fictional pours, each with a different kind of invitation. Confirm every ingredient and serving size before a real menu uses them.",
           "presentation": {
             "component": "beverage-flight",
-            "eyebrow": "Example drinks tasting",
+            "eyebrow": "Three little temptations",
             "price": "Example: 12 USD / flight",
             "items": [
               {
                 "name": "First pour",
                 "portion": "Example: 90 ml",
-                "text": "A bright, light preparation."
+                "text": "A bright opening sip with a lively finish that wakes up the whole palate."
               },
               {
                 "name": "Second pour",
                 "portion": "Example: 90 ml",
-                "text": "A rounder, slower preparation."
+                "text": "A slower, rounder middle pour: smooth, aromatic, and worth lingering over."
               },
               {
                 "name": "Final pour",
                 "portion": "Example: 60 ml",
-                "text": "A concentrated finish."
+                "text": "A concentrated final sip, deep in flavor and short enough to make you want another."
               }
             ],
             "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
@@ -4250,8 +4250,8 @@
       "catering": [
         {
           "id": "catering-1",
-          "title": "A meal for the group",
-          "text": "A package example with quantities, lead times, and service details.",
+          "title": "A table full of yes",
+          "text": "A fictional spread for a group that wants one more slice, one more scoop, and one more reason to stay. Quantities and terms are examples.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4283,7 +4283,7 @@
         {
           "id": "events-1",
           "title": "The group dining corner",
-          "text": "A space example with capacity, access information, and planning terms.",
+          "text": "A fictional space for a long meal, a shared plate, and the last bite nobody wants to claim. Confirm real room and booking details.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4325,8 +4325,8 @@
       "story": [
         {
           "id": "story-1",
-          "title": "A place in the neighborhood",
-          "text": "Share the real origin, purpose, and welcome of the restaurant.",
+          "title": "Lunch with its sleeves rolled up",
+          "text": "This fictional lunch counter believes the best meal leaves traces: sauce on the wrapper, spice on your tongue, and a satisfied silence halfway through.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4345,7 +4345,7 @@
         {
           "id": "team-1",
           "title": "Casey Park · fictional team member",
-          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
+          "text": "A fictional team member for this demo, here to make the kitchen feel warm and the menu worth lingering over.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4361,8 +4361,8 @@
           "presentation": {
             "role": "Example kitchen lead",
             "specialties": [
-              "Example seasonal preparation",
-              "Example guest welcome"
+              "Bold sauces and generous fillings",
+              "Lunch while it is still hot"
             ],
             "image": {
               "src": "images/team-kitchen.svg",
@@ -4378,8 +4378,8 @@
       "sourcing": [
         {
           "id": "sourcing-1",
-          "title": "Ingredients and partners",
-          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "title": "Where the good stuff begins",
+          "text": "A sample page would name the growers, makers, and ingredients behind the menu. Confirm each real source before making the claim.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4397,8 +4397,8 @@
       "news": [
         {
           "id": "news-1",
-          "title": "From the restaurant",
-          "text": "A full editorial example with a stable detail link and review history.",
+          "title": "Fresh from the kitchen",
+          "text": "A fictional kitchen note with a stable detail page; this copy is here to make you hungry, not report a real update.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4416,8 +4416,8 @@
       "calendar": [
         {
           "id": "calendar-1",
-          "title": "Community supper",
-          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "title": "Supper worth lingering over",
+          "text": "A fictional event listing for a shared table and a menu worth showing up hungry for.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4439,8 +4439,8 @@
       "accessibility": [
         {
           "id": "accessibility-1",
-          "title": "Plan a comfortable visit",
-          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "title": "Find your comfortable seat",
+          "text": "Use the confirmed entrance, seating, restroom, and parking details below; contact the team if you need help planning.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4458,8 +4458,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "Restaurant press kit",
-          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "title": "A menu worth the close-up",
+          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4477,8 +4477,8 @@
       "foodtruck": [
         {
           "id": "foodtruck-1",
-          "title": "Example market stop",
-          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "title": "Next stop: follow that smell",
+          "text": "A fictional truck stop for the demo schedule; imagine crisp edges, generous fillings, and salsa worth chasing.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -4552,29 +4552,29 @@
       "source": ""
     },
     "brand": {
-      "headline": "Good company after hours.",
-      "intro": "Browse drinks, small plates, and upcoming evenings in this bar demonstration.",
-      "eyebrow": "Restaurant demonstration",
-      "tagline": "Good company after hours.",
-      "note": "Illustrative menu and business details.",
+      "headline": "After-hours appetite, fully awake.",
+      "intro": "A cold drink, a plate with something crisp to tear into, and a late-night sandwich that makes one more round sound inevitable.",
+      "eyebrow": "Fictional restaurant · illustrative menu",
+      "tagline": "After-hours appetite, fully awake.",
+      "note": "Fictional dishes, prices, and restaurant details; for design demonstration only.",
       "image": {
         "src": "images/breakfast.svg",
         "alt": "Concept illustration of breakfast and coffee.",
         "width": 800,
         "height": 720
       },
-      "story_title": "Our kind of place",
+      "story_title": "After hours, appetite on",
       "story": [
-        "Share the restaurant’s actual story, people, and place in the neighborhood."
+        "This fictional late-night table makes room for one more small plate and the sandwich you order after pretending you are done."
       ],
       "ticker": [
-        "Explore the menu",
-        "Plan your visit",
-        "Gather around"
+        "See what’s calling",
+        "Find your table",
+        "Save room for the last bite"
       ]
     },
     "announcement": {
-      "text": "Explore this restaurant example. Services and prices are illustrative.",
+      "text": "This is a fictional restaurant demo. Come hungry: every menu is invented for the page and written to tempt your appetite.",
       "start": "",
       "end": ""
     },
@@ -4833,7 +4833,7 @@
     "menu": {
       "currency": "USD",
       "reviewed_on": "",
-      "note": "Illustrative dishes and prices. Replace with the approved menu.",
+      "note": "Fictional dishes, ingredients, and prices for this design demo. Verify every detail before using a real menu.",
       "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
       "categories": [
         {
@@ -4844,7 +4844,7 @@
             {
               "id": "item-1",
               "name": "House cocktail",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Cold ice, aromatic citrus, and a bittersweet finish; the scent gets the first sip before you do.",
               "price": "8.00",
               "state": "available",
               "location_ids": [],
@@ -4860,7 +4860,7 @@
             {
               "id": "item-2",
               "name": "Seasonal cocktail",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A seasonal mix of chilled aromatics, a little sweetness, and a slow finish built for lingering.",
               "price": "9.00",
               "state": "available",
               "location_ids": [],
@@ -4876,7 +4876,7 @@
             {
               "id": "item-3",
               "name": "Draft selection",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A rotating draft selection, cold and foamy with a crisp finish that makes the first sip disappear.",
               "price": "10.00",
               "state": "available",
               "location_ids": [],
@@ -4899,7 +4899,7 @@
             {
               "id": "item-4",
               "name": "House snack",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Salty, crisp, and dangerously easy to keep ordering alongside one more round.",
               "price": "12.00",
               "state": "available",
               "location_ids": [],
@@ -4915,7 +4915,7 @@
             {
               "id": "item-5",
               "name": "Sharing plate",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A few hot, savory bites with contrasting crunch and softness, meant to start in the middle and end too soon.",
               "price": "13.00",
               "state": "available",
               "location_ids": [],
@@ -4931,7 +4931,7 @@
             {
               "id": "item-6",
               "name": "Late-night sandwich",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Toasted outside, warm and savory within, with the sort of late-night comfort that calls for both hands.",
               "price": "14.00",
               "state": "available",
               "location_ids": [],
@@ -4954,7 +4954,7 @@
             {
               "id": "item-7",
               "name": "Citrus spritz",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Bright citrus, cold bubbles, and a fragrant finish; all the sparkle, none of the alcohol.",
               "price": "16.00",
               "state": "available",
               "location_ids": [],
@@ -4970,7 +4970,7 @@
             {
               "id": "item-8",
               "name": "Ginger cooler",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Cool ginger with a lively little bite and a smooth finish that keeps the glass moving.",
               "price": "17.00",
               "state": "available",
               "location_ids": [],
@@ -4986,7 +4986,7 @@
             {
               "id": "item-9",
               "name": "Sparkling tea",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A fragrant, sparkling tea with a crisp opening and a slow, dry finish for another small sip.",
               "price": "18.00",
               "state": "available",
               "location_ids": [],
@@ -5007,8 +5007,8 @@
       "specials": [
         {
           "id": "specials-1",
-          "title": "Seasonal special",
-          "text": "A dated offer with clear serving times and terms.",
+          "title": "The seasonal temptation",
+          "text": "A fictional limited-time bite, here to make restraint feel optional. Serving times, price, and terms need real confirmation.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5045,24 +5045,24 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "tasting-menu-example",
           "title": "The evening small-plate menu",
-          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "text": "Three invented courses for a slow meal, a full appetite, and the difficult decision of which last bite to save.",
           "presentation": {
             "component": "tasting-menu",
-            "eyebrow": "Example set menu",
+            "eyebrow": "A fictional tasting",
             "price": "Example: 36 USD / person",
             "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
             "courses": [
               {
                 "name": "Drinks",
-                "text": "Example course: House cocktail. Confirm actual dishes and substitutions."
+                "text": "Cold ice, aromatic citrus, and a bittersweet finish; the scent gets the first sip before you do."
               },
               {
                 "name": "Small plates",
-                "text": "Example course: House snack. Confirm actual dishes and substitutions."
+                "text": "Salty, crisp, and dangerously easy to keep ordering alongside one more round."
               },
               {
                 "name": "Alcohol-free",
-                "text": "Example course: Citrus spritz. Confirm actual dishes and substitutions."
+                "text": "Bright citrus, cold bubbles, and a fragrant finish; all the sparkle, none of the alcohol."
               }
             ],
             "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
@@ -5088,26 +5088,26 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "beverage-flight-example",
           "title": "The alcohol-free evening flight",
-          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "text": "Three fictional pours, each with a different kind of invitation. Confirm every ingredient and serving size before a real menu uses them.",
           "presentation": {
             "component": "beverage-flight",
-            "eyebrow": "Example drinks tasting",
+            "eyebrow": "Three little temptations",
             "price": "Example: 12 USD / flight",
             "items": [
               {
                 "name": "First pour",
                 "portion": "Example: 90 ml",
-                "text": "A bright, light preparation."
+                "text": "A bright opening sip with a lively finish that wakes up the whole palate."
               },
               {
                 "name": "Second pour",
                 "portion": "Example: 90 ml",
-                "text": "A rounder, slower preparation."
+                "text": "A slower, rounder middle pour: smooth, aromatic, and worth lingering over."
               },
               {
                 "name": "Final pour",
                 "portion": "Example: 60 ml",
-                "text": "A concentrated finish."
+                "text": "A concentrated final sip, deep in flavor and short enough to make you want another."
               }
             ],
             "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
@@ -5118,8 +5118,8 @@
       "catering": [
         {
           "id": "catering-1",
-          "title": "A meal for the group",
-          "text": "A package example with quantities, lead times, and service details.",
+          "title": "A table full of yes",
+          "text": "A fictional spread for a group that wants one more slice, one more scoop, and one more reason to stay. Quantities and terms are examples.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5151,7 +5151,7 @@
         {
           "id": "events-1",
           "title": "The upstairs gathering room",
-          "text": "A space example with capacity, access information, and planning terms.",
+          "text": "A fictional space for a long meal, a shared plate, and the last bite nobody wants to claim. Confirm real room and booking details.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5193,8 +5193,8 @@
       "story": [
         {
           "id": "story-1",
-          "title": "A place in the neighborhood",
-          "text": "Share the real origin, purpose, and welcome of the restaurant.",
+          "title": "After hours, appetite on",
+          "text": "This fictional late-night table makes room for one more small plate and the sandwich you order after pretending you are done.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5213,7 +5213,7 @@
         {
           "id": "team-1",
           "title": "Taylor Reed · fictional team member",
-          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
+          "text": "A fictional team member for this demo, here to make the kitchen feel warm and the menu worth lingering over.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5229,8 +5229,8 @@
           "presentation": {
             "role": "Example bar host",
             "specialties": [
-              "Example seasonal preparation",
-              "Example guest welcome"
+              "Small plates and late-night cravings",
+              "One more round of hospitality"
             ],
             "image": {
               "src": "images/team-kitchen.svg",
@@ -5246,8 +5246,8 @@
       "sourcing": [
         {
           "id": "sourcing-1",
-          "title": "Ingredients and partners",
-          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "title": "Where the good stuff begins",
+          "text": "A sample page would name the growers, makers, and ingredients behind the menu. Confirm each real source before making the claim.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5265,8 +5265,8 @@
       "news": [
         {
           "id": "news-1",
-          "title": "From the restaurant",
-          "text": "A full editorial example with a stable detail link and review history.",
+          "title": "Fresh from the kitchen",
+          "text": "A fictional kitchen note with a stable detail page; this copy is here to make you hungry, not report a real update.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5284,8 +5284,8 @@
       "calendar": [
         {
           "id": "calendar-1",
-          "title": "Community supper",
-          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "title": "Supper worth lingering over",
+          "text": "A fictional event listing for a shared table and a menu worth showing up hungry for.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5307,8 +5307,8 @@
       "accessibility": [
         {
           "id": "accessibility-1",
-          "title": "Plan a comfortable visit",
-          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "title": "Find your comfortable seat",
+          "text": "Use the confirmed entrance, seating, restroom, and parking details below; contact the team if you need help planning.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5326,8 +5326,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "Restaurant press kit",
-          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "title": "A menu worth the close-up",
+          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5345,8 +5345,8 @@
       "foodtruck": [
         {
           "id": "foodtruck-1",
-          "title": "Example market stop",
-          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "title": "Next stop: follow that smell",
+          "text": "A fictional truck stop for the demo schedule; imagine crisp edges, generous fillings, and salsa worth chasing.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5420,29 +5420,29 @@
       "source": ""
     },
     "brand": {
-      "headline": "Fresh from the oven.",
-      "intro": "A bakery example for everyday favorites, special orders, and celebrations.",
-      "eyebrow": "Restaurant demonstration",
-      "tagline": "Fresh from the oven.",
-      "note": "Illustrative menu and business details.",
+      "headline": "Butter, sugar, zero intention to share.",
+      "intro": "Crackly loaves, flaky pastries, and soft-centered sweets that demand a moment alone with your first bite.",
+      "eyebrow": "Fictional restaurant · illustrative menu",
+      "tagline": "Butter, sugar, zero intention to share.",
+      "note": "Fictional dishes, prices, and restaurant details; for design demonstration only.",
       "image": {
         "src": "images/breakfast.svg",
         "alt": "Concept illustration of breakfast and coffee.",
         "width": 800,
         "height": 720
       },
-      "story_title": "Our kind of place",
+      "story_title": "Butter has a way with a day",
       "story": [
-        "Share the restaurant’s actual story, people, and place in the neighborhood."
+        "This fictional bakery begins with the sound of a crust giving way and ends with powdered sugar on a sleeve. There is no tidy way to love pastry."
       ],
       "ticker": [
-        "Explore the menu",
-        "Plan your visit",
-        "Gather around"
+        "See what’s calling",
+        "Find your table",
+        "Save room for the last bite"
       ]
     },
     "announcement": {
-      "text": "Explore this restaurant example. Services and prices are illustrative.",
+      "text": "This is a fictional restaurant demo. Come hungry: every menu is invented for the page and written to tempt your appetite.",
       "start": "",
       "end": ""
     },
@@ -5701,7 +5701,7 @@
     "menu": {
       "currency": "USD",
       "reviewed_on": "",
-      "note": "Illustrative dishes and prices. Replace with the approved menu.",
+      "note": "Fictional dishes, ingredients, and prices for this design demo. Verify every detail before using a real menu.",
       "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
       "categories": [
         {
@@ -5712,7 +5712,7 @@
             {
               "id": "item-1",
               "name": "Country loaf",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A country loaf with a burnished crust that crackles under the knife and a tender crumb made for butter.",
               "price": "8.00",
               "state": "available",
               "location_ids": [],
@@ -5728,7 +5728,7 @@
             {
               "id": "item-2",
               "name": "Seeded loaf",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A seeded loaf with a deeply toasted crust, nutty aroma, and a soft center that begs for one more slice.",
               "price": "9.00",
               "state": "available",
               "location_ids": [],
@@ -5744,7 +5744,7 @@
             {
               "id": "item-3",
               "name": "Soft rolls",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Soft rolls with golden tops and pillowy middles; pull one apart while it is still warm.",
               "price": "10.00",
               "state": "available",
               "location_ids": [],
@@ -5767,7 +5767,7 @@
             {
               "id": "item-4",
               "name": "Morning pastry",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Flaky pastry, tender layers, and a buttery aroma that arrives before the first bite.",
               "price": "12.00",
               "state": "available",
               "location_ids": [],
@@ -5783,7 +5783,7 @@
             {
               "id": "item-5",
               "name": "Fruit tart",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A bright fruit filling tucked into a crisp shell, glossy on top and just tart enough to keep you coming back.",
               "price": "13.00",
               "state": "available",
               "location_ids": [],
@@ -5799,7 +5799,7 @@
             {
               "id": "item-6",
               "name": "Butter cookie",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A butter-rich cookie with a golden edge and a tender center that refuses to stay in the tin.",
               "price": "14.00",
               "state": "available",
               "location_ids": [],
@@ -5822,7 +5822,7 @@
             {
               "id": "item-7",
               "name": "Celebration cake",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A celebration cake with soft layers and a generous finish, ready to make the table go quiet for a moment.",
               "price": "16.00",
               "state": "available",
               "location_ids": [],
@@ -5838,7 +5838,7 @@
             {
               "id": "item-8",
               "name": "Dessert box",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A box of small sweets with crisp edges, soft centers, and every reason to claim that you are only sampling.",
               "price": "17.00",
               "state": "available",
               "location_ids": [],
@@ -5854,7 +5854,7 @@
             {
               "id": "item-9",
               "name": "Party selection",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A party selection chosen for the first gasp, the second slice, and the crumbs you find later.",
               "price": "18.00",
               "state": "available",
               "location_ids": [],
@@ -5875,8 +5875,8 @@
       "specials": [
         {
           "id": "specials-1",
-          "title": "Seasonal special",
-          "text": "A dated offer with clear serving times and terms.",
+          "title": "The seasonal temptation",
+          "text": "A fictional limited-time bite, here to make restraint feel optional. Serving times, price, and terms need real confirmation.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -5913,24 +5913,24 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "tasting-menu-example",
           "title": "The bakery lunch menu",
-          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "text": "Three invented courses for a slow meal, a full appetite, and the difficult decision of which last bite to save.",
           "presentation": {
             "component": "tasting-menu",
-            "eyebrow": "Example set menu",
+            "eyebrow": "A fictional tasting",
             "price": "Example: 36 USD / person",
             "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
             "courses": [
               {
                 "name": "Bread",
-                "text": "Example course: Country loaf. Confirm actual dishes and substitutions."
+                "text": "A country loaf with a burnished crust that crackles under the knife and a tender crumb made for butter."
               },
               {
                 "name": "Pastries",
-                "text": "Example course: Morning pastry. Confirm actual dishes and substitutions."
+                "text": "Flaky pastry, tender layers, and a buttery aroma that arrives before the first bite."
               },
               {
                 "name": "Celebrations",
-                "text": "Example course: Celebration cake. Confirm actual dishes and substitutions."
+                "text": "A celebration cake with soft layers and a generous finish, ready to make the table go quiet for a moment."
               }
             ],
             "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
@@ -5956,26 +5956,26 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "beverage-flight-example",
           "title": "The tea and coffee flight",
-          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "text": "Three fictional pours, each with a different kind of invitation. Confirm every ingredient and serving size before a real menu uses them.",
           "presentation": {
             "component": "beverage-flight",
-            "eyebrow": "Example drinks tasting",
+            "eyebrow": "Three little temptations",
             "price": "Example: 12 USD / flight",
             "items": [
               {
                 "name": "First pour",
                 "portion": "Example: 90 ml",
-                "text": "A bright, light preparation."
+                "text": "A bright opening sip with a lively finish that wakes up the whole palate."
               },
               {
                 "name": "Second pour",
                 "portion": "Example: 90 ml",
-                "text": "A rounder, slower preparation."
+                "text": "A slower, rounder middle pour: smooth, aromatic, and worth lingering over."
               },
               {
                 "name": "Final pour",
                 "portion": "Example: 60 ml",
-                "text": "A concentrated finish."
+                "text": "A concentrated final sip, deep in flavor and short enough to make you want another."
               }
             ],
             "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
@@ -5986,8 +5986,8 @@
       "catering": [
         {
           "id": "catering-1",
-          "title": "A meal for the group",
-          "text": "A package example with quantities, lead times, and service details.",
+          "title": "A table full of yes",
+          "text": "A fictional spread for a group that wants one more slice, one more scoop, and one more reason to stay. Quantities and terms are examples.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6019,7 +6019,7 @@
         {
           "id": "events-1",
           "title": "The bakery gathering table",
-          "text": "A space example with capacity, access information, and planning terms.",
+          "text": "A fictional space for a long meal, a shared plate, and the last bite nobody wants to claim. Confirm real room and booking details.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6061,8 +6061,8 @@
       "story": [
         {
           "id": "story-1",
-          "title": "A place in the neighborhood",
-          "text": "Share the real origin, purpose, and welcome of the restaurant.",
+          "title": "Butter has a way with a day",
+          "text": "This fictional bakery begins with the sound of a crust giving way and ends with powdered sugar on a sleeve. There is no tidy way to love pastry.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6081,7 +6081,7 @@
         {
           "id": "team-1",
           "title": "Jamie Brooks · fictional team member",
-          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
+          "text": "A fictional team member for this demo, here to make the kitchen feel warm and the menu worth lingering over.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6097,8 +6097,8 @@
           "presentation": {
             "role": "Example baker",
             "specialties": [
-              "Example seasonal preparation",
-              "Example guest welcome"
+              "Burnished crusts and soft centers",
+              "Pastries worth waking up for"
             ],
             "image": {
               "src": "images/team-kitchen.svg",
@@ -6114,8 +6114,8 @@
       "sourcing": [
         {
           "id": "sourcing-1",
-          "title": "Ingredients and partners",
-          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "title": "Where the good stuff begins",
+          "text": "A sample page would name the growers, makers, and ingredients behind the menu. Confirm each real source before making the claim.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6133,8 +6133,8 @@
       "news": [
         {
           "id": "news-1",
-          "title": "From the restaurant",
-          "text": "A full editorial example with a stable detail link and review history.",
+          "title": "Fresh from the kitchen",
+          "text": "A fictional kitchen note with a stable detail page; this copy is here to make you hungry, not report a real update.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6152,8 +6152,8 @@
       "calendar": [
         {
           "id": "calendar-1",
-          "title": "Community supper",
-          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "title": "Supper worth lingering over",
+          "text": "A fictional event listing for a shared table and a menu worth showing up hungry for.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6175,8 +6175,8 @@
       "accessibility": [
         {
           "id": "accessibility-1",
-          "title": "Plan a comfortable visit",
-          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "title": "Find your comfortable seat",
+          "text": "Use the confirmed entrance, seating, restroom, and parking details below; contact the team if you need help planning.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6194,8 +6194,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "Restaurant press kit",
-          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "title": "A menu worth the close-up",
+          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6213,8 +6213,8 @@
       "foodtruck": [
         {
           "id": "foodtruck-1",
-          "title": "Example market stop",
-          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "title": "Next stop: follow that smell",
+          "text": "A fictional truck stop for the demo schedule; imagine crisp edges, generous fillings, and salsa worth chasing.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6288,29 +6288,29 @@
       "source": ""
     },
     "brand": {
-      "headline": "Good food. Next stop.",
-      "intro": "See the schedule, explore the menu, and plan a truck visit for your gathering.",
-      "eyebrow": "Restaurant demonstration",
-      "tagline": "Good food. Next stop.",
-      "note": "Illustrative menu and business details.",
+      "headline": "Follow the smell. Bring an appetite.",
+      "intro": "Hot tacos, crisp sides, cool drinks, and fillings so gloriously messy they require both hands.",
+      "eyebrow": "Fictional restaurant · illustrative menu",
+      "tagline": "Follow the smell. Bring an appetite.",
+      "note": "Fictional dishes, prices, and restaurant details; for design demonstration only.",
       "image": {
         "src": "images/breakfast.svg",
         "alt": "Concept illustration of breakfast and coffee.",
         "width": 800,
         "height": 720
       },
-      "story_title": "Our kind of place",
+      "story_title": "Follow the first good smell",
       "story": [
-        "Share the restaurant’s actual story, people, and place in the neighborhood."
+        "This fictional kitchen on wheels follows the good smell: warm tortillas, bright salsa, crisp edges, and lunch best eaten while it is still hot."
       ],
       "ticker": [
-        "Explore the menu",
-        "Plan your visit",
-        "Gather around"
+        "See what’s calling",
+        "Find your table",
+        "Save room for the last bite"
       ]
     },
     "announcement": {
-      "text": "Explore this restaurant example. Services and prices are illustrative.",
+      "text": "This is a fictional restaurant demo. Come hungry: every menu is invented for the page and written to tempt your appetite.",
       "start": "",
       "end": ""
     },
@@ -6569,7 +6569,7 @@
     "menu": {
       "currency": "USD",
       "reviewed_on": "",
-      "note": "Illustrative dishes and prices. Replace with the approved menu.",
+      "note": "Fictional dishes, ingredients, and prices for this design demo. Verify every detail before using a real menu.",
       "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
       "categories": [
         {
@@ -6580,7 +6580,7 @@
             {
               "id": "item-1",
               "name": "House taco",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A warm tortilla wrapped around a savory filling, bright salsa, and crisp little edges; keep both hands ready.",
               "price": "8.00",
               "state": "available",
               "location_ids": [],
@@ -6596,7 +6596,7 @@
             {
               "id": "item-2",
               "name": "Seasonal taco",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A seasonal taco with a juicy center, sharp crunch, and enough sauce to make the last bite worth chasing.",
               "price": "9.00",
               "state": "available",
               "location_ids": [],
@@ -6612,7 +6612,7 @@
             {
               "id": "item-3",
               "name": "Street-food bowl",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A hearty street-food bowl piled with warm grains, fresh crunch, and a lively sauce that reaches every forkful.",
               "price": "10.00",
               "state": "available",
               "location_ids": [],
@@ -6635,7 +6635,7 @@
             {
               "id": "item-4",
               "name": "Crisp potatoes",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Crisp potatoes with a tender middle and a hot, savory finish; ideal for stealing one from someone else’s tray.",
               "price": "12.00",
               "state": "available",
               "location_ids": [],
@@ -6651,7 +6651,7 @@
             {
               "id": "item-5",
               "name": "Seasonal slaw",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Cool, crunchy slaw with a bright tang that cuts through the richer bites and sends you back in again.",
               "price": "13.00",
               "state": "available",
               "location_ids": [],
@@ -6667,7 +6667,7 @@
             {
               "id": "item-6",
               "name": "Side salad",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Fresh, crisp greens with a sharp dressing, made for the bite between something hot and something hotter.",
               "price": "14.00",
               "state": "available",
               "location_ids": [],
@@ -6690,7 +6690,7 @@
             {
               "id": "item-7",
               "name": "Lemonade",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Cold lemonade with a lively citrus bite and a sweet finish that cools the spice.",
               "price": "16.00",
               "state": "available",
               "location_ids": [],
@@ -6706,7 +6706,7 @@
             {
               "id": "item-8",
               "name": "Iced tea",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Iced tea, fragrant and refreshing, with a clean finish made for a hot afternoon.",
               "price": "17.00",
               "state": "available",
               "location_ids": [],
@@ -6722,7 +6722,7 @@
             {
               "id": "item-9",
               "name": "Sparkling water",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Cold sparkling water, bright bubbles and all, ready to cool the palate between bites.",
               "price": "18.00",
               "state": "available",
               "location_ids": [],
@@ -6743,8 +6743,8 @@
       "specials": [
         {
           "id": "specials-1",
-          "title": "Seasonal special",
-          "text": "A dated offer with clear serving times and terms.",
+          "title": "The seasonal temptation",
+          "text": "A fictional limited-time bite, here to make restraint feel optional. Serving times, price, and terms need real confirmation.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6781,24 +6781,24 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "tasting-menu-example",
           "title": "The street-food tasting trio",
-          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "text": "Three invented courses for a slow meal, a full appetite, and the difficult decision of which last bite to save.",
           "presentation": {
             "component": "tasting-menu",
-            "eyebrow": "Example set menu",
+            "eyebrow": "A fictional tasting",
             "price": "Example: 36 USD / person",
             "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
             "courses": [
               {
                 "name": "Street food",
-                "text": "Example course: House taco. Confirm actual dishes and substitutions."
+                "text": "A warm tortilla wrapped around a savory filling, bright salsa, and crisp little edges; keep both hands ready."
               },
               {
                 "name": "Sides",
-                "text": "Example course: Crisp potatoes. Confirm actual dishes and substitutions."
+                "text": "Crisp potatoes with a tender middle and a hot, savory finish; ideal for stealing one from someone else’s tray."
               },
               {
                 "name": "Drinks",
-                "text": "Example course: Lemonade. Confirm actual dishes and substitutions."
+                "text": "Cold lemonade with a lively citrus bite and a sweet finish that cools the spice."
               }
             ],
             "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
@@ -6824,26 +6824,26 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "beverage-flight-example",
           "title": "The market iced tea flight",
-          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "text": "Three fictional pours, each with a different kind of invitation. Confirm every ingredient and serving size before a real menu uses them.",
           "presentation": {
             "component": "beverage-flight",
-            "eyebrow": "Example drinks tasting",
+            "eyebrow": "Three little temptations",
             "price": "Example: 12 USD / flight",
             "items": [
               {
                 "name": "First pour",
                 "portion": "Example: 90 ml",
-                "text": "A bright, light preparation."
+                "text": "A bright opening sip with a lively finish that wakes up the whole palate."
               },
               {
                 "name": "Second pour",
                 "portion": "Example: 90 ml",
-                "text": "A rounder, slower preparation."
+                "text": "A slower, rounder middle pour: smooth, aromatic, and worth lingering over."
               },
               {
                 "name": "Final pour",
                 "portion": "Example: 60 ml",
-                "text": "A concentrated finish."
+                "text": "A concentrated final sip, deep in flavor and short enough to make you want another."
               }
             ],
             "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
@@ -6854,8 +6854,8 @@
       "catering": [
         {
           "id": "catering-1",
-          "title": "A meal for the group",
-          "text": "A package example with quantities, lead times, and service details.",
+          "title": "A table full of yes",
+          "text": "A fictional spread for a group that wants one more slice, one more scoop, and one more reason to stay. Quantities and terms are examples.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6887,7 +6887,7 @@
         {
           "id": "events-1",
           "title": "Private gathering arrangements",
-          "text": "A space example with capacity, access information, and planning terms.",
+          "text": "A fictional space for a long meal, a shared plate, and the last bite nobody wants to claim. Confirm real room and booking details.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6929,8 +6929,8 @@
       "story": [
         {
           "id": "story-1",
-          "title": "A place in the neighborhood",
-          "text": "Share the real origin, purpose, and welcome of the restaurant.",
+          "title": "Follow the first good smell",
+          "text": "This fictional kitchen on wheels follows the good smell: warm tortillas, bright salsa, crisp edges, and lunch best eaten while it is still hot.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6949,7 +6949,7 @@
         {
           "id": "team-1",
           "title": "Avery Lane · fictional team member",
-          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
+          "text": "A fictional team member for this demo, here to make the kitchen feel warm and the menu worth lingering over.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -6965,8 +6965,8 @@
           "presentation": {
             "role": "Example mobile-kitchen cook",
             "specialties": [
-              "Example seasonal preparation",
-              "Example guest welcome"
+              "Hot tortillas and bright salsa",
+              "Fast hands and warm lunches"
             ],
             "image": {
               "src": "images/team-kitchen.svg",
@@ -6982,8 +6982,8 @@
       "sourcing": [
         {
           "id": "sourcing-1",
-          "title": "Ingredients and partners",
-          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "title": "Where the good stuff begins",
+          "text": "A sample page would name the growers, makers, and ingredients behind the menu. Confirm each real source before making the claim.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -7001,8 +7001,8 @@
       "news": [
         {
           "id": "news-1",
-          "title": "From the restaurant",
-          "text": "A full editorial example with a stable detail link and review history.",
+          "title": "Fresh from the kitchen",
+          "text": "A fictional kitchen note with a stable detail page; this copy is here to make you hungry, not report a real update.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -7020,8 +7020,8 @@
       "calendar": [
         {
           "id": "calendar-1",
-          "title": "Community supper",
-          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "title": "Supper worth lingering over",
+          "text": "A fictional event listing for a shared table and a menu worth showing up hungry for.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -7043,8 +7043,8 @@
       "accessibility": [
         {
           "id": "accessibility-1",
-          "title": "Plan a comfortable visit",
-          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "title": "Find your comfortable seat",
+          "text": "Use the confirmed entrance, seating, restroom, and parking details below; contact the team if you need help planning.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -7062,8 +7062,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "Restaurant press kit",
-          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "title": "A menu worth the close-up",
+          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -7081,8 +7081,8 @@
       "foodtruck": [
         {
           "id": "foodtruck-1",
-          "title": "Example market stop",
-          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "title": "Next stop: follow that smell",
+          "text": "A fictional truck stop for the demo schedule; imagine crisp edges, generous fillings, and salsa worth chasing.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -7156,29 +7156,29 @@
       "source": ""
     },
     "brand": {
-      "headline": "Your favorite place, closer by.",
-      "intro": "Choose a location before viewing its menu, hours, ordering, or reservation options.",
-      "eyebrow": "Restaurant demonstration",
-      "tagline": "Your favorite place, closer by.",
-      "note": "Illustrative menu and business details.",
+      "headline": "One craving. Plenty of tables.",
+      "intro": "Move from coffee to lunch to dessert, finding a different excuse to come back at every fictional location.",
+      "eyebrow": "Fictional restaurant · illustrative menu",
+      "tagline": "One craving. Plenty of tables.",
+      "note": "Fictional dishes, prices, and restaurant details; for design demonstration only.",
       "image": {
         "src": "images/breakfast.svg",
         "alt": "Concept illustration of breakfast and coffee.",
         "width": 800,
         "height": 720
       },
-      "story_title": "Our kind of place",
+      "story_title": "One appetite, many tables",
       "story": [
-        "Share the restaurant’s actual story, people, and place in the neighborhood."
+        "This fictional group of neighborhood tables follows one simple rule: let each location have its own irresistible reason to arrive hungry."
       ],
       "ticker": [
-        "Explore the menu",
-        "Plan your visit",
-        "Gather around"
+        "See what’s calling",
+        "Find your table",
+        "Save room for the last bite"
       ]
     },
     "announcement": {
-      "text": "Explore this restaurant example. Services and prices are illustrative.",
+      "text": "This is a fictional restaurant demo. Come hungry: every menu is invented for the page and written to tempt your appetite.",
       "start": "",
       "end": ""
     },
@@ -7642,7 +7642,7 @@
     "menu": {
       "currency": "USD",
       "reviewed_on": "",
-      "note": "Illustrative dishes and prices. Replace with the approved menu.",
+      "note": "Fictional dishes, ingredients, and prices for this design demo. Verify every detail before using a real menu.",
       "allergen_note": "Ask the restaurant about ingredients and cross-contact. No dietary safety claim is implied by this example.",
       "categories": [
         {
@@ -7653,7 +7653,7 @@
             {
               "id": "item-1",
               "name": "Breakfast plate",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A hot breakfast plate with crisp edges, tender centers, and the sort of aroma that can change your route.",
               "price": "8.00",
               "state": "available",
               "location_ids": [],
@@ -7669,7 +7669,7 @@
             {
               "id": "item-2",
               "name": "Morning sandwich",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Soft egg and savory filling tucked into a toasted morning sandwich, warm enough to make the commute wait.",
               "price": "9.00",
               "state": "available",
               "location_ids": [],
@@ -7685,7 +7685,7 @@
             {
               "id": "item-3",
               "name": "Coffee & pastry",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A fragrant coffee and a tender pastry, a two-part morning temptation with no need to choose just one.",
               "price": "10.00",
               "state": "available",
               "location_ids": [],
@@ -7708,7 +7708,7 @@
             {
               "id": "item-4",
               "name": "House sandwich",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A generous sandwich with toasted edges, a savory center, and enough sauce to make lunch feel like a decision.",
               "price": "12.00",
               "state": "available",
               "location_ids": [],
@@ -7724,7 +7724,7 @@
             {
               "id": "item-5",
               "name": "Seasonal salad",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "Seasonal greens with ripe produce, crunchy textures, and a bright dressing that keeps the fork moving.",
               "price": "13.00",
               "state": "available",
               "location_ids": [],
@@ -7740,7 +7740,7 @@
             {
               "id": "item-6",
               "name": "Lunch bowl",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A hearty lunch bowl with warm grains, crisp toppings, and a lively sauce in every corner.",
               "price": "14.00",
               "state": "available",
               "location_ids": [],
@@ -7763,7 +7763,7 @@
             {
               "id": "item-7",
               "name": "Dinner plate",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A savory dinner plate with browned edges, tender middle, and a rich finish made for a slow evening.",
               "price": "16.00",
               "state": "available",
               "location_ids": [],
@@ -7779,7 +7779,7 @@
             {
               "id": "item-8",
               "name": "Sharing plate",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A sharing plate built from hot, savory bites and crisp contrasts; the middle of the table is the best seat.",
               "price": "17.00",
               "state": "available",
               "location_ids": [],
@@ -7795,7 +7795,7 @@
             {
               "id": "item-9",
               "name": "Evening dessert",
-              "description": "Example description. Replace with the actual ingredients and preparation.",
+              "description": "A soft-centered evening dessert with a delicate crisp edge and a lingering sweetness worth staying for.",
               "price": "18.00",
               "state": "available",
               "location_ids": [],
@@ -7816,8 +7816,8 @@
       "specials": [
         {
           "id": "specials-1",
-          "title": "Seasonal special",
-          "text": "A dated offer with clear serving times and terms.",
+          "title": "The seasonal temptation",
+          "text": "A fictional limited-time bite, here to make restraint feel optional. Serving times, price, and terms need real confirmation.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -7854,24 +7854,24 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "tasting-menu-example",
           "title": "The neighborhood set menu",
-          "text": "An illustrative set menu drawn from this restaurant example. Replace dishes, prices, and service dates before use.",
+          "text": "Three invented courses for a slow meal, a full appetite, and the difficult decision of which last bite to save.",
           "presentation": {
             "component": "tasting-menu",
-            "eyebrow": "Example set menu",
+            "eyebrow": "A fictional tasting",
             "price": "Example: 36 USD / person",
             "schedule": "Fictional future demonstration · November 14, 2099, 6–9 pm, America/Chicago",
             "courses": [
               {
                 "name": "Morning",
-                "text": "Example course: Breakfast plate. Confirm actual dishes and substitutions."
+                "text": "A hot breakfast plate with crisp edges, tender centers, and the sort of aroma that can change your route."
               },
               {
                 "name": "Midday",
-                "text": "Example course: House sandwich. Confirm actual dishes and substitutions."
+                "text": "A generous sandwich with toasted edges, a savory center, and enough sauce to make lunch feel like a decision."
               },
               {
                 "name": "Evening",
-                "text": "Example course: Dinner plate. Confirm actual dishes and substitutions."
+                "text": "A savory dinner plate with browned edges, tender middle, and a rich finish made for a slow evening."
               }
             ],
             "dietary_note": "Dietary substitutions and shared preparation conditions require restaurant confirmation.",
@@ -7897,26 +7897,26 @@
           "venue": "Illustrative venue — confirm before publication",
           "id": "beverage-flight-example",
           "title": "The house coffee flight",
-          "text": "A small illustrative tasting of three house drinks. Confirm ingredients, portions, and preparation before use.",
+          "text": "Three fictional pours, each with a different kind of invitation. Confirm every ingredient and serving size before a real menu uses them.",
           "presentation": {
             "component": "beverage-flight",
-            "eyebrow": "Example drinks tasting",
+            "eyebrow": "Three little temptations",
             "price": "Example: 12 USD / flight",
             "items": [
               {
                 "name": "First pour",
                 "portion": "Example: 90 ml",
-                "text": "A bright, light preparation."
+                "text": "A bright opening sip with a lively finish that wakes up the whole palate."
               },
               {
                 "name": "Second pour",
                 "portion": "Example: 90 ml",
-                "text": "A rounder, slower preparation."
+                "text": "A slower, rounder middle pour: smooth, aromatic, and worth lingering over."
               },
               {
                 "name": "Final pour",
                 "portion": "Example: 60 ml",
-                "text": "A concentrated finish."
+                "text": "A concentrated final sip, deep in flavor and short enough to make you want another."
               }
             ],
             "note": "Fictional alcohol-free selections. Confirm caffeine amounts, milk, sweeteners, allergens, and preparation.",
@@ -7927,8 +7927,8 @@
       "catering": [
         {
           "id": "catering-1",
-          "title": "A meal for the group",
-          "text": "A package example with quantities, lead times, and service details.",
+          "title": "A table full of yes",
+          "text": "A fictional spread for a group that wants one more slice, one more scoop, and one more reason to stay. Quantities and terms are examples.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -7960,7 +7960,7 @@
         {
           "id": "events-1",
           "title": "The neighborhood private room",
-          "text": "A space example with capacity, access information, and planning terms.",
+          "text": "A fictional space for a long meal, a shared plate, and the last bite nobody wants to claim. Confirm real room and booking details.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -8002,8 +8002,8 @@
       "story": [
         {
           "id": "story-1",
-          "title": "A place in the neighborhood",
-          "text": "Share the real origin, purpose, and welcome of the restaurant.",
+          "title": "One appetite, many tables",
+          "text": "This fictional group of neighborhood tables follows one simple rule: let each location have its own irresistible reason to arrive hungry.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -8022,7 +8022,7 @@
         {
           "id": "team-1",
           "title": "Jordan Quinn · fictional team member",
-          "text": "Demonstration biography: helps prepare the menu and welcome guests. Replace with the person’s approved biography.",
+          "text": "A fictional team member for this demo, here to make the kitchen feel warm and the menu worth lingering over.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -8038,8 +8038,8 @@
           "presentation": {
             "role": "Example kitchen lead",
             "specialties": [
-              "Example seasonal preparation",
-              "Example guest welcome"
+              "Breakfast worth crossing town for",
+              "Dinner worth staying out for"
             ],
             "image": {
               "src": "images/team-kitchen.svg",
@@ -8055,8 +8055,8 @@
       "sourcing": [
         {
           "id": "sourcing-1",
-          "title": "Ingredients and partners",
-          "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+          "title": "Where the good stuff begins",
+          "text": "A sample page would name the growers, makers, and ingredients behind the menu. Confirm each real source before making the claim.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -8074,8 +8074,8 @@
       "news": [
         {
           "id": "news-1",
-          "title": "From the restaurant",
-          "text": "A full editorial example with a stable detail link and review history.",
+          "title": "Fresh from the kitchen",
+          "text": "A fictional kitchen note with a stable detail page; this copy is here to make you hungry, not report a real update.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -8093,8 +8093,8 @@
       "calendar": [
         {
           "id": "calendar-1",
-          "title": "Community supper",
-          "text": "An event example with a date, timezone, venue, and cancellation state.",
+          "title": "Supper worth lingering over",
+          "text": "A fictional event listing for a shared table and a menu worth showing up hungry for.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -8116,8 +8116,8 @@
       "accessibility": [
         {
           "id": "accessibility-1",
-          "title": "Plan a comfortable visit",
-          "text": "Use the location-specific access facts below and contact the team about questions.",
+          "title": "Find your comfortable seat",
+          "text": "Use the confirmed entrance, seating, restroom, and parking details below; contact the team if you need help planning.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -8135,8 +8135,8 @@
       "press": [
         {
           "id": "press-1",
-          "title": "Restaurant press kit",
-          "text": "Approved facts and downloadable, permissioned assets belong here.",
+          "title": "A menu worth the close-up",
+          "text": "A sample press area for approved restaurant facts and permissioned assets. Keep every real claim verifiable.",
           "state": "demo",
           "location_ids": [
             "location-1"
@@ -8154,8 +8154,8 @@
       "foodtruck": [
         {
           "id": "foodtruck-1",
-          "title": "Example market stop",
-          "text": "A scheduled stop for the mobile-kitchen demonstration.",
+          "title": "Next stop: follow that smell",
+          "text": "A fictional truck stop for the demo schedule; imagine crisp edges, generous fillings, and salsa worth chasing.",
           "state": "demo",
           "location_ids": [
             "location-1"
