@@ -1,0 +1,5 @@
+{{/* "HH:MM" → "11 am" / "10:30 pm"; 24:00 is the end-of-day boundary.
+     ponytail: US 12-hour clock for every dataset; key it off site.Language.Locale if a non-US client appears. */}}
+{{ $out := "midnight" }}
+{{ if ne . "24:00" }}{{ $out = time.Format "3:04 pm" (printf "2000-01-01T%s:00Z" .) | replaceRE `:00 ` " " }}{{ end }}
+{{ return $out }}

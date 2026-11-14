@@ -1,3 +1,16 @@
 {{ if and (partial "feature-enabled.html" "visit") (partial "feature-enabled.html" "locations") }}
-  <section class="section wrap"><h2>Plan your visit</h2>{{ partial "modules/locations.html" (dict "level" 3) }}</section>
+  {{ $data := partial "site-data.html" . }}
+  <section class="section wrap"><h2>Plan your visit</h2>
+  {{/* ponytail: with several locations the home page is a chooser; hours and access live on each location page. */}}
+  {{ if gt (len $data.locations) 1 }}
+    {{ $layout := partial "component-layout.html" "location-card" }}
+    <div class="location-grid component-grid" data-component-layout="{{ $layout }}">
+      {{ range $data.locations }}
+        {{ partial "components/location-card.html" (dict "data" (dict "title" .name "eyebrow" "Visit" "address" .address "phone" .phone "link" (dict "url" (printf "locations/%s/" .id) "label" "Hours, specials, and directions")) "level" 3 "layout" $layout) }}
+      {{ end }}
+    </div>
+  {{ else }}
+    {{ partial "modules/locations.html" (dict "level" 3) }}
+  {{ end }}
+  </section>
 {{ end }}

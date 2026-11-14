@@ -4,7 +4,7 @@
   <div class="restaurant-intro">
   <p class="restaurant-kicker">{{ $d.eyebrow | default "Let’s talk" }}</p>
   {{ partial "components/heading.html" (dict "text" $d.title "level" .level "url" .headingURL) }}
-  <p>{{ $d.text }}</p>
+  {{ with $d.text }}<p>{{ . }}</p>{{ end }}
   </div><div class="restaurant-details">
   <div class="restaurant-contact-links">
     {{ with $d.phone }}<a href="tel:{{ replaceRE `[^+0-9]` "" . }}">Call {{ . }}</a>{{ end }}

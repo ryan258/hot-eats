@@ -17,7 +17,7 @@
       <span class="sg-edition">A library to build from.</span>
     </div>
   </header>
-  <p class="sg-context"><span class="sg-dot" aria-hidden="true"></span> Living style guide <span aria-hidden="true">/</span> {{ $config.preset }} preset <span aria-hidden="true">/</span> {{ site.Params.mode }} mode. All previews are illustrative; this guide is excluded from publication builds.</p>
+  <p class="sg-context"><span class="sg-dot" aria-hidden="true"></span> Living style guide <span aria-hidden="true">/</span> {{ $config.preset }} preset <span aria-hidden="true">/</span> {{ site.Params.mode }} mode. All previews are illustrative; this guide is excluded from publication builds. <a href="{{ "site-kit/brand/" | relURL }}"{{ if .Params.previewpreset }} target="_top"{{ end }}>Hot Eats brand &amp; sales kit</a></p>
   {{ partial "preset-switcher.html" . }}
   <div class="sg-layout">
     <aside class="sg-sidebar">

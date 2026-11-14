@@ -1,16 +1,44 @@
 {{ define "main" }}
 {{ $data := partial "site-data.html" . }}
 {{ range where $data.locations "id" .Params.locationid }}
+{{ $loc := . }}{{ $id := .id }}
 <article class="wrap section prose">
+  <p class="eyebrow">{{ site.Params.companyName }}</p>
   <h1>{{ .name }}</h1><p>{{ .address | default "Address to be confirmed" }}</p>
-  {{ partial "shared/hours.html" (dict "location" . "level" 2) }}
-  {{ with .phone }}<p><a href="tel:{{ replaceRE `[^+0-9]` "" . }}">Call {{ . }}</a></p>{{ end }}
-  {{ with .map_url }}<p><a class="button" href="{{ . }}">Directions</a></p>{{ end }}
-  {{ partial "visit-planning.html" (dict "location" . "detail" true "level" 2) }}
-  {{ with .meta.reviewed_on }}<p>Details reviewed: {{ . }}</p>{{ end }}
-  {{ $id := .id }}<div class="hero-actions">
-  {{ range slice "menu" "ordering" "reservations" }}{{ if partial "feature-enabled.html" . }}<a class="button" href="{{ partial "site-url.html" (printf "%s/?location=%s" . $id) }}">{{ humanize . }}</a>{{ end }}{{ end }}
+  <div class="hero-actions">
+    {{ if partial "feature-enabled.html" "ordering" }}
+      {{ range where (where $data.actions "module" "ordering") "location_id" $id }}
+        {{ $service := dict }}{{ range where $data.services "id" .service_id }}{{ $service = . }}{{ end }}
+        {{ if and (eq .state "available") .url (or (not .service_id) (eq $service.state "available")) }}<a class="button" href="{{ .url }}">{{ .label }}{{ with .provider }} with {{ . }}{{ end }}</a>{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ with .phone }}<a class="button" href="tel:{{ replaceRE `[^+0-9]` "" . }}">Call {{ . }}</a>{{ end }}
+    {{ with .map_url }}<a class="button" href="{{ . }}">Directions</a>{{ end }}
+    {{ if partial "feature-enabled.html" "menu" }}<a class="button" href="{{ partial "site-url.html" (printf "menu/?location=%s" $id) }}">Menu</a>{{ end }}
   </div>
+  {{ with .email }}<p>Email <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+  {{ partial "shared/hours.html" (dict "location" . "level" 2) }}
+  {{/* ponytail: each owner's records are the ones scoped to this location; group-wide records (no location_ids) show everywhere. */}}
+  {{ $headings := dict "specials" (printf "Specials at %s" .name) "events" "Private rooms" "story" (printf "About %s" .name) "catering" "Catering" }}
+  {{ range slice "specials" "events" "story" "catering" }}
+    {{ $module := . }}
+    {{ if partial "feature-enabled.html" $module }}
+      {{ $rows := slice }}
+      {{ range index $data.collections $module }}{{ if or (not .location_ids) (in .location_ids $id) }}{{ $rows = $rows | append . }}{{ end }}{{ end }}
+      {{ with $rows }}
+        <section class="location-section">
+          <h2>{{ index $headings $module }}</h2>
+          {{ range . }}{{ partial "shared/record-card.html" (dict "record" . "module" $module "detail" false "level" 3) }}{{ end }}
+        </section>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ partial "visit-planning.html" (dict "location" . "detail" true "level" 2) }}
+  {{ if partial "feature-enabled.html" "faq" }}
+    {{ $faq := slice }}{{ range $data.faq }}{{ if or (not .location_ids) (in .location_ids $id) }}{{ $faq = $faq | append . }}{{ end }}{{ end }}
+    {{ with $faq }}{{ partial "components/faq-list.html" (dict "data" (dict "title" (printf "Questions about %s" $loc.name) "items" .) "level" 2 "layout" (partial "component-layout.html" "faq-list")) }}{{ end }}
+  {{ end }}
+  {{ with .meta.reviewed_on }}<p>Details reviewed: {{ . }}</p>{{ end }}
 </article>
 {{ end }}
 {{ end }}

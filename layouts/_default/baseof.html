@@ -40,6 +40,16 @@
           <a href="{{ partial "site-url.html" (printf "%s/" .) }}" data-context-link{{ if eq $.Params.module . }} aria-current="page"{{ end }}>{{ $m.label }}</a>
         {{ end }}
       {{ end }}
+      {{ if and (partial "feature-enabled.html" "locations") (gt (len $data.locations) 1) }}
+        {{ $here := "" }}{{ range where $data.locations "id" .Params.locationid }}{{ $here = .name }}{{ end }}
+        <details class="explore-nav location-toggle">
+          <summary>Location: <span data-location-label>{{ $here | default "Choose" }}</span></summary>
+          <div>
+            {{ range $data.locations }}<a href="{{ partial "site-url.html" (printf "locations/%s/" .id) }}" data-location-option="{{ .id }}"{{ if eq .id $.Params.locationid }} aria-current="page"{{ end }}>{{ .name }}</a>{{ end }}
+            <a href="{{ partial "site-url.html" "locations/" }}" data-location-option="">All locations</a>
+          </div>
+        </details>
+      {{ end }}
       <details class="explore-nav">
         <summary>More</summary>
         <div>

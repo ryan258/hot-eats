@@ -28,7 +28,7 @@
     <p>{{ $row.text }}</p>
   {{ end }}
   <div class="record-meta">
-    <p class="state-badge">{{ humanize $state }}</p>
+    <p class="state-badge"{{ if eq $state "available" }} hidden{{ end }}>{{ humanize $state }}</p>
     {{ if ne $component "quote-card" }}{{ with $row.attribution }}<p>— {{ . }}</p>{{ end }}{{ end }}
     {{ if ne $component "event-card" }}
       {{ with $row.start }}<p><time datetime="{{ . }}">{{ time.Format "Mon, Jan 2, 2006 at 3:04 PM -0700" . }}</time>{{ with $row.end }} to <time datetime="{{ . }}">{{ time.Format "Mon, Jan 2, 2006 at 3:04 PM -0700" . }}</time>{{ end }}</p>{{ end }}

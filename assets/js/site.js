@@ -16,6 +16,25 @@
     $('.context-picker').hidden = false;
     if ([...picker.options].some(o => o.value === params.get('location'))) picker.value = params.get('location');
   }
+  // Location toggle: a location page remembers itself; other pages start from the remembered location.
+  const label = $('[data-location-label]');
+  const remember = id => {
+    try { id ? localStorage.setItem('he-location', id) : localStorage.removeItem('he-location'); } catch { /* private mode */ }
+    const option = id && $$('[data-location-option]').find(o => o.dataset.locationOption === id);
+    if (label) label.textContent = option ? option.textContent : 'Choose';
+  };
+  let saved = '';
+  try { saved = localStorage.getItem('he-location') || ''; } catch { /* private mode */ }
+  // Pages without a location list defer validation until a page with one.
+  if ((picker || $$('[data-location-option]').length) &&
+      !(picker && [...picker.options].some(o => o.value && o.value === saved)) &&
+      !$$('[data-location-option]').some(o => o.dataset.locationOption && o.dataset.locationOption === saved)) saved = '';
+  if (document.body.dataset.locationDefault) saved = document.body.dataset.locationDefault;
+  else if (picker && params.has('location')) saved = picker.value;
+  else if (picker && saved) picker.value = saved;
+  else if (saved) document.body.dataset.locationDefault = saved;
+  remember(saved);
+  $$('[data-location-option]').forEach(option => option.addEventListener('click', () => remember(option.dataset.locationOption)));
   const service = $('#service-context');
   if (service && [...service.options].some(o => o.value === params.get('service'))) service.value = params.get('service');
   if ($('.service-picker')) $('.service-picker').hidden = false;
@@ -91,7 +110,7 @@
   if (picker) picker.addEventListener('change', () => {
     const url = new URL(location.href);
     if (picker.value) url.searchParams.set('location', picker.value); else url.searchParams.delete('location');
-    history.replaceState(null, '', url); context();
+    history.replaceState(null, '', url); remember(picker.value); context();
   });
   context();
 
@@ -186,7 +205,7 @@
     if (element.hasAttribute('data-expiring')) element.hidden = true;
     else {
       element.dataset.recordState = 'expired';
-      element.querySelector('.state-badge').textContent = 'Expired';
+      const badge = element.querySelector('.state-badge'); badge.textContent = 'Expired'; badge.hidden = false;
       element.querySelectorAll('.calendar-download, a.text-link').forEach(control => { control.hidden = true; });
     }
     });
