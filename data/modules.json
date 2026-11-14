@@ -2,7 +2,7 @@
   {
     "id": "menu",
     "title": "Menu",
-    "description": "Breakfast, lunch, drinks, and a little something sweet.",
+    "description": "Dishes, prices, and dietary notes.",
     "kind": "menu",
     "requires": [],
     "inputs": "Approved dishes, prices, modifiers, dietary statements, availability, and a menu review date.",
@@ -14,7 +14,7 @@
   {
     "id": "specials",
     "title": "Specials",
-    "description": "A flexible home for seasonal menus and limited-run favorites.",
+    "description": "Current deals and specials, by location.",
     "kind": "records",
     "requires": [],
     "inputs": "Approved copy, current availability, and a business owner responsible for updates.",
@@ -26,7 +26,7 @@
   {
     "id": "locations",
     "title": "Hours & locations",
-    "description": "One neighborhood spot or a whole family of restaurants.",
+    "description": "Addresses, hours, phone numbers, and directions.",
     "kind": "locations",
     "requires": [],
     "inputs": "Verified addresses, location-specific hours and contacts, accessibility details, and maps links.",
@@ -49,12 +49,12 @@
   },
   {
     "id": "ordering",
-    "title": "Order pickup or delivery",
-    "description": "A clear starting point for pickup and delivery.",
+    "title": "Order online",
+    "description": "Order online from your location.",
     "kind": "action",
     "requires": [],
     "inputs": "Verified ordering provider URLs, fulfillment areas, fees, hours, and location routing.",
-    "label": "Order pickup or delivery",
+    "label": "Order online",
     "keywords": "order takeout takeaway pickup delivery fees",
     "group": "Dining",
     "requires_any": []
@@ -62,7 +62,7 @@
   {
     "id": "catering",
     "title": "Catering",
-    "description": "Make gatherings easier with food worth gathering around.",
+    "description": "Food for parties, meetings, and events.",
     "kind": "records",
     "requires": [],
     "inputs": "Actual packages, prices, minimums, lead times, service boundaries, allergen process, and inquiry contact.",
@@ -74,7 +74,7 @@
   {
     "id": "events",
     "title": "Private events",
-    "description": "A home for private dining, celebrations, and restaurant buyouts.",
+    "description": "Private rooms for parties, meetings, and celebrations.",
     "kind": "records",
     "requires": [],
     "inputs": "Real spaces, capacity, accessibility, deposits, cancellation rules, and event contact.",
@@ -86,7 +86,7 @@
   {
     "id": "planner",
     "title": "Plan a gathering",
-    "description": "Put your ideas into a message you can keep and share.",
+    "description": "Write up your event details to send to the restaurant.",
     "kind": "planner",
     "requires": [],
     "inputs": "Verified event inquiry email and reviewed planning questions. Preparing a message is not a booking.",
@@ -113,7 +113,7 @@
   {
     "id": "story",
     "title": "Our story",
-    "description": "A fuller introduction to the people and purpose behind the restaurant.",
+    "description": "How we got here.",
     "kind": "records",
     "requires": [],
     "inputs": "Approved copy, current availability, and a business owner responsible for updates.",
@@ -221,7 +221,7 @@
   {
     "id": "careers",
     "title": "Careers",
-    "description": "A practical place for current roles and applications.",
+    "description": "Open roles and how to apply.",
     "kind": "records",
     "requires": [],
     "inputs": "Current vacancies, location, compensation details as applicable, requirements, and application destination.",
@@ -233,7 +233,7 @@
   {
     "id": "faq",
     "title": "Questions & answers",
-    "description": "Useful answers without making guests hunt.",
+    "description": "Answers to common questions.",
     "kind": "faq",
     "requires": [],
     "inputs": "Owner-confirmed answers on walk-ins, reservations, dietary needs, parking, children, pets, and accessibility.",
@@ -245,7 +245,7 @@
   {
     "id": "contact",
     "title": "Contact",
-    "description": "Give every kind of question the right next step.",
+    "description": "How to reach us.",
     "kind": "contact",
     "requires": [],
     "inputs": "Verified public email, phone, response expectations, and privacy handling.",
@@ -257,7 +257,7 @@
   {
     "id": "accessibility",
     "title": "Access information",
-    "description": "Help guests understand the space before they arrive.",
+    "description": "Entrances, seating, parking, and other access details.",
     "kind": "records",
     "requires": [],
     "inputs": "Location-specific access facts and an actual accessibility contact.",

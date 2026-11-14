@@ -19,7 +19,9 @@
     },
     "story_title": "Our kind of place",
     "story": [
-      "Share the restaurant’s actual story, people, and place in the neighborhood."
+      "Lucyd started with one griddle, eleven stools, and a rule: nobody leaves hungry or hurried.",
+      "We cook the way a good diner always has: eggs to order, burgers smashed on the flat-top, pie cut thick. Then we pour the coffee before you ask.",
+      "Pull up a stool. Bring the whole family, the crossword, or nothing at all."
     ],
     "ticker": [
       "Explore the menu",
@@ -28,7 +30,7 @@
     ]
   },
   "announcement": {
-    "text": "Explore this restaurant example. Services and prices are illustrative.",
+    "text": "Pie of the day goes fast. Ask at the counter before noon. Sample announcement, replace before launch.",
     "start": "",
     "end": ""
   },
@@ -113,11 +115,11 @@
       ],
       "exceptions": [],
       "access": {
-        "entrance": "Access information awaiting confirmation.",
-        "seating": "Seating information awaiting confirmation.",
-        "restroom": "Restroom information awaiting confirmation.",
-        "sensory": "Noise and lighting information awaiting confirmation.",
-        "parking": "Parking and transit information awaiting confirmation."
+        "entrance": "Step-free front door with a push-button opener. The counter is at the left as you come in.",
+        "seating": "Eleven counter stools, six booths, and four movable tables. Ask for a table if stools are hard to use.",
+        "restroom": "One single-user restroom, step-free, with a baby changing table.",
+        "sensory": "Lively at the weekend rush, quieter after 1 pm. The griddle is loud; booths in the back are the calmest.",
+        "parking": "Free lot behind the building, plus street parking. The 12 bus stops at the corner."
       },
       "meta": {
         "status": "demo",
@@ -199,11 +201,11 @@
       ],
       "exceptions": [],
       "access": {
-        "entrance": "Access information awaiting confirmation.",
-        "seating": "Seating information awaiting confirmation.",
-        "restroom": "Restroom information awaiting confirmation.",
-        "sensory": "Noise and lighting information awaiting confirmation.",
-        "parking": "Parking and transit information awaiting confirmation."
+        "entrance": "Step-free front door with a push-button opener. The counter is at the left as you come in.",
+        "seating": "Eleven counter stools, six booths, and four movable tables. Ask for a table if stools are hard to use.",
+        "restroom": "One single-user restroom, step-free, with a baby changing table.",
+        "sensory": "Lively at the weekend rush, quieter after 1 pm. The griddle is loud; booths in the back are the calmest.",
+        "parking": "Free lot behind the building, plus street parking. The 12 bus stops at the corner."
       },
       "meta": {
         "status": "demo",
@@ -666,8 +668,8 @@
     "specials": [
       {
         "id": "specials-1",
-        "title": "Seasonal special",
-        "text": "A dated offer with clear serving times and terms.",
+        "title": "Tuesday meatloaf supper",
+        "text": "Thick-cut meatloaf, buttery mashed potatoes, and green beans with a little bacon. Served until the pan is empty, which is usually around two.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -677,20 +679,29 @@
           "reviewed_on": "",
           "source": ""
         },
-        "facts": [],
+        "facts": [
+          {
+            "label": "Price",
+            "value": "$14 with a side and coffee"
+          },
+          {
+            "label": "Served",
+            "value": "Tuesdays, 11 am to 2 pm"
+          }
+        ],
         "url": "",
         "attachments": [],
-        "start": "2026-10-10T11:00:00-05:00",
-        "end": "2026-10-10T14:00:00-05:00",
+        "start": "2026-10-20T11:00:00-05:00",
+        "end": "2026-10-20T14:00:00-05:00",
         "timezone": "America/Chicago",
-        "venue": "Illustrative venue — confirm before publication"
+        "venue": "Lucyd counter and booths"
       }
     ],
     "catering": [
       {
         "id": "catering-1",
         "title": "A meal for the group",
-        "text": "A package example with quantities, lead times, and service details.",
+        "text": "Pancake brunch, burger bar, or a box of sandwiches and pie. We pack it hot, label it clearly, and include plates and napkins.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -703,15 +714,15 @@
         "facts": [
           {
             "label": "Serves",
-            "value": "Illustrative package for 12 guests"
+            "value": "Packages for 12, 24, or 48 guests"
           },
           {
             "label": "Lead time",
-            "value": "Example: 72 hours; confirm the actual policy"
+            "value": "72 hours; sooner by phone when we can"
           },
           {
             "label": "Service",
-            "value": "Confirm pickup, delivery, setup, and service area"
+            "value": "Pickup at the counter, or delivery within five miles"
           }
         ],
         "url": "",
@@ -721,8 +732,8 @@
     "events": [
       {
         "id": "events-1",
-        "title": "Private dining",
-        "text": "A space example with capacity, access information, and planning terms.",
+        "title": "The back room",
+        "text": "Birthdays, team lunches, and rehearsal dinners, with a griddle-side view and a menu we plan with you.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -735,15 +746,15 @@
         "facts": [
           {
             "label": "Capacity",
-            "value": "Confirm seated and standing capacity"
+            "value": "24 seated, 35 standing"
           },
           {
             "label": "Access",
-            "value": "Confirm routes, seating, restrooms, and noise"
+            "value": "Step-free from the side entrance; single-user restroom nearby"
           },
           {
             "label": "Terms",
-            "value": "Confirm deposits, minimums, and cancellation terms"
+            "value": "Weekday minimum of $400, deposit refunded up to 7 days before"
           }
         ],
         "url": "",
@@ -754,7 +765,7 @@
       {
         "id": "story-1",
         "title": "A place in the neighborhood",
-        "text": "Share the real origin, purpose, and welcome of the restaurant.",
+        "text": "Lucyd opened for the early shift: the bakers, the nurses, the bus drivers. The hours have grown, but the welcome hasn't changed. Same counter, same coffee, new regulars every week.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -772,8 +783,8 @@
     "team": [
       {
         "id": "team-1",
-        "title": "The people behind the welcome",
-        "text": "Replace with a real name, role, biography, and permissioned portrait.",
+        "title": "Dana, head cook and keeper of the griddle",
+        "text": "Dana has run the line since opening day and still cracks the first egg of the morning. Ask about her pie crust. She will tell you the secret is cold butter and patience.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -783,7 +794,16 @@
           "reviewed_on": "",
           "source": ""
         },
-        "facts": [],
+        "facts": [
+          {
+            "label": "Role",
+            "value": "Head cook"
+          },
+          {
+            "label": "Ask about",
+            "value": "Pie crust and hash browns"
+          }
+        ],
         "url": "",
         "attachments": []
       }
@@ -791,8 +811,8 @@
     "sourcing": [
       {
         "id": "sourcing-1",
-        "title": "Ingredients and partners",
-        "text": "Describe verified ingredients, suppliers, and seasonal substitutions.",
+        "title": "Close-to-home ingredients",
+        "text": "Eggs from a farm down the road, bread baked that morning, and produce from the Saturday market when it's in season. When something runs out, we say so and swap in the next best thing.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -802,7 +822,16 @@
           "reviewed_on": "",
           "source": ""
         },
-        "facts": [],
+        "facts": [
+          {
+            "label": "Eggs",
+            "value": "Local farm, delivered twice a week"
+          },
+          {
+            "label": "Bread",
+            "value": "Baked daily by a neighborhood bakery"
+          }
+        ],
         "url": "",
         "attachments": []
       }
@@ -810,8 +839,8 @@
     "news": [
       {
         "id": "news-1",
-        "title": "From the restaurant",
-        "text": "A full editorial example with a stable detail link and review history.",
+        "title": "Fall pie lineup is here",
+        "text": "Apple, pumpkin, and a brown-butter pecan that has already started arguments at the counter. Slices by the plate, whole pies by the day before.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -830,7 +859,7 @@
       {
         "id": "calendar-1",
         "title": "Community supper",
-        "text": "An event example with a date, timezone, venue, and cancellation state.",
+        "text": "One long table, a family-style meal, and neighbors you haven't met yet. Pay what you can; everyone eats.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -840,20 +869,29 @@
           "reviewed_on": "",
           "source": ""
         },
-        "facts": [],
+        "facts": [
+          {
+            "label": "Cost",
+            "value": "Pay what you can"
+          },
+          {
+            "label": "Seats",
+            "value": "Up to 30; arrive early"
+          }
+        ],
         "url": "",
         "attachments": [],
-        "start": "2026-10-10T11:00:00-05:00",
-        "end": "2026-10-10T14:00:00-05:00",
+        "start": "2026-10-24T17:00:00-05:00",
+        "end": "2026-10-24T19:30:00-05:00",
         "timezone": "America/Chicago",
-        "venue": "Illustrative venue — confirm before publication"
+        "venue": "Lucyd back room"
       }
     ],
     "accessibility": [
       {
         "id": "accessibility-1",
         "title": "Plan a comfortable visit",
-        "text": "Use the location-specific access facts below and contact the team about questions.",
+        "text": "Our doors are step-free, and our team is happy to help with seating, menus, or anything else that makes your meal easier. Call ahead if you'd like a table held by the door.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -871,8 +909,8 @@
     "press": [
       {
         "id": "press-1",
-        "title": "Restaurant press kit",
-        "text": "Approved facts and downloadable, permissioned assets belong here.",
+        "title": "Lucyd press kit",
+        "text": "A short description, the story in two paragraphs, and photos of the counter and the pie case, all cleared for use.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -882,7 +920,16 @@
           "reviewed_on": "",
           "source": ""
         },
-        "facts": [],
+        "facts": [
+          {
+            "label": "In one line",
+            "value": "A neighborhood diner serving comfort food, all day."
+          },
+          {
+            "label": "Founded",
+            "value": "Add the real opening year"
+          }
+        ],
         "url": "",
         "attachments": []
       }
@@ -890,8 +937,8 @@
     "foodtruck": [
       {
         "id": "foodtruck-1",
-        "title": "Example market stop",
-        "text": "A scheduled stop for the mobile-kitchen demonstration.",
+        "title": "Saturday market stop",
+        "text": "The Lucyd cart parks by the fountain with breakfast sandwiches, hand pies, and good coffee. Look for the cherry-red awning.",
         "state": "demo",
         "location_ids": [
           "location-1"
@@ -904,10 +951,10 @@
         "facts": [],
         "url": "",
         "attachments": [],
-        "start": "2026-10-10T11:00:00-05:00",
-        "end": "2026-10-10T14:00:00-05:00",
+        "start": "2026-10-17T08:00:00-05:00",
+        "end": "2026-10-17T12:00:00-05:00",
         "timezone": "America/Chicago",
-        "venue": "Illustrative venue — confirm before publication"
+        "venue": "Market square, by the fountain"
       }
     ],
     "reviews": [],
@@ -917,13 +964,25 @@
     {
       "id": "hours",
       "question": "Where can I find hours and directions?",
-      "answer": "Choose a location to see its schedule and access information. Demo schedules are illustrative.",
+      "answer": "Pick a location to see today's hours, the address, and how to get in. The schedule below each location is the one we keep up to date.",
       "location_ids": []
     },
     {
       "id": "dietary",
-      "question": "How do I ask about ingredients?",
-      "answer": "Contact the restaurant before ordering. The team must confirm ingredients and cross-contact procedures.",
+      "question": "How do I ask about ingredients or allergies?",
+      "answer": "Tell your server or call the counter before you order. We'll walk you through what's in each dish and how it's cooked, and we won't guess.",
+      "location_ids": []
+    },
+    {
+      "id": "walk-ins",
+      "question": "Do you take reservations?",
+      "answer": "Counter and booth seats are first come, first served. Parties of eight or more can ask about the back room.",
+      "location_ids": []
+    },
+    {
+      "id": "kids",
+      "question": "Is it okay to bring kids?",
+      "answer": "Please do. We have booster seats, crayons, and a half-stack of pancakes that fits small appetites.",
       "location_ids": []
     }
   ],
@@ -932,7 +991,7 @@
       "id": "breakfast-art",
       "src": "images/breakfast.svg",
       "alt": "Concept illustration of breakfast and coffee.",
-      "caption": "Illustration, not a photograph of food served.",
+      "caption": "Breakfast and coffee, in a concept illustration. Swap for your own photo.",
       "credit": "Hot Eats concept artwork",
       "permission": "Review for the chosen restaurant",
       "collection": "Concept",
@@ -945,10 +1004,10 @@
   ],
   "policies": {
     "privacy": "This website uses local menu filters and a local gathering brief. No brief is submitted by this site. Provider links lead to services with their own policies. Confirm hosting logs, contacts, retention, and any additional services before publication.",
-    "reservations": "Confirm walk-ins, party limits, deposits, cancellations, and accessible booking alternatives.",
-    "giftcards": "Confirm redemption locations, purchase terms, balance help, and support.",
-    "loyalty": "Confirm earning, redemption, eligibility, account help, and terms.",
-    "newsletter": "Confirm frequency, consent, privacy, and unsubscribe process."
+    "reservations": "Counter and booths are first come, first served. Parties of eight or more can ask about the back room.",
+    "giftcards": "Gift cards are good at the counter and never expire. Ask us for your balance.",
+    "loyalty": "Every tenth coffee is on us. Ask for a card at the counter.",
+    "newsletter": "A short note about the pie lineup, once a month. Unsubscribe any time."
   },
   "publication": {
     "domain": "",

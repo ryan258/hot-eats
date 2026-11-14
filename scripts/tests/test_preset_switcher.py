@@ -10,7 +10,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
-from model import configuration, enabled, load_json
+from model import configuration, preview_configuration, enabled, load_json
 from verify import build
 from test_preset_layouts import Markup
 
@@ -22,7 +22,7 @@ class PresetSwitcherTests(unittest.TestCase):
         cls.addClassCleanup(cls.tmp.cleanup)
         cls.source = Path(cls.tmp.name) / "source"
         cls.source.mkdir()
-        for folder in ["assets", "content", "data", "layouts", "presets", "profiles", "config", "static"]:
+        for folder in ["assets", "content", "data", "layouts", "presets", "profiles", "static"]:
             shutil.copytree(ROOT / folder, cls.source / folder)
         for name in ["hugo.toml", "site-profile.json"]:
             shutil.copy2(ROOT / name, cls.source / name)
@@ -73,7 +73,7 @@ class PresetSwitcherTests(unittest.TestCase):
                 self.assertNotIn("Private client fixture headline", page.text)
                 body = next(a for t, a in page.elements if t == "body")
                 self.assertEqual(body["data-preset"], preset)
-                config, _ = configuration(ROOT, preset)
+                config = preview_configuration(ROOT, preset)
                 self.assertEqual(body["data-accent"], config["params"]["accent"])
                 menu = Markup((base / "menu/index.html").read_text())
                 self.assertEqual(menu.matching("restaurant-dish")[0]["data-layout"], config["params"]["componentLayouts"]["dish-card"])
@@ -108,7 +108,7 @@ class PresetSwitcherTests(unittest.TestCase):
                     for route in entry["routes"]:
                         target = self.output / (entry["url"] + route["path"]).removeprefix("/review/") / "index.html"
                         self.assertTrue(target.exists(), target)
-                config, _ = configuration(ROOT, preset)
+                config = preview_configuration(ROOT, preset)
                 choices = {a["id"].removeprefix("component-"): a["data-preset-layout"] for _, a in page.elements if "data-kit-component" in a}
                 self.assertEqual(choices, config["params"]["componentLayouts"])
 
@@ -121,7 +121,7 @@ class PresetSwitcherTests(unittest.TestCase):
                 page = Markup((base / "component-showcase/index.html").read_text())
                 self.assertEqual({a["data-showcase-component"] for _, a in page.elements
                                   if "data-showcase-component" in a}, showcase_ids)
-                config, _ = configuration(ROOT, preset)
+                config = preview_configuration(ROOT, preset)
                 for component in showcase_ids:
                     marker = f'data-showcase-component="{component}"'
                     html = (base / "component-showcase/index.html").read_text().split(marker, 1)[1].split('</section>', 1)[0]

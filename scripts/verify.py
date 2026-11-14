@@ -133,6 +133,8 @@ def build(root, output, preset=None, publication=False, example=False):
         (output / "site-kit/index.html").exists() != publication,
         "Operator guide mode leak",
     )
+    if publication:
+        require(not (output / "site-kit").exists(), "Preview routes or assets leaked")
     for entry in index:
         if entry["url"].endswith("/locations/"):
             require("hours" in entry["keywords"].lower(), "Hours missing from search")

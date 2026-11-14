@@ -47,7 +47,7 @@ class PresetLayoutTests(unittest.TestCase):
         cls.addClassCleanup(cls.tmp.cleanup)
         cls.source = Path(cls.tmp.name) / "source"
         cls.source.mkdir()
-        for name in ["assets", "content", "data", "layouts", "presets", "profiles", "config", "static"]:
+        for name in ["assets", "content", "data", "layouts", "presets", "profiles", "static"]:
             shutil.copytree(ROOT / name, cls.source / name)
         for name in ["hugo.toml", "site-profile.json"]:
             shutil.copy2(ROOT / name, cls.source / name)

@@ -10,7 +10,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
-from model import Invalid, configuration, load_json, validate
+from model import Invalid, configuration, preview_configuration, load_json, validate
 from verify import build
 from test_preset_layouts import Markup
 
@@ -79,7 +79,7 @@ class GuestIntegrationTests(unittest.TestCase):
         cls.addClassCleanup(cls.tmp.cleanup)
         cls.source = Path(cls.tmp.name) / "source"
         cls.source.mkdir()
-        for folder in ["assets", "content", "data", "layouts", "presets", "profiles", "config", "static"]:
+        for folder in ["assets", "content", "data", "layouts", "presets", "profiles", "static"]:
             shutil.copytree(ROOT / folder, cls.source / folder)
         for name in ["hugo.toml", "site-profile.json"]:
             shutil.copy2(ROOT / name, cls.source / name)
@@ -108,7 +108,7 @@ class GuestIntegrationTests(unittest.TestCase):
 
     def test_all_nine_presets_render_guest_components_with_their_layout_choices(self):
         for preset in self.scenarios:
-            config, _ = configuration(ROOT, preset)
+            config = preview_configuration(ROOT, preset)
             layouts = config["params"]["componentLayouts"]
             cases = [("menu", "menu-section", "menu-section"),
                      ("specials", "tasting-menu", "tasting"),
@@ -161,7 +161,7 @@ class GuestIntegrationTests(unittest.TestCase):
 
     def test_new_record_details_search_fields_and_owner_data_isolation(self):
         for preset, data in self.scenarios.items():
-            config, _ = configuration(ROOT, preset)
+            config = preview_configuration(ROOT, preset)
             for module in ["specials", "team", "events"]:
                 if not config["params"]["features"][module]:
                     continue
@@ -170,7 +170,7 @@ class GuestIntegrationTests(unittest.TestCase):
                     self.assertIn(row["title"], detail.text)
                     self.assertIn(row["text"], detail.text)
         search = self.page("kitchen-sink", "search")
-        self.assertTrue(any("Example seasonal preparation" in a.get("data-search-text", "") for _, a in search.elements))
+        self.assertTrue(any("buttermilk pancakes" in a.get("data-search-text", "") for _, a in search.elements))
         self.assertTrue(any("90 ml" in a.get("data-search-text", "") for _, a in search.elements))
         self.assertEqual((ROOT / "data/restaurant.json").read_bytes(), self.owner_data)
         self.assertEqual((ROOT / "site-profile.json").read_bytes(), self.selection)

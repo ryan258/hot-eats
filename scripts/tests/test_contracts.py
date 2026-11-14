@@ -117,6 +117,19 @@ class ModelTests(unittest.TestCase):
             "planner", validate(self.data, self.modules, self.config, ROOT)
         )
 
+    def test_profile_overrides_preset(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "presets").mkdir()
+            (root / "profiles").mkdir()
+            (root / "hugo.toml").write_text("[params.features]\nmenu = true\nteam = true\n")
+            (root / "presets/p.toml").write_text("[params.features]\nteam = true\ngallery = true\n")
+            (root / "profiles/c.toml").write_text("[params.features]\nteam = false\n")
+            (root / "site-profile.json").write_text('{"profile": "profiles/c.toml", "preset": "presets/p.toml"}')
+            config, names = configuration(root)
+        self.assertEqual(names[-1], "profiles/c.toml")  # same list feeds hugo --config
+        self.assertEqual(config["params"]["features"], {"menu": True, "team": False, "gallery": True})
+
     def test_food_truck_has_schedule_not_fixed_visit(self):
         _, _, config, _, _ = load_validated(ROOT, "food-truck")
         self.assertFalse(config["params"]["features"]["visit"])

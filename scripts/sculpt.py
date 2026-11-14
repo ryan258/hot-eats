@@ -139,17 +139,27 @@ def sculpt(destination, name, slug, preset):
         )
 
         def toml_table(value, prefix=()):
+            def tables(item):
+                return isinstance(item, list) and item and all(isinstance(i, dict) for i in item)
+
+            def pair(key, item):
+                return json.dumps(key) + " = " + json.dumps(item, ensure_ascii=False)
+
             lines = []
             if prefix:
                 lines.append("[" + ".".join(json.dumps(k) for k in prefix) + "]")
             for key, item in value.items():
-                if not isinstance(item, dict):
-                    lines.append(
-                        json.dumps(key) + " = " + json.dumps(item, ensure_ascii=False)
-                    )
+                if not isinstance(item, dict) and not tables(item):
+                    lines.append(pair(key, item))
             for key, item in value.items():
                 if isinstance(item, dict):
                     lines.extend([""] + toml_table(item, prefix + (key,)))
+            # ponytail: array-of-tables rows are flat (module.mounts); nest if a row ever holds a table.
+            for key, item in value.items():
+                if tables(item):
+                    header = ".".join(json.dumps(k) for k in prefix + (key,))
+                    for row in item:
+                        lines.extend(["", f"[[{header}]]"] + [pair(k, v) for k, v in row.items()])
             return lines
 
         (stage / "hugo.toml").write_text(

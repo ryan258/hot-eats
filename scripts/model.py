@@ -277,7 +277,8 @@ def configuration(root, preset=None):
     selection = load_json(root / "site-profile.json")
     mapping(selection, "site-profile.json")
     chosen = f"presets/{preset}.toml" if preset else selection.get("preset")
-    names = ["hugo.toml", selection.get("profile"), chosen]
+    # Right-most wins (Python merge and hugo --config): the client profile overrides its preset.
+    names = ["hugo.toml", chosen, selection.get("profile")]
     config = {}
     for name in names:
         if not isinstance(name, str) or "," in name:
@@ -293,6 +294,13 @@ def configuration(root, preset=None):
     if type(config["params"]["useExamples"]) is not bool:
         fail("use_examples", "expected true or false")
     return config, names
+
+
+def preview_configuration(root, preset):
+    """What /site-kit/presets/<preset>/ renders: the preset wins over client overrides (site-config.html)."""
+    config, _ = configuration(root, preset)
+    path = Path(root).resolve() / f"presets/{preset}.toml"
+    return merge(config, tomllib.loads(path.read_text(encoding="utf-8")))
 
 
 def enabled(modules, features):
@@ -441,6 +449,7 @@ def validate(data, modules, config, root=None, publication=False):
         text(loc.get("name"), at + ".name", True)
         text(loc.get("address"), at + ".address", publication and "locations" in active)
         text(loc.get("phone"), at + ".phone")
+        email(loc.get("email", ""), at + ".email")
         url(loc.get("map_url", ""), at + ".map_url")
         metadata(loc.get("meta"), at + ".meta", publication)
         try:
@@ -577,13 +586,12 @@ def validate(data, modules, config, root=None, publication=False):
             record_presentation(row, key, at + ".presentation")
             url(row.get("url", ""), at + ".url")
             if (
-                key in {"calendar", "specials", "foodtruck"}
+                key in {"calendar", "foodtruck"}
                 or row.get("start")
                 or row.get("end")
             ):
-                if instant(row.get("end"), at + ".end") <= instant(
-                    row.get("start"), at + ".start"
-                ):
+                start = instant(row.get("start"), at + ".start")
+                if instant(row.get("end"), at + ".end") <= start:
                     fail(at, "end must follow start")
                 try:
                     ZoneInfo(row.get("timezone"))
