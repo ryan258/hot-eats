@@ -1,5 +1,7 @@
 {{ partial "generate-restaurant-pages.html" (dict "adapter" . "config" site.Params "prefix" "" "params" dict) }}
 {{ if ne site.Params.mode "publication" }}
+  {{ .AddPage (dict "path" "site-kit/brand" "kind" "page" "title" "Hot Eats brand preview" "layout" "brand-kit") }}
+  {{ .AddPage (dict "path" "site-kit/brand/one-sheet" "kind" "page" "title" "Hot Eats sales one-sheet" "layout" "brand-kit" "params" (dict "brandsheet" true)) }}
   {{ range partialCached "preset-library.html" "all" }}
     {{ $config := merge site.Params . (dict "useexamples" true) }}
     {{ partial "generate-restaurant-pages.html" (dict "adapter" $ "config" $config "prefix" (printf "site-kit/presets/%s/" .preset) "params" (dict "previewpreset" .preset)) }}

@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 from html import unescape
 import json
 from pathlib import Path
+import re
 import sys
 import tempfile
 import unittest
@@ -149,6 +150,29 @@ class ComponentLibraryTests(unittest.TestCase):
             guest = (self.output / route).read_text()
             self.assertNotIn('style-guide.min.', guest)
             self.assertNotIn('Fictional guest', guest)
+
+    def test_brand_preview_reuses_sources_and_keeps_the_guest_assets_separate(self):
+        brand = self.output / "site-kit/brand"
+        self.assertIn('href="/review/site-kit/brand/"', self.html)
+        preview = (brand / "index.html").read_text()
+        self.assertIn('href="/review/site-kit/presets/food-truck/"', preview)
+        self.assertIn('href="/review/site-kit/brand/one-sheet/"', preview)
+        sheet = (brand / "one-sheet/index.html").read_text()
+        self.assertIn("Start with one restaurant.", sheet)
+
+        tokens = json.loads((ROOT / "assets/brand/brand-tokens.json").read_text())
+        css = (ROOT / "assets/brand/brand-tokens.css").read_text()
+        for name, color in tokens["colors"].items():
+            self.assertIn(color["value"], preview)
+            self.assertRegex(css, rf"--he-{re.escape(name)}:\s*{re.escape(color['value'])};")
+        self.assertIn(tokens["type"]["display"]["name"], preview)
+        for file in (ROOT / "assets/brand").glob("hot-eats-*"):
+            self.assertEqual((brand / "artwork" / file.name).read_bytes(), file.read_bytes())
+
+        guest = (self.output / "index.html").read_text()
+        self.assertNotIn("hot-eats-brand", guest)
+        self.assertNotIn("brand-kit.min.", guest)
+        self.assertNotIn("/site-kit/brand/", (self.output / "index.json").read_text())
 
 
 if __name__ == "__main__":

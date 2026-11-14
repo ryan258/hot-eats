@@ -1,0 +1,159 @@
+{{- $tokensCSS := resources.Get "brand/brand-tokens.css" -}}
+{{- $kitCSS := resources.Get "brand/brand-kit.css" -}}
+{{- $css := slice $tokensCSS $kitCSS | resources.Concat "site-kit/brand/brand-kit.css" | minify | fingerprint -}}
+{{- $lockup := resources.Get "brand/hot-eats-lockup.svg" | resources.Copy "site-kit/brand/artwork/hot-eats-lockup.svg" -}}
+{{- $mark := resources.Get "brand/hot-eats-mark.svg" | resources.Copy "site-kit/brand/artwork/hot-eats-mark.svg" -}}
+{{- $icon := resources.Get "brand/hot-eats-favicon.svg" | resources.Copy "site-kit/brand/artwork/hot-eats-favicon.svg" -}}
+{{- $sheet := .Params.brandsheet -}}
+{{- $presets := partialCached "preset-library.html" "all" -}}
+{{- $guide := "site-kit/" | relURL -}}
+{{- $brand := "site-kit/brand/" | relURL -}}
+{{- $examples := slice
+  (dict "id" "cafe" "name" "Café" "task" "Check the menu and find a time to stop by.")
+  (dict "id" "food-truck" "name" "Food truck" "task" "Find the next stop before heading out.")
+  (dict "id" "multi-location" "name" "Multi-location" "task" "Choose a location and check its visit details.")
+-}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f9f4e8">
+  <title>{{ .Title }}</title>
+  <meta name="description" content="A configurable website kit for independent restaurants and the web partners who build for them.">
+  <link rel="icon" type="image/svg+xml" href="{{ $icon.RelPermalink }}">
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>
+<body class="hot-eats-brand">
+  <a class="he-skip" href="#main">Skip to content</a>
+  <header class="he-header he-wrap">
+    <a class="he-home" href="{{ $brand }}"><img src="{{ $lockup.RelPermalink }}" alt="Hot Eats brand preview"></a>
+    <nav aria-label="Hot Eats">
+      {{ if $sheet }}
+      <a href="{{ $brand }}">Brand preview</a>
+      {{ else }}
+      <a href="#examples">Examples</a>
+      <a href="#identity">Identity assets</a>
+      <a href="{{ "site-kit/brand/one-sheet/" | relURL }}">Sales one-sheet</a>
+      {{ end }}
+    </nav>
+  </header>
+  <main id="main" class="he-wrap" tabindex="-1">
+    <div class="he-hero{{ if $sheet }} he-hero-sheet{{ end }}">
+      <div>
+        <p class="he-category">Restaurant website kit</p>
+        <h1>Make it easy<br>to come in.</h1>
+        <p class="he-lede">Give guests a clear menu, the right hours and location, and a straightforward next step on a site that feels like your restaurant.</p>
+        {{ if not $sheet }}<a class="he-button" href="#examples">Explore restaurant examples <span aria-hidden="true">↓</span></a>{{ end }}
+      </div>
+      <div class="he-hero-art" aria-hidden="true"><img src="{{ $mark.RelPermalink }}" alt=""></div>
+    </div>
+
+    <section class="he-section he-value" aria-labelledby="value-title">
+      <div class="he-section-intro">
+        <h2 id="value-title">Built around a visit.</h2>
+        <p>Hot Eats is a configurable website kit for independent restaurants and the web partners who build for them.</p>
+      </div>
+      <dl class="he-steps">
+        <div><dt>Find the menu</dt><dd>Browse a readable menu with prices, availability, filters and links to individual dishes.</dd></div>
+        <div><dt>Plan the visit</dt><dd>Check location details, regular and holiday hours, and reviewed arrival information.</dd></div>
+        <div><dt>Take the next step</dt><dd>Get directions, call the restaurant, or continue to an ordering or booking provider where configured.</dd></div>
+      </dl>
+    </section>
+
+    {{ if $sheet }}
+    <section class="he-section he-pilot" aria-labelledby="pilot-title">
+      <div class="he-section-intro">
+        <h2 id="pilot-title">Start with one restaurant.</h2>
+        <p>A proposed pilot adapts one design to one location. Walk through a real guest task and rehearse a routine menu or hours update with the people who will own it.</p>
+      </div>
+      <div class="he-sheet-notes">
+        <p><strong>Bring to the demo.</strong> A current menu, the restaurant’s most common guest question, and the person who handles updates.</p>
+        <p><strong>Review together.</strong> Content ownership, approved provider destinations, hosting, and who publishes changes.</p>
+      </div>
+      <a class="he-button he-sheet-link" href="{{ $brand }}#examples">Explore restaurant examples</a>
+    </section>
+    <p class="he-review">Review copy. Use your browser’s Print command to save or print the one-sheet.</p>
+    {{ else }}
+    <section class="he-section" id="examples" aria-labelledby="examples-title">
+      <div class="he-section-intro">
+        <h2 id="examples-title">Three ways to start.</h2>
+        <p>Explore working designs built with the same kit. The restaurant names, menus and schedules in these examples are illustrative.</p>
+      </div>
+      <div class="he-examples">
+        {{ range $examples }}
+          {{ $preset := index (where $presets "preset" .id) 0 }}
+          <article class="he-example" data-example="{{ .id }}">
+            <p class="he-example-type">{{ .name }}</p>
+            <h3>{{ $preset.designname }}</h3>
+            <p>{{ .task }}</p>
+            <a href="{{ printf "site-kit/presets/%s/" .id | relURL }}">Explore the {{ .name | lower }} example <span aria-hidden="true">↗</span></a>
+          </article>
+        {{ end }}
+      </div>
+      <p class="he-guide-link"><a href="{{ $guide }}#presets">Compare all {{ len $presets }} designs</a></p>
+      <div class="he-maintenance">
+        <h3>Keep everyday changes manageable.</h3>
+        <div>
+          <p>Choose the components your restaurant needs. Use local tools to review a menu or hours change before saving, with a recovery copy for applied changes.</p>
+          <p class="he-guide-link"><a href="{{ $guide }}#library">See the component guide</a><a href="{{ $guide }}#owner-tools">See the update commands</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="he-section" id="identity" aria-labelledby="identity-title">
+      <div class="he-section-intro">
+        <h2 id="identity-title">Product identity</h2>
+        <p>Use the Hot Eats identity on product and partner materials. Each restaurant brings its own identity to the guest website.</p>
+      </div>
+      <div class="he-artwork">
+        <figure>
+          <div class="he-logo-sample"><img src="{{ $lockup.RelPermalink }}" alt="Hot Eats primary lockup"></div>
+          <figcaption><a href="{{ $lockup.RelPermalink }}" download>Download primary logo <span>(SVG)</span></a></figcaption>
+        </figure>
+        {{ $reverse := resources.Get "brand/hot-eats-lockup-reverse.svg" | resources.Copy "site-kit/brand/artwork/hot-eats-lockup-reverse.svg" }}
+        <figure>
+          <div class="he-logo-sample he-logo-dark"><img src="{{ $reverse.RelPermalink }}" alt="Hot Eats reverse lockup"></div>
+          <figcaption><a href="{{ $reverse.RelPermalink }}" download>Download reverse logo <span>(SVG)</span></a></figcaption>
+        </figure>
+      </div>
+      <ul class="he-downloads">
+        {{ range slice
+            (dict "file" "hot-eats-lockup-ink.svg" "label" "One-color ink logo")
+            (dict "file" "hot-eats-lockup-white.svg" "label" "One-color white logo")
+            (dict "file" "hot-eats-mark.svg" "label" "Doorway mark")
+            (dict "file" "hot-eats-favicon.svg" "label" "Favicon")
+            (dict "file" "hot-eats-social-card.svg" "label" "Editable social card")
+            (dict "file" "hot-eats-social-card.png" "label" "Social card PNG")
+            (dict "file" "hot-eats-one-sheet.svg" "label" "Editable sales sheet")
+            (dict "file" "brand-tokens.css" "label" "CSS tokens")
+            (dict "file" "brand-tokens.json" "label" "JSON tokens")
+        }}
+          {{ $asset := resources.Get (printf "brand/%s" .file) | resources.Copy (printf "site-kit/brand/artwork/%s" .file) }}
+          <li><a href="{{ $asset.RelPermalink }}" download>{{ .label }} <span aria-hidden="true">↓</span></a></li>
+        {{ end }}
+      </ul>
+      {{ $tokens := (resources.Get "brand/brand-tokens.json").Content | transform.Unmarshal }}
+      <h3>Palette</h3>
+      <ul class="he-swatches" role="list">
+        {{ range slice "paper" "ink" "porch" "brick" "mint" "honey" "muted" "line" "white" }}
+          {{ $color := index $tokens.colors . }}
+          <li><span class="he-swatch" data-color="{{ . }}" aria-hidden="true"></span><strong>{{ $color.name }}</strong><code>{{ $color.value }}</code><span>{{ $color.role }}</span></li>
+        {{ end }}
+      </ul>
+      <h3>Typography</h3>
+      <div class="he-type">
+        <div><p class="he-display-sample">Come on in.</p><p><strong>Display</strong> · {{ $tokens.type.display.name }}</p></div>
+        <div><p class="he-body-sample">Check today’s hours and find the right door.</p><p><strong>Body</strong> · {{ $tokens.type.body.name }}</p></div>
+      </div>
+      <p class="he-review">The type specimens use local fonts when installed and the supplied fallback stacks elsewhere.</p>
+    </section>
+    {{ end }}
+  </main>
+  <footer class="he-footer he-wrap">
+    <p>Hot Eats · Restaurant website kit</p>
+    {{ if $sheet }}<a href="{{ $brand }}">Return to the brand preview</a>{{ else }}<a href="{{ "site-kit/brand/one-sheet/" | relURL }}">Open the printable sales one-sheet</a>{{ end }}
+    <p class="he-review">Local review material</p>
+  </footer>
+</body>
+</html>

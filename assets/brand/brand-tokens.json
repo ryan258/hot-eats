@@ -1,0 +1,23 @@
+{
+  "colors": {
+    "paper": {"name": "Paper", "value": "#F9F4E8", "role": "Primary background"},
+    "ink": {"name": "Ink", "value": "#192D27", "role": "Primary text and dark backgrounds"},
+    "porch": {"name": "Porch", "value": "#275344", "role": "Primary action and logo tile"},
+    "brick": {"name": "Brick", "value": "#9F3E29", "role": "Warm accent and attention on light surfaces"},
+    "mint": {"name": "Mint", "value": "#DDE9D8", "role": "Secondary light surface"},
+    "honey": {"name": "Honey", "value": "#F6C96B", "role": "Graphic accent and focus on dark surfaces"},
+    "muted": {"name": "Muted", "value": "#45584D", "role": "Secondary text on light surfaces"},
+    "line": {"name": "Line", "value": "#778B7C", "role": "Rules and control boundaries on Paper or White"},
+    "white": {"name": "White", "value": "#FFFFFF", "role": "Text on Porch and Brick, or a neutral surface"}
+  },
+  "type": {
+    "display": {
+      "name": "Bricolage Grotesque",
+      "fallback": "\"Avenir Next\", system-ui, sans-serif"
+    },
+    "body": {
+      "name": "Atkinson Hyperlegible Next",
+      "fallback": "system-ui, Arial, sans-serif"
+    }
+  }
+}

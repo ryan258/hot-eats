@@ -1,0 +1,26 @@
+/* Hot Eats product surfaces. Values mirror brand-tokens.json. */
+.hot-eats-brand {
+  --he-paper: #F9F4E8;
+  --he-ink: #192D27;
+  --he-porch: #275344;
+  --he-brick: #9F3E29;
+  --he-mint: #DDE9D8;
+  --he-honey: #F6C96B;
+  --he-muted: #45584D;
+  --he-line: #778B7C;
+  --he-white: #FFFFFF;
+  --he-font-display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --he-font-body: "Atkinson Hyperlegible Next", system-ui, Arial, sans-serif;
+  --he-space-1: 0.25rem;
+  --he-space-2: 0.5rem;
+  --he-space-3: 0.75rem;
+  --he-space-4: 1rem;
+  --he-space-5: 1.5rem;
+  --he-space-6: 2rem;
+  --he-space-7: 3rem;
+  --he-space-8: 4rem;
+  --he-radius-control: 0.5rem;
+  --he-radius-panel: 0.75rem;
+  --he-focus-light: var(--he-brick);
+  --he-focus-dark: var(--he-honey);
+}
