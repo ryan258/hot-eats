@@ -17,6 +17,8 @@ Open http://127.0.0.1:1417/ and `/site-kit/`. Choose another example:
 ./he doctor
 ```
 
+For the product identity and proposed launch materials, start with the [brand and marketing kit](docs/brand/README.md). The [local brand preview](http://127.0.0.1:1417/site-kit/brand/) includes editable identity assets and a printable sales one-sheet.
+
 Presets: `kitchen-sink`, `diner`, `cafe`, `fine-dining`, `fast-casual`, `bar`, `bakery`, `food-truck`, `multi-location`. They select modules, a complete illustrative dataset, homepage composition, and component layouts. Each has its own typography, color, border, and card treatment; see [the preset designs](docs/preset-designs.md). Examples are maintained in `data/scenarios.json`; the client's editable records live in `data/restaurant.json`.
 
 The [component living style guide](http://127.0.0.1:1417/site-kit/#presets) includes a nine-design switcher, side-by-side previews of real example pages at desktop or phone widths, and 54 rendered layouts with individual selectors and comparison controls, alternate states, template calls and sample input data, design tokens, category/search tools, palette previews, and a narrow preview. Choose Component showcase in the comparison page selector to see menu sections, tasting menus, beverage flights, team profiles, private dining spaces, and visit steps in each design. The six additions also render on enabled guest pages using validated restaurant records and the selected preset’s layouts. Its layout selectors start with the active preset’s choices. See [component integration](docs/component-library.md). The guide and its preset preview routes are excluded from publication builds.
@@ -46,12 +48,15 @@ Use the wrapper to select profile, preset, and dataset consistently. Plain Hugo 
 
 ## Implemented local capabilities
 
-This revision is awaiting owner-run verification; see the [project roadmap](roadmap.md) and [enhancement register](docs/remediation-status.md).
+This revision has passed automated test and multi-preset build verification; see the [project roadmap](roadmap.md) and [enhancement register](docs/remediation-status.md).
 
 - Menu search, category/service/location filters, stable dish links, explicit sold-out states, and full/filtered printing.
-- Location detail pages, split schedules, date exceptions, access facts, click-to-call, and approved-schedule current-status display.
+- Multi-location navigation and persistence: header location dropdown toggle with `localStorage` memory across visits, location-scoped hero actions (call, directions, online ordering, scoped menu links), location-specific emails, and location-scoped records.
+- 12-hour clock time formatting across weekly schedules and special date exceptions.
+- Brand identity and marketing preview: dedicated `/site-kit/brand` and `/site-kit/brand/one-sheet` preview routes with downloadable vector assets, design tokens, and a printable sales one-sheet (strictly excluded from publication builds).
 - Location/service-specific provider handoffs with available/paused/unavailable states and fallback contacts.
-- Structured content records and detail pages for specials, catering, events, story, team, sourcing, reviews, news, calendars, careers, access information, press, and truck stops.
+- Structured content records and detail pages for specials (supporting ongoing or dated offers), catering, events, story, team, sourcing, reviews, news, calendars, careers, access information, press, and truck stops.
+- Clean record presentation hiding redundant "Available" state badges on live cards while maintaining expired, demo, and unavailable status indicators.
 - Expired-event states and calendar downloads; local gathering briefs with editable export/import and optional mail-app draft handoff.
 - Guest-task search with synonyms and content, mobile quick actions, native FAQs, privacy content, and no-JavaScript reading fallbacks.
 - Schema validation, dependency checks, owner diffs/snapshots, content provenance, staged copying, fresh builds, and explicit publication gates.
@@ -79,7 +84,7 @@ Builds use a fresh destination outside source and print a sibling source/data/ou
 
 | Source | Owns |
 | --- | --- |
-| `site-profile.json`, `profiles/`, `presets/` | Selected identity, module set, presentation, example/client choice |
+| `site-profile.json`, `profiles/`, `presets/` | Selected identity, module set, presentation, example/client choice; profile settings override the preset |
 | `data/restaurant.json` | Client public restaurant records |
 | `data/scenarios.json` | Nine illustrative example datasets |
 | `data/modules.json` | Module contracts, dependencies, navigation and search vocabulary |

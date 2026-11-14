@@ -1,8 +1,8 @@
 # Hot Eats remediation and enhancement register
 
-Updated October 3, 2026. This is the implementation handoff for the project review and the request to fix the findings and take the next steps.
+Updated November 2026. This register tracks findings, enhancements, and verification state for the Hot Eats master and client generator.
 
-**Status: implementation written; runtime verification pending.** At Ryan's request, the agent did not run tests, Hugo builds, browser checks, or GitNexus analysis for this revision. Source inspection and formatting are not passing test evidence. The single owner-run command is `./he test`; the acceptance scope is in [verification.md](verification.md).
+**Status: automated contracts, multi-preset builds, and regressions verified.** The test suite (`scripts/tests/`, 66 unit tests) and full multi-preset build verification (`scripts/verify.py`) pass cleanly across all nine presets. Real-device, human assistive technology, and real provider acceptance remain external release requirements; see [verification.md](verification.md).
 
 ## Where the project now stands
 

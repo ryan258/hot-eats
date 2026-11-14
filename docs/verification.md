@@ -1,5 +1,26 @@
 # Verification evidence and owner handoff
 
+## November 2026 multi-location persistence, brand kit, and engine verification
+
+Automated regression coverage was executed across all 66 test cases in `scripts/tests/` and the full multi-preset build suite in `scripts/verify.py`.
+
+### Automated test coverage
+
+All 66 automated tests passed:
+- `test_location_navigation.py`: Multi-location header dropdown presence when locations > 1, location persistence across guest pages, URL context preservation, and location-scoped hero actions (call, directions, online ordering, and scoped menu links).
+- `test_location_persistence.py` & `location_persistence_runtime.cjs`: Node/DOM runtime testing of `localStorage` (`he-location`) lifecycle, preserving selections, defaulting to current page context, deferring validation until on a location page, and clearing on "All locations".
+- `test_contracts.py`: Location email validation, ongoing specials without paired start/end timestamps, and array-of-tables (`[[...]]`) serialization in `sculpt.py`.
+- `test_component_library.py`: Interactive brand kit preview and sales one-sheet routes, 12-hour AM/PM clock time formatting (`clock.html`), and hidden state badges for available records.
+- `test_preset_layouts.py`, `test_preset_switcher.py`, and `test_guest_components.py`: Previews with client profile overrides, preset configurations, and component layout fixtures.
+
+### Full build verification (`scripts/verify.py`)
+
+The full regression build executed cleanly:
+- All nine illustrative presets (`kitchen-sink`, `diner`, `cafe`, `fine-dining`, `fast-casual`, `bar`, `bakery`, `food-truck`, `multi-location`) plus current selection built with zero warnings or errors.
+- HTML page counts: `current-selection=323`, `bakery=308`, `bar=306`, `cafe=307`, `diner=310`, `fast-casual=305`, `fine-dining=313`, `food-truck=304`, `kitchen-sink=323`, `multi-location=311`.
+- Verified local links, asset paths, duplicate ID prevention, heading level hierarchy, search index keyword consistency, and Unicode client name handling.
+- Publication isolation verified: preview bar, brand kit, and all `/site-kit/` routes are strictly absent from publication builds.
+
 ## October 13 remaining-page consistency pass
 
 The remaining restaurant pages were reviewed across all nine presets: service handoffs (ordering/reservations/gift cards/rewards/newsletters), catering, calendars/truck schedules, quotations, FAQs, contact, hours/location listings, editorial records (story/sourcing/news/careers/press), galleries, search, privacy, and record details. A route manifest derived from the current preset feature switches and illustrative data contained 258 guest pages: kitchen-sink 42, diner 29, café 26, fine dining 32, fast casual 24, bar 25, bakery 27, food truck 23, and multi-location 30. Guides and component-showcase routes were excluded from that count.

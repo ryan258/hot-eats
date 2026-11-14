@@ -33,4 +33,4 @@ Shared flags: `visit`, `search`, `announcement`, `quicklinks`. Homepage sections
 
 Record modules use structured facts, dates where relevant, attachments, links, provenance, and generated detail pages. Reviews and careers begin empty. Action modules require an explicit available state, an available associated service, and an HTTPS destination before linking out.
 
-Read `docs/data-model.md` for field contracts and `docs/verification.md` for the unexecuted verification handoff.
+Read `docs/data-model.md` for field contracts and `docs/verification.md` for verification scope and evidence.
